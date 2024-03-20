@@ -1,7 +1,5 @@
 ## [Online](http://calculusmadeeasy.org/)
 
-Pull requests and issues are welcome.
-
 Original:
 http://www.gutenberg.org/ebooks/33283
 license original: Public Domain
