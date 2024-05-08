@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>On true Compound Interest and the Law of Organic Growth | Calculus Made Easy</title>
+<meta charset="UTF-8">
+<title>Про справжні складні відсотки та закон органічного росту | Математичний аналіз простими словами</title>
 <link rel="stylesheet" href="screen.css">
 <style>
 body{counter-reset:h1 14}
@@ -12,466 +12,143 @@ body{counter-reset:h1 14}
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<h1><br>On true Compound Interest and the Law of Organic Growth</h1>
+<h1><br>Про справжні складні відсотки та закон органічного росту</h1>
 <p class="a rotatedFloralHeartBullet">
 
 
-<p>Let there be a quantity growing in such a way that
-the increment of its growth, during a given time,
-shall always be proportional to its own magnitude.
-This resembles the process of reckoning interest on
-money at some fixed rate; for the bigger the capital,
-the bigger the amount of interest on it in a given
-time.
+</p><p>Нехай існує величина, яка зростає таким чином, що приріст її зростання протягом певного часу завжди буде пропорційним самій величині. Це нагадує процес нарахування відсотків на гроші за деякою фіксованою ставкою, адже чим більший капітал, тим більша сума відсотків на нього в певний час.
 
-<p>Now we must distinguish clearly between two
-cases, in our calculation, according as the calculation
-is made by what the arithmetic books call “simple
-interest,” or by what they call “compound interest.”
-For in the former case the capital remains fixed,
-while in the latter the interest is added to the capital,
-which therefore increases by successive additions.
+</p><p>Тут ми повинні чітко розрізнити два випадки в наших розрахунках, залежно від того, як виконується обчислення - чином, який в підручниках з арифметики називають «простими відсотками», або чином, що вони називають «складними відсотками». Бо в першому випадку капітал залишається постійним, тоді як у другому відсотки додаються до капіталу, який, таким чином, збільшується шляхом послідовних додавань.
 
-<p><em> At simple interest</em>. Consider a concrete case.
-Let the capital at start be £$100$, and let the rate
-of interest be $10$ per cent. per annum. Then the
-increment to the owner of the capital will be £$10$
-every year. Let him go on drawing his interest
-every year, and hoard it by putting it by in a
+</p><p><em>При простих відсотках</em>. Розглянемо конкретний випадок. Нехай початковий капітал становить £$100$, а процентна ставка становить $10$ відсотків на рік. Тоді приріст власника капіталу становитиме £$10$ щороку. Нехай він продовжує отримувати свої відсотки щороку і накопичує їх, кладучи їх у панчоху або замикаючи у своєму сейфі. Тоді, якщо він продовжить робити це протягом $10$ років, до кінця цього часу він отримає $10$ надбавок по £$10$ кожна, або £$100$, тобто разом із початковими £$100$ загальна сума становить £$200$. Його майно подвоїться за $10$ років. Якби відсоткова ставка становила $5$ процентів, йому довелося б накопичувати $20$ років, щоб подвоїти своє майно. Якби це було лише $2$ відсотки, йому довелося б накопичувати $50$ років. Легко побачити: якщо розмір річного відсотка становить $\dfrac{1}{n}$ капіталу, власник має накопичувати $n$ років, щоб подвоїти своє майно.
 
-stocking, or locking it up in his safe. Then, if he
-goes on for $10$ years, by the end of that time he will
-have received $10$ increments of £$10$ each, or £$100$,
-making, with the original £$100$, a total of £$200$ in all.
-His property will have doubled itself in $10$ years.
-If the rate of interest had been $5$ per cent., he would
-have had to hoard for $20$ years to double his property.
-If it had been only $2$ per cent., he would have had
-to hoard for $50$ years. It is easy to see that if the
-value of the yearly interest is $\dfrac{1}{n}$ of the capital, he
-must go on hoarding for $n$ years in order to double
-his property.
+</p><p>Або, якщо $y$ — початковий капітал, а річний відсоток складає $\dfrac{y}{n}$, то наприкінці $n$ років його власність становитиме \[ y + n\dfrac{y}{n} = 2y. \]
 
-<p>Or, if $y$ be the original capital, and the yearly
-interest is $\dfrac{y}{n}$, then, at the end of $n$ years, his property
-will be
-\[
-y + n\dfrac{y}{n} = 2y.
-\]
+</p><p>
+<em>(2) При складних відсотках.</em> Як і раніше, нехай господар <a name="erratum0"/> починає з капіталу £$100$, заробляючи за ставкою $10$ відсотків на рік; але, замість того, щоб накопичувати відсотки, нехай вони додаються до капіталу щороку, щоб капітал зростав з року в рік. Тоді, наприкінці першого року, капітал зросте до £$110$; і на другий рік (ще $10$%) це принесе £$11$. Він розпочне третій рік із £$121$, а відсотки на це становитимуть £$12.1$; <em></em>тож він починає четвертий рік із £$133.1$, <em></em>і так далі. Це легко розрахувати і виявити, що наприкінці десяти років загальний капітал зросте до £$259.37$. <em></em>  <em></em> Насправді ми бачимо, що наприкінці кожного року кожен фунт зароблятиме $\tfrac{1}{10}$ фунта, і тому, якщо їх завжди додавати, кожен рік помножить капітал на $\tfrac{11}{10}$; і якщо це триватиме протягом десяти років (що помножить на цей коефіцієнт десять разів), це збільшить початковий капітал у $2.59374$ рази. Перекладемо це в символи. Нехай $y_0$ це початковий капітал; $\dfrac{1}{n}$ це частка, додана на кожній з $n$ операцій; і $y_n$ це обсяг капіталу в кінці $n$-ї операції. Тоді \[ y_n = y_0\left(1 + \frac{1}{n}\right)^n. \]
 
-<p>
-<em>(2) At compound interest.</em> As before, let the owner
-<a name="erratum0"/>
-begin with a capital of £$100$, earning interest at the
-rate of $10$ per cent. per annum; but, instead of
-hoarding the interest, let it be added to the capital
-each year, so that the capital grows year by year.
-Then, at the end of one year, the capital will have
-grown to £$110$; and in the second year (still at $10$%)
-this will earn £$11$ interest. He will start the third
-year with £$121$, and the interest on that will be
-£$12$. $2$<em>s</em> .; so that he starts the fourth year with
-£$133$. $2$<em>s</em> ., and so on. It is easy to work it out, and
-find that at the end of the ten years the total capital
+</p><p>Але такий спосіб нарахування складних відсотків раз на рік насправді є не зовсім справедливим, адже навіть протягом першого року £$100$ повинні були зрости. Наприкінці півроку капітал мав становити принаймні £$105$, і, звичайно, було б справедливіше, якби відсотки за другу половину року були розраховані від £$105$. Це було б еквівалентно $5$% за півроку, з $20$ операціями, при кожній з яких капітал множиться на $\tfrac{21}{20}$. Якщо рахувати таким чином, до кінця десяти років капітал зріс би до £$265.32$. <em></em> <em></em>Для \[ (1 + \tfrac{1}{20})^{20} = 2.653. \]
 
-will have grown to £$259$. $7$<em>s</em> . $6$<em>d</em> . In fact, we see that
-at the end of each year, each pound will have earned
-$\tfrac{1}{10}$ of a pound, and therefore, if this is always added
-on, each year multiplies the capital by $\tfrac{11}{10}$; and if
-continued for ten years (which will multiply by this
-factor ten times over) will multiply the original
-capital by $2.59374$. Let us put this into symbols.
-Put $y_0$ for the original capital; $\dfrac{1}{n}$ for the fraction
-added on at each of the $n$ operations; and $y_n$ for the
-value of the capital at the end of the $n$th operation.
-Then
-\[
-y_n = y_0\left(1 + \frac{1}{n}\right)^n.
-\]
+</p><p>Але, незважаючи на це, процес все ще не є зовсім справедливим, оскільки до кінця першого місяця вже будуть отримані певні відсотки, а піврічний розрахунок передбачає, що капітал залишається нерухомим протягом шести місяців. Припустімо, що ми розділили рік на $10$ частин і нараховуємо один відсоток за кожну десяту частину року. Тепер ми маємо $100$ операцій, що тривають протягом десяти років, або \[ y_n = £100 \left( 1 + \tfrac{1}{100} \right)^{100}, \] що становить £$270.48$. <em></em> <em></em>
 
-<p>But this mode of reckoning compound interest once
-a year, is really not quite fair; for even during the
-first year the £$100$ ought to have been growing. At
-the end of half a year it ought to have been at least £$105$,
-and it certainly would have been fairer had
-the interest for the second half of the year been
-calculated on £$105$. This would be equivalent to
-calling it $5$% per half-year; with $20$ operations, therefore,
-at each of which the capital is multiplied by $\tfrac{21}{20}$.
-If reckoned this way, by the end of ten years the
-capital would have grown to
-£$265$. $6$<em>s</em> . $7$<em>d</em>.; for
-\[
-(1 + \tfrac{1}{20})^{20} = 2.653.
-\]
+</p><p>І навіть це не кінцевим. Нехай десять років поділено на $1000$ періодів, кожен з яких становить $\frac{1}{100}$ року; відсотки становлять $\frac{1}{1000}$ за кожен такий період; тоді \[ y_n = £100 \left( 1 + \tfrac{1}{1000} \right)^{1000}, \] що становить £$271.69$.  
 
-<p>But, even so, the process is still not quite fair; for,
-by the end of the first month, there will be some
-interest earned; and a half-yearly reckoning assumes
-that the capital remains stationary for six months at
+</p><p>Підемо ще дрібніше та розділимо десять років на частини по $10 000$, кожна з яких становить $\frac{1}{1000}$ року, зі ставкою $\frac{1}{100}$ від $1$ відсотка. Тоді \[ y_n = £100 \left( 1 + \tfrac{1}{10 000} \right)^{10 000}, \] що становить £$271.81$.  
 
-a time. Suppose we divided the year into $10$ parts,
-and reckon a one-per-cent. interest for each tenth of
-the year. We now have $100$ operations lasting over
-the ten years; or
-\[
-y_n = £100 \left( 1 + \tfrac{1}{100} \right)^{100};
-\]
-which works out to
-£$270$. $9$<em>s</em> . $7\frac{1}{2}$<em>d</em>.
+</p><p>Зрештою, стане видно, що те, що ми намагаємося знайти, насправді є кінцевим значенням виразу $\left(1 + \dfrac{1}{n}\right)^n$, яке, як ми бачимо, є більше $2$, і яке, коли ми беремо $n$ все більше і більше, стає все ближче і ближче до певного граничного значення. Яким би великим ви не робили $n$, значення цього виразу стає все ближчим до числа \[ 2.71828\ldots \] число, що має <em>ніколи не бути забутим</em>.
 
-<p>Even this is not final. Let the ten years be divided
-into $1000$ periods, each of $\frac{1}{100}$ of a year; the interest
-being $\frac{1}{10}$ per cent. for each such period; then
-\[
-y_n = £100 \left( 1 + \tfrac{1}{1000} \right)^{1000};
-\]
-which works out to
-£$271$. $13$<em>s</em> . $10$<em>d</em> .
-
-<p>Go even more minutely, and divide the ten years
-into $10,000$ parts, each $\frac{1}{1000}$ of a year, with interest
-at $\frac{1}{100}$ of $1$ per cent. Then
-\[
-y_n = £100 \left( 1 + \tfrac{1}{10,000} \right)^{10,000}
-\]
-which amounts to
-£$271$. $16$<em>s</em> . $3\frac{1}{2}$<em>d</em>.
-
-<p>Finally, it will be seen that what we are trying to
-find is in reality the ultimate value of the expression
-$\left(1 + \dfrac{1}{n}\right)^n$, which, as we see, is greater than $2$; and
-which, as we take $n$ larger and larger, grows closer
-and closer to a particular limiting value. However
-big you make $n$, the value of this expression grows
-nearer and nearer to the figure
-\[
-2.71828\ldots
-\]
-a number <em>never to be forgotten</em>.
-
-<p>Let us take geometrical illustrations of these things.
-In <a href="#figure36">Figure 36</a>, $OP$ stands for the original value. $OT$ is
-the whole time during which the value is growing.
-It is divided into $10$ periods, in each of which there is
-an equal step up. Here $\dfrac{dy}{dx}$ is a constant; and if each
-step up is $\frac{1}{10}$ of the original $OP$, then, by $10$ such
-steps, the height is doubled. If we had taken $20$ steps,
-each of half the height shown, at the end the height
-would still be just doubled. Or $n$ such steps, each
-of $\dfrac{1}{n}$ of the original height $OP$, would suffice to
-double the height. This is the case of simple interest.
-Here is $1$ growing till it becomes $2$.
+</p><p>Давайте розглянемо геометричні ілюстрації цих речей. На <a href="#figure36">Зображенні 36</a>, $OP$ означає початкове значення. $OT$ - це весь час, протягом якого вартість зростає. Він розділений на $10$ періодів, у кожному з яких є рівний крок угору. Тут $\dfrac{dy}{dx}$ є константою; і якщо кожен крок угору становить $\frac{1}{10}$ вихідного $OP$, то за $10$ таких кроків висота подвоюється. Якби ми зробили $20$ кроків, кожен у половину вказаної висоти, у кінці висота все одно була б подвоїна. Або $n$ таких кроків, кожен $\dfrac{1}{n}$ початкової висоти $OP$, буде достатньо, щоб подвоїти висоту. Це випадок простих відсотків. Тут $1$ зростає, поки не стане $2$.
 <a name="figure36">
-<p><img src="33283-t/images/150a.pdf.png-1.png">
-<p>In <a href="#figure37">Figure 37</a>, we have the corresponding illustration of
-the geometrical progression. Each of the successive
-ordinates is to be $1 + \dfrac{1}{n}$, that is, $\dfrac{n+1}{n}$ times as high as
-its predecessor. The steps up are not equal, because
-each step up is now $\dfrac{1}{n}$ of the ordinate <em>at that part</em> of
-the curve. If we had literally $10$ steps, with $\left(1 + \frac{1}{10} \right)$
-for the multiplying factor, the final total would be
-
-$(1 + \tfrac{1}{10})^{10}$ or $2.594$ times the original $1$. But if only
-we take $n$ sufficiently large (and the corresponding
-$\dfrac{1}{n}$ sufficiently small), then the final value $\left(1 + \dfrac{1}{n}\right)^n$ to
-
-which unity will grow will be $2.71828$.
+</a></p><p><img src="33283-t/images/150a.pdf.png-1.png">
+</p><p>На <a href="#figure37">Зображенні 37</a>, маємо відповідну ілюстрацію геометричної прогресії. Кожна з послідовних ординат має бути в $1 + \dfrac{1}{n}$, тобто $\dfrac{n+1}{n}$ разів вищою за попередню. Кроки вгору не рівні, тому що кожен крок угору тепер становить $\dfrac{1}{n}$ ординати <em>в тій частині</em> кривої. Якби у нас було $10$ кроків із $\left(1 + \frac{1}{10} \right)$ у якості коефіцієнту множення, кінцева сума була б $(1 + \tfrac{1}{10}) ^{10}$ або $2.594$, помножене на початкову $1$. Але якщо ми зробимо $n$ достатньо великим (і відповідно $\dfrac{1}{n}$ достатньо малим), тоді остаточне значення $\left(1 + \dfrac{1}{n}\right)^ n$, до якого зросте одиниця, становитиме $2.71828$.
 
 <a name="figure37">
-<p><img src="33283-t/images/151a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/151a.pdf.png-1.png">
 
-<p><em>Epsilon.</em> To this mysterious number $2.7182818$
-etc., the mathematicians have assigned as a symbol
-the Greek letter $\epsilon$ (pronounced <em>epsilon</em>). All schoolboys
-know that the Greek letter $\pi$ (called <em>pi</em>) stands
-for $3.141592$ etc.; but how many of them know that
-<em>epsilon</em> means $2.71828$? Yet it is an even more
-important number than $\pi$!
+</p><p><em>Епсилон.</em> Цьому загадковому числу $2.7182818$ і т.д. математики приписали у якості символу грецьку літеру $\epsilon$ (вимовляється як <em>епсилон</em>). Усі школярі знають, що грецька буква $\pi$ (вимовляється як <em>пі</em>) становить $3,141592 $ і т.д., але скільки з них знають, що <em>епсилон</em> означає $2.71828$? Але це навіть важливіше число, ніж $\pi$!
 
-<p>What, then, is <em>epsilon</em>?
+</p><p>Що ж таке <em>епсилон</em>?
 
-<p>Suppose we were to let $1$ grow at simple interest
-till it became $2$; then, if at the same nominal rate of
-interest, and for the same time, we were to let $1$ grow
-at true compound interest, instead of simple, it would
-grow to the value <em>epsilon</em>.
+</p><p>Припустімо, ми дозволимо $1$ зростати за простими відсотками, поки він не стане $2$; тоді, якби за тієї самої номінальної процентної ставки та за той самий час ми б дозволили $1$ зростати за справжніми складними відсотками, замість простих, $1$ зросте до значення <em>епсилон</em>.
 
-<p>This process of growing proportionately, at every
-instant, to the magnitude at that instant, some people
+</p><p>Деякі люди називають цей процес зростання, щомиті пропорційного до величини, <em>логарифмічною швидкістю</em> зростання. Одинична логарифмічна швидкість зростання — це така швидкість, яка за одиницю часу спричинить зростання $1$ до $2.718281$. Її також можна назвати <em>органічною швидкістю</em> зростання: оскільки для органічного росту (за певних обставин) властиво, що приріст організму за певний час пропорційний величині самого організму.
 
-call <em>a logarithmic rate</em> of growing. Unit logarithmic
-rate of growth is that rate which in unit time will
-cause $1$ to grow to $2.718281$. It might also be
-called the <em>organic rate</em> of growing: because it is
-characteristic of organic growth (in certain circumstances)
-that the increment of the organism in a
-given time is proportional to the magnitude of the
-organism itself.
+</p><p>Якщо ми візьмемо $100$ процентів як одиницю темпу, а будь-який фіксований період як одиницю часу, тоді результат <em>арифметичного</em> зростання $1$ з одиничним темпом, за одиницю часу, становитиме $2$, тоді як результат <em>логарифмічного</em> зростання $1$ з одиничним темпом за той самий час становитиме $2.71828\ldots$,.
 
-<p>If we take $100$ per cent. as the unit of rate,
-and any fixed period as the unit of time, then the
-result of letting $1$ grow <em>arithmetically</em> at unit rate,
-for unit time, will be $2$, while the result of letting $1$
-grow <em>logarithmically</em> at unit rate, for the same time,
-will be $2.71828\ldots$,.
-
-<p><em>A little more about Epsilon.</em> We have seen that
-
-we require to know what value is reached by the
-expression $\left(1 + \dfrac{1}{n}\right)^n$, when $n$ becomes indefinitely
-great. Arithmetically, here are tabulated a lot of
-values (which anybody can calculate out by the help
-of an ordinary table of logarithms) got by assuming
-$n = 2$; $n = 5$; $n = 10$; and so on, up to $n = 10,000$.
-\begin{alignat*}{2}
-&(1 + \tfrac{1}{2})^2             &&= 2.25.    \\
-&(1 + \tfrac{1}{5})^5             &&= 2.488.   \\
-&(1 + \tfrac{1}{10})^{10}         &&= 2.594.   \\
-&(1 + \tfrac{1}{20})^{20}         &&= 2.653.   \\
-&(1 + \tfrac{1}{100})^{100}       &&= 2.705.   \\
-&(1 + \tfrac{1}{1000})^{1000}     &&= 2.7169.  \\
-&(1 + \tfrac{1}{10,000})^{10,000} &&= 2.7181.
-\end{alignat*}
+</p><p><em>Ще трохи про Епсилон.</em> Ми побачили, що нам потрібно знати, якого значення досягає вираз $\left(1 + \dfrac{1}{n}\right)^n$, коли $n$ стає нескінченно великим. Нижче арифметично наведено багато значень (які будь-хто може обчислити за допомогою звичайної таблиці логарифмів), отриманих, припустивши $n = 2$; $n = 5$; $n = 10$; і так далі, до $n = 10 000 $. \begin{alignat*}{2} &amp;(1 + \tfrac{1}{2})^2 &amp;&amp;= 2.25. \\ &amp;(1 + \tfrac{1}{5})^5 &amp;&amp;= 2.488. \\ &amp;(1 + \tfrac{1}{10})^{10} &amp;&amp;= 2.594. \\ &amp;(1 + \tfrac{1}{20})^{20} &amp;&amp;= 2.653. \\ &amp;(1 + \tfrac{1}{100})^{100} &amp;&amp;= 2.705. \\ &amp;(1 + \tfrac{1}{1000})^{1000} &amp;&amp;= 2.7169. \\ &amp;(1 + \tfrac{1}{10,000})^{10,000} &amp;&amp;= 2.7181. \end{alignat*}
 
 
-<p>It is, however, worth while to find another way of
-calculating this immensely important figure.
+</p><p>Однак варто знайти інший спосіб обчислення цього надзвичайно важливого числа.
 
-<p>Accordingly, we will avail ourselves of the binomial
-theorem, and expand the expression $\left(1 + \dfrac{1}{n}\right)^n$ in that
-well-known way.
+</p><p>Тож, ми скористаємося біноміальною теоремою та розгорнемо вираз $\left(1 + \dfrac{1}{n}\right)^n$ у цей добре відомий спосіб.
 
-<p>The binomial theorem<a name="binomtheo"/> gives the rule that
-\begin{align*}
-(a + b)^n &= a^n + n \dfrac{a^{n-1} b}{1!} + n(n - 1) \dfrac{a^{n-2} b^2}{2!} \\
-  & \phantom{= a^n\ } + n(n -1)(n - 2) \dfrac{a^{n-3} b^3}{3!} + \text{etc}. \\
+</p><p>Біноміальна теорема <a name="binomtheo"/> надає правило, що \begin{align*} (a + b)^n &amp;= a^n + n \dfrac{a^{n-1} b}{1!} + n(n - 1) \dfrac{ a^{n-2} b^2}{2!} \\ &amp; \phantom{= a^n\ } + n(n -1)(n - 2) \dfrac{a^{n-3} b ^3}{3!} + \text{і т.д.}. \\ \end{align*} Поклавши $a = 1$ і $b = \dfrac{1}{n}$, ми отримаємо \begin{align*} \left(1 + \dfrac{1}{n}\right)^n &amp;= 1 + 1 + \dfrac{1}{2!} \left(\dfrac{n - 1}{n}\right) + \dfrac{1}{3!} \dfrac{(n - 1)(n - 2)}{n^2} \\ &amp;\phantom{= 1 + 1\ } + \dfrac{1}{4!} \dfrac{(n - 1)(n - 2)( n - 3)}{n^3} + \text{і т.д.}. \end{align*}
 
-\end{align*}
-Putting $a = 1$ and $b = \dfrac{1}{n}$, we get
-\begin{align*}
+</p><p>Тепер, якщо ми припустимо, що $n$ стане нескінченно великим, скажімо, мільярдом або мільярдом мільярдів, тоді $n – 1$, $n – 2$ і $n – 3$ тощо, усі будуть відчутно рівними до $n$; і тоді ряд стає \[ \epsilon = 1 + 1 + \dfrac{1}{2!} + \dfrac{1}{3!} + \dfrac{1}{4!} + \text{і т.д.} \ldots \]
 
-\left(1 + \dfrac{1}{n}\right)^n
-  &= 1 + 1 + \dfrac{1}{2!} \left(\dfrac{n - 1}{n}\right) + \dfrac{1}{3!} \dfrac{(n - 1)(n - 2)}{n^2} \\
-  &\phantom{= 1 + 1\ } + \dfrac{1}{4!} \dfrac{(n - 1)(n - 2)(n - 3)}{n^3} + \text{etc}.
-\end{align*}
-
-<p>Now, if we suppose $n$ to become indefinitely great,
-say a billion, or a billion billions, then $n - 1$, $n - 2$,
-and $n - 3$, etc., will all be sensibly equal to $n$; and
-then the series becomes
-\[
-\epsilon = 1 + 1 + \dfrac{1}{2!} + \dfrac{1}{3!} + \dfrac{1}{4!} + \text{etc}.\ldots
-\]
-
-<p>By taking this rapidly convergent series to as
-many terms as we please, we can work out the sum to
-any desired point of accuracy. Here is the working
-for ten terms:
+</p><p>Розбираючи цей швидко збіжний ряд до будь-якої кількості членів, ми можемо отримати суму з будь-якою бажаною точністю. Ось опрацювання до десяти членів:
 <table>
 <tr><td>        </td><td>$1.000000$</td></tr>
-<tr><td>dividing by 1 </td><td>$1.000000$</td></tr>
-<tr><td>dividing by 2 </td><td>$0.500000$</td></tr>
-<tr><td>dividing by 3 </td><td>$0.166667$</td></tr>
-<tr><td>dividing by 4 </td><td>$0.041667$</td></tr>
-<tr><td>dividing by 5 </td><td>$0.008333$</td></tr>
-<tr><td>dividing by 6 </td><td>$0.001389$</td></tr>
-<tr><td>dividing by 7 </td><td>$0.000198$</td></tr>
-<tr><td>dividing by 8 </td><td>$0.000025$</td></tr>
-<tr><td>dividing by 9 </td><td><u>$0.000002$</u></td></tr>
-<tr><td>Total       </td><td><u>$2.718281$</u></td></tr>
+<tr><td>ділимо на 1 </td><td>$1.000000$</td></tr>
+<tr><td>ділимо на 2 </td><td>$0.500000$</td></tr>
+<tr><td>ділимо на 3 </td><td>$0.166667$</td></tr>
+<tr><td>ділимо на 4 </td><td>$0.041667$</td></tr>
+<tr><td>ділимо на  5 </td><td>$0.008333$</td></tr>
+<tr><td>ділимо на 6 </td><td>$0.001389$</td></tr>
+<tr><td>ділимо на 7 </td><td>$0.000198$</td></tr>
+<tr><td>ділимо на 8 </td><td>$0.000025$</td></tr>
+<tr><td>ділимо на 9 </td><td><u>$0.000002$</u></td></tr>
+<tr><td>Сума       </td><td><u>$2.718281$</u></td></tr>
 </table>
 
-<p>$\epsilon$ is incommensurable with $1$, and resembles $\pi$ in
-being an interminable non-recurrent decimal.
+</p><p>$\epsilon$ неспівмірне з $1$ і нагадує $\pi$ у тому, що являє собою нескінченний неперіодичний десятковий дріб.
 
-<p><em>The Exponential Series.</em> We shall have need of yet
-another series.
+</p><p><em>Степеневий ряд.</em> Нам знадобиться ще один ряд.
 
-<p>Let us, again making use of the binomial theorem,
-expand the expression $\left(1 + \dfrac{1}{n}\right)^{nx}$, which is the same
-as $\epsilon^x$ when we make $n$ indefinitely great.
-\begin{align*}
-\epsilon^x
-  &= 1^{nx} + nx \frac{1^{nx-1} \left(\dfrac{1}{n}\right)}{1!}
-            + nx(nx - 1) \frac{1^{nx - 2} \left(\dfrac{1}{n}\right)^2}{2!} \\
-  & \phantom{= 1^{nx}\ }
-    + nx(nx - 1)(nx - 2) \frac{1^{nx-3} \left(\dfrac{1}{n}\right)^3}{3!}
-    + \text{etc}.\\
-  &= 1 + x + \frac{1}{2!} · \frac{n^2x^2 - nx}{n^2}
-    + \frac{1}{3!} · \frac{n^3x^3 - 3n^2x^2 + 2nx}{n^3} + \text{etc}. \\
+</p><p>Давайте, знову використовуючи біноміальну теорему, розгорнемо вираз $\left(1 + \dfrac{1}{n}\right)^{nx}$, що є еквівалентним $\epsilon^x$, коли $n$ є нескінченно великим. \begin{align*} \epsilon^x &amp;= 1^{nx} + nx \frac{1^{nx-1} \left(\dfrac{1}{n}\right)}{1!} + nx(nx - 1) \frac{1^{nx - 2} \left(\dfrac{1}{n}\right)^2}{2!} \\ &amp; \phantom{= 1^{nx}\ } + nx(nx - 1)(nx - 2) \frac{1^{nx-3} \left(\dfrac{1}{n}\right)^3}{3!} + \text{і т.д}.\\ &amp;= 1 + x + \frac{1}{2!} · \frac{n^2x^2 - nx}{n^2} + \frac{1}{3!} · \frac{n^3x^3 - 3n^2x^2 + 2nx}{n^3} + \text{і т.д}. \\ &amp;= 1 + x + \frac{x^2 -\dfrac{x}{n}}{2!} + \frac{x^3 - \dfrac{3x^2}{n} + \dfrac{2x}{n^2}}{3!} + \text{і т.д}. \end{align*}
 
-  &= 1 + x + \frac{x^2 -\dfrac{x}{n}}{2!}
-    + \frac{x^3 - \dfrac{3x^2}{n} + \dfrac{2x}{n^2}}{3!} + \text{etc}.
-\end{align*}
+</p><p>Але коли $n$ робиться нескінченно великим, це спрощується до: \[ \epsilon^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \text{і т.д.}\dots \]
 
-<p>But, when $n$ is made indefinitely great, this simplifies down to the following:
-\[
-\epsilon^x
-  = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \text{etc.}\dots
-\]
+</p><p>Такий ряд називається <em>степеневим</em>.
 
-<p>This series is called <em>the exponential series</em>.
+</p><p>Головна причина, чому $\epsilon$ вважається важливим, полягає у тому, що $\epsilon^x$ має властивість, якої не має жодна інша функція від $x$, а саме: <em>коли ви її диференціюєте, її значення залишається незмінним</em><a name="unchanged"/>; або, іншими словами, її похідна дорівнює їй самій. Це можна миттєво побачити, продиференціювавши її відносно $x$, таким чином: \begin{align*} \frac{d(\epsilon^x)}{dx} &amp;= 0 + 1 + \frac{2x}{1 · 2} + \frac{3x^2}{1 · 2 · 3} + \frac{4x^3}{1 · 2 · 3 · 4} \\ &amp;\phantom{= 0 + 1 + \frac{2x }{1 · 2} + \frac{3x^2}{1 · 2 · 3}\ } + \frac{5x^4}{1 · 2 · 3 · 4 · 5} + \text{і т.д}. \\ або &amp;= 1 + x + \frac{x^2}{1 · 2} + \frac{x^3}{1 · 2 · 3} + \frac{x^4}{1 · 2 · 3 · 4} + \text{і т.д.}, \end{align*} що повністю збігається з оригінальним рядом.
 
-<p>The great reason why $\epsilon$ is regarded of importance
-is that $\epsilon^x$ possesses a property, not possessed by any
-other function of $x$, that <em>when you differentiate it
-its value remains unchanged</em><a name="unchanged"/>; or, in other words, its
-differential coefficient is the same as itself. This can
-be instantly seen by differentiating it with respect
-to $x$, thus:
-\begin{align*}
-\frac{d(\epsilon^x)}{dx}
-  &= 0 + 1 + \frac{2x}{1 · 2} + \frac{3x^2}{1 · 2 · 3} + \frac{4x^3}{1 · 2 · 3 · 4} \\
-&\phantom{= 0 + 1 + \frac{2x}{1 · 2} + \frac{3x^2}{1 · 2 · 3}\ } + \frac{5x^4}{1 · 2 · 3 · 4 · 5} + \text{etc}.  \\
- or
-  &= 1 + x + \frac{x^2}{1 · 2} + \frac{x^3}{1 · 2 · 3} + \frac{x^4}{1 · 2 · 3 · 4} + \text{etc}.,
-\end{align*}
-which is exactly the same as the original series.
+</p><p>Ми могли б підійти до задачі у інший спосіб і та запитати: «давайте знайдемо функцію від $x$ таку, що її похідна така сама, як і вихідна функція. Або чи існує якийсь вираз, що включає лише степені $x$, який не змінюється диференціюванням? Відповідно, давайте <em>припустимо</em> у якості загального виразу: \begin{align*} y &amp;= A + Bx + Cx^2 + Dx^3 + Ex^4 + \text{і т.д}.,\\ \end{align*} (в якому коефіцієнти $A$, $B$, $C$ тощо мають бути знайдені) і диференціюємо його. \begin{align*} \dfrac{dy}{dx} &amp;= B + 2Cx + 3Dx^2 + 4Ex^3 + \text{etc}. \end{align*}
 
-<p>Now we might have gone to work the other way,
-and said: Go to; let us find a function of $x$, such
-that its differential coefficient is the same as itself.
-Or, is there any expression, involving only powers
+</p><p>Тепер, якщо цей новий вираз справді має бути таким самим, як той, з якого його було отримано, зрозуміло, що $A$ <em>повинна</em> $=B$; що $C=\dfrac{B}{2}=\dfrac{A}{1· 2}$; що $D = \dfrac{C}{3} = \dfrac{A}{1 · 2 · 3}$; що $E = \dfrac{D}{4} = \dfrac{A}{1 · 2 · 3 · 4}$ тощо.
 
-of $x$, which is unchanged by differentiation? Accordingly;
-let us <em>assume</em> as a general expression that
-\begin{align*}
-y &= A + Bx + Cx^2 + Dx^3 + Ex^4 + \text{etc}.,\\
-\end{align*}
+</p><p>Тим чином закон зміни полягає в тому, що \[ y = A\left(1 + \dfrac{x}{1} + \dfrac{x^2}{1 · 2} + \dfrac{x^3}{1 · 2 · 3} + \dfrac{x^4}{1 · 2 · 3 · 4} + \text{і т.д}.\right). \]
 
-(in which the coefficients $A$, $B$, $C$, etc. will have to be
-determined), and differentiate it.
-\begin{align*}
+</p><p>Якщо тепер ми візьмемо $A = 1$ для подальшої простоти, ми матимемо \[ y = 1 + \dfrac{x}{1} + \dfrac{x^2}{1 · 2} + \dfrac {x^3}{1 · 2 · 3} + \dfrac{x^4}{1 · 2 · 3 · 4} + \text{і т.д.}. \]
 
-\dfrac{dy}{dx} &= B + 2Cx + 3Dx^2 + 4Ex^3 + \text{etc}.
-\end{align*}
+</p><p>Диференціюючи його будь-яку кількість разів, ви завжди отримаєте знову той самий ряд.
 
-<p>Now, if this new expression is really to be the same
-as that from which it was derived, it is clear that
-$A$ <em>must</em> $=B$; that $C=\dfrac{B}{2}=\dfrac{A}{1· 2}$; that $D = \dfrac{C}{3} = \dfrac{A}{1 · 2 · 3}$;
-that $E = \dfrac{D}{4} = \dfrac{A}{1 · 2 · 3 · 4}$, etc.
+</p><p>Якщо тепер ми візьмемо окремий випадок $A=1$ і обчислимо ряд, ми отримаємо просто \begin{align*} \text{коли } x &amp;= 1,\quad &amp; y &amp;= 2.718281 \text {і т.д.}; &amp; \text{тобто } y &amp;= \epsilon; \\ \text{коли } x &amp;= 2,\quad &amp; y &amp;=(2.718281 \text{ і т.д.})^2; &amp; \text{тобто } y &amp;= \epsilon^2; \\ \text{коли } x &amp;= 3,\quad &amp; y &amp;=(2.718281 \text{ і т.д.})^3; &amp; \text{тобто } y &amp;= \epsilon^3; \end{align*} і, отже, \[ \text{коли } x=x,\quad y=(2.718281 \text{ і т.д}.)^x;\quad\text{тобто } y=\epsilon^x , \] таким чином остаточно демонструючи, що \[ \epsilon^x = 1 + \dfrac{x}{1} + \dfrac{x^2}{1·2} + \dfrac{x^3}{1· 2· 3} + \dfrac{x^4}{1· 2· 3· 4} + \text{і т.д.} \]
 
-<p>The law of change is therefore that
-\[
-y = A\left(1 + \dfrac{x}{1} + \dfrac{x^2}{1 · 2} + \dfrac{x^3}{1 · 2 · 3} + \dfrac{x^4}{1 · 2 · 3 · 4} + \text{etc}.\right).
-\]
+</p><p> 
 
-<p>If, now, we take $A = 1$ for the sake of further
-simplicity, we have
-\[
-y = 1 + \dfrac{x}{1} + \dfrac{x^2}{1 · 2} + \dfrac{x^3}{1 · 2 · 3} + \dfrac{x^4}{1 · 2 · 3 · 4} + \text{etc}.
-\]
+</p><p>Звісно, з цього випливає, що $\epsilon^y$ залишається незмінним, якщо диференціювати його по $y$. Крім того, $\epsilon^{ax}$, що еквівалентно $(\epsilon^a)^x$, при диференційуванні по $x$ буде $a\epsilon^{ax}$, оскільки $a$ є константою.
 
-<p>Differentiating it any number of times will give
-always the same series over again.
+</p><p>
+<em>Натуральні або Неперові логарифми.</em></p><p>
+Ще одна причина, чому $\epsilon$ важливий, полягає в тому, що Непер, винахідник логарифмів, зробив $\epsilon$ базісом своєї системи. Якщо $y$ є значенням $\epsilon^x$, то $x$ є <em>логарифмом</em> $y$ за основою $\epsilon$. Або, якщо \begin{align*} y &amp;= \epsilon^x, \\ \text{тоді}\; x &amp;= \log_\epsilon y. \end{align*}
 
-<p>If, now, we take the particular case of $A=1$, and
-evaluate the series, we shall get simply
-\begin{align*}
-\text{when } x &= 1,\quad & y &= 2.718281 \text{ etc.};    & \text{that is, } y &= \epsilon;   \\
-\text{when } x &= 2,\quad & y &=(2.718281 \text{ etc.})^2; & \text{that is, } y &= \epsilon^2; \\
-\text{when } x &= 3,\quad & y &=(2.718281 \text{ etc.})^3; & \text{that is, } y &= \epsilon^3;
-\end{align*}
-
-and therefore
-\[
-\text{when } x=x,\quad y=(2.718281 \text{ etc}.)^x;\quad\text{that is, } y=\epsilon^x,
-\]
-thus finally demonstrating that
-\[
-\epsilon^x = 1 + \dfrac{x}{1} + \dfrac{x^2}{1·2} + \dfrac{x^3}{1· 2· 3} + \dfrac{x^4}{1· 2· 3· 4} + \text{etc}.
-\]
-
-<p>[Note.–<em>How to read exponentials</em> . For the benefit
-of those who have no tutor at hand it may be of use
-to state that $\epsilon^x$ is read as “<em>epsilon to the eksth power</em>;”
-or some people read it “<em>exponential eks</em>.” So $\epsilon^{pt}$ is
-read “<em>epsilon to the pee-teeth-power</em>” or “<em>exponential
-pee tee</em>.” Take some similar expressions:–Thus, $\epsilon^{-2}$ is
-read “<em>epsilon to the minus two power</em>” or “<em>exponential
-minus two</em>.” $\epsilon^{-ax}$ is read “<em>epsilon to the minus
-ay-eksth</em>” or “<em>exponential minus ay-eks</em>.”]
-
-<p>Of course it follows that $\epsilon^y$ remains unchanged if
-differentiated with respect to $y$. Also $\epsilon^{ax}$, which is
-equal to $(\epsilon^a)^x$, will, when differentiated with respect
-to $x$, be $a\epsilon^{ax}$, because $a$ is a constant.
-
-<p>
-<em>Natural or Naperian Logarithms.</em><p>
-Another reason why $\epsilon$ is important is because it
-was made by Napier, the inventor of logarithms, the
-basis of his system. If $y$ is the value of $\epsilon^x$, then $x$
-is the <em>logarithm</em>, to the base $\epsilon$, of $y$. Or, if
-\begin{align*}
-                  y &= \epsilon^x, \\
- \text{then}\;  x &= \log_\epsilon y.
-\end{align*}
-
-<p>The two curves plotted in <a href="#figure38">Fig. 38</a> and <a href="#figure39">Fig. 39</a> represent
-these equations.
+</p><p>Дві криві на <a href="#figure38">Зображенні 38</a> і <a href="#figure39">Зображенні 39</a> представляють ці рівняння.
 
 
-<p>The points calculated are:
-<p>For Fig. 38:
+</p><p>Розраховані точки:
+</p><p>Для Зоб. 38:
 <table>
 <tr><td>$x$</td><td>$0$</td><td>$0.5$</td><td>$1$</td><td>$1.5$</td><td>$2$</td></tr>
 <tr><td>$y$</td><td>$1$</td><td>$1.65$</td><td>$2.71$</td><td>$4.50$</td><td>$7.39$</td></tr>
 </table>
 
-<a name="figure38">
-<p><img src="33283-t/images/158b.pdf.png-1.png">
-
-<p>For Fig. 39:
+</p><p>Для Зоб. 39:
 <table>
 <tr><td>$y$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td><td>$8$</td></tr>
 <tr><td>$x$</td><td>$0$</td><td>$0.69$</td><td>$1.10$</td><td>$1.39$</td><td>$2.08$</td></tr>
 </table>
 
+<a name="figure38">
+</a></p><p><img src="33283-t/images/158b.pdf.png-1.png">
 <a name="figure39">
-<p><img src="33283-t/images/158a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/158a.pdf.png-1.png">
 
-<p>It will be seen that, though the calculations yield
-different points for plotting, yet the result is identical.
-The two equations really mean the same thing.
+</p><p>Можна побачити, що, хоча розрахунки дають різні точки для побудови графіка, все ж результат ідентичний. Ці два рівняння насправді означають одне і те саме.
 
-<p>As many persons who use ordinary logarithms,
-which are calculated to base $10$ instead of base $\epsilon$, are
-unfamiliar with the “natural” logarithms, it may be
-worth while to say a word about them. The ordinary
-rule that adding logarithms gives the logarithm of
-the product still holds good; or
-\[
-\log_\epsilon a + \log_\epsilon b = \log_\epsilon ab.
-\]
-Also the rule of powers holds good;
-\[
-n × \log_\epsilon a = \log_\epsilon a^n.
-\]
+</p><p>Оскільки багато людей, які використовують звичайні логарифми, що обчислюються за основою $10$ замість основи $\epsilon$, не знайомі з «натуральними» логарифмами, можливо, варто сказати про них кілька слів. Звичайне правило, згідно з яким додавання логарифмів дає логарифм добутку, залишається в силі; або \[ \log_\epsilon a + \log_\epsilon b = \log_\epsilon ab. \] Також діє правило степенів; \[ n × \log_\epsilon a = \log_\epsilon a^n. \] Але оскільки $10$ більше не є основою, неможливо помножити на $100$ або $1000$, просто додавши $2$ або $3$ до показнику. Можна перейти від натурального логарифму до звичайного, просто помноживши його на $0.4343$; тобто \begin{align*} \log_{10} x &amp;= 0,4343 × \log_{\epsilon} x, \\ \text{ і навпаки,}\; \log_{\epsilon} x &amp;= 2,3026 × \log_{10} x. \end{align*}
 
-But as $10$ is no longer the basis, one cannot multiply
-by $100$ or $1000$ by merely adding $2$ or $3$ to the
-index. One can change the natural logarithm to
-the ordinary logarithm simply by multiplying it by
-$0.4343$; or
-\begin{align*}
-\log_{10} x &= 0.4343 × \log_{\epsilon} x, \\
-\text{ and conversely,}\;
-\log_{\epsilon} x &= 2.3026 × \log_{10} x.
-\end{align*}
+</p><p>
 
-<p>
-
-<h2>A Useful Table of “Naperian Logarithms”</h3>
-<p><em>(Also called Natural Logarithms or Hyperbolic Logarithms)</em>
+</p><h2>Корисна таблиця «Неперових логарифмів»</h3>
+<p><em>(також їх називають натуральними логарифмами або гіперболічними логарифмами)</em>
 
 <table>
 <tr>
-<th>Number</th>
+<th>Число</th>
 <th>$\log_{\epsilon}$</th>
 <th></th>
-<th>Number</th>
+<th>Число</th>
 <th>$\log_{\epsilon}$</th>
 </tr>
 
@@ -492,252 +169,80 @@ $0.4343$; or
 <tr><td>$5.0$</td><td> $1.6094$ </td><td></td><td>$20 000$</td><td>$9.9035$</td></tr>
 </table>
 
-<p>
-<em>Exponential and Logarithmic Equations.</em><p><a name="expolo"/>
-Now let us try our hands at differentiating certain
-expressions that contain logarithms or exponentials.
+</p><p>
+<em>Експоненціальні та логарифмічні рівняння.</em></p><p><a name="expolo"/>
+Тепер давайте спробуємо продиференціювати певні вирази, які містять логарифми або експоненти.
 
-<p>Take the equation:
-\[
-y = \log_\epsilon x.
-\]
-First transform this into
-\[
-\epsilon^y = x,
-\]
+</p><p>Візьмемо рівняння: \[ y = \log_\epsilon x. \] Спочатку перетворимо це на \[ \epsilon^y = x, \] звідки, оскільки диференціал $\epsilon^y$ відносно $y$ є вихідною функцією без змін (див. <a href="14.html#unchanged">тут</a>), \[ \frac{dx}{dy} = \epsilon^y, \] і, повертаючись від зворотньої до вихідної функції, \[ \frac{dy}{dx} = \frac{1}{\ \dfrac{dx}{dy}\ } = \frac{1}{\epsilon^y} = \frac{1}{x}. \]
 
-whence, since the differential of $\epsilon^y$ with regard to $y$ is
-the original function unchanged (see <a href="14.html#unchanged">here</a>),
-\[
-\frac{dx}{dy} = \epsilon^y,
-\]
-and, reverting from the inverse to the original function,
-\[
-\frac{dy}{dx}
-  = \frac{1}{\ \dfrac{dx}{dy}\ }
-  = \frac{1}{\epsilon^y}
-  = \frac{1}{x}.
-\]
+</p><p>Це дуже цікавий результат. Це може бути записано <a name="differlog"/> \[ \frac{d(\log_\epsilon x)}{dx} = x^{-1}. \]
 
-<p>Now this is a very curious result.  It may be
-written<a name="differlog"/>
-\[
-\frac{d(\log_\epsilon x)}{dx} = x^{-1}.
-\]
+</p><p>Зверніть увагу, що $x^{-1}$ — це результат, який ми ніколи не могли б отримати за правилом диференціювання степенів. <a href="4.html#multipow">Те правило</a> складалось у помноженні на степінь і зменшенні степеня на $1$. Отже, диференціювання $x^3$ давало нам $3x^2$, а диференціювання $x^2$ давало $2x^1$. Але диференціювання $x^0$ не дасть нам $x^{-1}$, оскільки $x^0$ сама по собі дорівнює $= 1$ і є константою. Ми ще повернемося до цього цікавого факту, що диференціювання $\log_\epsilon x$ дає нам $\dfrac{1}{x}$, коли дійдемо до розділу про інтегрування.
 
-<p>Note that $x^{-1}$ is a result that we could never have
-got by the rule for differentiating powers. <a href="4.html#multipow">That rule</a> is to multiply by the power, and reduce the
-power by $1$. Thus, differentiating $x^3$ gave us $3x^2$;
-and differentiating $x^2$ gave $2x^1$. But differentiating
-$x^0$ does not give us $x^{-1}$ or $0 × x^{-1}$, because $x^0$ is itself
-$= 1$, and is a constant. We shall have to come back
-to this curious fact that differentiating $\log_\epsilon x$ gives us
-$\dfrac{1}{x}$ when we reach the chapter on integrating.
+</p><p></p><hr>
 
-<p><hr>
+<p>Тепер спробуємо диференціювати \begin{align*} y &amp;= \log_\epsilon(x+a),\\ \text{тобто}\; \epsilon^y &amp;= x+a; \end{align*} маємо $\dfrac{d(x+a)}{dy} = \epsilon^y$, оскільки диференціал $\epsilon^y$ залишається $\epsilon^y$. Це дає \begin{align*} \frac{dx}{dy} &amp;= \epsilon^y = x+a; \\ \end{align*} отже, повертаючись до вихідної функції, ми отримуємо \begin{align*} \frac{dy}{dx} &amp;= \frac{1}{\;\dfrac{dx}{dy} \;} = \frac{1}{x+a}. \end{align*}<a name="differ2"/>
+</p><hr>
+   Далі спробуємо \begin{align*} y &amp;= \log_{10} x. \end{align*}
 
-<p>Now, try to differentiate
-\begin{align*}
-                              y &= \log_\epsilon(x+a),\\
- \text{that is}\;  \epsilon^y &= x+a;
-\end{align*}
-we have $\dfrac{d(x+a)}{dy} = \epsilon^y$, since the differential of $\epsilon^y$
-remains $\epsilon^y$.
+<p>Спочатку перейдемо до натурального логарифму, помноживши на $0.4343$. Це дає нам \begin{align*} y &amp;= 0.4343 \log_\epsilon x; \\ \text{звідки}\; \frac{dy}{dx} &amp;= \frac{0.4343}{x}. \end{align*}
 
-   This gives
-\begin{align*}
+</p><p></p><hr>
 
-\frac{dx}{dy} &= \epsilon^y = x+a; \\
-\end{align*}
-hence, reverting to the original function,
-we get
-\begin{align*}
+<p>Наступна річ не настільки проста. Спробуйте це:<a name="diffexp"/> \[ y = a^x. \]
 
-\frac{dy}{dx} &= \frac{1}{\;\dfrac{dx}{dy}\;} = \frac{1}{x+a}.
-\end{align*}<a name="differ2"/>
-<hr>
-   Next try
-\begin{align*}
-y &= \log_{10} x.
-\end{align*}
+</p><p>Логарифмуючи обидві сторони, ми отримуємо \begin{align*} \log_\epsilon y &amp;= x \log_\epsilon a, \\ \text{ або}\; x = \frac{\log_\epsilon y}{\log_\epsilon a} &amp;= \frac{1}{\log_\epsilon a} × \log_\epsilon y. \end{align*}
 
-<p>First change to natural logarithms by multiplying
-by the modulus $0.4343$. This gives us
-\begin{align*}
-y &= 0.4343 \log_\epsilon x; \\
- \text{whence}\;
-\frac{dy}{dx} &= \frac{0.4343}{x}.
-\end{align*}
-
-<p><hr>
-
-<p>The next thing is not quite so simple. Try this:<a name="diffexp"/>
-\[
-y = a^x.
-\]
-
-<p>Taking the logarithm of both sides, we get
-\begin{align*}
-\log_\epsilon y &= x \log_\epsilon a, \\
-\text{ or}\;
-x  = \frac{\log_\epsilon y}{\log_\epsilon a}
-  &= \frac{1}{\log_\epsilon a} × \log_\epsilon y.
-\end{align*}
-
-<p>Since $\dfrac{1}{\log_\epsilon a}$ is a constant, we get
-\[
-\frac{dx}{dy}
-  = \frac{1}{\log_\epsilon a} × \frac{1}{y}
-  = \frac{1}{a^x × \log_\epsilon a};
-\]
-hence, reverting to the original function.
-\[
-\frac{dy}{dx} = \frac{1}{\;\dfrac{dx}{dy}\;} = a^x × \log_\epsilon a.
-\]
+</p><p>Оскільки $\dfrac{1}{\log_\epsilon a}$ є константою, ми отримуємо \[ \frac{dx}{dy} = \frac{1}{\log_\epsilon a} × \frac{1} {y} = \frac{1}{a^x × \log_\epsilon a}; \] отже, інвертуючи до початкової функції. \[ \frac{dy}{dx} = \frac{1}{\;\dfrac{dx}{dy}\;} = a^x × \log_\epsilon a. \]
 
 
-<p>We see that, since
-\[
-\frac{dx}{dy} × \frac{dy}{dx} =1\quad\text{and}\quad
-\frac{dx}{dy} = \frac{1}{y} × \frac{1}{\log_\epsilon a},\quad
-\frac{1}{y} × \frac{dy}{dx} = \log_\epsilon a.
-\]
+</p><p>Ми бачимо, що, оскільки \[ \frac{dx}{dy} × \frac{dy}{dx} =1\quad\text{і}\quad \frac{dx}{dy} = \frac{1}{y} × \frac{1}{\log_\epsilon a},\quad \frac{1}{y} × \frac{dy}{dx} = \log_\epsilon a. \]
 
-<p>We shall find that whenever we have an expression
-such as $\log_\epsilon y =$ a function of $x$, we always have
-$\dfrac{1}{y}\, \dfrac{dy}{dx} =$ the differential coefficient of the function of $x$,
-so that we could have written at once, from
+</p><p>Ми знайдемо, що коли у нас є такий вираз, як $\log_\epsilon y =$ функція від $x$, ми завжди маємо $\dfrac{1}{y}\, \dfrac{dy}{dx} =$ похідна функції від $x$, тож ми можемо відразу записати з $\log_\epsilon y = x \log_\epsilon a$, \[ \frac{1}{y}\, \frac {dy}{dx} = \log_\epsilon a\quad\text{і}\quad \frac{dy}{dx} = a^x \log_\epsilon a. \]
 
-$\log_\epsilon y = x \log_\epsilon a$,
-\[
-\frac{1}{y}\, \frac{dy}{dx}
-  = \log_\epsilon a\quad\text{and}\quad
-\frac{dy}{dx} = a^x \log_\epsilon a.
-\]
+</p><p></p><hr>
 
-<p><hr>
+<p>Тепер спробуємо навести додаткові приклади.
 
-<p>Let us now attempt further examples.
+</p><p>
+</p><p><em>Приклади</em> (1) $y=\epsilon^{-ax}$. Нехай $-ax=z$; тоді $y=\epsilon^z$. \[ \frac{dy}{dz} = \epsilon^z;\quad \frac{dz}{dx} = -a;\quad\text{отже}\quad \frac{dy}{dx} = -a \epsilon^{-ax}. \]
 
-<p>
-<p><em>Examples</em>
-(1) $y=\epsilon^{-ax}$. Let $-ax=z$; then $y=\epsilon^z$.
-\[
-\frac{dy}{dz} = \epsilon^z;\quad
-\frac{dz}{dx} = -a;\quad\text{hence}\quad
-\frac{dy}{dx} = -a\epsilon^{-ax}.
-\]
+</p><p>Або так: \[ \log_\epsilon y = -ax;\quad \frac{1}{y}\, \frac{dy}{dx} = -a;\quad \frac{dy}{dx} = - ay = -a\epsilon^{-ax}. \]
 
-<p>Or thus:
-\[
-\log_\epsilon y = -ax;\quad
-\frac{1}{y}\, \frac{dy}{dx} = -a;\quad
-\frac{dy}{dx} = -ay = -a\epsilon^{-ax}.
-\]
+</p><p>(2) $y=\epsilon^{\frac{x^2}{3}}$. Нехай $\dfrac{x^2}{3}=z$; тоді $y=\epsilon^z$. \[ \frac{dy}{dz} = \epsilon^z;\quad \frac{dz}{dx} = \frac{2x}{3};\quad \frac{dy}{dx} = \frac{2x}{3}\, \epsilon^{\frac{x^2}{3}}. \]
 
-<p>(2) $y=\epsilon^{\frac{x^2}{3}}$. Let $\dfrac{x^2}{3}=z$; then $y=\epsilon^z$.
-\[
-\frac{dy}{dz} = \epsilon^z;\quad
-\frac{dz}{dx} = \frac{2x}{3};\quad
-\frac{dy}{dx} = \frac{2x}{3}\, \epsilon^{\frac{x^2}{3}}.
-\]
-
-<p>Or thus:
-\[
-\log_\epsilon y = \frac{x^2}{3};\quad
-\frac{1}{y}\, \frac{dy}{dx} = \frac{2x}{3};\quad
-\frac{dy}{dx} = \frac{2x}{3}\, \epsilon^{\frac{x^2}{3}}.
-\]
+</p><p>Або так: \[ \log_\epsilon y = \frac{x^2}{3};\quad \frac{1}{y}\, \frac{dy}{dx} = \frac{2x}{3 };\quad \frac{dy}{dx} = \frac{2x}{3}\, \epsilon^{\frac{x^2}{3}}. \]
 
 
-<p>(3) $y = \epsilon^{\frac{2x}{x+1}}$.
-\begin{align*}
-\log_\epsilon y &= \frac{2x}{x+1},\quad
-\frac{1}{y}\, \frac{dy}{dx} = \frac{2(x+1)-2x}{(x+1)^2}; \\
- hence
-\frac{dy}{dx} &= \frac{2}{(x+1)^2} \epsilon^{\frac{2x}{x+1}}.
-\end{align*}
+</p><p>(3) $y = \epsilon^{\frac{2x}{x+1}}$. \begin{align*} \log_\epsilon y &amp;= \frac{2x}{x+1},\quad \frac{1}{y}\, \frac{dy}{dx} = \frac{2( x+1)-2x}{(x+1)^2}; \\ отже \frac{dy}{dx} &amp;= \frac{2}{(x+1)^2} \epsilon^{\frac{2x}{x+1}}. \end{align*}
 
-<p>Check by writing $\dfrac{2x}{x+1}=z$.
+</p><p>Перевірте, написавши $\dfrac{2x}{x+1}=z$.
 
-<p>(4) $y=\epsilon^{\sqrt{x^2+a}}$. $\log_\epsilon y=(x^2+a)^{\frac{1}{2}}$.
-\[
-\frac{1}{y}\, \frac{dy}{dx} = \frac{x}{(x^2+a)^{\frac{1}{2}}}\quad\text{and}\quad
-\frac{dy}{dx} = \frac{x × \epsilon^{\sqrt{x^2+a}}}{(x^2+a)^{\frac{1}{2}}}.
-\]
-For if $(x^2+a)^{\frac{1}{2}}=u$ and $x^2+a=v$, $u=v^{\frac{1}{2}}$,
-\[
-\frac{du}{dv} = \frac{1}{{2v}^{\frac{1}{2}}};\quad
-\frac{dv}{dx} = 2x;\quad
-\frac{du}{dx} = \frac{x}{(x^2+a)^{\frac{1}{2}}}.
-\]
+</p><p>(4) $y=\epsilon^{\sqrt{x^2+a}}$. $\log_\epsilon y=(x^2+a)^{\frac{1}{2}}$. \[ \frac{1}{y}\, \frac{dy}{dx} = \frac{x}{(x^2+a)^{\frac{1}{2}}}\quad\text{і}\quad \frac{dy}{dx} = \frac{x × \epsilon^{\sqrt{x^2+a}}}{(x^2+a)^{\frac{1}{ 2}}}. \] А якщо $(x^2+a)^{\frac{1}{2}}=u$ і $x^2+a=v$, $u=v^{\frac{1}{2 }}$, \[ \frac{du}{dv} = \frac{1}{{2v}^{\frac{1}{2}}};\quad \frac{dv}{dx} = 2x; \quad \frac{du}{dx} = \frac{x}{(x^2+a)^{\frac{1}{2}}}. \]
 
-<p>Check by writing $\sqrt{x^2+a}=z$.
+</p><p>Перевірте, написавши $\sqrt{x^2+a}=z$.
 
-<p>(5) $y=\log(a+x^3)$. Let $(a+x^3)=z$; then $y=\log_\epsilon z$.
-\[
-\frac{dy}{dz} = \frac{1}{z};\quad
-\frac{dz}{dx} = 3x^2;\quad\text{hence}\quad
-\frac{dy}{dx} = \frac{3x^2}{a+x^3}.
-\]
+</p><p>(5) $y=\log(a+x^3)$. Нехай $(a+x^3)=z$; тоді $y=\log_\epsilon z$. \[ \frac{dy}{dz} = \frac{1}{z};\quad \frac{dz}{dx} = 3x^2;\quad\text{отже}\quad \frac{dy}{ dx} = \frac{3x^2}{a+x^3}. \]
 
-<p>(6) $y=\log_\epsilon\{{3x^2+\sqrt{a+x^2}}\}$. Let $3x^2 + \sqrt{a+x^2}=z$;
-then $y=\log_\epsilon z$.
-\begin{align*}
-\frac{dy}{dz}
-  &= \frac{1}{z};\quad \frac{dz}{dx} = 6x + \frac{x}{\sqrt{x^2+a}}; \\
-\frac{dy}{dx}
-  &= \frac{6x + \dfrac{x}{\sqrt{x^2+a}}}{3x^2 + \sqrt{a+x^2}}
-   = \frac{x(1 + 6\sqrt{x^2+a})}{(3x^2 + \sqrt{x^2+a}) \sqrt{x^2+a}}.
-\end{align*}
+</p><p>(6) $y=\log_\epsilon\{{3x^2+\sqrt{a+x^2}}\}$. Нехай $3x^2 + \sqrt{a+x^2}=z$; тоді $y=\log_\epsilon z$. \begin{align*} \frac{dy}{dz} &amp;= \frac{1}{z};\quad \frac{dz}{dx} = 6x + \frac{x}{\sqrt{x^2 +a}}; \\ \frac{dy}{dx} &amp;= \frac{6x + \dfrac{x}{\sqrt{x^2+a}}}{3x^2 + \sqrt{a+x^2}} = \frac{x(1 + 6\sqrt{x^2+a})}{(3x^2 + \sqrt{x^2+a}) \sqrt{x^2+a}}. \end{align*}
 
 
-<p>(7) $y=(x+3)^2 \sqrt{x-2}$.
+</p><p>(7) $y=(x+3)^2 \sqrt{x-2}$.
 \begin{align*}
 \log_\epsilon y
-  &= 2 \log_\epsilon(x+3)+ \tfrac{1}{2} \log_\epsilon(x-2). \\
+  &amp;= 2 \log_\epsilon(x+3)+ \tfrac{1}{2} \log_\epsilon(x-2). \\
 \frac{1}{y}\, \frac{dy}{dx}
-  &= \frac{2}{(x+3)} + \frac{1}{2(x-2)}; \\
+  &amp;= \frac{2}{(x+3)} + \frac{1}{2(x-2)}; \\
 \frac{dy}{dx}
-  &= (x+3)^2 \sqrt{x-2} \left\{\frac{2}{x+3} + \frac{1}{2(x-2)}\right\}.
+  &amp;= (x+3)^2 \sqrt{x-2} \left\{\frac{2}{x+3} + \frac{1}{2(x-2)}\right\}.
 \end{align*}
 
-<p>(8) $y=(x^2+3)^3(x^3-2)^{\frac{2}{3}}$.
-\begin{align*}
-\log_\epsilon y
-  &= 3 \log_\epsilon(x^2+3) + \tfrac{2}{3} \log_\epsilon(x^3-2); \\
-\frac{1}{y}\, \frac{dy}{dx}
-  &= 3 \frac{2x}{(x^2+3)} + \frac{2}{3} \frac{3x^2}{x^3-2}
-   = \frac{6x}{x^2+3} + \frac{2x^2}{x^3-2}.
-\end{align*}
-For if $y=\log_\epsilon(x^2+3)$, let $x^2+3=z$ and $u=\log_\epsilon z$.
-\[
-\frac{du}{dz} = \frac{1}{z};\quad
-\frac{dz}{dx} = 2x;\quad
-\frac{du}{dx} = \frac{2x}{x^2+3}.
-\]
-Similarly, if $v=\log_\epsilon(x^3-2)$, $\dfrac{dv}{dx} = \dfrac{3x^2}{x^3-2}$ and
-\[
-\frac{dy}{dx}
-  = (x^2+3)^3(x^3-2)^{\frac{2}{3}}
-    \left\{ \frac{6x}{x^2+3} + \frac{2x^2}{x^3-2} \right\}.
-\]
+</p><p>(8) $y=(x^2+3)^3(x^3-2)^{\frac{2}{3}}$. \begin{align*} \log_\epsilon y &amp;= 3 \log_\epsilon(x^2+3) + \tfrac{2}{3} \log_\epsilon(x^3-2); \\ \frac{1}{y}\, \frac{dy}{dx} &amp;= 3 \frac{2x}{(x^2+3)} + \frac{2}{3} \frac{3x^2}{x^3-2} = \frac{6x}{x^2+3} + \frac{2x^2}{x^3-2}. \end{align*} Якщо $y=\log_\epsilon(x^2+3)$, нехай $x^2+3=z$ і $u=\log_\epsilon z$. \[ \frac{du}{dz} = \frac{1}{z};\quad \frac{dz}{dx} = 2x;\quad \frac{du}{dx} = \frac{2x}{x^2+3}. \] Подібним чином, якщо $v=\log_\epsilon(x^3-2)$, $\dfrac{dv}{dx} = \dfrac{3x^2}{x^3-2}$ і \[ \frac{dy}{dx} = (x^2+3)^3(x^3-2)^{\frac{2}{3}} \left\{ \frac{6x}{x^2+3 } + \frac{2x^2}{x^3-2} \right\}. \]
 
-<p>(9) $y=\dfrac{\sqrt[2]{x^2+a}}{\sqrt[3]{x^3-a}}$.
-\begin{align*}
-\log_\epsilon y
-  &= \frac{1}{2} \log_\epsilon(x^2+a) - \frac{1}{3} \log_\epsilon(x^3-a). \\
-\frac{1}{y}\, \frac{dy}{dx}
-  &= \frac{1}{2}\, \frac{2x}{x^2+a} - \frac{1}{3}\, \frac{3x^2}{x^3-a}
-   = \frac{x}{x^2+a} - \frac{x^2}{x^3-a} \\
- and
-\frac{dy}{dx}
-  &= \frac{\sqrt[2]{x^2+a}}{\sqrt[3]{x^3-a}}
-     \left\{ \frac{x}{x^2+a} - \frac{x^2}{x^3-a} \right\}.
-\end{align*}
+</p><p>(9) $y=\dfrac{\sqrt[2]{x^2+a}}{\sqrt[3]{x^3-a}}$. \begin{align*} \log_\epsilon y &amp;= \frac{1}{2} \log_\epsilon(x^2+a) - \frac{1}{3} \log_\epsilon(x^3-a). \\ \frac{1}{y}\, \frac{dy}{dx} &amp;= \frac{1}{2}\, \frac{2x}{x^2+a} - \frac{1}{3}\, \frac{3x^2}{x^3-a} = \frac{x}{x^2+a} - \frac{x^2}{x^3-a} \\ і \frac{dy}{dx} &amp;= \frac{\sqrt[2]{x^2+a}}{\sqrt[3]{x^3-a}} \left\{ \frac{x}{ x^2+a} - \frac{x^2}{x^3-a} \right\}. \end{align*}
 
 
-<p>(10) $y=\dfrac{1}{\log_\epsilon x}$
+</p><p>(10) $y=\dfrac{1}{\log_\epsilon x}$
 \[
 \frac{dy}{dx}
   = \frac{\log_\epsilon x × 0 - 1 × \dfrac{1}{x}}
@@ -745,173 +250,115 @@ Similarly, if $v=\log_\epsilon(x^3-2)$, $\dfrac{dv}{dx} = \dfrac{3x^2}{x^3-2}$ a
   = -\frac{1}{x \log_\epsilon^2x}.
 \]
 
-<p>(11) $y=\sqrt[3]{\log_\epsilon x} = (\log_\epsilon x)^{\frac{1}{3}}$. Let $z=\log_\epsilon x$; $y=z^{\frac{1}{3}}$.
-\[
-\frac{dy}{dz} = \frac{1}{3} z^{-\frac{2}{3}};\quad
-\frac{dz}{dx} = \frac{1}{x};\quad
-\frac{dy}{dx} = \frac{1}{3x \sqrt[3]{\log_\epsilon^2 x}}.
-\]
+</p><p>(11) $y=\sqrt[3]{\log_\epsilon x} = (\log_\epsilon x)^{\frac{1}{3}}$. Нехай $z=\log_\epsilon x$; $y=z^{\frac{1}{3}}$. \[ \frac{dy}{dz} = \frac{1}{3} z^{-\frac{2}{3}};\quad \frac{dz}{dx} = \frac{1}{x};\quad \frac{dy}{dx} = \frac{1}{3x \sqrt[3]{\log_\epsilon^2 x}}. \]
 
-<p>(12) $y=\left(\dfrac{1}{a^x}\right)^{ax}$.
-\begin{align*}
-\log y &= -ax \log a^{x} = -ax^{2} \cdot \log a.\\
-\frac{1}{y} \frac{dy}{dx} &= -2ax \cdot \log a\\
+</p><p>(12) $y=\left(\dfrac{1}{a^x}\right)^{ax}$. \begin{align*} \log_\epsilon y &amp;= ax(\log_\epsilon 1 - \log_\epsilon a^x) = -ax \log_\epsilon a^x. \\ \frac{1}{y}\, \frac{dy}{dx} &amp;= -ax × a^x \log_\epsilon a - a \log_\epsilon a^x. \\ і \frac{dy}{dx} &amp;= -\left(\frac{1}{a^x}\right)^{ax} (x × a^{x+1} \log_\epsilon a + a \log_\epsilon a^x). \end{align*}
 
-\frac{dy}{dx} &= -2ax\left(\frac{1}{a^{x}}\right)^{ax} \cdot \log a = -2x a^{1-ax^{2}} \cdot \log a. 
+</p><p>Тепер спробуйте виконати наступні вправи.
 
-\end{align*}
+</p><p>
+</p><hr></h2><h3>Exercises XII</h3>
 
-<p>Try now the following exercises.
+<p>(1) Продиференціюйте $y=b(\epsilon^{ax} -\epsilon^{-ax})$.
 
-<p>
-<hr><h3>Exercises XII</h3>
+</p><p>(2) Знайдіть похідну виразу $u=at^2+2\log_\epsilon t$ відносно $t$.
 
-<p>(1) Differentiate $y=b(\epsilon^{ax} -\epsilon^{-ax})$.
+</p><p>(3) Якщо $y=n^t$, знайдіть $\dfrac{d(\log_\epsilon y)}{dt}$.
 
-<p>(2) Find the differential coefficient with respect to $t$
-of the expression $u=at^2+2\log_\epsilon t$.
+</p><p>(4) Покажіть, що якщо $y=\dfrac{1}{b}·\dfrac{a^{bx}}{\log_\epsilon a}$, $\dfrac{dy}{dx}=a^{bx}$.
 
-<p>(3) If $y=n^t$, find $\dfrac{d(\log_\epsilon y)}{dt}$.
-
-<p>(4) Show that if $y=\dfrac{1}{b}·\dfrac{a^{bx}}{\log_\epsilon a}$,&nbsp;&nbsp; $\dfrac{dy}{dx}=a^{bx}$.
-
-<p>(5) If $w=pv^n$, find $\dfrac{dw}{dv}$.
+</p><p>(5) Якщо $w=pv^n$, знайдіть $\dfrac{dw}{dv}$.
 
 
-<p>Differentiate
+</p><p>Продиференцюйте
 
-<p>(6) $y=\log_\epsilon x^n$.
-<p>(7) $y=3\epsilon^{-\frac{x}{x-1}}$.
-<p>(8) $y=(3x^2+1)\epsilon^{-5x}$.
-<p>(9) $y=\log_\epsilon(x^a+a)$.
+</p><p>(6) $y=\log_\epsilon x^n$.
+</p><p>(7) $y=3\epsilon^{-\frac{x}{x-1}}$.
+</p><p>(8) $y=(3x^2+1)\epsilon^{-5x}$.
+</p><p>(9) $y=\log_\epsilon(x^a+a)$.
 
-<p>(10) $y=(3x^2-1)(\sqrt{x}+1)$.
+</p><p>(10) $y=(3x^2-1)(\sqrt{x}+1)$.
 
-<p>(11) $y=\dfrac{\log_\epsilon(x+3)}{x+3}$.
-<p>(12) $y=a^x × x^a$.
+</p><p>(11) $y=\dfrac{\log_\epsilon(x+3)}{x+3}$.
+</p><p>(12) $y=a^x × x^a$.
 
-<p>(13) It was shown by Lord Kelvin that the speed of
-signalling through a submarine cable depends on the
-value of the ratio of the external diameter of the core
-to the diameter of the enclosed copper wire. If this
-ratio is called $y$, then the number of signals $s$ that can
-be sent per minute can be expressed by the formula
-\[
-s=ay^2 \log_\epsilon \frac{1}{y};
-\]
-where $a$ is a constant depending on the length and
-the quality of the materials. Show that if these are
-given, $s$ will be a maximum if $y=1 ÷ \sqrt{\epsilon}$.
+</p><p>(13) Лорд Кельвін показав, що швидкість передачі сигналу через підводний кабель залежить від величини відношення зовнішнього діаметра сердечника до діаметра мідного дроту, що входить до нього. Якщо це співвідношення називається $y$, то кількість сигналів $s$, які можна надіслати за хвилину, можна виразити формулою \[ s=ay^2 \log_\epsilon \frac{1}{y}; \] де $a$ — константа, яка залежить від довжини та якості матеріалів. Покажіть, що якщо вони задані, $s$ буде максимальним, якщо $y=1 ÷ \sqrt{\epsilon}$.
 
-<p>(14) Find the maximum or minimum of
-\[
-y=x^3-\log_\epsilon x.
-\]
+</p><p>(14) Знайдіть максимум або мінімум \[ y=x^3-\log_\epsilon x. \]
 
-<p>(15) Differentiate $y=\log_\epsilon(ax\epsilon^x)$.
+</p><p>(15) Продиференціюйте $y=\log_\epsilon(ax\epsilon^x)$.
 
-<p>(16) Differentiate $y=(\log_\epsilon ax)^3$.
+</p><p>(16) Продиференціюйте $y=(\log_\epsilon ax)^3$.
 
-<hr>
-<p><h3 class="answers">Answers</h3>
+</p><hr>
+<p></p><h3 class="answers">Відповіді</h3>
 
 <p>(1)   $ab(\epsilon^{ax} + \epsilon^{-ax})$.
 
-<p>(2)   $2at + \dfrac{2}{t}$.
+</p><p>(2)   $2at + \dfrac{2}{t}$.
 
-<p>(3)   $\log_\epsilon n$.
-
-
-<p>(5)   $npv^{n-1}$.
-
-<p>(6)   $\dfrac{n}{x}$.
-
-<p>(7)   $\dfrac{3\epsilon^{- \frac{x}{x-1}}}{(x - 1)^2}$.
+</p><p>(3)   $\log_\epsilon n$.
 
 
-<p>(8)   $6x \epsilon^{-5x} - 5(3x^2 + 1)\epsilon^{-5x}$.
+</p><p>(5)   $npv^{n-1}$.
 
-<p>(9)   $\dfrac{ax^{a-1}}{x^a + a}$.
+</p><p>(6)   $\dfrac{n}{x}$.
 
-
-<p>(10)   $\left(\dfrac{6x}{3x^2-1} + \dfrac{1}{2\left(\sqrt x + x\right)}\right) \left(3x^2-1\right)\left(\sqrt x + 1\right)$.
-
-<p>(11)   $\dfrac{1 - \log_\epsilon \left(x + 3\right)}{\left(x + 3\right)^2}$.
+</p><p>(7)   $\dfrac{3\epsilon^{- \frac{x}{x-1}}}{(x - 1)^2}$.
 
 
-<p>(12)   $a^x\left(ax^{a-1} + x^a \log_\epsilon a\right)$.
+</p><p>(8)   $6x \epsilon^{-5x} - 5(3x^2 + 1)\epsilon^{-5x}$.
 
-<p>(14)   Min.: $y = 0.7$ for $x = 0.694$.
-
-
-<p>(15)   $\dfrac{1 + x}{x}$.
-
-<p>(16)   $\dfrac{3}{x} (\log_\epsilon ax)^2$.
-<p>
-<h2>The Logarithmic Curve.</h2>
-
-<p>Let us return to the curve which has its successive
-ordinates in geometrical progression, such as that
-represented by the equation $y=bp^x$.
-
-<p>We can see, by putting $x=0$, that $b$ is the initial
-height of $y$.
-
-<p>Then when
-\[
-x=1,\quad y=bp;\qquad
-x=2,\quad y=bp^2;\qquad
-x=3,\quad y=bp^3,\quad \text{etc.}
-\]
+</p><p>(9)   $\dfrac{ax^{a-1}}{x^a + a}$.
 
 
-<p>Also, we see that $p$ is the numerical value of the
-ratio between the height of any ordinate and that of
-the next preceding it. In <a href="#figure40">Figure 40</a>, we have taken $p$
-as $\frac{6}{5}$; each ordinate being $\frac{6}{5}$ as high as the preceding
-one.
+</p><p>(10)   $\left(\dfrac{6x}{3x^2-1} + \dfrac{1}{2\left(\sqrt x + x\right)}\right) \left(3x^2-1\right)\left(\sqrt x + 1\right)$.
+
+</p><p>(11)   $\dfrac{1 - \log_\epsilon \left(x + 3\right)}{\left(x + 3\right)^2}$.
+
+
+</p><p>(12)   $a^x\left(ax^{a-1} + x^a \log_\epsilon a\right)$.
+
+</p><p>(14) Мін.: $y = 0.7$ для $x = 0.694$.
+
+
+</p><p>(15)   $\dfrac{1 + x}{x}$.
+
+</p><p>(16)   $\dfrac{3}{x} (\log_\epsilon ax)^2$.
+</p><p>
+</p><h2>Логарифмічна крива.</h2>
+
+<p>Повернімося до кривої, яка має свої послідовні ординати в геометричній прогресії, як-от представлена рівнянням $y=bp^x$.
+
+</p><p>Ми можемо побачити, поклавши $x=0$, що $b$ є початковою висотою $y$.
+
+</p><p>Тоді, коли \[ x=1,\quad y=bp;\qquad x=2,\quad y=bp^2;\qquad x=3,\quad y=bp^3,\quad \text{і т.д.} \]
+
+
+</p><p>Крім того, ми бачимо, що $p$ — це числове значення відношення між висотою будь-якої ординати та висотою наступної після неї. На <a href="#figure40">Зображенні 40</a>, ми взяли $p$ як $\frac{6}{5}$; кожна ордината має висоту $\frac{6}{5}$, від і попередньої.
 
 <a name="figure40">
-<p><img src="33283-t/images/167a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/167a.pdf.png-1.png">
 <a name="figure41">
-<p><img src="33283-t/images/167b.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/167b.pdf.png-1.png">
 
-<p>If two successive ordinates are related together
-thus in a constant ratio, their logarithms will have a
-constant difference; so that, if we should plot out
-a new curve, <a href="#figure41">Figure 41</a>, with values of $\log_\epsilon y$ as ordinates,
-it would be a straight line sloping up by equal steps.
-In fact, it follows from the equation, that
-\begin{align*}
-\log_\epsilon y &= \log_\epsilon b + x · \log_\epsilon p, \\
- \text{whence }\;
-\log_\epsilon y &- \log_\epsilon b = x · \log_\epsilon p.
-\end{align*}
+</p><p>Якщо дві послідовні ординати завжди співвіднесені між собою таким чином, їхні логарифми матимуть постійну різницю; так що, якщо ми повинні побудувати нову криву, <a href="#figure41">Зображення 41</a>, зі значеннями $\log_\epsilon y$ у якості ординат, це буде пряма лінія з рівним нахилом вгору. Фактично, з рівняння випливає, що \begin{align*} \log_\epsilon y &amp;= \log_\epsilon b + x · \log_\epsilon p, \\ \text{звідки }\; \log_\epsilon y &amp;- \log_\epsilon b = x · \log_\epsilon p. \end{align*}
 
-<p>Now, since $\log_\epsilon p$ is a mere number, and may be
-written as $\log_\epsilon p=a$, it follows that
-\[
-\log_\epsilon \frac{y}{b}=ax,
-\]
-and the equation takes the new form
-\[
-y = b\epsilon^{ax}.
-\]
+</p><p>Оскільки $\log_\epsilon p$ є просто числом і може бути записане як $\log_\epsilon p=a$, з цього випливає, що \[ \log_\epsilon \frac{y}{b}=ax, \] і рівняння набуває вигляду \[ y = b\epsilon^{ax}. \]
 <br>
-<hr>
-<a href="14b.html">Next &rarr;</a><br>
-<a href="/">Main Page &uarr;</a><br>
+</p><hr>
+<a href="14b.html">Далі →</a><br> <a href="/">Головна сторінка ↑</a><br>
 
 <script src="j/jquery.js"></script>
 <script src="j/modernizr.js"></script>
 <script src="j/dih5.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101178221-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  gtag('config', 'UA-101178221-1');
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
-

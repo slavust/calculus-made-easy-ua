@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Sums, Differences, Products and Quotients | Calculus Made Easy</title>
+<meta charset="UTF-8">
+<title>Суми, різниці, добутки та частки | Математичний аналіз простими словами</title>
 <link rel="stylesheet" href="screen.css">
 <style>
 body{counter-reset:h1 6}
@@ -12,586 +12,248 @@ body{counter-reset:h1 6}
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<h1><br>Sums, Differences, Products and Quotients</h1>
+<h1><br>Суми, різниці, добутки та частки</h1>
 <p class="a rotatedFloralHeartBullet">
 
 
-<p>We have learned how to differentiate simple algebraical
-functions such as $x^2 + c$ or $ax^4$, and we have
-now to consider how to tackle the <em>sum</em><a name="sumdiffer"/> of two or
-more functions.
+</p><p>Ми навчилися диференціювати прості алгебраїчні функції, такі як $x^2 + c$ або $ax^4$, і тепер маємо розібратись, як діференціювати <em>суму</em><a name="sumdiffer"/> двох або більше функцій.
 
-<p>For instance, let
-\[
-y = (x^2+c) + (ax^4+b);
-\]
-what will its $\dfrac{dy}{dx}$ be? How are we to go to work
-on this new job?
+</p><p>Наприклад, нехай \[ y = (x^2+c) + (ax^4+b); \] тоді яким буде $\dfrac{dy}{dx}$? Як ми будемо працювати над цією задачею?
 
-<p>The answer to this question is quite simple: just
-differentiate them, one after the other, thus:
-\[
-\dfrac{dy}{dx} = 2x + 4ax^3. (Ans.)
-\]
+</p><p>Відповідь на це запитання досить проста: продиференціюйте їх одну за одною таким чином: \[ \dfrac{dy}{dx} = 2x + 4ax^3. \]
 
-<p>If you have any doubt whether this is right, try
-a more general case, working it by first principles.
-And this is the way.
+</p><p>Якщо у вас є сумніви, чи це правильно, спробуйте більш загальний випадок, керуючись початковими принципами. І це буде наступний шлях:
 
-<p>Let $y = u+v$, where $u$ is any function of $x$, and $v$
-any other function of $x$. Then, letting $x$ increase
-to $x+dx$, $y$ will increase to $y+dy$; and $u$ will
-increase to $u+du$; and $v$ to $v+dv$.
+</p><p>нехай $y = u+v$, де $u$ — будь-яка функція від $x$, і $v$ — будь-яка інша функція від $x$. Тоді, якщо $x$ збільшиться до $x+dx$, $y$ збільшиться до $y+dy$; $u$ збільшиться до $u+du$; і $v$ до $v+dv$.
 
-<p>And we shall have:
+</p><p>І матимемо:
 
-<p>$  y+dy = u+du + v+dv.$
-<p>Subtracting the original $y = u+v$, we get
-<p>$dy = du+dv, $
-<p>and dividing through by $dx$, we get:
-<p>$\dfrac{dy}{dx} = \dfrac{du}{dx} + \dfrac{dv}{dx}.$
+</p><p>$  y+dy = u+du + v+dv.$
+</p><p>Віднімаючи початкове $y = u+v$, отримуємо
+</p><p>$dy = du+dv, $
+</p><p>і поділивши це на $dx$, отримаємо:
+</p><p>$\dfrac{dy}{dx} = \dfrac{du}{dx} + \dfrac{dv}{dx}.$
 
 
-<p>This justifies the procedure. You differentiate each
-function separately and add the results. So if now
-we take the example of the preceding paragraph, and
-put in the values of the two functions, we shall have,
-using the notation shown (<a href="3.html#note">chapter III</a>),
-\begin{alignat*}{2}
-\frac{dy}{dx}
-  & = \frac{d(x^2+c)}{dx} &&+ \frac{d(ax^4+b)}{dx} \\
-  & = 2x                  &&+ 4ax^3,
-\end{alignat*}
-exactly as before.
+</p><p>Це відповідає описаній вище процедурі. Ви диференціюєте кожну функцію окремо та складаєте результати. Отже, якщо тепер ми візьмемо наведений у попередньому параграфі приклад та введемо значення двох функцій, ми матимемо, використовуючи нотацію наведену у <a href="3.html#note">розділі III</a>, \begin{alignat*}{2} \frac{dy}{dx} &amp; = \frac{d(x^2+c)}{dx} &amp;&amp;+ \frac{d(ax^4+b)} {dx} \\ &amp; = 2x &amp;&amp;+ 4ax^3, \end{alignat*} так само, як і раніше.
 
-<p>If there were three functions of $x$, which we may
-call $u$, $v$ and $w$, so that
-\begin{align*}
-y &= u+v+w; \\
- \text{then}\;
-\frac{dy}{dx} &= \frac{du}{dx} + \frac{dv}{dx} + \frac{dw}{dx}.
-\end{align*}
+</p><p>Якби було три функції від $x$, які ми можемо назвати $u$, $v$ і $w$, так що \begin{align*} y &amp;= u+v+w; \\ \text{тоді}\; \frac{dy}{dx} &amp;= \frac{du}{dx} + \frac{dv}{dx} + \frac{dw}{dx}. \end{align*}
 
-<p>As for <em>subtraction</em>, it follows at once; for if the
-function $v$ had itself had a negative sign, its
-differential coefficient would also be negative; so
-that by differentiating
-\begin{align*}
-y &= u-v, \\
-\text{ we should get}\;
-\frac{dy}{dx} &= \frac{du}{dx} - \frac{dv}{dx}.
-\end{align*}
+</p><p>З цього одразу випливає правило для <em>віднімання</em>, адже якби функція $v$ сама мала негативний знак, її диференціальний коефіцієнт також був би негативним; так що диференціюючи \begin{align*} y &amp;= uv, \\ \text{ ми маємо отримати}\; \frac{dy}{dx} &amp;= \frac{du}{dx} - \frac{dv}{dx}. \end{align*}
 
 
-<p>But when we come to do with <em>Products</em>, the thing
-is not quite so simple.
+</p><p>Але коли ми маємо справу з <em>добутком</em>, стає трохи складніше.
 
-<p>Suppose we were asked to differentiate the expression
-\[
-y = (x^2+c) × (ax^4+b),
-\]
-what are we to do? The result will certainly <em>not</em>
-be $2x × 4ax^3$; for it is easy to see that neither $c × ax^4$,
-nor $x^2 × b$, would have been taken into that product.
+</p><p>Припустімо, що нас попросили продиференціювати вираз \[ y = (x^2+c) × (ax^4+b), \] що нам робити? Результатом точно <em>не</em> буде $2x × 4ax^3$; оскільки легко побачити, що ані $c × ax^4$, ані $x^2 × b$ не було б взято до цього добутку.
 
-<p>Now there are two ways in which we may go
-to work.
+</p><p>Тепер є два шляхи, якими ми можемо приступити до роботи.
 
-<p><em>First way.</em> Do the multiplying first, and, having
-worked it out, then differentiate.
+</p><p><em>Перший спосіб.</em> Виконайте спочатку множення, і потім, розв’язавши його, диференціюйте.
 
-<p>Accordingly, we multiply together $x^2 + c$ and $ax^4 + b$.
+</p><p>Відповідно, ми множимо $x^2 + c$ на $ax^4 + b$.
 
-<p>This gives $ax^6 + acx^4 + bx^2 + bc$.
+</p><p>Це дає $ax^6 + acx^4 + bx^2 + bc$.
 
-<p>Now differentiate, and we get:
-\[
-\dfrac{dy}{dx} = 6ax^5 + 4acx^3 + 2bx.
-\]
+</p><p>Тепер диференціюємо і отримаємо: \[ \dfrac{dy}{dx} = 6ax^5 + 4acx^3 + 2bx. \]
 
-<p><em>Second way.</em> Go back to first principles, and
-consider the equation
-\[
-y = u × v;
-\]
-where $u$ is one function of $x$, and $v$ is any other
-function of $x$. Then, if $x$ grows to be $x+dx$; and $y$
-to $y+dy$; and $u$ becomes $u+du$, and $v$ becomes $v+dv$,
-we shall have:
-\begin{align*}
- y + dy &= (u + du) × (v + dv) \\
-        &= u · v + u · dv + v · du + du · dv.
-\end{align*}
+</p><p><em>Другий спосіб.</em> Повернемося до початкових принципів і розглянемо рівняння \[ y = u × v; \] де $u$ — одна функція від $x$, а $v$ — будь-яка інша функція від $x$. Тоді, якщо $x$ зростає до $x+dx$; і $y$ до $y+dy$; і $u$ стає $u+du$, а $v$ стає $v+dv$, ми матимемо: \begin{align*} y + dy &amp;= (u + du) × (v + dv) \\ &amp;= u · v + u · dv + v · du + du · dv. \end{align*}
 
-<p>Now $du · dv$ is a small quantity of the second order
-of smallness, and therefore in the limit may be
-discarded, leaving
-\[
-y + dy = u · v + u · dv + v · du.
-\]
+</p><p>Тут $du · dv$ є малою величиною другого порядку малості, і тому може бути відкинуто, залишивши \[ y + dy = u · v + u · dv + v · du. \]
 
 
-<p>Then, subtracting the original $y = u· v$, we have left
-\[
-dy = u · dv + v · du;
-\]
-and, dividing through by $dx$, we get the result:
-\[
-\dfrac{dy}{dx} = u\, \dfrac{dv}{dx} + v\, \dfrac{du}{dx}.
-\]
+</p><p>Тоді, віднявши початкове $y = u· v$, ми залишимо \[ dy = u · dv + v · du; \] і, поділивши на $dx$, отримаємо результат: \[ \dfrac{dy}{dx} = u\, \dfrac{dv}{dx} + v\, \dfrac{du}{dx} . \]
 
-<p>This shows that our instructions will be as follows:<a name="differprod"/>
-<em>To differentiate the product of two functions, multiply
-each function by the differential coefficient of the
-other, and add together the two products so obtained.</em>
+</p><p>Тобто, наші інструкції будуть наступними: <a name="differprod"/><em>Щоб диференціювати добуток двох функцій, помножте кожну функцію на похідну іншої та складіть два отримані таким чином добутки.</em>
 
-<p>You should note that this process amounts to
-the following: Treat $u$ as constant while you
-differentiate $v$; then treat $v$ as constant while you
-differentiate $u$; and the whole differential coefficient $\dfrac{dy}{dx}$
-will be the sum of these two treatments.
+</p><p>Зауважте, що цей процес полягає у наступному: вважайте $u$ константою під час диференціювання $v$; потім розглядайте $v$ як константу, поки ви диференціюєте $u$; і повна похідна $\dfrac{dy}{dx}$ буде сумою цих двох результатів.
 
-<p>Now, having found this rule, apply it to the
-concrete example which was considered above.
+</p><p>Тепер, винайшовши це правило, застосуємо його до конкретного прикладу, який розглядався вище.
 
-<p>We want to differentiate the product
-\[
-(x^2 + c) × (ax^4 + b).
-\]
+</p><p>Ми хочемо продиференціювати добуток \[ (x^2 + c) × (ax^4 + b). \]
 
-<p>Call $(x^2 + c) = u$; and $(ax^4 + b) = v$.
+</p><p>Назвемо $(x^2 + c) = u$ та $(ax^4 + b) = v$.
 
-<p>Then, by the general rule just established, we
-may write:
-\begin{alignat*}{2}
-\dfrac{dy}{dx}
-&= (x^2 + c)\, \frac{d(ax^4 + b)}{dx} &&+ (ax^4 + b)\, \frac{d(x^2 + c)}{dx} \\
-&= (x^2 + c)\, 4ax^3                  &&+ (ax^4 + b)\, 2x \\
-&= 4ax^5 + 4acx^3                     &&+ 2ax^5 + 2bx,   \\
-
-\dfrac{dy}{dx}
-&= 6ax^5 + 4acx^3                     &&+ 2bx,
-\end{alignat*}
-exactly as before.
+</p><p>Тоді, за щойно встановленим загальним правилом, ми можемо написати: \begin{alignat*}{2} \dfrac{dy}{dx} &amp;= (x^2 + c)\, \frac{d(ax^4 + b)}{dx} &amp;&amp;+ (ax^4 + b)\, \frac{d(x^2 + c)}{dx} \\ &amp;= (x^2 + c)\, 4ax^3 &amp;&amp;+ (ax^4 + b)\, 2x \\ &amp;= 4ax^5 + 4acx^3 &amp;&amp;+ 2ax^5 + 2bx, \\ \dfrac{dy}{dx} &amp;= 6ax^5 + 4acx^3 &amp;&amp;+ 2bx, \end{alignat*} точно так само, як і раніше.
 
 
-<p>Lastly, we have to differentiate <em>quotients</em>.
+</p><p>Нарешті, ми маємо диференціювати <em>частки</em>.
 
 
-<p>Think of this example, $y = \dfrac{bx^5 + c}{x^2 + a}$. In such a case
-it is no use to try to work out the division beforehand,
-because $x^2 + a$ will not divide into $bx^5 + c$, neither
-have they any common factor. So there is nothing
-for it but to go back to first principles, and find a
-rule.
+</p><p>Розглянемо такий приклад: $y = \dfrac{bx^5 + c}{x^2 + a}$. У цьому випадку марно намагатися опрацювати ділення заздалегідь, тому що $x^2 + a$ не ділиться на $bx^5 + c$, і вони не мають спільного множника. Тож не залишається нічого іншого, як повернутися до початкових принципів і винайти правило. Тому ми покладемо \[ y = \frac{u}{v}; \] де $u$ і $v$ дві різні функції незалежної змінної $x$. Тоді, коли $x$ стане $x + dx$, $y$ стане $y + dy$; і $u$ стане $u + du$, а $v$ стане $v + dv$. Тоді \[ y + dy = \dfrac{u + du}{v + dv}. \]
 
-
-   So we will put
-\[
-y = \frac{u}{v};
-\]
-where $u$ and $v$ are two different functions of the
-independent variable $x$.  Then, when $x$ becomes
-$x + dx$, $y$ will become $y + dy$; and $u$ will become
-$u + du$; and $v$ will become $v + dv$. So then
-\[
-y + dy = \dfrac{u + du}{v + dv}.
-\]
-
-<p>Now perform the algebraic division, thus:
+</p><p>Тепер виконайємо алгебраїчне ділення наступним чином:
 <a name="figure666a">
 <img src="33283-t/images/666a.pdf.png-1.png">
 
-<p>As both these remainders are small quantities of
-the second order, they may be neglected, and the
-division may stop here, since any further remainders
-would be of still smaller magnitudes.
+</a></p><p>Оскільки обидва ці залишки є малими величинами другого порядку, ними можна знехтувати, і ділення може зупинитися на цьому, оскільки будь-які подальші залишки будуть ще меншими.
 
-<p>So we have got:
-\begin{align*}
-y + dy &= \dfrac{u}{v} + \dfrac{du}{v} - \dfrac{u· dv}{v^2}; \\
-\end{align*}
-which may be written
-\begin{align*}
-&= \dfrac{u}{v} + \dfrac{v· du - u· dv}{v^2}. \\
-\end{align*}
-Now subtract the original $y = \dfrac{u}{v}$, and we have left:
-\begin{align*}
-dy &= \dfrac{v· du - u· dv}{v^2}; \\
+</p><p>Отже, ми отримали: \begin{align*} y + dy &amp;= \dfrac{u}{v} + \dfrac{du}{v} - \dfrac{u· dv}{v^2}; \\ \end{align*} що може бути записано як \begin{align*} &amp;= \dfrac{u}{v} + \dfrac{v· du - u· dv}{v^2}. \\ \end{align*} Тепер віднімемо початкове $y = \dfrac{u}{v}$, і у нас залишиться: \begin{align*} dy &amp;= \dfrac{v· du - u· dv}{v^2}; \\ \text{звідки}\; \dfrac{dy}{dx} &amp;= \dfrac{v\, \dfrac{du}{dx} - u\, \dfrac{dv}{dx}}{v^2}. \end{align*}
 
- \text{whence}\;
-\dfrac{dy}{dx}
-&= \dfrac{v\, \dfrac{du}{dx} - u\, \dfrac{dv}{dx}}{v^2}.
-\end{align*}
+</p><p>Це дає нам інструкції щодо того, <em>як диференціювати ділення двох функцій. Помножте функцію дільника на похідну функції діленого; потім помножте функцію діленого на похідну функції дільника, і відніміть. Нарешті, поділіть на квадрат функції дільника</em>.
 
-<p>This gives us our instructions as to <em>how to differentiate
-a quotient of two functions. Multiply the
-divisor function by the differential coefficient of
-the dividend function; then multiply the dividend
-function by the differential coefficient of the divisor
-function; and subtract. Lastly divide by the square
-of the divisor function</em>.
+</p><p>
+Повертаючись до нашого прикладу $y = \dfrac{bx^5 + c}{x^2 + a}$, \begin{align*} \text{ запишемо}\; bx^5 + c &amp;= u; \\ \text{та}\; x^2 + a &amp;= v. \end{align*}
 
-<p>
-Going back to our example $y = \dfrac{bx^5 + c}{x^2 + a}$,
-\begin{align*}
-\text{ write}\;
-bx^5 + c &= u; \\
- \text{and}\;
-x^2  + a &= v.
-\end{align*}
+</p><p>Тоді \begin{align*} \frac{dy}{dx} &amp;= \frac{(x^2 + a)\, \dfrac{d(bx^5 + c)}{dx} - (bx^5 + c)\, \dfrac{d(x^2 + a)}{dx}}{(x^2 + a)^2} \\ &amp;= \frac{(x^2 + a)(5bx^4) - (bx^5 + c)(2x)}{(x^2 + a)^2}, \\ \frac{dy}{dx} &amp;= \frac{3bx^6 + 5abx^4 - 2cx}{(x^2 + a)^2}.\quad\text{(Відповідь.)} \end{align*}
 
-<p>Then
-\begin{align*}
-\frac{dy}{dx}
-&= \frac{(x^2 + a)\, \dfrac{d(bx^5 + c)}{dx} - (bx^5 + c)\, \dfrac{d(x^2 + a)}{dx}}{(x^2 + a)^2} \\
-&= \frac{(x^2 + a)(5bx^4) - (bx^5 + c)(2x)}{(x^2 + a)^2}, \\
-\frac{dy}{dx}
-&= \frac{3bx^6 + 5abx^4 - 2cx}{(x^2 + a)^2}.\quad\text{(Answer.)}
-\end{align*}
+</p><p>Розрахунок часток часто втомлює, але в ньому немає нічого складного.
 
-<p>The working out of quotients is often tedious, but
-there is nothing difficult about it.
+</p><p>Далі наведено кілька ще повністю розрахованих прикладів.<a name="examples3"/>
 
-<p>Some further examples fully worked out are given
-hereafter.<a name="examples3"/>
+</p><p>(1) Продиференціювати $y = \dfrac{a}{b^2} x^3 - \dfrac{a^2}{b} x + \dfrac{a^2}{b^2}$.
 
-<p>(1) Differentiate $y = \dfrac{a}{b^2} x^3 - \dfrac{a^2}{b} x + \dfrac{a^2}{b^2}$.
+</p><p>Будучи константою, $\dfrac{a^2}{b^2}$ стає нулем, і ми маємо \[ \frac{dy}{dx} = \frac{a}{b^2} × 3 × x^{3-1} - \frac{a^2}{b} × 1 × x^{1-1}. \]
 
-<p>Being a constant, $\dfrac{a^2}{b^2}$ vanishes,
-and we have
-\[
-\frac{dy}{dx} = \frac{a}{b^2} × 3 × x^{3-1} - \frac{a^2}{b} × 1 × x^{1-1}.
-\]
+</p><p>Але $x^{1-1} = x^0 = 1$; тож ми отримуємо: \[ \frac{dy}{dx} = \frac{3a}{b^2} x^2 - \frac{a^2}{b}. \]
 
-<p>But $x^{1-1} = x^0 = 1$; so we get:
-\[
-\frac{dy}{dx} = \frac{3a}{b^2} x^2 - \frac{a^2}{b}.
-\]
+</p><p>(2) Продиференціюйте $y = 2a\sqrt{bx^3} - \dfrac{3b \sqrt[3]{a}}{x} - 2\sqrt{ab}$.
 
-<p>(2) Differentiate $y = 2a\sqrt{bx^3} - \dfrac{3b \sqrt[3]{a}}{x} - 2\sqrt{ab}$.
+</p><p>Переписавши $x$ у формі ступеня, ми маємо \[ y = 2a\sqrt{b} x^{\frac{3}{2}} - 3b \sqrt[3]{a} x^{-1} - 2\sqrt{ab}. \]
 
-<p>Putting $x$ in the index form, we get
-\[
-y = 2a\sqrt{b} x^{\frac{3}{2}} - 3b \sqrt[3]{a} x^{-1} - 2\sqrt{ab}.
-\]
-
-<p>Now
-\[
-\frac{dy}{dx} = 2a\sqrt{b} × \tfrac{3}{2} × x^{\frac{3}{2}-1} - 3b\sqrt[3]{a} × (-1) × x^{-1-1}; \\
- \text{or, }\;
-\frac{dy}{dx} = 3a\sqrt{bx} + \frac{3b\sqrt[3]{a}}{x^2}.
-\]
+</p><p>Тепер \[ \frac{dy}{dx} = 2a\sqrt{b} × \tfrac{3}{2} × x^{\frac{3}{2}-1} - 3b\sqrt[3]{a} × (-1) × x^{-1-1}; \\ \text{або, }\; \frac{dy}{dx} = 3a\sqrt{bx} + \frac{3b\sqrt[3]{a}}{x^2}. \]
 
 
-<p>(3) Differentiate $z = 1.8 \sqrt[3]{\dfrac{1}{\theta^2}} - \dfrac{4.4}{\sqrt[5]{\theta}} - 27°$.
+</p><p>(3) Продиференціюйте $z = 1.8 \sqrt[3]{\dfrac{1}{\theta^2}} - \dfrac{4.4}{\sqrt[5]{\theta}} - 27°$.
 
-<p>This may be written: $z= 1.8\, \theta^{-\frac{2}{3}} - 4.4\, \theta^{-\frac{1}{5}} - 27°$.
+</p><p>Це можна записати: $z= 1,8\, \theta^{-\frac{2}{3}} - 4,4\, \theta^{-\frac{1}{5}} - 27°$.
 
-<p>The $27°$ vanishes, and we have
-\[
-\frac{dz}{d\theta}
-  = 1.8 × -\tfrac{2}{3} × \theta^{-\frac{2}{3}-1}
-  - 4.4 × \left(-\tfrac{1}{5}\right)\theta^{-\frac{1}{5}-1}; \\
- \text{or}\;,
-\frac{dz}{d\theta}
-  = -1.2\, \theta^{-\frac{5}{3}} + 0.88\, \theta^{-\frac{6}{5}}; \\
-\text{or,}\;
-\frac{dz}{d\theta} = \frac{0.88}{\sqrt[5]{\theta^6}}
-  - \frac{1.2}{\sqrt[3]{\theta^5}}.
-\]
+</p><p>$27°$ зникає, і ми маємо \[ \frac{dz}{d\theta} = 1,8 × -\tfrac{2}{3} × \theta^{-\frac{2}{3}-1} - 4,4 × \left(-\tfrac{1}{5}\right)\theta^{-\frac{1}{5}-1}; \\ \text{або}\;, \frac{dz}{d\theta} = -1,2\, \theta^{-\frac{5}{3}} + 0,88\, \theta^{-\frac {6}{5}}; \\ \text{або,}\; \frac{dz}{d\theta} = \frac{0,88}{\sqrt[5]{\theta^6}} - \frac{1,2}{\sqrt[3]{\theta^5}}. \]
 
-<p>(4) Differentiate $v = (3t^2 - 1.2 t + 1)^3$.
+</p><p>(4) Продиференціюйте $v = (3t^2 - 1.2 t + 1)^3$.
 
-<p>A direct way of doing this will be explained later
-(see <a href="9.html#dodge">here</a>); but we can nevertheless manage it now
-without any difficulty.
+</p><p>Прямий спосіб зробити це буде пояснено пізніше (див. <a href="9.html#dodge">тут</a>); але ми можемо впоратися з цим зараз без будь-яких труднощів.
 
-<p>Developing the cube, we get
-\[
-v = 27t^6 - 32.4t^5 + 39.96t^4 - 23.328t^3 + 13.32t^2 - 3.6t + 1;
-\]
-hence
-\[
-\frac{dv}{dt} = 162t^5 - 162t^4 + 159.84t^3 - 69.984t^2 + 26.64t - 3.6.
-\]
+</p><p>Розгортаючи куб, отримуємо \[ v = 27t^6 - 32,4t^5 + 39,96t^4 - 23,328t^3 + 13,32t^2 - 3,6t + 1; \] отже \[ \frac{dv}{dt} = 162t^5 - 162t^4 + 159,84t^3 - 69,984t^2 + 26,64t - 3,6. \]
 
-<p>(5) Differentiate $y = (2x - 3)(x + 1)^2$.
-\begin{alignat*}{2}
-\frac{dy}{dx}
-  &= (2x - 3)\, \frac{d\bigl[(x + 1)(x + 1)\bigr]}{dx}
-     &&+ (x + 1)^2\, \frac{d(2x - 3)}{dx} \\
-  &= (2x - 3) \left[(x + 1)\, \frac{d(x + 1)}{dx}\right.
-     &&+ \left.(x + 1)\, \frac{d(x + 1)}{dx}\right] \\
-  &  &&+ (x + 1)^2\, \frac{d(2x - 3)}{dx} \\
-
-  &= 2(x + 1)\bigl[(2x - 3) + (x + 1)\bigr] &&= 2(x + 1)(3x - 2)
-\end{alignat*}
-or, more simply, multiply out and then differentiate.
+</p><p>(5) Продиференціюйте $y = (2x - 3)(x + 1)^2$. \begin{alignat*}{2} \frac{dy}{dx} &amp;= (2x - 3)\, \frac{d\bigl[(x + 1)(x + 1)\bigr]}{dx} &amp;&amp;+ (x + 1)^2\, \frac{d(2x - 3)}{dx} \\ &amp;= (2x - 3) \left[(x + 1)\, \frac{d(x + 1)}{dx}\right. &amp;&amp;+ \left.(x + 1)\, \frac{d(x + 1)}{dx}\right] \\ &amp; &amp;&amp;+ (x + 1)^2\, \frac{d(2x - 3)}{dx} \\ &amp;= 2(x + 1)\bigl[(2x - 3) + (x + 1)\bigr] &amp;&amp;= 2(x + 1)(3x - 2) \end{alignat*} або, простіше кажучі, помножити, а потім продиференціювати.
 
 
-<p>(6) Differentiate $y = 0.5 x^3(x-3)$.
-\begin{align*}
-\frac{dy}{dx}
-  &= 0.5\left[x^3 \frac{d(x-3)}{dx} + (x-3) \frac{d(x^3)}{dx}\right] \\
-  &= 0.5\left[x^3 + (x-3) × 3x^2\right] = 2x^3 - 4.5x^2.
-\end{align*}
+</p><p>(6) Продиференціюйте $y = 0,5 x^3(x-3)$. \begin{align*} \frac{dy}{dx} &amp;= 0.5\left[x^3 \frac{d(x-3)}{dx} + (x-3) \frac{d(x^3)}{dx}\right] \\ &amp;= 0.5\left[x^3 + (x-3) × 3x^2\right] = 2x^3 - 4.5x^2. \end{align*}
 
-<p>Same remarks as for preceding example.
+</p><p>Так само, як і у попередньому прикладі.
 
-<p>(7) Differentiate $w = \left(\theta + \dfrac{1}{\theta}\right)
-   \left(\sqrt{\theta} + \dfrac{1}{\sqrt{\theta}}\right)$.
+</p><p>(7) Продиференціюйте $w = \left(\theta + \dfrac{1}{\theta}\right) \left(\sqrt{\theta} + \dfrac{1}{\sqrt{\theta}}\right)$.
 
-<p>This may be written
-\begin{gather*}
-w = (\theta + \theta^{-1})(\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}}). \\
-\begin{aligned}
-\frac{dw}{d\theta}
-  &= (\theta + \theta^{-1})
-     \frac{d(\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}})}{d\theta}
-   + (\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}})
-     \frac{d(\theta+\theta^{-1})}{d\theta} \\
+</p><p>Це можно записати як \begin{gather*} w = (\theta + \theta^{-1})(\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}}). \\ \begin{aligned} \frac{dw}{d\theta} &amp;= (\theta + \theta^{-1}) \frac{d(\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}})}{d\theta} + (\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}}) \frac{d(\theta+\theta^{-1})}{d\theta} \\ &amp;= (\theta + \theta^{-1})(\tfrac{1}{2}\theta^{-\frac{1}{2}} - \tfrac{1}{2}\theta^{-\frac{3}{2}}) + (\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}})(1 - \theta^{-2}) \\ &amp;= \tfrac{1}{2}(\theta^{ \frac{1}{2}} + \theta^{-\frac{3}{2}} - \theta^{-\frac{1}{2}} - \theta^{-\frac{5}{2}}) + (\theta^{ \frac{1}{2}} + \theta^{-\frac{1}{2}} - \theta^{-\frac{3}{2}} - \theta^{-\frac{5}{2}}) \\ &amp;= \tfrac{3}{2} \left(\sqrt{\theta} - \frac{1}{\sqrt{\theta^5}}\right) + \tfrac{1}{2} \left(\frac{1}{\sqrt{\theta}} - \frac{1}{\sqrt{\theta^3}}\right). \end{aligned} \end{gather*}
 
-  &= (\theta + \theta^{-1})(\tfrac{1}{2}\theta^{-\frac{1}{2}}
-                          - \tfrac{1}{2}\theta^{-\frac{3}{2}})
-   + (\theta^{\frac{1}{2}} + \theta^{-\frac{1}{2}})(1 - \theta^{-2}) \\
+</p><p>Це, знову ж таки, можна отримати простіше, спочатку помноживши два множники, а потім продиференціювавши. Однак це не завжди можливо; див., наприклад, <a href="16.html#example1">тут</a>, приклад 8, в якому правило диференціювання добутку <em>має</em> бути використаним.
 
-  &= \tfrac{1}{2}(\theta^{ \frac{1}{2}} + \theta^{-\frac{3}{2}}
-                - \theta^{-\frac{1}{2}} - \theta^{-\frac{5}{2}})
-   + (\theta^{ \frac{1}{2}} + \theta^{-\frac{1}{2}}
-    - \theta^{-\frac{3}{2}} - \theta^{-\frac{5}{2}}) \\
-
-  &= \tfrac{3}{2} \left(\sqrt{\theta} - \frac{1}{\sqrt{\theta^5}}\right)
-   + \tfrac{1}{2} \left(\frac{1}{\sqrt{\theta}} - \frac{1}{\sqrt{\theta^3}}\right).
-\end{aligned}
-\end{gather*}
-
-<p>This, again, could be obtained more simply by
-multiplying the two factors first, and differentiating
-afterwards. This is not, however, always possible;
-see, for instance, <a href="16.html#example1">here</a>, example 8, in which the
-rule for differentiating a product <em>must</em> be used.
-
-<p>(8) Differentiate $y =\dfrac{a}{1 + a\sqrt{x} + a^2x}$.
-\begin{align*}
-\frac{dy}{dx}
-  &= \frac{(1 + ax^{\frac{1}{2}} + a^2x) × 0 - a\dfrac{d(1 + ax^{\frac{1}{2}} + a^2x)}{dx}}
-          {(1 + a\sqrt{x} + a^2x)^2} \\
-  &= - \frac{a(\frac{1}{2}ax^{-\frac{1}{2}} + a^2)}
-            {(1 + ax^{\frac{1}{2}} + a^2x)^2}.
-\end{align*}
+</p><p>(8) Продиференціюйте $y =\dfrac{a}{1 + a\sqrt{x} + a^2x}$. \begin{align*} \frac{dy}{dx} &amp;= \frac{(1 + ax^{\frac{1}{2}} + a^2x) × 0 - a\dfrac{d(1 + ax^{\frac{1}{2}} + a^2x)}{dx}} {(1 + a\sqrt{x} + a^2x)^2} \\ &amp;= - \frac{a(\frac{1}{2}ax^{-\frac{1}{2}} + a^2)} {(1 + ax^{\frac{1}{2}} + a^2x)^2}. \end{align*}
 
 
-<p>(9) Differentiate $y = \dfrac{x^2}{x^2 + 1}$.
-\[
-\dfrac{dy}{dx} = \dfrac{(x^2 + 1)\, 2x - x^2 × 2x}{(x^2 + 1)^2} = \dfrac{2x}{(x^2 + 1)^2}.
-\]
+</p><p>(9) Продиференціюйте $y = \dfrac{x^2}{x^2 + 1}$. \[ \dfrac{dy}{dx} = \dfrac{(x^2 + 1)\, 2x - x^2 × 2x}{(x^2 + 1)^2} = \dfrac{2x}{(x^2 + 1)^2}. \]
 
-<p>(10) Differentiate $y = \dfrac{a + \sqrt{x}}{a - \sqrt{x}}$.
+</p><p>(10) Продиференціюйте $y = \dfrac{a + \sqrt{x}}{a - \sqrt{x}}$.
 
-<p>In the indexed form, $y = \dfrac{a + x^{\frac{1}{2}}}{a - x^{\frac{1}{2}}}$.
-\[
-\frac{dy}{dx}
-  = \frac{(a - x^{\frac{1}{2}})( \tfrac{1}{2} x^{-\frac{1}{2}})
-        - (a + x^{\frac{1}{2}})(-\tfrac{1}{2} x^{-\frac{1}{2}})}
-         {(a - x^{\frac{1}{2}})^2}
-  = \frac{ a - x^{\frac{1}{2}}
-         + a + x^{\frac{1}{2}}}
-        {2(a - x^{\frac{1}{2}})^2\, x^{\frac{1}{2}}}; \\
- \text{hence}\;
-\frac{dy}{dx} = \frac{a}{(a - \sqrt{x})^2\, \sqrt{x}}.
-\]
+</p><p>У формі ступеня, $y = \dfrac{a + x^{\frac{1}{2}}}{a - x^{\frac{1}{2}}}$. \[ \frac{dy}{dx} = \frac{(a - x^{\frac{1}{2}})( \tfrac{1}{2} x^{-\frac{1}{2}}) - (a + x^{\frac{1}{2}})(-\tfrac{1}{2} x^{-\frac{1}{2}})} {(a - x^{\frac{1}{2}})^2} = \frac{ a - x^{\frac{1}{2}} + a + x^{\frac{1}{2}}} {2(a - x^{\frac{1}{2}})^2\, x^{\frac{1}{2}}}; \\ \text{отже}\; \frac{dy}{dx} = \frac{a}{(a - \sqrt{x})^2\, \sqrt{x}}. \]
 
-<p>(11) Differentiate
+</p><p>(11) Продиференціювати
 
-<p>\begin{align*}
-\theta &= \frac{1 - a \sqrt[3]{t^2}}{1 + a \sqrt[2]{t^3}}. \\
-   \text{Now}\;
-\theta &= \frac{1 - at^{\frac{2}{3}}}{1 + at^{\frac{3}{2}}}.
-\end{align*}
-\begin{align*}
-\frac{d\theta}{dt}
-  &= \frac{(1 + at^{\frac{3}{2}}) (-\tfrac{2}{3} at^{-\frac{1}{3}})
-         - (1 - at^{\frac{2}{3}}) × \tfrac{3}{2} at^{\frac{1}{2}}}
-          {(1 + at^{\frac{3}{2}})^2} \\
-  &= \frac{5a^2 \sqrt[6]{t^7} - \dfrac{4a}{\sqrt[3]{t}} - 9a \sqrt[2]{t}}
-          {6(1 + a \sqrt[2]{t^3})^2}.
-\end{align*}
+</p><p>\begin{align*} \theta &amp;= \frac{1 - a \sqrt[3]{t^2}}{1 + a \sqrt[2]{t^3}}. \\ \text{Тепер}\; \theta &amp;= \frac{1 - at^{\frac{2}{3}}}{1 + at^{\frac{3}{2}}}. \end{align*} \begin{align*} \frac{d\theta}{dt} &amp;= \frac{(1 + at^{\frac{3}{2}}) (-\tfrac{2}{3} at^{-\frac{1}{3}}) - (1 - at^{\frac{2}{3}}) × \tfrac{3}{2} at^{\frac{1}{2}}} {(1 + at^{\frac{3}{2}})^2} \\ &amp;= \frac{5a^2 \sqrt[6]{t^7} - \dfrac{4a}{\sqrt[3]{t}} - 9a \sqrt[2]{t}} {6(1 + a \sqrt[2]{t^3})^2}. \end{align*}
 
-<p>(12) A reservoir of square cross-section has sides
-sloping at an angle of $45°$ with the vertical. The side
+</p><p>(12) Резервуар квадратного поперечного перерізу має сторони, нахилені до вертикалі під кутом $45°$. Сторона дна становить $200$ футів. Знайдіть вираз для кількості води, яка вливається або витікає, коли глибина води змінюється на $1$ фут; отже, знайдіть у галонах кількість, що вилучається щогодини, коли глибина зменшується з $14$ до $10$ футів за $24$ години.
 
-of the bottom is $200$ feet. Find an expression for the
-quantity pouring in or out when the depth of water
-varies by $1$ foot; hence find, in gallons, the quantity
-withdrawn hourly when the depth is reduced from
-$14$ to $10$ feet in $24$ hours.
+</p><p>Об’єм усеченої піраміди висотою $H$ і основами $A$ і $a$ дорівнює $V = \dfrac{H}{3} (A + a + \sqrt{Aa} )$. Легко побачити, що якщо нахил становить $45°$, а глибина $h$, довжина сторони квадратної поверхні води становить $200 + 2h$ футів, отже об’єм води \[ \dfrac{h}{3} [200^2 + (200 + 2h)^2 + 200(200 + 2h)] = 40 000h + 400h^2 + \dfrac{4h^3}{3}. \]
 
-<p>The volume of a frustum of pyramid of height $H$,
-and of bases $A$ and $a$, is $V = \dfrac{H}{3} (A + a + \sqrt{Aa} )$. It is
-easily seen that, the slope being $45°$, if the depth be
-$h$, the length of the side of the square surface of the
-water is $200 + 2h$ feet, so that the volume of water is
-\[
-\dfrac{h}{3} [200^2 + (200 + 2h)^2 + 200(200 + 2h)]
-= 40,000h + 400h^2 + \dfrac{4h^3}{3}.
-\]
+</p><p>$\dfrac{dV}{dh} = 40 000 + 800h + 4h^2 = {}$ кубічних футів на фут варіації глибини. Середній рівень від $14$ до $10$ футів становить $12$ футів, коли $h = 12$, $\dfrac{dV}{dh} = 50 176$ кубічних футів.
 
-<p>$\dfrac{dV}{dh} = 40,000 + 800h + 4h^2 = {}$ cubic feet per foot of depth
-variation. The mean level from $14$ to $10$ feet is
-$12$ feet, when $h = 12$, $\dfrac{dV}{dh} = 50,176$ cubic feet.
+</p><p>Галони на годину відповідають зміні глибини на $4$ фути. за $24$ години ${} = \dfrac{4 × 50 176 × 6,25}{24} = 52 267 $ галонів.
 
-<p>Gallons per hour corresponding to a change of depth
-of $4$ ft. in $24$ hours ${} = \dfrac{4 × 50,176 × 6.25}{24} = 52,267$ gallons.
-
-<p>(13) The absolute pressure, in atmospheres, $P$, of
-saturated steam at the temperature $t°$ C. is given by
-Dulong as being $P = \left( \dfrac{40 + t}{140} \right)^5$  as long as $t$ is above
-$80°$. Find the rate of variation of the pressure with
-the temperature at $100°$ C.
+</p><p>(13) Абсолютний тиск, в атмосферах, $P$, насиченого пара при температурі $t°$ C. визначено Дюлонгом як $P = \left( \dfrac{40 + t}{140} \right )^5$, доки $t$ вище $80°$. Знайти швидкість зміни тиску з температурою при 100°С.
 
 
-<p>Expand the numerator by the binomial theorem
-(see <a href="14.html#binomtheo">here</a>).
-\[
-P = \frac{1}{140^5} (40^5 + 5×40^4 t + 10 × 40^3 t^2 + 10 × 40^2 t^3
-                            + 5 × 40t^4 + t^5);
-\]
-\begin{align*}
- \text{hence}\;  \dfrac{dP}{dt} = &\dfrac{1}{537,824 × 10^5}\\
-      &(5 × 40^4 + 20 × 40^3 t + 30 × 40^2 t^2 + 20 × 40t^3 + 5t^4),
-\end{align*}
-when $t = 100$ this becomes $0.036$ atmosphere per
-degree Centigrade change of temperature.
+</p><p>Розкладемо чисельник за біноміальною теоремою (див. <a href="14.html#binomtheo">тут</a>). \[ P = \frac{1}{140^5} (40^5 + 5×40^4 t + 10 × 40^3 t^2 + 10 × 40^2 t^3 + 5 × 40t^4 + t^5); \] \begin{align*} \text{отже}\; \dfrac{dP}{dt} = &amp;\dfrac{1}{537,824 × 10^5}\\ &amp;(5 × 40^4 + 20 × 40^3 t + 30 × 40^2 t^2 + 20 × 40t^3 + 5t^4), \end{align*} якщо $t = 100$, це становить $0.036$ атмосфери на зміну температури на один градус Цельсія.
+
+</p><p>
+</p><hr><h3>Вправи III</h3>
 
 <p>
-<hr><h3>Exercises III</h3>
+(1) Диференціюйте<a name="examples2"/>
 
-<p>
-(1) Differentiate<a name="examples2"/>
+</p><p>(<em>a</em>)  $u = 1 + x + \dfrac{x^2}{1 × 2} + \dfrac{x^3}{1 × 2 × 3} + \dotsb$.
+</p><p>(<em>b</em>)  $y = ax^2 + bx + c$. (<em>c</em> ) $y = (x + a)^2$.
+</p><p>(<em>d</em>)  $y = (x + a)^3$.
 
-<p>(<em>a</em>)  $u = 1 + x + \dfrac{x^2}{1 × 2} + \dfrac{x^3}{1 × 2 × 3} + \dotsb$.
-<p>(<em>b</em>)  $y = ax^2 + bx + c$. (<em>c</em> ) $y = (x + a)^2$.
-<p>(<em>d</em>)  $y = (x + a)^3$.
+</p><p>(2) Якщо $w = at - \frac{1}{2}bt^2$, знайдіть $\dfrac{dw}{dt}$.
 
-<p>(2) If $w = at - \frac{1}{2}bt^2$, find $\dfrac{dw}{dt}$.
+</p><p>(3) Знайдіть похідну \[ y = (x + \sqrt{-1}) × (x - \sqrt{-1}). \]
 
-<p>(3) Find the differential coefficient of
-\[
-y = (x + \sqrt{-1}) × (x - \sqrt{-1}).
-\]
+</p><p>(4) Продиференціюйте \[ y = (197x - 34x^2) × (7 + 22x - 83x^3). \]
 
-<p>(4) Differentiate
-\[
-y = (197x - 34x^2) × (7 + 22x - 83x^3).
-\]
+</p><p>(5) Якщо $x = (y + 3) × (y + 5)$, знайдіть $\dfrac{dx}{dy}$.
 
-<p>(5) If $x = (y + 3) × (y + 5)$, find $\dfrac{dx}{dy}$.
-
-<p>(6) Differentiate $y = 1.3709x × (112.6 + 45.202x^2)$.
+</p><p>(6) Продиференціюйте $y = 1.3709x × (112.6 + 45.202x^2)$.
 
 
 
-<p>Find the differential coefficients of
+</p><p>Знайдіть похідні від
 
-<p>(7) $y = \dfrac{2x + 3}{3x + 2}$.
-<p>(8) $y = \dfrac{1 + x + 2x^2 + 3x^3}{1 + x + 2x^2}$.
-<p>(9) $y = \dfrac{ax + b}{cx + d}$.
-<p>(10) $y = \dfrac{x^n + a}{x^{-n} + b}$.
-
-
-<p>(11) The temperature $t$ of the filament of an incandescent
-electric lamp is connected to the current
-passing through the lamp by the relation
-\[
-C = a + bt + ct^2.
-\]
-
-<p>Find an expression giving the variation of the
-current corresponding to a variation of temperature.
-
-<p>(12) The following formulae have been proposed to
-express the relation between the electric resistance $R$
-of a wire at the temperature $t°$ C., and the resistance
-$R_0$ of that same wire at $0°$ Centigrade, $a$, $b$, $c$ being
-constants.
-\begin{align*}
-R &= R_0(1 + at + bt^2). \\
-R &= R_0(1 + at + b\sqrt{t}). \\
-R &= R_0(1 + at + bt^2)^{-1}.
-\end{align*}
-
-<p>Find the rate of variation of the resistance with
-regard to temperature as given by each of these
-formulae.
-
-<p>(13) The electromotive-force $E$ of a certain type of
-standard cell has been found to vary with the temperature $t$
-according to the relation
-\[
-E = 1.4340 \bigl[1 - 0.000814(t-15)
-                 + 0.000007(t-15)^2\bigr] \text{ volts}.
-\]
-
-<p>Find the change of electromotive-force per degree,
-at $15°$, $20°$ and $25°$.
+</p><p>(7) $y = \dfrac{2x + 3}{3x + 2}$.
+</p><p>(8) $y = \dfrac{1 + x + 2x^2 + 3x^3}{1 + x + 2x^2}$.
+</p><p>(9) $y = \dfrac{ax + b}{cx + d}$.
+</p><p>(10) $y = \dfrac{x^n + a}{x^{-n} + b}$.
 
 
-<p>(14) The electromotive-force necessary to maintain
-an electric arc of length $l$ with a current of intensity $i$
-has been found by Mrs. Ayrton to be
-\[
-E = a + bl + \frac{c + kl}{i},
-\]
-where $a$, $b$, $c$, $k$ are constants.
+</p><p>(11) Температура $t$ нитки електричної лампи розжарювання пов'язана зі струмом, що проходить через лампу, співвідношенням \[ C = a + bt + ct^2. \]
 
-<p>Find an expression for the variation of the electromotive-force
-(<em>a</em>) with regard to the length of the arc;
-(<em>b</em>) with regard to the strength of the current.
+</p><p>Знайдіть вираз, що відповідає зміні сили струму при зміні температури.
+
+</p><p>(12) Наступні формули були запропоновані для вираження співвідношення між електричним опором $R$ дроту при температурі $t°$ C. та опором $R_0$ цього самого дроту при $0°$ за Цельсієм, $ a$, $b$, $c$ є константами. \begin{align*} R &amp;= R_0(1 + at + bt^2). \\ R &amp;= R_0(1 + at + b\sqrt{t}). \\ R &amp;= R_0(1 + at + bt^2)^{-1}. \end{align*}
+
+</p><p>Знайдіть швидкість зміни опору залежно від температури, що визначається кожною з цих формул.
+
+</p><p>(13) Виявлено, що електрорушійна сила $E$ певного типу гальванічного елемента змінюється залежно від температури $t$ відповідно до співвідношення \[ E = 1,4340 \bigl[1 - 0,000814(t-15) + 0,000007 (t-15)^2\bigr] \text{ вольт}. \]
+
+</p><p>Знайдіть зміну електрорушійної сили на градус при $15°$, $20°$ і $25°$.
 
 
-<p><h3 class="answers">Answers</h3>
+</p><p>(14) Електрорушійна сила, необхідна для підтримки електричної дуги довжиною $l$ зі струмом інтенсивності $i$, була встановлена місіс Айртон, як \[ E = a + bl + \frac{c + kl} {i}, \] де $a$, $b$, $c$, $k$ константи.
+
+</p><p>Знайдіть вираз для зміни електрорушійної сили (<em>a</em>) з урахуванням довжини дуги; (<em>b</em>) з урахуванням сили струму.
+
+
+</p><p></p><h3 class="answers">Відповіді</h3>
 
 
 
 <p>(1)  (<em>a</em>) $1 + x + \dfrac{x^2}{2} + \dfrac{x^3}{6} + \dfrac{x^4}{24} + \ldots$
-	<p>(<em>b</em>) $2ax + b$.
-	<p>(<em>c</em> ) $2x + 2a$.
-    <p>(<em>d</em>) $3x^2 + 6ax + 3a^2$.
+	</p><p>(<em>b</em>) $2ax + b$.
+	</p><p>(<em>c</em> ) $2x + 2a$.
+    </p><p>(<em>d</em>) $3x^2 + 6ax + 3a^2$.
 
-<p>(2)  $\dfrac{dw}{dt} = a - bt$.
-<p>(3)  $\dfrac{dy}{dx} = 2x$.
-<p>(4)  $14110x^4 - 65404x^3 - 2244x^2 + 8192x + 1379$.
-<p>(5)  $\dfrac{dx}{dy} = 2y + 8$.
-<p>(6)  $185.9022654x^2 + 154.36334$.
-<p>(7)  $\dfrac{-5}{(3x + 2)^2}$.
-<p>(8)  $\dfrac{6x^4 + 6x^3 + 9x^2}{(1 + x + 2x^2)^2}$.
-<p>(9)  $\dfrac{ad - bc}{(cx + d)^2}$.
-<p>(10)  $\dfrac{anx^{-n-1} + bnx^{n-1} + 2nx^{-1}}{(x^{-n} + b)^2}$.
-<p>(11)  $b + 2ct$.
-<p>(12)  $R_0(a + 2bt)$,&nbsp;&nbsp; $R_0 \left(a + \dfrac{b}{2\sqrt{t}}\right)$,&nbsp;&nbsp;
+</p><p>(2)  $\dfrac{dw}{dt} = a - bt$.
+</p><p>(3)  $\dfrac{dy}{dx} = 2x$.
+</p><p>(4)  $14110x^4 - 65404x^3 - 2244x^2 + 8192x + 1379$.
+</p><p>(5)  $\dfrac{dx}{dy} = 2y + 8$.
+</p><p>(6)  $185.9022654x^2 + 154.36334$.
+</p><p>(7)  $\dfrac{-5}{(3x + 2)^2}$.
+</p><p>(8)  $\dfrac{6x^4 + 6x^3 + 9x^2}{(1 + x + 2x^2)^2}$.
+</p><p>(9)  $\dfrac{ad - bc}{(cx + d)^2}$.
+</p><p>(10)  $\dfrac{anx^{-n-1} + bnx^{n-1} + 2nx^{-1}}{(x^{-n} + b)^2}$.
+</p><p>(11)  $b + 2ct$.
+</p><p>(12)  $R_0(a + 2bt)$,&nbsp;&nbsp; $R_0 \left(a + \dfrac{b}{2\sqrt{t}}\right)$,&nbsp;&nbsp;
   $-\dfrac{R_0(a + 2bt)}{(1 + at + bt^2)^2}$&nbsp;&nbsp; or&nbsp;&nbsp; $\dfrac{R^2 (a + 2bt)}{R_0}$.
 
-<p>(13)  $1.4340(0.000014t - 0.001024)$,&nbsp;&nbsp; $-0.00117$,&nbsp;&nbsp; $-0.00107$,&nbsp;&nbsp; $-0.00097$.
+</p><p>(13)  $1.4340(0.000014t - 0.001024)$,&nbsp;&nbsp; $-0.00117$,&nbsp;&nbsp; $-0.00107$,&nbsp;&nbsp; $-0.00097$.
 
-<p>(14)  $\dfrac{dE}{dl} = b + \dfrac{k}{i}$,&nbsp;&nbsp; $\dfrac{dE}{di} = -\dfrac{c + kl}{i^2}$.
+</p><p>(14)  $\dfrac{dE}{dl} = b + \dfrac{k}{i}$,&nbsp;&nbsp; $\dfrac{dE}{di} = -\dfrac{c + kl}{i^2}$.
 
-<p>
+</p><p>
 
 <br>
-<hr>
-<a href="7.html">Next &rarr;</a><br>
-<a href="/">Main Page &uarr;</a><br>
+</p><hr>
+<a href="7.html">Далі →</a><br> <a href="/">Головна сторінка ↑</a><br>
 
 <script src="j/jquery.js"></script>
 <script src="j/modernizr.js"></script>
 <script src="j/dih5.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101178221-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  gtag('config', 'UA-101178221-1');
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
 </script>

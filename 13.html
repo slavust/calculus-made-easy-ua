@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Other Useful Dodges | Calculus Made Easy</title>
+<meta charset="UTF-8">
+<title>Інші корисні хитрощі | Математичний аналіз простими словами</title>
 <link rel="stylesheet" href="screen.css">
 <style>
 body{counter-reset:h1 13}
@@ -12,526 +12,191 @@ body{counter-reset:h1 13}
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<h1><br>Other Useful Dodges</h1>
+<h1><br>Інші корисні хитрощі</h1>
 <p class="a rotatedFloralHeartBullet">
 
-<p><h2>Partial Fractions.</h2>
+</p><p></p><h2>Розкладання на прості дроби</h2>
 
-<p>We have seen that when we differentiate a fraction
-we have to perform a rather complicated operation;
-and, if the fraction is not itself a simple one, the result
-is bound to be a complicated expression. If we could
-split the fraction into two or more simpler fractions
-such that their sum is equivalent to the original
-fraction, we could then proceed by differentiating
-each of these simpler expressions. And the result of
-differentiating would be the sum of two (or more)
-differentials, each one of which is relatively simple;
-while the final expression, though of course it will be
-the same as that which could be obtained without
-resorting to this dodge, is thus obtained with much
-less effort and appears in a simplified form.
+<p>Ми бачили, що при диференціюванні дробу доводиться виконувати досить складну операцію; і, якщо дріб сам по собі не є простим, результат обов’язково буде складним виразом. Якби ми змогли розбити дріб на два чи більше простіших дробів так, щоб їхня сума була еквівалентною початковому дробу, ми могли б виконати диференціювання кожного з цих простіших виразів. І результатом диференціювання буде сума двох (або більше) диференціалів, кожен з яких є відносно простим. Тоді остаточний вираз, звичайно, буде еквівалентним тому, що можна було б отримати, не вдаючись до цього хитрування, проте, таким чином, він отримується з набагато меншими зусиллями і представлений у спрощеній формі.
 
-<p>Let us see how to reach this result. Try first the
-job of adding two fractions together to form a resultant
-fraction. Take, for example, the two fractions $\dfrac{1}{x+1}$
-and $\dfrac{2}{x-1}$. Every schoolboy can add these together
-and find their sum to be $\dfrac{3x+1}{x^2-1}$. And in the same
+</p><p>Давайте подивимося, як можна досягти цього результату. Спробуємо спочатку скласти два дроби разом, щоб отримати результуючий дріб. Візьмемо, наприклад, $\dfrac{1}{x+1}$ і $\dfrac{2}{x-1}$. Кожен школяр може скласти їх і отримати суму $\dfrac{3x+1}{x^2-1}$. І таким же чином він може скласти три або більше дробів. Цей процес, звичайно, можна обернути назад:<a name="partfracs2"/> тобто, якби цей останній вираз було надано, то, безумовно, його можна було б якимось чином знову розбити на простіші дроби. Тільки ми не в кожному наданому випадку знаємо, <em>як</em> це робиться. Щоб з'ясувати це, розглянемо спочатку простий випадок. Але важливо пам'ятати, що все, що відбудеться далі, стосується лише тих дробів, що називаються «правильними» алгебраїчними дробами, тобто таких, що, як наведені вище, мають чисельник <em>меншого ступіню</em> ніж знаменник; тобто тих, у яких максимальний ступінь $x$ у чисельнику менший, ніж у знаменнику. Якщо ми маємо справу з таким виразом, як $\dfrac{x^2+2}{x^2-1}$, ми можемо спростити його шляхом ділення, оскільки він еквівалентний $1+\dfrac{3}{x ^2-1}$; а $\dfrac{3}{x^2-1}$ — це правильний алгебраїчний дріб, до якого можна застосувати операцію розкладання на прості дроби, яка пояснюється далі.
 
-way he can add together three or more fractions.
-Now this process can certainly be reversed:<a name="partfracs2"/> that is to
-say, that if this last expression were given, it is certain
-that it can somehow be split back again into its
-original components or partial fractions. Only we do
-not know in every case that may be presented to us
-<em>how</em> we can so split it. In order to find this out
-we shall consider a simple case at first. But it is
-important to bear in mind that all which follows
-applies only to what are called “proper” algebraic
-fractions, meaning fractions like the above, which have
-the numerator of <em>a lesser degree</em> than the denominator;
-that is, those in which the highest index of $x$ is less
-in the numerator than in the denominator. If we
-have to deal with such an expression as $\dfrac{x^2+2}{x^2-1}$, we can
-simplify it by division, since it is equivalent to
-$1+\dfrac{3}{x^2-1}$; and $\dfrac{3}{x^2-1}$ is a proper algebraic fraction
-to which the operation of splitting into partial fractions
-can be applied, as explained hereafter.
-
-<p>
-<em>Case I.</em> If we perform many additions of two or
-more fractions the denominators of which contain only
-terms in $x$, and no terms in $x^2$, $x^3$, or any other powers
-of $x$, we <em>always</em> find that <em>the denominator of the final
-resulting fraction is the product of the denominators</em>
-of the fractions which were added to form the result.
-It follows that by factorizing the denominator of this
-final fraction, we can find every one of the denominators
-of the partial fractions of which we are in search.
+</p><p>
+<em>Випадок І.</em> Якщо ми виконуємо додавання двох або більше дробів, знаменник яких містить лише доданки в $x$, і не містить доданків у $x^2$, $x^3$ чи будь-яких інших степенях $x$, ми <em>завжди</em> бачитимемо, що <em>знаменник кінцевого отриманого дробу є добутком знаменників</em> дробів, які були складені для отримання результату. З цього випливає, що, розклавши знаменник цього останнього дробу на множники, ми можемо знайти кожен із знаменників простіших дробів, що ми і шукаємо.
 
 
-<p>Suppose we wish to go back from $\dfrac{3x+1}{x^2-1}$ to the
-components which we know are $\dfrac{1}{x+1}$ and $\dfrac{2}{x-1}$. If
-we did not know what those components were we can
-still prepare the way by writing:
-\[
-\frac{3x+1}{x^2-1} = \frac{3x+1}{(x+1)(x-1)} = \frac{}{x+1} + \frac{}{x-1},
-\]
-leaving blank the places for the numerators until we
-know what to put there. We always may assume the
-sign between the partial fractions to be <em>plus</em>, since, if
-it be <em>minus</em>, we shall simply find the corresponding
-numerator to be negative. Now, since the partial
-fractions are <em>proper</em> fractions, the numerators are
-mere numbers without $x$ at all, and we can call them
-$A$, $B$, $C\dots$ as we please. So, in this case, we have:
-\[
-\frac{3x+1}{x^2-1} = \frac{A}{x+1} + \frac{B}{x-1}.
-\]
+</p><p>Припустімо, ми хочемо повернутися від $\dfrac{3x+1}{x^2-1}$ до компонентів, які, як ми знаємо, $\dfrac{1}{x+1}$ і $\dfrac{2}{ x-1}$. Якби ми не знали, що це за компоненти, ми б все одно могли підготувати шлях, записавши: \[ \frac{3x+1}{x^2-1} = \frac{3x+1}{(x+1)(x -1)} = \frac{}{x+1} + \frac{}{x-1}, \] залишаючи незаповненими місця для чисельників, поки ми не дізнаємося, що туди вписати. Ми завжди можемо вважати знак між простими дробами <em>плюсом</em>, оскільки, якщо це буде <em>мінус</em>, ми просто знайдемо відповідний чисельник від’ємним. Тепер, оскільки ці дроби є <em>правильними</em>, чисельники — це просто числа без $x$, і ми можемо називати їх $A$, $B$, $C\dots$ як завгодно. Отже, у цьому випадку ми маємо: \[ \frac{3x+1}{x^2-1} = \frac{A}{x+1} + \frac{B}{x-1}. \]
 
-<p>If now we perform the addition of these two
-partial fractions, we get $\dfrac{A(x-1)+B(x+1)}{(x+1)(x-1)}$; and this
-must be equal to $\dfrac{3x+1}{(x+1)(x-1)}$. And, as the denominators
-in these two expressions are the same,
-the numerators must be equal, giving us:
-\[
-3x + 1 = A(x-1) + B(x + 1).
-\]
+</p><p>Якщо тепер виконати додавання цих двох дробів, ми отримаємо $\dfrac{A(x-1)+B(x+1)}{(x+1)(x-1)}$, і це має дорівнювати $\dfrac{3x+1}{(x+1)(x-1)}$. І оскільки знаменники по обидві сторони цього рівняння однакові, чисельники теж мають бути рівними, що дає нам: \[ 3x + 1 = A(x-1) + B(x + 1). \]
 
-<p>Now, this is an equation with two unknown
-quantities, and it would seem that we need another
-equation before we can solve them and find $A$ and $B$.
+</p><p>Це рівняння з двома невідомими величинами, і, здавалося б, нам потрібно ще одне рівняння, перш ніж ми зможемо їх розв’язати та знайти $A$ і $B$. Але є інший вихід із цієї складності. Рівняння має бути вірним для всіх значень $x$; отже, це має бути істинним і для таких значень $x$, при яких $x-1$ і $x+1$ дорівнюватимуть нулю, тобто для $x=1$ і для $x=-1$ відповідно. Якщо зробити $x=1$, ми отримаємо $4 = (A × 0)+(B × 2)$, так що $B=2$; і якщо ми зробимо $x=-1$, ми отримаємо $-2 = (A × -2) + (B × 0)$, отже $A=1$. Замінивши $A$ і $B$ дробів на ці нові значення, ми виявимо, що вони стануть $\dfrac{1}{x+1}$ і $\dfrac{2}{x-1}$; і справа зроблена.
 
-But there is another way out of this difficulty. The
-equation must be true for all values of $x$; therefore
-it must be true for such values of $x$ as will cause
-$x-1$ and $x+1$ to become zero, that is for $x=1$ and
-for $x=-1$ respectively. If we make $x=1$, we get
-$4 = (A × 0)+(B × 2)$, so that $B=2$; and if we make
-$x=-1$, we get $-2 = (A × -2) + (B × 0)$, so that $A=1$.
-Replacing the $A$ and $B$ of the partial fractions by
-these new values, we find them to become $\dfrac{1}{x+1}$ and
-$\dfrac{2}{x-1}$; and the thing is done.
+</p><p>У якості наступного прикладу візьмемо дріб $\dfrac{4x^2 + 2x - 14}{x^3 + 3x^2 - x - 3}$. Знаменник стає нулем, коли $x$ отримує значення $1$; отже $x-1$ є його множником, і, очевидно, тоді іншим множником буде $x^2 + 4x + 3$; і це знову можна розкласти на $(x+1)(x+3)$. Отже, ми можемо записати дріб так: \[ \frac{4x^2 + 2x - 14}{x^3 + 3x^2 - x - 3} = \frac{A}{x+1} + \frac{B }{x-1} + \frac{C}{x+3}, \] утворюючи три дроби.
 
-<p>As a farther example, let us take the fraction
-$\dfrac{4x^2 + 2x - 14}{x^3 + 3x^2 - x - 3}$. The denominator becomes zero when
-$x$ is given the value $1$; hence $x-1$ is a factor of it,
-and obviously then the other factor will be $x^2 + 4x + 3$;
-and this can again be decomposed into $(x+1)(x+3)$.
-So we may write the fraction thus:
-\[
-\frac{4x^2 + 2x - 14}{x^3 + 3x^2 - x - 3}
-  = \frac{A}{x+1} + \frac{B}{x-1} + \frac{C}{x+3},
-\]
-making three partial factors.
+</p><p>Діючи, як і раніше, знаходимо \[ 4x^2 + 2x - 14 = A(x-1)(x+3) + B(x+1)(x+3) + C(x+1)(x-1) ). \]
 
-<p>Proceeding as before, we find
-\[
-4x^2 + 2x - 14 = A(x-1)(x+3) + B(x+1)(x+3) + C(x+1)(x-1).
-\]
+</p><p>Тепер, якщо зробимо $x=1$, ми отримаємо: \[ -8 = (A × 0) + B(2 × 4) + (C × 0);\quad \text{тобто } B = - 1. \]
 
-<p>Now, if we make $x=1$, we get:
-\[
--8 = (A × 0) + B(2 × 4) + (C × 0);\quad \text{that is, } B = -1.
-\]
-
-<p>If $x= -1$, we get:
-\[
--12 = A(-2 × 2) + (B × 0) + (C × 0);\quad \text{whence } A = 3.
-\]
+</p><p>Якщо $x= -1$, ми отримуємо: \[ -12 = A(-2 × 2) + (B × 0) + (C × 0);\quad \text{звідки } A = 3. \]
 
 
-<p>If $x = -3$, we get:
-\[
-16 = (A × 0) + (B × 0) + C(-2 × -4);\quad \text{whence } C = 2.
-\]
+</p><p>Якщо $x = -3$, отримаємо: \[ 16 = (A × 0) + (B × 0) + C(-2 × -4);\quad \text{звідки } C = 2. \]
 
-<p>So then the partial fractions are:
-\[
-\frac{3}{x+1} - \frac{1}{x-1} + \frac{2}{x+3},
-\]
-which is far easier to differentiate with respect to $x$
-than the complicated expression from which it is
-derived.
+</p><p>Отже, прості дроби будуть наступними: \[ \frac{3}{x+1} - \frac{1}{x-1} + \frac{2}{x+3}, \] що набагато легше диференціювати відносно $x$, ніж складний вираз, з якого він отриманий.
 
-<p><em>Case II.</em> If some of the factors of the denominator
-contain terms in $x^2$, and are not conveniently put
-into factors, then the corresponding numerator may
-contain a term in $x$, as well as a simple number; and
-hence it becomes necessary to represent this unknown
-numerator not by the symbol $A$ but by $Ax + B$; the
-rest of the calculation being made as before.
+</p><p><em>Випадок II.</em> Якщо деякі з множників знаменника містять доданки в $x^2$, і їх незручно розкладати, тоді відповідний чисельник може містити доданки в $x$ і просте число; і тому виникає необхідність представити цей невідомий чисельник не символом $A$, а $Ax + B$; решта розрахунків виконується як і раніше. Спробуємо, наприклад: \[ \frac{-x^2 - 3}{(x^2+1)(x+1)}. \\ \frac{-x^2 - 3}{(x^2+1)(x+1)} = \frac{Ax+B}{x^2+1} + \frac{C}{x+1};\\ -x^2 - 3 = (Ax + B)(x+1) + C(x^2+1). \]
 
+</p><p>Підставивши $x= -1$, ми отримаємо $-4 = C × 2$; і $C = -2$; \begin{align*} \text{отже } \; -x^2 - 3 &amp;= (Ax + B)(x + 1) - 2x^2 - 2; \\ \text{і } \; x^2 - 1 &amp;= Ax(x+1) + B(x+1). \end{align*}
 
-   Try, for instance:
-\[
-\frac{-x^2 - 3}{(x^2+1)(x+1)}. \\
-\frac{-x^2 - 3}{(x^2+1)(x+1)} = \frac{Ax+B}{x^2+1} + \frac{C}{x+1};\\
--x^2 - 3 = (Ax + B)(x+1) + C(x^2+1).
-\]
+</p><p>Поклавши $x = 0$, отримаємо $-1 = B$; отже \[ x^2 - 1 = Ax(x + 1) - x - 1;\quad \text{або } x^2 + x = Ax(x+1); \\ \text{і}\; x+1 = A(x+1), \] так що $A=1$, а дроби: \[ \frac{x-1}{x^2+1} - \frac{2}{ x+1}. \]
 
-<p>Putting $x= -1$, we get $-4 = C × 2$; and $C = -2$;
-\begin{align*}
- \text{hence } \;
--x^2 - 3 &= (Ax + B)(x + 1) - 2x^2 - 2; \\
-\text{and } \;
-x^2 - 1 &= Ax(x+1) + B(x+1).
-\end{align*}
+</p><p>Візьмемо у якості іношого прикладу дріб \[ \frac{x^3-2}{(x^2+1)(x^2+2)}. \]
 
-<p>Putting $x = 0$, we get $-1 = B$;
-hence
-\[
-x^2 - 1 = Ax(x + 1) - x - 1;\quad \text{or } x^2 + x = Ax(x+1); \\
- \text{and}\;
-x+1 = A(x+1),
-\]
+</p><p>Отримуємо \begin{align*} \frac{x^3-2}{(x^2+1)(x^2+2)} &amp;= \frac{Ax+B}{x^2+1} + \frac{Cx+D}{x^2+2}\\ &amp;= \frac{(Ax+B)(x^2+2)+(Cx+D)(x^2+1)}{(x ^2+1)(x^2+2)}. \end{align*}
 
-so that $A=1$, and the partial fractions are:
-\[
-\frac{x-1}{x^2+1} - \frac{2}{x+1}.
-\]
+</p><p>У цьому випадку визначити $A$, $B$, $C$, $D$ не так просто. Простіше буде діяти наступним чином: оскільки заданий дріб і дріб, знайдений додаванням простих дробів, рівні і мають <em>однакові</em> знаменники, чисельники також повинні бути однакові. У такому випадку і для таких алгебраїчних виразів, як ці, <em>коефіцієнти при однакових ступенях $x$ мають бути рівними й одного знаку</em>.
 
-<p>Take as another example the fraction
-\[
-\frac{x^3-2}{(x^2+1)(x^2+2)}.
-\]
+</p><p>Отже, оскільки \begin{align*} x^3-2 &amp;= (Ax+B)(x^2+2) + (Cx+D)(x^2+1) \\ &amp;= (A+C) x^3 + (B+D)x^2 + (2A+C)x + 2B+D, \end{align*} ми маємо $1=A+C$; $0=B+D$ (коефіцієнт при $x^2$ у лівому виразі дорівнює нулю); $0=2A+C$; та $-2=2B+D$. Маємо чотири рівняння, з яких ми легко отримуємо $A=-1$; $B=-2$; $C=2$; $D=0$; так що прості дроби є наступними: $\dfrac{2(x+1)}{x^2+2} - \dfrac{x+2}{x^2+1}$. Цим методом можна скористатися завжди, але метод, наданий першим, буде найшвидшим у випадку лише факторів у $x$.
 
-<p>We get
-\begin{align*}
-\frac{x^3-2}{(x^2+1)(x^2+2)}
-  &= \frac{Ax+B}{x^2+1} + \frac{Cx+D}{x^2+2}\\
-  &= \frac{(Ax+B)(x^2+2)+(Cx+D)(x^2+1)}{(x^2+1)(x^2+2)}.
-\end{align*}
+</p><p><em>Випадок III.</em> Якщо серед множників знаменника є деякі, що зводяться у певний ступінь, слід допускати можливе існування простих дробів, які мають у знаменнику кілька степенів цього множника аж до найвищого. Наприклад, розбиваючи дріб $\dfrac{3x^2-2x+1}{(x+1)^2(x-2)}$, ми повинні враховувати можливе існування знаменника $x+1$, а також $(x+1)^2$ і $(x-2)$.
 
-<p>In this case the determination of $A$, $B$, $C$, $D$ is not
-so easy. It will be simpler to proceed as follows:
-Since the given fraction and the fraction found by
-adding the partial fractions are equal, and have
-<em>identical</em> denominators, the numerators must also be
-identically the same. In such a case, and for such
-algebraical expressions as those with which we are
-dealing here, <em>the coefficients of the same powers of $x$
-are equal and of same sign</em>.
+</p><p>Однак ми можемо вважати, що оскільки чисельник дробу, знаменник якого дорівнює $(x+1)^2$, може містити доданки в $x$, ми повинні врахувати це, записавши $Ax+B$ для його чисельнику, так що \[ \frac{3x^2 - 2x + 1}{(x+1)^2(x-2)} = \frac{Ax+B}{(x+1)^2} + \frac{C}{x+1} + \frac{D}{x-2}. \] Проте, якщо ми спробуємо знайти $A$, $B$, $C$ і $D$ у цьому випадку, ми зазнаємо невдачі, тому що ми маємо чотири невідомі і лише три співвідношення, що їх з’єднують, \[ \frac{3x^2 - 2x + 1}{(x+1)^2(x-2)} = \frac{x-1}{(x+1) )^2} + \frac{1}{x+1} + \frac{1}{x-2}. \]
 
-<p>Hence, since
-\begin{align*}
-x^3-2
-  &= (Ax+B)(x^2+2) + (Cx+D)(x^2+1) \\
-  &= (A+C)x^3 + (B+D)x^2 + (2A+C)x + 2B+D,
-\end{align*}
-we have $1=A+C$; $0=B+D$ (the coefficient of $x^2$
-in the left expression being zero); $0=2A+C$; and
-$-2=2B+D$. Here are four equations, from which
-we readily obtain $A=-1$; $B=-2$; $C=2$; $D=0$;
-so that the partial fractions are $\dfrac{2(x+1)}{x^2+2} - \dfrac{x+2}{x^2+1}$.
+</p><p>Але якщо ми напишемо \[ \frac{3x^2 - 2x + 1}{(x+1)^2(x-2)} = \frac{A}{(x+1)^2} + \frac{ B}{x+1} + \frac{C}{x-2}, \] отримаємо \[ 3x^2 - 2x+1 = A(x-2) + B(x+1)(x-2 ) + C(x+1)^2, \] що дає $C=1$ для $x=2$. Замінюючи $C$ на його значення, транспонуючи, збираючи однакові доданки та ділячи на $x-2$, ми отримуємо $-2x= A+B(x+1)$, що дає $A=-2$ для $x= -1$. Замінивши $A$ на його значення, ми отримаємо \[ 2x = -2+B(x+1). \]
 
-This method can always be used; but the method
-shown first will be found the quickest in the case of
-factors in $x$ only.
+</p><p>Отже, $B=2$; так що прості дроби: \[ \frac{2}{x+1} - \frac{2}{(x+1)^2} + \frac{1}{x-2}, \] замість $\dfrac{1}{x+1} + \dfrac{x-1}{(x+1)^2} + \dfrac{1}{x-2}$ вказаних вище, з яких було отримано $\dfrac{3x^2-2x+1}{(x+1)^2(x-2)}$. Таємниця розкриється, якщо ми помітимо, що $\dfrac{x-1}{(x+1)^2}$ сам по собі може бути розділений на дві частини $\dfrac{1}{x+1} - \dfrac{2 }{(x+1)^2}$, так що наведені три дроби насправді еквівалентні до \[ \frac{1}{x+1} + \frac{1}{x+1} - \frac{2 }{(x+1)^2} + \frac{1}{x-2} = \frac{2}{x+1} - \frac{2}{(x+1)^2} + \frac {1}{x-2}, \] які є отриманими простими дробами.
 
-<p><em>Case III.</em> When, among the factors of the denominator
-there are some which are raised to some power,
-one must allow for the possible existence of partial
-fractions having for denominator the several powers
-of that factor up to the highest. For instance, in
-splitting the fraction $\dfrac{3x^2-2x+1}{(x+1)^2(x-2)}$ we must allow for
-the possible existence of a denominator $x+1$ as well
-as $(x+1)^2$ and $(x-2)$.
+</p><p>Ми бачимо, що тут достатньо врахувати один числовий член у кожному чисельнику, і ми завжди отримаємо остаточні прості дроби.
 
-<p>It maybe thought, however, that, since the numerator
-of the fraction the denominator of which is $(x+1)^2$
-may contain terms in $x$, we must allow for this in
-writing $Ax+B$ for its numerator, so that
-\[
-\frac{3x^2 - 2x + 1}{(x+1)^2(x-2)}
-  = \frac{Ax+B}{(x+1)^2} + \frac{C}{x+1} + \frac{D}{x-2}.
-\]
-If, however, we try to find $A$, $B$, $C$ and $D$ in this case,
-we fail, because we get four unknowns; and we have
-only three relations connecting them, yet
-\[
-\frac{3x^2 - 2x + 1}{(x+1)^2(x-2)}
-  = \frac{x-1}{(x+1)^2} + \frac{1}{x+1} + \frac{1}{x-2}.
-\]
+</p><p>Тим не менш, якщо в знаменнику є ступінь множника $x^2$, відповідні чисельники мають мати вигляд $Ax+B$; наприклад, \[ \frac{3x-1}{(2x^2-1)^2(x+1)} = \frac{Ax+B}{(2x^2-1)^2} + \frac {Cx+D}{2x^2-1} + \frac{E}{x+1}, \] що дає \[ 3x - 1 = (Ax + B)(x + 1) + (Cx + D) (x + 1)(2x^2 - 1) + E(2x^2 - 1)^2. \]
 
-<p>But if we write
-\[
-\frac{3x^2 - 2x + 1}{(x+1)^2(x-2)}
-  = \frac{A}{(x+1)^2} + \frac{B}{x+1} + \frac{C}{x-2},
-\]
-we get
-\[
-3x^2 - 2x+1 = A(x-2) + B(x+1)(x-2) + C(x+1)^2,
-\]
+</p><p>Для $x = -1$ це дає $E = -4$. Замінюючи, переставляючи, збираючи однакові доданки та ділячи на $x + 1$, ми отримуємо \[ 16x^3 - 16x^2 + 3 = 2Cx^3 + 2Dx^2 + x(A - C) + (B - D) ). \]
 
-which gives $C=1$ for $x=2$. Replacing $C$ by its value,
-transposing, gathering like terms and dividing by
-$x-2$, we get $-2x= A+B(x+1)$, which gives $A=-2$
-for $x=-1$. Replacing $A$ by its value, we get
-\[
-2x = -2+B(x+1).
-\]
+</p><p>Отже, $2C = 16$ і $C = 8$; $2D = -16$ і $D = -8$; $A - C = 0$ або $A - 8 = 0$ і $A = 8$, і, нарешті, $B - D = 3$ або $B = -5$. Таким чином, ми отримуємо прості дроби: \[ \frac{(8x - 5)}{(2x^2 - 1)^2} + \frac{8(x - 1)}{2x^2 - 1} - \frac{4}{x + 1}. \]
 
-<p>Hence $B=2$; so that the partial fractions are:
-\[
-\frac{2}{x+1} - \frac{2}{(x+1)^2} + \frac{1}{x-2},
-\]
-instead of $\dfrac{1}{x+1} + \dfrac{x-1}{(x+1)^2} + \dfrac{1}{x-2}$ stated above as being
-the fractions from which $\dfrac{3x^2-2x+1}{(x+1)^2(x-2)}$ was obtained.
-The mystery is cleared if we observe that $\dfrac{x-1}{(x+1)^2}$ can
-itself be split into the two fractions $\dfrac{1}{x+1} - \dfrac{2}{(x+1)^2}$, so
-that the three fractions given are really equivalent to
-\[
-\frac{1}{x+1} + \frac{1}{x+1} - \frac{2}{(x+1)^2} + \frac{1}{x-2}
-  = \frac{2}{x+1} - \frac{2}{(x+1)^2} + \frac{1}{x-2},
-\]
-which are the partial fractions obtained.
+</p><p>Корисно перевіряти отримані результати. Найпростіший спосіб — замінити $x$ одним значенням, скажімо, $+1$, як у заданому виразі, так і в отриманих простих дробах.
 
-<p>We see that it is sufficient to allow for one numerical
-term in each numerator, and that we always get the
-ultimate partial fractions.
+</p><p>Якщо знаменник містить лише ступінь одного множника, існує наступний дуже швидкий метод:
 
-<p>When there is a power of a factor of $x^2$ in the
-denominator, however, the corresponding numerators
-must be of the form $Ax+B$; for example,
-\[
-\frac{3x-1}{(2x^2-1)^2(x+1)}
-  = \frac{Ax+B}{(2x^2-1)^2} + \frac{Cx+D}{2x^2-1} + \frac{E}{x+1},
-\]
+</p><p>Взявши, наприклад, $\dfrac{4x + 1}{(x + 1)^3}$, нехай $x + 1 = z$; тоді $x = z - 1$.
 
-which gives
-\[
-3x - 1 = (Ax + B)(x + 1)
-       + (Cx + D)(x + 1)(2x^2 - 1) + E(2x^2 - 1)^2.
-\]
+</p><p>Замінюючи, отримуємо \[ \frac{4(z - 1) + 1}{z^3} = \frac{4z - 3}{z^3} = \frac{4}{z^2} - \frac {3}{z^3}. \]
 
-<p>For $x = -1$, this gives $E = -4$. Replacing, transposing,
-collecting like terms, and dividing by $x + 1$,
-we get
-\[
-16x^3 - 16x^2 + 3 = 2Cx^3 + 2Dx^2 + x(A - C) + (B - D).
-\]
-
-<p>Hence $2C = 16$ and $C = 8$; $2D = -16$ and $D = -8$;
-$A - C = 0$ or $A - 8 = 0$ and $A = 8$, and finally, $B - D = 3$
-or $B = -5$. So that we obtain as the partial fractions:
-\[
-\frac{(8x - 5)}{(2x^2 - 1)^2} + \frac{8(x - 1)}{2x^2 - 1} - \frac{4}{x + 1}.
-\]
-
-<p>It is useful to check the results obtained. The
-simplest way is to replace $x$ by a single value, say $+1$,
-both in the given expression and in the partial
-fractions obtained.
-
-<p>Whenever the denominator contains but a power of
-a single factor, a very quick method is as follows:
-
-<p>Taking, for example, $\dfrac{4x + 1}{(x + 1)^3}$, let $x + 1 = z$; then
-$x = z - 1$.
-
-<p>Replacing, we get
-\[
-\frac{4(z - 1) + 1}{z^3} = \frac{4z - 3}{z^3} = \frac{4}{z^2} - \frac{3}{z^3}.
-\]
-
-<p>The partial fractions are, therefore,
-\[
-\frac{4}{(x + 1)^2} - \frac{3}{(x + 1)^3}.
-\]
+</p><p>Таким чином, прості дроби дорівнюють \[ \frac{4}{(x + 1)^2} - \frac{3}{(x + 1)^3}. \]
 
 
-<p>Application to differentiation. Let it be required
-to differentiate $y = \dfrac{5-4x}{6x^2 + 7x - 3}$; we have
-\begin{align*}
-\frac{dy}{dx}
-  &= -\frac{(6x^2+7x-3) × 4 + (5 - 4x)(12x + 7)}{(6x^2 + 7x - 3)^2}\\
-  &=  \frac{24x^2 - 60x - 23}{(6x^2 + 7x - 3)^2}.
-\end{align*}
+</p><p>Застосування до диференціювання. Нехай потрібно продиференціювати $y = \dfrac{5-4x}{6x^2 + 7x - 3}$; маємо \begin{align*} \frac{dy}{dx} &amp;= -\frac{(6x^2+7x-3) × 4 + (5 - 4x)(12x + 7)}{(6x^2 + 7x - 3)^2}\\ &amp;= \frac{24x^2 - 60x - 23}{(6x^2 + 7x - 3)^2}. \end{align*}
 
-<p>If we split the given expression into
-\[
-\frac{1}{3x-1} - \frac{2}{2x+3},
-\]
-we get, however,
-\[
-\frac{dy}{dx} = -\frac{3}{(3x-1)^2} + \frac{4}{(2x+3)^2},
-\]
-which is really the same result as above split into
-partial fractions. But the splitting, if done after
-differentiating, is more complicated, as will easily be
-seen. When we shall deal with the <em>integration</em> of
-such expressions, we shall find the splitting into
-partial fractions a precious auxiliary (see <a href="20.html#partfracs">here</a>).
+</p><p>Однак, якщо ми розбиваємо даний вираз на \[ \frac{1}{3x-1} - \frac{2}{2x+3}, \] отримуємо \[ \frac{dy}{dx} = - \frac{3}{(3x-1)^2} + \frac{4}{(2x+3)^2}, \] що фактично є тим самим результатом, що й вище, розкладеним на прості дроби. Але розкладання, якщо виконувати його після диференціювання, є більш складним, що легко побачити. Коли ми зіштовхнемося з <em>інтегруванням</em> таких виразів, ми побачимо, що розкладання на прости дроби є дорогоцінним допоміжним інструментом (див. <a href="20.html#partfracs">тут</a>).
 
-<p>
-<hr><h3>Exercises XI</h3>
-<p>Split into fractions:
+</p><p>
+</p><hr><h3>Вправи XI</h3>
+<p>Розбити на прості дроби:
 
-<p>(1) $\dfrac{3x + 5}{(x - 3)(x + 4)}$.
-<p>(2) $\dfrac{3x - 4}{(x - 1)(x - 2)}$.
-<p>(3) $\dfrac{3x + 5}{x^2 + x - 12}$.
-<p>(4) $\dfrac{x + 1}{x^2 - 7x + 12}$.
-<p>(5) $\dfrac{x - 8}{(2x + 3)(3x - 2)}$.
-<p>(6) $\dfrac{x^2 - 13x + 26}{(x - 2)(x - 3)(x - 4)}$.
-<p>(7) $\dfrac{x^2 - 3x + 1}{(x - 1)(x + 2)(x - 3)}$.
-<p>(8) $\dfrac{5x^2 + 7x + 1}{(2x + 1)(3x - 2)(3x + 1)}$.
-<p>(9) $\dfrac{x^2}{x^3 - 1}$.
-<p>(10) $\dfrac{x^4 + 1}{x^3 + 1}$.
-<p>(11) $\dfrac{5x^2 + 6x + 4}{(x +1)(x^2 + x + 1)}$.
-<p>(12) $\dfrac{x}{(x - 1)(x - 2)^2}$.
-<p>(13) $\dfrac{x}{(x^2 - 1)(x + 1)}$.
-<p>(14) $\dfrac{x + 3}{ (x +2)^2(x - 1)}$.
-<p>(15) $\dfrac{3x^2 + 2x + 1}{(x + 2)(x^2 + x + 1)^2}$.
-<p>(16) $\dfrac{5x^2 + 8x - 12}{(x + 4)^3}$.
-<p>(17) $\dfrac{7x^2 + 9x - 1}{(3x - 2)^4}$.
-<p>(18) $\dfrac{x^2}{(x^3 - 8)(x - 2)}$.
+</p><p>(1) $\dfrac{3x + 5}{(x - 3)(x + 4)}$.
+</p><p>(2) $\dfrac{3x - 4}{(x - 1)(x - 2)}$.
+</p><p>(3) $\dfrac{3x + 5}{x^2 + x - 12}$.
+</p><p>(4) $\dfrac{x + 1}{x^2 - 7x + 12}$.
+</p><p>(5) $\dfrac{x - 8}{(2x + 3)(3x - 2)}$.
+</p><p>(6) $\dfrac{x^2 - 13x + 26}{(x - 2)(x - 3)(x - 4)}$.
+</p><p>(7) $\dfrac{x^2 - 3x + 1}{(x - 1)(x + 2)(x - 3)}$.
+</p><p>(8) $\dfrac{5x^2 + 7x + 1}{(2x + 1)(3x - 2)(3x + 1)}$.
+</p><p>(9) $\dfrac{x^2}{x^3 - 1}$.
+</p><p>(10) $\dfrac{x^4 + 1}{x^3 + 1}$.
+</p><p>(11) $\dfrac{5x^2 + 6x + 4}{(x +1)(x^2 + x + 1)}$.
+</p><p>(12) $\dfrac{x}{(x - 1)(x - 2)^2}$.
+</p><p>(13) $\dfrac{x}{(x^2 - 1)(x + 1)}$.
+</p><p>(14) $\dfrac{x + 3}{ (x +2)^2(x - 1)}$.
+</p><p>(15) $\dfrac{3x^2 + 2x + 1}{(x + 2)(x^2 + x + 1)^2}$.
+</p><p>(16) $\dfrac{5x^2 + 8x - 12}{(x + 4)^3}$.
+</p><p>(17) $\dfrac{7x^2 + 9x - 1}{(3x - 2)^4}$.
+</p><p>(18) $\dfrac{x^2}{(x^3 - 8)(x - 2)}$.
 
-<p><h3 class="answers">Answers</h3>
+</p><p></p><h3 class="answers">Відповіді</h3>
 
 <p>(1)   $\dfrac{2}{ x - 3} + \dfrac{1}{ x + 4}$.
 
-<p>(2)   $\dfrac{1}{ x - 1} + \dfrac{2}{ x - 2}$.
+</p><p>(2)   $\dfrac{1}{ x - 1} + \dfrac{2}{ x - 2}$.
 
-<p>(3)   $\dfrac{2}{ x - 3} + \dfrac{1}{ x + 4}$.
-
-
-<p>(4)   $\dfrac{5}{ x - 4} - \dfrac{4}{ x - 3}$.
-
-<p>(5)   $\dfrac{19}{13(2x + 3)} - \dfrac{22}{13(3x - 2)}$.
+</p><p>(3)   $\dfrac{2}{ x - 3} + \dfrac{1}{ x + 4}$.
 
 
-<p>(6)   $\dfrac{2}{ x - 2} + \dfrac{4}{ x - 3} - \dfrac{5}{ x - 4}$.
+</p><p>(4)   $\dfrac{5}{ x - 4} - \dfrac{4}{ x - 3}$.
 
-<p>(7)   $\dfrac{1}{6(x - 1)} + \dfrac{11}{15(x + 2)} + \dfrac{1}{10(x - 3)}$.
-
-<p>(8)   $\dfrac{7}{9(3x + 1)} + \dfrac{71}{63(3x - 2)} - \dfrac{5}{7(2x + 1)}$.
+</p><p>(5)   $\dfrac{19}{13(2x + 3)} - \dfrac{22}{13(3x - 2)}$.
 
 
-<p>(9)   $\dfrac{1}{3(x - 1)} + \dfrac{2x + 1}{3(x^2 + x + 1)}$.
+</p><p>(6)   $\dfrac{2}{ x - 2} + \dfrac{4}{ x - 3} - \dfrac{5}{ x - 4}$.
 
-<p>(10)  $x + \dfrac{2}{3(x + 1)} + \dfrac{1 - 2x}{3(x^2 - x + 1)}$.
+</p><p>(7)   $\dfrac{1}{6(x - 1)} + \dfrac{11}{15(x + 2)} + \dfrac{1}{10(x - 3)}$.
 
-
-<p>(11)  $\dfrac{3}{(x + 1)} + \dfrac{2x + 1}{x^2 + x + 1}$.
-
-<p>(12)  $\dfrac{1}{ x - 1} - \dfrac{1}{ x - 2} + \dfrac{2}{(x - 2)^2}$.
+</p><p>(8)   $\dfrac{7}{9(3x + 1)} + \dfrac{71}{63(3x - 2)} - \dfrac{5}{7(2x + 1)}$.
 
 
-<p>(13)  $\dfrac{1}{4(x - 1)} - \dfrac{1}{4(x + 1)} + \dfrac{1}{2(x + 1)^2}$.
+</p><p>(9)   $\dfrac{1}{3(x - 1)} + \dfrac{2x + 1}{3(x^2 + x + 1)}$.
 
-<p>(14)  $\dfrac{4}{9(x - 1)} - \dfrac{4}{9(x + 2)} - \dfrac{1}{3(x + 2)^2}$.
+</p><p>(10)  $x + \dfrac{2}{3(x + 1)} + \dfrac{1 - 2x}{3(x^2 - x + 1)}$.
 
-<p>(15)  $\dfrac{1}{ x + 2} - \dfrac{x - 1}{ x^2 + x + 1} - \dfrac{1}{(x^2 + x + 1)^2}$.
 
-<p>(16)  $\dfrac{5}{ x + 4} -\dfrac{32}{(x + 4)^2} + \dfrac{36}{(x + 4)^3}$.
+</p><p>(11)  $\dfrac{3}{(x + 1)} + \dfrac{2x + 1}{x^2 + x + 1}$.
 
-<p>(17)  $\dfrac{7}{9(3x - 2)^2} + \dfrac{55}{9(3x - 2)^3} + \dfrac{73}{9(3x - 2)^4}$.
+</p><p>(12)  $\dfrac{1}{ x - 1} - \dfrac{1}{ x - 2} + \dfrac{2}{(x - 2)^2}$.
 
-<p>(18)  $\dfrac{1}{6(x - 2)} + \dfrac{1}{3(x - 2)^2} - \dfrac{x}{6(x^2 + 2x + 4)}$.
-<p>
-<h2>Differential of an Inverse Function.</h2>
 
-<p>Consider the function (see <a href="3.html#function">here</a>) $y = 3x$; it can be
-expressed in the form $x = \dfrac{y}{3}$; this latter form is called
-the <em>inverse function</em> to the one originally given.
+</p><p>(13)  $\dfrac{1}{4(x - 1)} - \dfrac{1}{4(x + 1)} + \dfrac{1}{2(x + 1)^2}$.
 
-<p>If $y = 3x$,&nbsp;&nbsp; $\dfrac{dy}{dx} = 3$; if $x=\dfrac{y}{3}$,&nbsp;&nbsp; $\dfrac{dx}{dy} = \dfrac{1}{3}$, and we see that
-\[
-\frac{dy}{dx} = \frac{1}{\ \dfrac{dx}{dy}\ }\quad \text{or}\quad
-\frac{dy}{dx} × \frac{dx}{dy} = 1.
-\]
+</p><p>(14)  $\dfrac{4}{9(x - 1)} - \dfrac{4}{9(x + 2)} - \dfrac{1}{3(x + 2)^2}$.
 
-<p>Consider $y= 4x^2$, $\dfrac{dy}{dx} = 8x$; the inverse function is
-\[
-x = \frac{y^{\frac{1}{2}}}{2},\quad \text{and}\quad
-\frac{dx}{dy} = \frac{1}{4\sqrt{y}} = \frac{1}{4 × 2x} = \frac{1}{8x}.
-\]
+</p><p>(15)  $\dfrac{1}{ x + 2} - \dfrac{x - 1}{ x^2 + x + 1} - \dfrac{1}{(x^2 + x + 1)^2}$.
 
-\begin{align*}
-   \text{Here again}\;
-\frac{dy}{dx}×\frac{dx}{dy} &= 1.
-\end{align*}
+</p><p>(16)  $\dfrac{5}{ x + 4} -\dfrac{32}{(x + 4)^2} + \dfrac{36}{(x + 4)^3}$.
 
-<p>It can be shown that for all functions which can be
-put into the inverse form, one can always write
-\[
-\frac{dy}{dx} × \frac{dx}{dy} = 1\quad \text{or}\quad
-\frac{dy}{dx} = \frac{1}{\ \dfrac{dx}{dy}\ }.
-\]
+</p><p>(17)  $\dfrac{7}{9(3x - 2)^2} + \dfrac{55}{9(3x - 2)^3} + \dfrac{73}{9(3x - 2)^4}$.
 
-<p>It follows that, being given a function, if it be
-easier to differentiate the inverse function, this may
-be done, and the reciprocal of the differential coefficient
-of the inverse function gives the differential coefficient
-of the given function itself.
+</p><p>(18)  $\dfrac{1}{6(x - 2)} + \dfrac{1}{3(x - 2)^2} - \dfrac{x}{6(x^2 + 2x + 4)}$.
+</p><p>
+</p><h2>Диференціал оберненої функції.</h2>
 
-<p>As an example, suppose that we wish to differentiate
-$y=\sqrt[2]{\dfrac{3}{x}-1}$. We have seen one way of doing this,
-by writing $u=\dfrac{3}{x}-1$, and finding $\dfrac{dy}{du}$ and $\dfrac{du}{dx}$. This
-gives
-\[
-\frac{dy}{dx} = -\frac{3}{2x^2\sqrt{\dfrac{3}{x} -1}}.
-\]
+<p>Розглянемо функцію (див. <a href="3.html#function">тут</a>) $y = 3x$; її можна виразити у формі $x = \dfrac{y}{3}$; ця остання форма називається <em>оберненою функцією</em> до тієї, що була дана спочатку.
 
-<p>If we had forgotten how to proceed by this method,
-or wished to check our result by some other way of
-obtaining the differential coefficient, or for any other
-reason we could not use the ordinary method, we can
-proceed as follows: The inverse function is $x=\dfrac{3}{1+y^2}$.
-\[
-\frac{dx}{dy} = -\frac{3 × 2y}{(1+y^2)^2} = -\frac{6y}{(1+y^2)^2};
-\]
+</p><p>Якщо $y = 3x$, $\dfrac{dy}{dx} = 3$; якщо $x=\dfrac{y}{3}$, $\dfrac{dx}{dy} = \dfrac{1}{3}$, і ми бачимо, що \[ \frac{dy}{dx} = \frac{1}{\ \dfrac{dx}{dy}\ }\quad \text{або }\quad \frac{dy}{dx} × \frac{dx}{dy} = 1. \]
 
-hence
-\[
-\frac{dy}{dx} = \frac{1}{\ \dfrac{dx}{dy}\ }
-  = -\frac{(1+y^2)^2}{6y}
-  = -\frac{\left(1+\dfrac{3}{x} -1\right)^2}{6×\sqrt[2]{\dfrac{3}{x}-1}}
-  = -\frac{3}{2x^2\sqrt{\dfrac{3}{x}-1}}.
-\]
+</p><p>Розглянемо $y= 4x^2$, $\dfrac{dy}{dx} = 8x$; обернена функція \[ x = \frac{y^{\frac{1}{2}}}{2},\quad \text{і}\quad \frac{dx}{dy} = \frac{1}{4\sqrt{y}} = \frac{1}{4 × 2x} = \frac{1}{8x}. \] \begin{align*} \text{Знову тут}\; \frac{dy}{dx}×\frac{dx}{dy} &amp;= 1. \end{align*}
 
-<p>Let us take as an other example $y=\dfrac{1}{\sqrt[3]{\theta +5}}$.
+</p><p>Можна показати, що для всіх функцій, які можливо привести до оберненої форми, завжди можна записати \[ \frac{dy}{dx} × \frac{dx}{dy} = 1\quad \text{або}\quad \frac{dy}{dx} = \frac{1}{\ \dfrac{dx}{dy}\ }. \]
 
-<p>The inverse function is $\theta=\dfrac{1}{y^3}-5$ or $\theta=y^{-3}-5$, and
-\[
-\frac{d\theta}{dy} = -3y^{-4} = -3\sqrt[3]{(\theta + 5)^4}.
-\]
+</p><p>Звідси випливає, що якщо обернену до заданої функцію продиференціювати легше, це можна зробити, і зворотна величина похідної оберненої функції дає похідну самої заданої функції.
 
-<p>It follows that $\dfrac{dy}{dx} = -\dfrac{1}{3\sqrt{(\theta +5)^4}}$, as might have
-been found otherwise.
+</p><p>Як приклад, припустімо, що ми хочемо продиференціювати $y=\sqrt[2]{\dfrac{3}{x}-1}$. Ми вже бачили один спосіб зробити це, написавши $u=\dfrac{3}{x}-1$ і знайшовши $\dfrac{dy}{du}$ і $\dfrac{du}{dx}$. Це дає \[ \frac{dy}{dx} = -\frac{3}{2x^2\sqrt{\dfrac{3}{x} -1}}. \]
 
-<p>We shall find this dodge most useful later on;
-meanwhile you are advised to become familiar with
-it by verifying by its means the results obtained in
-Exercises I. (<a href="4.html#ex1">here</a>), Nos. 5, 6, 7; Examples (<a href="9.html#ExNo1">here</a>),
-Nos. 1, 2, 4; and Exercises VI. (<a href="9.html#ex6">here</a>), Nos. 1, 2, 3
-and 4.
+</p><p>Якщо ми забули, як діяти цим методом, або бажаємо перевірити наш результат якимось іншим чином, або з будь-якої іншої причини ми не могли використати звичайний метод, ми можемо зробити наступне: обернена функція є $x=\dfrac{3}{1+y^2}$. \[ \frac{dx}{dy} = -\frac{3 × 2y}{(1+y^2)^2} = -\frac{6y}{(1+y^2)^2}; \] отже \[ \frac{dy}{dx} = \frac{1}{\ \dfrac{dx}{dy}\ } = -\frac{(1+y^2)^2}{6y} = -\frac{\left(1+\dfrac{3}{x} -1\right)^2}{6×\sqrt[2]{\dfrac{3}{x}-1}} = -\frac {3}{2x^2\sqrt{\dfrac{3}{x}-1}}. \]
 
-<p><hr>
+</p><p>Візьмемо у якості іншого прикладу $y=\dfrac{1}{\sqrt[3]{\theta +5}}$.
 
-<p>You will surely realize from this chapter and the
-preceding, that in many respects the calculus is an
-<em>art</em> rather than a <em>science</em>: an art only to be acquired,
-as all other arts are, by practice. Hence you should
-work many examples, and set yourself other examples,
-to see if you can work them out, until the various
-artifices become familiar by use.
+</p><p>Обернена функція $\theta=\dfrac{1}{y^3}-5$ або $\theta=y^{-3}-5$, і \[ \frac{d\theta}{dy} = -3y^{-4} = -3\sqrt[3]{(\theta + 5)^4}. \]
+
+</p><p>З цього випливає, що $\dfrac{dy}{dx} = -\dfrac{1}{3\sqrt{(\theta +5)^4}}$, що можна було б знайти інакше.
+
+</p><p>Пізніше ми побачимо, що цей трюк є дуже корисним. Тим часом раджу вам ознайомитися з ним, перевіривши за його допомогою результати, отримані у вправах I. (<a href="4.html#ex1">тут</a>), номери 5, 6, 7; Приклади (<a href="9.html#ExNo1">тут</a>), номери 1, 2, 4; і вправи VI. (<a href="9.html#ex6">тут</a>), номери 1, 2, 3 і 4.
+
+</p><p></p><hr>
+
+<p>З цього та попередніх розділів ви могли побачити, що багато у чому диференціювання є <em>мистецтвом</em>, а не просто <em>наукою</em>: мистецтвом, яке можна опанувати, як і всі інші види мистецтва, лише практикою. Тому вам слід опрацювати багато прикладів і навести собі інші приклади, щоб побачити, чи зможете ви їх опрацювати, доки різні хитрощі не стануть звичними під час використання.
 
 <br>
-<hr>
-<a href="14.html">Next &rarr;</a><br>
-<a href="/">Main Page &uarr;</a><br>
+</p><hr>
+<a href="14.html">Далі →</a><br> <a href="/">Головна сторінка ↑</a><br>
 
 <script src="j/jquery.js"></script>
 <script src="j/modernizr.js"></script>
 <script src="j/dih5.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101178221-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  gtag('config', 'UA-101178221-1');
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
