@@ -123,11 +123,63 @@ body{counter-reset:h1 18}
 
 
 <p>Тепер, коли ми знаємо, що інтегрування є протилежністю диференціювання, ми можемо відразу знайти похідні, які ми вже знаємо, і побачити, з яких функцій вони були отримані. Це дає нам наступні готові інтеграли:<a name="intex2"/><a name="differ3"/><a name="cosax"/>
-\begin{alignat*}{4}
-&amp;x^{-1} &amp;&amp;\qquad &amp;&amp; \int x^{-1}\, dx &amp;&amp;= \log_\epsilon x + C. \\ %\label{intex2} &amp;\frac{1}{x+a} &amp;&amp; &amp;&amp; \int \frac{1}{x+a}\, dx &amp;&amp;= \log_\epsilon (x+a) + C. \\ &amp;\epsilon^x &amp;&amp; &amp;&amp; \int \epsilon^x\, dx &amp;&amp;= \epsilon ^x + C. \\ &amp;\epsilon^{-x} &amp;&amp;&amp;&amp; \int \epsilon^{-x}\, dx &amp;&amp;= -\epsilon^{-x} + C \\ 
-\end{alignat*} (for if $y = - \dfrac{1}{\epsilon^x}$, $\dfrac{dy}{dx} = -\dfrac{\epsilon^x × 0 - 1 × \epsilon^x}{\epsilon^{2x}} = \epsilon^{-x}$). \begin{alignat*}{4} &amp;\sin x &amp;&amp; &amp;&amp; \int \sin x\, dx &amp;&amp;= -\cos x + C. \\ &amp;\cos x &amp;&amp; &amp;&amp; \int \cos x\, dx &amp;&amp;= \sin x + C. \\ \end{alignat*} Також ми можемо вивести наступне: \begin{alignat*}{4} &amp;\log_\epsilon x; &amp;&amp;&amp;&amp; \int\log_\epsilon x\, dx &amp;&amp;= x(\log_\epsilon x - 1) + C \\ \end{alignat*} (for if $y = x \log_\epsilon x - x$, $\dfrac{dy}{dx} = \dfrac{x}{x} + \log_\epsilon x - 1 = \log_\epsilon x$). \begin{alignat*}{4} &amp;\log_{10} x; &amp;&amp;&amp;&amp; \int\log_{10} x\, dx &amp;&amp;= 0.4343x (\log_\epsilon x - 1) + C. \\ &amp;a^x &amp;&amp; &amp;&amp; \int a^x\, dx &amp;&amp;= \dfrac{a^x}{\log_\epsilon a} + C. \\ % \label{cosax} &amp;\cos ax; &amp;&amp;&amp;&amp; \int\cos ax\, dx &amp;&amp;= \frac{1}{a} \sin ax + C \\ \end{alignat*} (якщо $y = \sin ax$, $\dfrac{dy}{dx} = a \cos ax$; отже, щоб отримати $\cos ax$ треба диференціювати $y = \dfrac{1}{a} \sin ax$). \begin{alignat*}{4} &amp;\sin ax; &amp;&amp;&amp;&amp; \int\sin ax\, dx &amp;&amp;= -\frac{1}{a} \cos ax + C. \\ \end{alignat*}
 
-</p><p>Спробуйте також $\cos^2\theta$; Невеликий прийом спростить справу: \[ \cos 2\theta = \cos^2\theta - \sin^2\theta = 2\cos^2 \theta - 1; \\ \] отже \[ \cos^2\theta = \tfrac{1}{2}(\cos 2\theta + 1), \] і \begin{align*} \int\cos^2 \theta\, d\theta &amp;= \tfrac{1}{2} \int (\cos 2\theta + 1)\, d\theta \\ &amp;= \tfrac{1}{2} \int \cos 2 \theta\, d\theta + \tfrac{1}{2} \int d\theta. \\ &amp;= \frac{\sin 2\theta}{4} + \frac{\theta}{2} + C. \end{align*}
+\begin{alignat*}{4}
+&x^{-1} &&\qquad &&
+  \int x^{-1}\, dx      &&= \log_\epsilon x + C. \\
+
+%\label{intex2}
+&\frac{1}{x+a} &&  &&
+  \int \frac{1}{x+a}\, dx &&= \log_\epsilon (x+a) + C. \\
+
+&\epsilon^x &&  &&
+  \int \epsilon^x\, dx    &&= \epsilon ^x + C. \\
+
+&\epsilon^{-x} &&&&
+  \int \epsilon^{-x}\, dx &&= -\epsilon^{-x} + C \\
+
+\end{alignat*}
+(якщо $y = - \dfrac{1}{\epsilon^x}$, $\dfrac{dy}{dx} = -\dfrac{\epsilon^x × 0 - 1 × \epsilon^x}{\epsilon^{2x}} = \epsilon^{-x}$).
+\begin{alignat*}{4}
+
+
+&\sin x &&  &&
+  \int \sin x\, dx        &&= -\cos x + C. \\
+
+&\cos x && &&
+  \int \cos x\, dx        &&= \sin x + C. \\
+
+\end{alignat*}
+  Також ми можемо вивести наступне:
+\begin{alignat*}{4}
+
+&\log_\epsilon x; &&&&
+  \int\log_\epsilon x\, dx &&= x(\log_\epsilon x - 1) + C \\
+
+\end{alignat*}
+(якщо $y = x \log_\epsilon x - x$, $\dfrac{dy}{dx} = \dfrac{x}{x} + \log_\epsilon x - 1 = \log_\epsilon x$).
+\begin{alignat*}{4}
+
+
+&\log_{10} x;   &&&&
+  \int\log_{10} x\, dx &&= 0.4343x (\log_\epsilon x - 1) + C. \\
+
+&a^x &&  &&
+  \int a^x\, dx        &&= \dfrac{a^x}{\log_\epsilon a} + C. \\
+
+% \label{cosax}
+&\cos ax; &&&& \int\cos ax\, dx     &&= \frac{1}{a} \sin ax + C \\
+\end{alignat*}
+(якщо $y = \sin ax$, $\dfrac{dy}{dx} = a \cos ax$; отже, щоб отримати $\cos ax$,
+треба диференціювати $y = \dfrac{1}{a} \sin ax$).
+\begin{alignat*}{4}
+
+
+
+&\sin ax; &&&& \int\sin ax\, dx     &&= -\frac{1}{a} \cos ax + C. \\
+\end{alignat*}
+  
+</p><p>Спробуйте також $\cos^2\theta$; Невеликий прийом спростить справу: \[ \cos 2\theta = \cos^2\theta - \sin^2\theta = 2\cos^2 \theta - 1; \\ \] отже \[ \cos^2\theta = \tfrac{1}{2}(\cos 2\theta + 1), \] та \begin{align*} \int\cos^2 \theta\, d\theta &amp;= \tfrac{1}{2} \int (\cos 2\theta + 1)\, d\theta \\ &amp;= \tfrac{1}{2} \int \cos 2 \theta\, d\theta + \tfrac{1}{2} \int d\theta. \\ &amp;= \frac{\sin 2\theta}{4} + \frac{\theta}{2} + C. \end{align*}
 </p><p>(Дивись також <a href="20.html#moreexamples">тут</a>)
 </p><p>
 Дивіться також <a href="table.html">Таблицю стандартних форм</a>. Вам треба зробити таку таблицю для себе, помістивши в неї лише загальні функції, які ви вдало диференціювали та інтегрували. Слідкуйте за тим, щоб вона постійно росла!
