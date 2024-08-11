@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>On Finding Areas by Integrating | Calculus Made Easy</title>
+<meta charset="UTF-8">
+<title>Про визначення площ шляхом інтегрування | Математичний аналіз простими словами</title>
 <link rel="stylesheet" href="screen.css">
 <style>
 body{counter-reset:h1 19}
@@ -12,742 +12,293 @@ body{counter-reset:h1 19}
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<h1><br>On Finding Areas by Integrating</h1>
+<h1><br>Про визначення площ шляхом інтегрування</h1>
 <p class="a rotatedFloralHeartBullet">
 
-<p>One use of the integral calculus is to enable us to
-ascertain the values of areas bounded by curves.
+</p><p>Одним із способів використання інтегрального числення є визначення площ, обмежених кривими.
 
-<p>Let us try to get at the subject bit by bit.
+</p><p>Давайте спробуємо поетапно розібратися в цій темі.
 
 <a name="figure52">
-<p><img src="33283-t/images/218a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/218a.pdf.png-1.png">
 
-<p>Let $AB$ (<a href="#figure52">Figure 52</a>) be a curve, the equation to which
-is known. That is, $y$ in this curve is some known
-function of $x$. Think of a piece of the curve from
-the point $P$ to the point $Q$.
+</p><p>Нехай $AB$ (<a href="#figure52">Зображення 52</a>) — крива, рівняння якої нам відоме. Тобто $y$ в цій кривій є деякою відомою функцією від $x$. Розглянемо частину кривої від точки $P$ до точки $Q$.
 
-<p>Let a perpendicular $PM$ be dropped from $P$, and
-another $QN$ from the point $Q$. Then call $OM = x_1$
-and $ON = x_2$, and the ordinates $PM = y_1$ and $QN = y_2$.
-We have thus marked out the area $PQNM$ that lies
+</p><p>Нехай з точки $P$ опущено перпендикуляр $PM$, а з точки $Q$ — інший перпендикуляр $QN$. Тоді назвемо абсциси $OM = x_1$ і $ON = x_2$, а ординати $PM = y_1$ і $QN = y_2$. Таким чином, ми позначили область $PQNM$, яка лежить під фрагментом $PQ$. Питання в тому, <em>як ми можемо знайти площу цієї області</em>?
 
-beneath the piece $PQ$. The problem is, <em>how can we
-calculate the value of this area</em>?
-
-<p>The secret of solving this problem is to conceive
-the area as being divided up into a lot of narrow
-strips, each of them being of the width $dx$. The
-smaller we take $dx$, the more of them there will be
-between $x_1$ and $x_2$. Now, the whole area is clearly
-equal to the sum of the areas of all such strips. Our
-business will then be to discover an expression for
-the area of any one narrow strip, and to integrate it
-so as to add together all the strips. Now think of
-any one of the strips. It
-will be like this:
-being bounded between two vertical sides, with
-a flat bottom $dx$, and with a slightly curved
-sloping top.
+</p><p>Секрет розв'язання цієї задлачи полягає в тому, щоб уявити площу як розділену на безліч вузьких смуг, кожна з яких має ширину $dx$. Чим меншим ми беремо $dx$, тим більше їх буде між $x_1$ і $x_2$. Тоді вся площа явно дорівнює сумі площ усіх цих смуг. Тож наша справа полягатиме в тому, щоб знайти вираз для площі однієї такої вузької смугии та інтегрувати його, щоб скласти усі смужки разом. Тепер подумайте про будь-яку зі смужок. Вона буде такою: обмежена між двома вертикальними сторонами, з плоским низом $dx$ і злегка зігнутим похилим верхом.
 <a name="figure219a">
-<p><img src="33283-t/images/219a.pdf.png-1.png">
-<p>Suppose we take its <em>average</em>
-height as being $y$; then, as its width is $dx$, its
-area will be $y\, dx$. And seeing that we may
-take the width as narrow as we please, if we
-only take it narrow enough its average height will be
-the same as the height at the middle of it. Now
-let us call the unknown value of the whole area $S$,
-meaning surface. The area of one strip will be
-simply a bit of the whole area, and may therefore
-be called $dS$. So we may write
-\[
-\text{area of $1$ strip} = dS = y · dx.
-\]
-If then we add up all the strips, we get
-\[
-\text{total area $S$} = \int dS = \int y\, dx.
-\]
+</a></p><p><img src="33283-t/images/219a.pdf.png-1.png">
+</p><p>Припустимо, ми візьмемо її <em>середню</em> висоту як $y$; тоді, оскільки її ширина $dx$, її площа буде $y\, dx$. І оскільки ми можемо прийняти ширину якою завгодно малою, якщо ми візьмемо її достатньо малою, середня висота смуги буде такою ж, як і висота в середині смуги. Далі, позначимо невідоме значення всієї площі літерою $S$, відю англ. Surface. Площа однієї смуги буде просто невеликою частиною всієї площі, і тому її можна назвати $dS$. Отже, ми можемо написати \[ \text{площа $1$ смуги} = dS = y · dx. \] Тоді, якщо скласти всі смуги, ми отримаємо \[ \text{загальна площа $S$} = \int dS = \int y\, dx. \]
 
-<p>So then our finding $S$ depends on whether we can
+</p><p>Таким чином, знаходження $S$ залежить від того, чи зможемо ми проінтегрувати $y · dx$ для конкретного випадку, коли відомо, якою саме функцією від $x$ є $y$ .
 
-integrate $y · dx$ for the particular case, when we know
-what the value of $y$ is as a function of $x$.
+</p><p>Наприклад, якщо вам сказали, що для конкретної кривої $y = b + ax^2$, ви, безсумнівно, можете ввести це значення у вираз і сказати: тоді я маю знайти $\int (b + ax^2 )\, dx$.
 
-<p>For instance, if you were told that for the particular
-curve in question $y = b + ax^2$, no doubt you could put
-that value into the expression and say: then I must
-find $\int (b + ax^2)\, dx$.
+</p><p>Це все дуже добре, але невелике міркування покаже, що потрібно зробити щось ще. Оскільки площа, яку ми намагаємося знайти, не є площею під усією довжиною кривої, а лише площею, обмеженою зліва $PM$ і праворуч $QN$, ми повинні зробити щось, щоб визначити нашу область у цих "<em>межах</em>". <a name="limits"/>
 
-<p>That is all very well; but a little thought will show
-you that something more must be done. Because the
-area we are trying to find is not the area under the
-whole length of the curve, but only the area limited
-on the left by $PM$, and on the right by $QN$, it follows
-that we must do something to define our area between
-those "<em>limits</em>". <a name="limits"/>
+</p><p>Це знайомить нас з новим поняттям, а саме з <em>областю інтегрування</em>. Ми припускаємо, що $x$ змінюється, але для поточної мети нам не потрібно жодного значення $x$ нижче $x_1$ (тобто $OM$) і жодного значення $x$ вище $x_2$ (тобто $ ON$). Коли інтеграл потрібно визначити таким чином між двома межами, ми називаємо нижче з двох значень <em>нижньою границею</em>, і верхнє значення <em>верхньою границею</em>. Будь-який обмежений таким чином інтеграл ми називаємо <em>визначеним інтегралом</em>, щоб відрізнити його від <em>невизначеного інтегралу</em>, на який не встановлено жодних обмежень.
 
-<p>This introduces us to a new notion, namely that of
-<em>integrating between limits</em>. We suppose $x$ to vary,
-and for the present purpose we do not require any
-value of $x$ below $x_1$ (that is $OM$), nor any value of $x$
-above $x_2$ (that is $ON$). When an integral is to be
-thus defined between two limits, we call the lower
-of the two values <em>the inferior limit</em>, and the upper
-value <em>the superior limit</em>. Any integral so limited
-we designate as a <em>definite integral</em>, by way of distinguishing
-it from a <em>general integral</em> to which no
-limits are assigned.
+</p><p>У символах, які дають вказівки щодо інтегрування, границі позначаються вгорі та внизу відповідно від знака інтегрування. Таким чином інструкцію \[ \int_{x=x_1}^{x=x_2} y · dx \] буде прочитано як: знайти інтеграл $y · dx$ між нижньою границею $x_1$ і верхньою границею $x_2$ .
 
-<p>In the symbols which give instructions to integrate,
-the limits are marked by putting them at the top
-and bottom respectively of the sign of integration.
-Thus the instruction
-\[
-\int_{x=x_1}^{x=x_2} y · dx
-\]
+</p><p>Іноді ця річ записується простіше: \[ \int^{x_2}_{x_1} y · dx. \] Добре, але <em>як</em> нам знайти інтеграл між границями, коли ми маємо ці інструкції?
 
-will be read: find the integral of $y · dx$ between the
-inferior limit $x_1$ and the superior limit $x_2$.
+</p><p>Подивіться ще раз на <a href="#figure52">Зображення 52</a>. Припустімо, що ми можемо знайти площу під більшою частиною кривої від $A$ до $Q$, тобто від $x = 0$ до $x = x_2$, назвавши площу $AQNO$. Далі припустімо, що ми можемо знайти площу під меншим шматком від $A$ до $P$, тобто від $x = 0$ до $x = x_1$, а саме площу $APMO$. Тоді якби ми відняти меншу площу від більшої, мала б залишитись площа $PQNM$, яку ми і шукаємо. Тут ми і маємо підказку щодо того, як це робити: визначений інтеграл між двома границями є <em>різницею</em> між інтегралом, розрахованим для верхньої границі, та інтегралом, розрахованим для нижньої границі.
 
-<p>Sometimes the thing is written more simply
-\[
-\int^{x_2}_{x_1} y · dx.
-\]
-Well, but <em>how</em> do you find an integral between limits,
-when you have got these instructions?
+</p><p>Отже, давайте продовжимо. Спочатку знайдемо невизначений інтеграл: \[ \int y\, dx, \] і, оскільки $y = b + ax^2$ є рівнянням кривої (<a href="#figure52">Зображення 52</a>), \[ \int (b + ax^2)\, dx \] є невизначеним інтегралом, який ми повинні знайти.
 
-<p>Look again at <a href="#figure52">Figure 52</a>. Suppose we could
-find the area under the larger piece of curve from
-$A$ to $Q$, that is from $x = 0$ to $x = x_2$, naming the area
-$AQNO$. Then, suppose we could find the area under
-the smaller piece from $A$ to $P$, that is from $x = 0$ to
-$x = x_1$, namely the area $APMO$. If then we were to
-subtract the smaller area from the larger, we should
-have left as a remainder the area $PQNM$, which is
-what we want. Here we have the clue as to what
-to do; the definite integral between the two limits is
-<em>the difference</em> between the integral worked out for
-the superior limit and the integral worked out for the
-lower limit.
+</p><p>Виконуючи інтегрування за правилами, ми отримуємо \[ bx + \frac{a}{3} x^3 + C; \] і це буде вся область від $0$ до будь-якого значення $x$, яке ми можемо підставити.
 
-<p>Let us then go ahead. First, find the general
-integral thus:
-\[
-\int y\, dx,
-\]
-and, as $y = b + ax^2$ is the equation to the curve (<a href="#figure52">Figure 52</a>),
-\[
-\int (b + ax^2)\, dx
-\]
-is the general integral which we must find.
+</p><p>Отже, більша площа до верхньої межі $x_2$ буде \[ bx_2 + \frac{a}{3} x_2^3 + C; \] а менша площа до нижньої межі $x_1$ буде \[ bx_1 + \frac{a}{3} x_1^3 + C. \]
 
-<p>Doing the integration in question by the rule
-, we get
-\[
-bx + \frac{a}{3} x^3 + C;
-\]
+</p><p>Тепер віднімемо від більшого менше, і ми отримаємо для площі $S$ значення \[ \text{площа $S$} = b(x_2 - x_1) + \frac{a}{3}(x_2^ 3 - x_1^3). \]
 
-and this will be the whole area from $0$ up to any
-value of $x$ that we may assign.
+</p><p>Це відповідь, яку ми шукали. Наведемо деякі числові приклади. Припустімо, що $b = 10$, $a = 0,06$, $x_2 = 8$ і $x_1 = 6$. Тоді площа $S$ дорівнює \begin{gather*} 10(8 - 6) + \frac{0,06}{3} (8^3 - 6^3) \\ \begin{aligned} &amp;= 20 + 0,02(512 - 216) \\ &amp;= 20 + 0,02 × 296 \\ &amp;= 20 + 5,92 \\ &amp;= 25,92. \end{aligned} \end{gather*}
 
-<p>Therefore, the larger area up to the superior limit $x_2$
-will be
-\[
-bx_2 + \frac{a}{3} x_2^3 + C;
-\]
-and the smaller area up to the inferior limit $x_1$ will be
-\[
-bx_1 + \frac{a}{3} x_1^3 + C.
-\]
-
-<p>Now, subtract the smaller from the larger, and we
-get for the area $S$ the value,
-\[
-\text{area $S$} = b(x_2 - x_1) + \frac{a}{3}(x_2^3 - x_1^3).
-\]
-
-<p>This is the answer we wanted. Let us give some
-numerical values. Suppose $b = 10$, $a = 0.06$, and $x_2 = 8$
-and $x_1 = 6$. Then the area $S$ is equal to
-\begin{gather*}
-10(8 - 6) + \frac{0.06}{3} (8^3 - 6^3) \\
-\begin{aligned}
-&= 20 + 0.02(512 - 216)    \\
-&= 20 + 0.02 × 296    \\
-&= 20 + 5.92     \\
-&= 25.92.
-\end{aligned}
-\end{gather*}
-
-<p>Let us here put down a symbolic way of stating
-what we have ascertained about limits:
-\[
-\int^{x=x_2}_{x=x_1} y\, dx = y_2 - y_1,
-\]
-where $y_2$ is the integrated value of $y\, dx$ corresponding
-to $x_2$, and $y_1$ that corresponding to $x_1$.
+</p><p>Давайте наведемо тут символьне формулювання того, що ми з’ясували щодо границь: \[ \int^{x=x_2}_{x=x_1} y\, dx = y_2 - y_1, \] де $y_2$ — проінтегроване значення $y\, dx$, що відповідає $x_2$, і $y_1$, що відповідає $x_1$.
 
 
-<p>All integration between limits requires the difference
-between two values to be thus found. Also note
-that, in making the subtraction the added constant $C$
-has disappeared.
+</p><p>Будь-яке інтегрування між границями вимагає визначення різниці між двома значеннями. Також зауважте, що під час виконання віднімання додана константа $C$ зникла.
 
-<p>
-<p><em>Examples</em>
-(1) To familiarize ourselves with the process, let us
-take a case of which we know the answer beforehand.
-Let us find the area of the triangle (<a href="#figure53">Figure 53</a>), which
-has base $x = 12$ and height $y = 4$. We know beforehand,
-from obvious mensuration, that the answer will
-come $24$.
+</p><p>
+</p><p><em>Приклади</em> (1) Щоб ознайомитися з процесом, розглянемо випадок, відповідь на який ми знаємо заздалегідь. Давайте знайдемо площу трикутника (<a href="#figure53">Зображення 53</a>), який має основу $x = 12$ і висоту $y = 4$. Ми заздалегідь знаємо, з очевидного вимірювання, що відповідь буде $24$.
 
 <a name="figure3">
-<p><img src="33283-t/images/223a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/223a.pdf.png-1.png">
 
-<p>Now, here we have as the “curve” a sloping line
-for which the equation is
-\[
-y = \frac{x}{3}.
-\]
+</p><p>Тут ми маємо у якості «кривої» похилу пряму, рівняння якої \[ y = \frac{x}{3}. \]
 
-<p>The area in question will be
-\[
-\int^{x=12}_{x=0} y · dx = \int^{x=12}_{x=0} \frac{x}{3} · dx.
-\]
+</p><p>Площа, про яку йде мова, буде \[ \int^{x=12}_{x=0} y · dx = \int^{x=12}_{x=0} \frac{x}{3} · dx . \]
 
-<p>Integrating $\dfrac{x}{3}\, dx$ (<a href="18.html#diffrule">here</a>), and putting down the
+</p><p>Інтегруючи $\dfrac{x}{3}\, dx$ (<a href="18.html#diffrule">тут</a>), і записавши значення інтеграла в квадратних дужках із позначеними зверху та знизу границями, отримаємо \begin{align*} \text{площа}\; &amp;= \left[ \frac{1}{3} · \frac{1}{2} x^2 \right]^{x=12}_{x=0} + C \\ &amp;= \left[ \frac{x^2}{6} \right]^{x=12}_{x=0} + C \\ &amp;= \left[ \frac{12^2}{6} \right] - \left[ \frac{0^2}{6} \right] \\ &amp;= \frac{144}{6} = 24.\quad Відповідь. \end{align*}
 
-value of the general integral in square brackets with
-the limits marked above and below, we get
+</p><p>Давайте переконаємося в цьому досить дивовижному прийомі розрахунку, перевіривши його на простому прикладі. Візьміть папір у клітинку, бажано такий, що розлинений квадратиками розміром одна восьма або одна десята дюйма в кожну сторону. На цьому папері побудуйте графік рівняння \[ y = \frac{x}{3}. \]
 
-\begin{align*}
-\text{area}\;
-  &= \left[ \frac{1}{3} · \frac{1}{2} x^2 \right]^{x=12}_{x=0} + C \\
-  &= \left[ \frac{x^2}{6} \right]^{x=12}_{x=0} + C  \\
-  &= \left[ \frac{12^2}{6} \right] - \left[ \frac{0^2}{6} \right] \\
-  &= \frac{144}{6} = 24.\quad Ans.
-\end{align*}
-
-<p>Let us satisfy ourselves about this rather surprising
-dodge of calculation, by testing it on a simple
-example. Get some squared paper, preferably some
-that is ruled in little squares of one-eighth inch or
-one-tenth inch each way.  On this squared paper
-plot out the graph of the equation,
-\[
-y = \frac{x}{3}.
-\]
-
-<p>The values to be plotted will be:
+</p><p>Нанесені на графік значення будуть такими:
 <table>
 <tr><td>$x$</td><td>$0$</td><td>$3$</td><td>$6$</td><td>$9$</td><td>$12$</td>
 <tr><td>$y$</td><td>$0$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td>
-</table>
+</tr></tr></table>
 
-<p>The plot is given in <a href="#figure54">Figure 54</a>.
+</p><p>Графік наданий на <a href="#figure54">Зображенні 54</a>.
 <a name="figure54">
-<p><img src="33283-t/images/224a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/224a.pdf.png-1.png">
 
-<p>Now reckon out the area beneath the curve <em>by
-counting the little squares</em> below the line, from $x = 0$
-as far as $x = 12$ on the right. There are $18$ whole
-squares and four triangles, each of which has an area
-equal to $1\frac{1}{2}$ squares; or, in total, $24$ squares. Hence
-$24$ is the numerical value of the integral of $\dfrac{x}{3}\, dx$
-between the lower limit of $x = 0$ and the higher limit
-of $x = 12$.
+</p><p>Тепер розрахуйте площу під кривою, <em>порахувавши маленькі квадрати</em> під лінією, від $x = 0$ до $x = 12$ справа. Є $18$ цілих квадратів і чотири трикутники, площа кожного з яких дорівнює $1\frac{1}{2}$ квадрати; або, загалом, $24$ квадрати. Отже, $24$ — це числове значення інтеграла $\dfrac{x}{3}\, dx$ між нижньою границею $x = 0$ і верхньою $x = 12$.
 
-<p>As a further exercise, show that the value of the
-same integral between the limits of $x = 3$ and $x = 15$
-is $36$.
+</p><p>У якості подальшої вправи покажіть, що значення того самого інтеграла між границями $x = 3$ і $x = 15$ дорівнює $36$.
 
 <a name="figure55">
-<p><img src="33283-t/images/225a.pdf.png-1.png">
-<p>(2) Find the area, between limits $x = x_1$ and $x = 0$,
-of the curve $y = \dfrac{b}{x + a}$.
-\begin{align*}
-\text{Area}
-  &= \int^{x=x_1}_{x=0} y · dx
-   = \int^{x=x_1}_{x=0} \frac{b}{x+a}\, dx  \\
+</a></p><p><img src="33283-t/images/225a.pdf.png-1.png">
+</p><p>(2) Знайдіть площу у межах $x = x_1$ і $x = 0$ кривої $y = \dfrac{b}{x + a}$. \begin{align*} \text{Площа} &amp;= \int^{x=x_1}_{x=0} y · dx = \int^{x=x_1}_{x=0} \frac{b}{x+a}\, dx \\ &amp;= b \bigl[\log_\epsilon(x + a) \bigr]^{x_1} _{0} + C \\ &amp;= b \bigl[\log_\epsilon(x_1 + a) - \log_\epsilon(0 + a)\bigr] \\ &amp;= b \log_\epsilon \frac{x_1 + a}{a}.\quad Відповідь. \end{align*}
 
-  &= b \bigl[\log_\epsilon(x + a) \bigr]^{x_1} _{0} + C  \\
-  &= b \bigl[\log_\epsilon(x_1 + a) - \log_\epsilon(0 + a)\bigr]  \\
-  &= b \log_\epsilon \frac{x_1 + a}{a}.\quad Ans .
-\end{align*}
+</p><p><em>Примітка</em> – Зверніть увагу, що при роботі з визначеними інтегралами константа $C$ завжди зникає у процесі віднімання.
 
-<p><em>Note</em>–Notice that in dealing with definite integrals
-the constant $C$ always disappears by subtraction.
-
-<p>Let it be noted that this process of subtracting one
-part from a larger to find the difference is really a
-common practice. How do you find the area of a
-plane ring (<a href="#figure56">Figure 56</a>), the outer radius of which is $r_2$
-and the inner radius is $r_1$? You know from mensuration
-that the area of the outer circle is $\pi r_2^2$; then
-you find the area of the inner circle, $\pi r_1^2$; then you
-subtract the latter from the former, and find area of
-ring $= \pi(r_2^2 - r_1^2)$; which may be written
-\[
-\pi(r_2 + r_1)(r_2 - r_1)
-\]
-$= \text{mean circumference of ring} × \text{width of ring}$.
+</p><p>Слід зазначити, що цей процес віднімання однієї частини від більшої, щоб знайти різницю, є насправді звичайною практикою. Як знайти площу плоского кільця (<a href="#figure56">Зображення 56</a>), зовнішній радіус якого дорівнює $r_2$, а внутрішній — $r_1$? Ви знаєте з, що площа зовнішнього кола дорівнює $\pi r_2^2$. Тоді ви знайдете площу внутрішнього кола, $\pi r_1^2$, потім ви віднімаєте останнє від першого та знайдете площу кільця $= \pi(r_2^2 - r_1^2)$, що можна записати як \[ \pi(r_2 + r_1)(r_2 - r_1) \] $= \text{середня довжина окружності кільця} × \text{ширина кільця}$.
 <a name="figure56">
-<p><img src="33283-t/images/226a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/226a.pdf.png-1.png">
 
 
-<p>(3) Here's another case–that of the <em>die-away curve</em>. Find the area between $x = 0$ and $x = a$, of
-the curve (<a href="#figure57">Figure 57</a>) whose equation is
-\begin{align*}
-y &= b\epsilon^{-x}. \\
-\text{Area}
-  &= b\int^{x=a} _{x=0} \epsilon^{-x} · dx.  \\
-\end{align*}
-  The integration (<a href="18.html#differ3">here</a>) gives
-\begin{align*}
-  &= b\left[-\epsilon^{-x}\right]^a _0 \\
-  &= b\bigl[-\epsilon^{-a} - (-\epsilon^{-0})\bigr] \\
-  &= b(1-\epsilon^{-a}).
-\end{align*}
+</p><p>(3) Ось ще один випадок – <em>спадна крива</em>. Знайдіть площу між $x = 0$ і $x = a$ під кривою (<a href="#figure57">Зображення 57</a>), рівняння якої має вигляд \begin{align*} y &amp;= b\epsilon^{-x}. \\ \text{Площа} &amp;= b\int^{x=a} _{x=0} \epsilon^{-x} · dx. \\ \end{align*} Інтегрування (<a href="18.html#differ3">тут</a>) дає \begin{align*} &amp;= b\left[-\epsilon^{-x}\right]^a _0 \\ &amp;= b\bigl[-\epsilon^{-a} - (-\epsilon^{-0})\bigr] \\ &amp;= b(1-\epsilon^{-a}). \end{align*}
 
 <a name="figure57">
-<p><img src="33283-t/images/227a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/227a.pdf.png-1.png">
 
-<p>(4) Another example is afforded by the adiabatic
-curve of a perfect gas, the equation to which is
-$pv^n = c$, where $p$ stands for pressure, $v$ for volume,
-and $n$ is of the value $1.42$ (<a href="#figure58">Figure 58</a>).
+</p><p>(4) Наступним прикладом візьмемо адіабатичну криву ідеального газу, рівняння якої $pv^n = c$, де $p$ означає тиск, $v$ — об’єм, а $n$ — має значення $1,42$ (<a href="#figure58">Зображення 58</a>).
 <a name="figure58">
-<p><img src="33283-t/images/227b.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/227b.pdf.png-1.png">
 
-<p>Find the area under the curve (which is proportional
+</p><p>Знайдіть площу під кривою (яка є пропорційною роботі, виконаній під час раптового стиснення газу) від об’єму $v_2$ до об’єму $v_1$.
 
-to the work done in suddenly compressing the gas)
-from volume $v_2$ to volume $v_1$.
+</p><p>Тут ми маємо \begin{align*} \text{площа} &amp;= \int^{v=v_2}_{v=v_1} cv^{-n} · dv \\ &amp;= c\left[\frac{1 }{1-n} v^{1-n} \right]^{v_2} _{v_1} \\ &amp;= c \frac{1}{1-n} (v_2^{1-n} - v_1^ {1-n}) \\ &amp;= \frac{-c}{0.42}\left(\frac{1}{v_2^{0.42}} - \frac{1}{v_1^{0.42}}\right) . \end{align*}
 
-<p>Here we have
-\begin{align*}
-\text{area}
-  &= \int^{v=v_2}_{v=v_1} cv^{-n} · dv \\
-  &= c\left[\frac{1}{1-n} v^{1-n} \right]^{v_2} _{v_1} \\
-  &= c \frac{1}{1-n} (v_2^{1-n} - v_1^{1-n}) \\
-  &= \frac{-c}{0.42}\left(\frac{1}{v_2^{0.42}} - \frac{1}{v_1^{0.42}}\right).
-\end{align*}
-
-<p>
-<em>An Exercise.</em><p>
-Prove the ordinary mensuration formula, that the
-area $A$ of a circle whose radius is $R$, is equal to $\pi R^2$.
+</p><p>
+<em>Вправа.</em></p><p>
+Доведіть формулу, що площа $A$ кола радіуса $R$ дорівнює $\pi R^2$.
 
 <a name="figure59">
-<p><img src="33283-t/images/228a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/228a.pdf.png-1.png">
 
-<p>Consider an elementary zone or annulus of the
-surface (<a href="#figure59">Figure 59</a>), of breadth $dr$, situated at a distance $r$
-from the centre. We may consider the entire surface
-as consisting of such narrow zones, and the
-whole area $A$ will simply be the integral of all
+</p><p>Розглянемо елементарну зону, або кільце поверхні (<a href="#figure59">Зображення 59</a>) шириною $dr$, що знаходиться на відстані $r$ від центру. Ми можемо вважати, що вся поверхня складається з таких вузьких зон, а вся площа $A$ буде просто інтегралом усіх таких елементарних зон від центру до краю, тобто інтегрованою від $r = 0$ до $r = R $.
 
-such elementary zones from centre to margin, that is,
-integrated from $r = 0$ to $r = R$.
+</p><p>Тож, ми маємо знайти вираз для елементарної площі $dA$ такої вузької зони. Уявіть це як смугу шириною $dr$ і довжиною, що дорівнює довжині кола радіусом $r$, тобто $2 \pi r$. Тоді ми маємо площу вузької зони \[ dA = 2 \pi r\, dr. \]
 
-<p>We have therefore to find an expression for the
-elementary area $dA$ of the narrow zone. Think of
-it as a strip of breadth $dr$, and of a length that is
-the periphery of the circle of radius $r$, that is, a
-length of $2 \pi r$. Then we have, as the area of the
-narrow zone,
-\[
-dA = 2 \pi r\, dr.
-\]
+</p><p>Отже, площа всього кола буде: \[ A = \int dA = \int^{r=R}_{r=0} 2 \pi r · dr = 2 \pi \int^{r=R} _{r=0} r · dr. \]
 
-<p>Hence the area of the whole circle will be:
-\[
-A = \int dA
-  = \int^{r=R}_{r=0} 2 \pi r · dr
-  = 2 \pi \int^{r=R}_{r=0} r · dr.
-\]
+</p><p>Тож, загальний інтеграл від $r · dr$ дорівнює $\frac{1}{2} r^2$. Отже, \begin{align*} A &amp;= 2 \pi \bigl[\tfrac{1}{2} r^2 \bigr]^{r=R}_{r=0}; \\ або A &amp;= 2 \pi \bigl[\tfrac{1}{2} R^2 - \tfrac{1}{2}(0)^2\bigr]; \\ звідки \; A &amp;= \pi R^2. \end{align*}
 
-<p>Now, the general integral of $r · dr$ is $\frac{1}{2} r^2$. Therefore,
-\begin{align*}
-A &= 2 \pi \bigl[\tfrac{1}{2} r^2 \bigr]^{r=R}_{r=0}; \\
- or
-A &= 2 \pi \bigl[\tfrac{1}{2} R^2 - \tfrac{1}{2}(0)^2\bigr]; \\
- whence \;
-A &= \pi R^2.
-\end{align*}
-
-<p>
-<em>Another Exercise.</em><p>
-Let us find the mean ordinate of the positive part
-of the curve $y = x - x^2$, which is shown in <a href="#figure60">Figure 60</a>.
-To find the mean ordinate, we shall have to find the
-area of the piece $OMN$, and then divide it by the
-length of the base $ON$. But before we can find
-the area we must ascertain the length of the base,
-so as to know up to what limit we are to integrate.
-At $N$ the ordinate $y$ has zero value; therefore, we
-must look at the equation and see what value of $x$
-will make $y = 0$. Now, clearly, if $x$ is $0$, $y$ will also be $0$,
-the curve passing through the origin $O$; but also,
-if $x=1$, $y=0$; so that $x=1$ gives us the position of
-the point $N$.
+</p><p>
+<em>Ще одна вправа.</em></p><p>
+Давайте знайдемо середню ординату додатної частини кривої $y = x - x^2$, яка відображена на <a href="#figure60">Зображенні 60</a>. Щоб знайти середню ординату, нам потрібно знайти площу частини $OMN$, а потім розділити її на довжину основи $ON$. Але перш ніж ми зможемо знайти площу, нам треба визначити довжину основи, щоб знати, до якої межі ми маємо інтегрувати. При $N$ ордината $y$ має нульове значення; отже, ми повинні глянути рівняння та побачити, при яких значеннях $x$ $y$ становитиме $0$. Зрозуміло, що якщо $x$ дорівнює $0$, $y$ також буде $0$, тобто крива проходить через початок координат $O$; але також, якщо $x=1$, $y=0$, так що $x=1$ дає нам положення точки $N$.
 <a name="figure60">
-<p><img src="33283-t/images/229a.pdf.png-1.png">
-<p>Then the area wanted is
-\begin{align*}
-  &= \int^{x=1}_{x=0} (x-x^2)\, dx \\
-  &= \left[\tfrac{1}{2} x^2 - \tfrac{1}{3} x^3 \right]^{1}_{0} \\
-  &= \left[\tfrac{1}{2} - \tfrac{1}{3} \right] - [0-0] \\
-  &= \tfrac{1}{6}.
-\end{align*}
+</a></p><p><img src="33283-t/images/229a.pdf.png-1.png">
+</p><p>Отже, шукана площа становить \begin{align*} &amp;= \int^{x=1}_{x=0} (x-x^2)\, dx \\ &amp;= \left[\tfrac{1}{2} x^2 - \tfrac{1}{3} x^3 \right]^{1}_{0} \\ &amp;= \left[\tfrac{1}{2} - \tfrac{1}{3} \right] - [0-0] \\ &amp;= \tfrac{1}{6}. \end{align*}
 
-<p>But the base length is $1$.
+</p><p>Але довжина основи дорівнює $1$.
 
-<p>Therefore, the average ordinate of the curve $= \frac{1}{6}$.
+</p><p>Тож, середня ордината кривої $= \frac{1}{6}$.
 
-<p>[<em>Note</em>–It will be a pretty and simple exercise in
-maxima and minima to find by differentiation what
-is the height of the maximum ordinate. It <em>must</em> be
-greater than the average.]
+</p><p>[<em>Примітка</em> – Це буде гарною і простою вправою з максимумів і мінімумів, щоб шляхом диференціювання знайти висоту максимальної ординати. Вона <em>повинна</em> бути більшою за середню.]
 
-<p>The mean ordinate of any curve, over a range from
-$x= 0$ to $x = x_1$, is given by the expression,
-\[
-\text{mean $y$} = \frac{1}{x_1} \int^{x=x_1}_{x=0} y · dx.
-\]
+</p><p>Середня ордината будь-якої кривої в діапазоні від $x= 0$ до $x = x_1$ визначається виразом \[ \text{середня $y$} = \frac{1}{x_1} \int ^{x=x_1}_{x=0} y · dx. \]
 
-<p>One can also find in the same way the surface area
-of a solid of revolution.
+</p><p>Таким же чином можна знайти площу поверхні твердого тіла обертання.
 
 
-<p>
-<em>Example</em>. The curve $y=x^2-5$ is revolving about
-the axis of $x$. Find the area of the surface generated
-by the curve between $x=0$ and $x=6$.
+</p><p>
+<em>Приклад</em>. Крива $y=x^2-5$ обертається навколо осі $x$. Знайдіть площу поверхні, утвореної кривою між $x=0$ і $x=6$.
 
-<p>A point on the curve, the ordinate of which is $y$,
-describes a circumference of length $2\pi y$, and a narrow
-belt of the surface, of width $dx$, corresponding to this
-point, has for area $2\pi y\, dx$. The total area is
-\begin{align*}
-2\pi \int^{x=6}_{x=0} y\, dx
-  &= 2\pi \int^{x=6}_{x=0} (x^2-5)\, dx
-   = 2\pi \left[\frac{x^3}{3} - 5x\right]^6_0 \\
-  &= 6.28 × 42=263.76.
-\end{align*}
+</p><p>Точка на кривій, ордината якої дорівнює $y$, описує окружність довжиною $2\pi y$, а відповідна цій точці вузька смужка поверхні шириною $dx$ має площу $2\pi y\, dx$. Загальна площа дорівнює \begin{align*} 2\pi \int^{x=6}_{x=0} y\, dx &amp;= 2\pi \int^{x=6}_{x=0} (x^2-5)\, dx = 2\pi \left[\frac{x^3}{3} - 5x\right]^6_0 \\ &amp;= 6,28 × 42=263,76. \end{align*}
 
-<p>
-<h2>Areas in Polar Coordinates.</h2>
+</p><p>
+</p><h2>Площі в полярних координатах.</h2>
 
-<p>When the equation of the boundary of an area is
-given as a function of the distance $r$ of a point of it
-from a fixed point $O$ (see <a href="#figure61">Figure 61</a>) called the <em>pole</em>, and
-of the angle which $r$ makes with the positive horizontal
-direction $OX$, the process just explained can
-be applied just as easily, with a small modification.
-Instead of a strip of area, we consider a small triangle
-$OAB$, the angle at $O$ being $d\theta$, and we find the sum
-of all the little triangles making up the required
-area.
+<p>Коли рівняння межі області задано як функція відстані $r$ її точки від фіксованої точки $O$ (див. <a href="#figure61">Зображення 61</a>), що називається <em>полюсом</em>, і кута, який $r$ утворює з позитивним горизонтальним напрямком $OX$, щойно пояснений процес можна застосувати так само легко, з невеликими змінами. Замість смужки площі ми розглянемо малий трикутник $OAB$, де кут при $O$ дорівнює $d\theta$, і знайдемо суму всіх маленьких трикутників, які складають шукану площу.
 <a name="figure61">
-<p><img src="33283-t/images/231a.pdf.png-1.png">
-<p>
-The area of such a small triangle is approximately
-$\dfrac{AB}{2}×r$ or $\dfrac{r\, d\theta}{2}×r$; hence the portion of the area
-included between the curve and two positions of $r$
-corresponding to the angles $\theta_1$ and $\theta_2$ is given by
-\[
-\tfrac{1}{2} \int^{\theta=\theta_2}_{\theta=\theta_1} r^2\, d\theta.
-\]
+</a></p><p><img src="33283-t/images/231a.pdf.png-1.png">
+</p><p>
+Площа такого маленького трикутника становить приблизно $\dfrac{AB}{2}×r$ або $\dfrac{r\, d\theta}{2}×r$. Отже, частина площи між кривою та двома положеннями $r$, що відповідають кутам $\theta_1$ і $\theta_2$, визначається як \[ \tfrac{1}{2} \int^{\theta= \theta_2}_{\theta=\theta_1} r^2\, d\theta. \]
 
-<p><hr>
+</p><p></p><hr>
 
 <p>
-<p><em>Examples</em>
-(1) Find the area of the sector of $1$ radian in a
-circumference of radius $a$ inches.
+</p><p><em>Приклади</em> (1) Знайдіть площу сектора в $1$ радіан в колі радіусом $a$ дюймів.
 
-<p>The polar equation of the circumference is evidently
-$r=a$. The area is
-\[
-\tfrac{1}{2} \int^{\theta=\theta_2}_{\theta=\theta_1} a^2\, d\theta
-  = \frac{a^2}{2} \int^{\theta=1}_{\theta=0} d\theta
-  = \frac{a^2}{2}.
-\]
+</p><p>Полярне рівняння кола, очевидно, $r=a$. Площа дорівнює \[ \tfrac{1}{2} \int^{\theta=\theta_2}_{\theta=\theta_1} a^2\, d\theta = \frac{a^2}{2} \int^{\theta=1}_{\theta=0} d\theta = \frac{a^2}{2}. \]
 
-<p>(2) Find the area of the first quadrant of the curve
-(known as “Pascal's Snail”), the polar equation of
-which is $r=a(1+\cos \theta)$.
-\begin{align*}
-\text{Area}
-  &= \tfrac{1}{2}  \int^{\theta=\frac{\pi}{2}}_{\theta=0} a^2(1+\cos \theta)^2\, d\theta  \\
-  &= \frac{a^2}{2} \int^{\theta=\frac{\pi}{2}}_{\theta=0} (1+2 \cos \theta + \cos^2 \theta)\, d\theta  \\
-  &= \frac{a^2}{2} \left[\theta + 2 \sin \theta + \frac{\theta}{2} + \frac{\sin 2 \theta}{4} \right]^{\frac{\pi}{2}}_{0} \\
-  &= \frac{a^2(3\pi+8)}{8}.
-\end{align*}
+</p><p>(2) Знайдіть площу першої чверті кривої (відомої як «равлик Паскаля»), полярне рівняння якої $r=a(1+\cos \theta)$. \begin{align*} \text{Площа} &amp;= \tfrac{1}{2} \int^{\theta=\frac{\pi}{2}}_{\theta=0} a^2(1 +\cos \theta)^2\, d\theta \\ &amp;= \frac{a^2}{2} \int^{\theta=\frac{\pi}{2}}_{\theta=0 } (1+2 \cos \theta + \cos^2 \theta)\, d\theta \\ &amp;= \frac{a^2}{2} \left[\theta + 2 \sin \theta + \frac {\theta}{2} + \frac{\sin 2 \theta}{4} \right]^{\frac{\pi}{2}}_{0} \\ &amp;= \frac{a^2( 3\pi+8)}{8}. \end{align*}
 
 
-<p><h2>Volumes by Integration.</h2>
+</p><p></p><h2>Об'єми за допомогою інтегрування.</h2>
 
-<p>What we have done with the area of a little strip
-of a surface, we can, of course, just as easily do with
-the volume of a little strip of a solid. We can add
-up all the little strips that make up the total solid,
-and find its volume, just as we have added up all the
-small little bits that made up an area to find the final
-area of the figure operated upon.
+<p>Те, що ми зробили з площею невеликої смужки поверхні, ми, звичайно, можемо так само легко зробити з об’ємом невеликої смужки тіла. Ми можемо скласти всі маленькі смужки, які утворюють загальне тіло, і знайти його об’єм, так само, як ми склали всі маленькі смужки, з яких складається площа, щоб знайти кінцеву площу фігури, з якою працюємо.
 
-<p><hr>
+</p><p></p><hr>
 
 <p>
-<p><em>Examples</em>
-(1) Find the volume of a sphere of radius $r$.
+</p><p><em>Приклади</em> (1) Знайдіть об’єм кулі радіуса $r$.
 
-<p>A thin spherical shell has for volume $4\pi x^2\, dx$ (see
-<a href="#figure59">Figure 59</a>; summing up all the concentric shells %[xref, Page]
-which make up the sphere, we have
-\[
-\text{volume sphere}
-  = \int^{x=r}_{x=0} 4\pi x^2\, dx
-  = 4\pi \left[\frac{x^3}{3} \right]^r_0
-  = \tfrac{4}{3} \pi r^3.
-\]
+</p><p>Тонка сферична оболонка має об'єм $4\pi x^2\, dx$ (див. <a href="#figure59">Зображення  59</a>). Підсумовуючи всі концентричні оболонки (концентрична оболонка — послідовний сферичний шар навколо центру сфери), які утворюють сферу, ми маємо \[ \text{об'єм сфери} = \int^{x=r}_{x=0} 4\pi x^2\ , dx = 4\pi \left[\frac{x^3}{3} \right]^r_0 = \tfrac{4}{3} \pi r^3. \]
 
 <a name="figure62">
-<p><img src="33283-t/images/233a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/233a.pdf.png-1.png">
 
-<p>We can also proceed as follows: a slice of the
-sphere, of thickness $dx$, has for volume $\pi y^2\, dx$ (see
-<a href="#figure62">Figure 62</a>). Also $x$ and $y$ are related by the expression
-\[
-y^2 = r^2 - x^2.
-\]
+</p><p>Ми також могли зробити наступним чином: розріз сфери товщиною $dx$ має об’єм $\pi y^2\, dx$ (див. <a href="#figure62">Зображення 62</a>). Також $x$ і $y$ пов’язані виразом \[ y^2 = r^2 - x^2. \] \begin{align*} Отже \; \text{об'єм сфери} &amp;= 2 \int^{x=r}_{x=0} \pi(r^2-x^2)\, dx \\ &amp;= 2 \pi \left[ \int^ {x=r}_{x=0} r^2\, dx - \int^{x=r}_{x=0} x^2\, dx \right] \\ &amp;= 2 \pi \left [r^2x - \frac{x^3}{3} \right]^r_0 = \frac{4\pi}{3} r^3. \end{align*}
 
-\begin{align*}
-   Hence \;
-\text{volume sphere}
-  &= 2 \int^{x=r}_{x=0} \pi(r^2-x^2)\, dx \\
-  &= 2 \pi \left[ \int^{x=r}_{x=0} r^2\, dx - \int^{x=r}_{x=0} x^2\, dx \right] \\
-  &= 2 \pi \left[r^2x - \frac{x^3}{3} \right]^r_0 = \frac{4\pi}{3} r^3.
-\end{align*}
+</p><p>(2) Знайдіть об’єм твердого тіла, утвореного обертанням кривої $y^2=6x$ навколо осі $x$ між $x=0$ і $x=4$.
 
-<p>(2) Find the volume of the solid generated by the
-revolution of the curve $y^2=6x$ about the axis of $x$,
-between $x=0$ and $x=4$.
+</p><p>Об’єм смужки твердого тіла дорівнює $\pi y^2\, dx$. \begin{align*} Отже \; \text{об'єм} &amp;= \int^{x=4}_{x=0} \pi y^2\, dx = 6\pi \int^{x=4}_{x=0} x\, dx \\ &amp;= 6\pi \left[ \frac{x^2}{2} \right]^4_0 = 48\pi = 150,8. \end{align*}
 
-<p>The volume of a strip of the solid is $\pi y^2\, dx$.
-\begin{align*}
-   Hence \;
-\text{volume}
-  &= \int^{x=4}_{x=0} \pi y^2\, dx = 6\pi \int^{x=4}_{x=0} x\, dx  \\
-  &= 6\pi \left[ \frac{x^2}{2} \right]^4_0 = 48\pi = 150.8.
-\end{align*}
+</p><p></p><h2>Про Середнє Квадратичне.</h2>
 
-<p><h2>On Quadratic Means.</h2>
-
-<p>In certain branches of physics, particularly in the
-study of alternating electric currents, it is necessary
-to be able to calculate the <em>quadratic mean</em> of a
-variable quantity. By “quadratic mean” is denoted
-the square root of the mean of the squares of all the
-values between the limits considered. Other names
-for the quadratic mean of any quantity are its
-“virtual” value, or its “r.m.s.” (meaning root-mean-square)
-value. The French term is <em>valeur efficace</em> . If $y$
-is the function under consideration, and the quadratic
-mean is to be taken between the limits of $x=0$
-and $x=l$; then the quadratic mean is expressed as
-\[
-\sqrt[2] {\frac{1}{l} \int^l_0 y^2\, dx}.
-\]
+<p>У деяких розділах фізики, зокрема при вивченні змінного електричного струму, необхідно вміти обчислювати <em>середнє квадратичне</em> змінної величини. Під «середнім квадратичним» мається на увазі квадратний корінь із середнього квадратів усіх значень у розглянутих межах. Інша назва середнього квадратичного будь-якої величини — це її "кореневе середньоквадратичне". <em></em> Якщо $y$ — це функція, що розглядається, а середнє квадратичне має бути взято між межами $x=0$ і $x=l$, тоді середнє квадратичне виражається як \[ \sqrt[2] {\frac{1}{l} \int^l_0 y^2\, dx}. \]
 
 
-<p>
-<p><em>Examples</em>
-(1) To find the quadratic mean of the function
-$y=ax$ (<a href="#figure63">Figure 63</a>).
+</p><p>
+</p><p><em>Приклади</em> (1) Знайти середнє квадратичне функції $y=ax$ (<a href="#figure63">Зображення 63</a>).
 
-<p>Here the integral is $\int^l_0 a^2 x^2\, dx$,
-which is $\frac{1}{3} a^2 l^3$.
+</p><p>Тут інтеграл це $\int^l_0 a^2 x^2\, dx$, що дорівнює $\frac{1}{3} a^2 l^3$.
 
 <a name="figure63">
-<p><img src="33283-t/images/235a.pdf.png-1.png">
+</a></p><p><img src="33283-t/images/235a.pdf.png-1.png">
 
-<p>Dividing by $l$ and taking the square root, we have
-\[
-\text{quadratic mean} = \frac{1}{\sqrt 3}\, al.
-\]
+</p><p>Поділивши на $l$ і взявши квадратний корінь, ми отримаємо \[ \text{середнє квадратичне} = \frac{1}{\sqrt 3}\, al. \]
 
-<p>Here the arithmetical mean is $\frac{1}{2}al$; and the ratio
-of quadratic to arithmetical mean (this ratio is called
-the <em>form-factor</em>) is $\dfrac{2}{\sqrt 3}=1.155$.
+</p><p>Середнє арифметичне тут дорівнює $\frac{1}{2}al$; а відношення середнього квадратичного до середнього арифметичного становить $\dfrac{2}{\sqrt 3}=1,155$.
 
-<p>(2) To find the quadratic mean of the function $y=x^a$.
+</p><p>(2) Знайти середнє квадратичне функції $y=x^a$.
 
-<p>The integral is $\int^{x=l}_{x=0} x^{2a}\, dx$, that is $\dfrac{l^{2a+1}}{2a+1}$.
-
- Hence
-quadratic mean = $\sqrt[2]{\dfrac{l^{2a}}{2a+1}}$.
+</p><p>Інтеграл дорівнює $\int^{x=l}_{x=0} x^{2a}\, dx$, тобто $\dfrac{l^{2a+1}}{2a+1}$. Отже, середнє квадратичне = $\sqrt[2]{\dfrac{l^{2a}}{2a+1}}$.
 
 
-<p>(3) To find the quadratic mean of the function $y=a^{\frac{x}{2}}$.
+</p><p>(3) Знайти середнє квадратичне функції $y=a^{\frac{x}{2}}$.
 
-<p>The integral is $\int^{x=l}_{x=0} (a^{\frac{x}{2}})^2\, dx$, that is $\int^{x=l}_{x=0} a^x\, dx$,
+</p><p>Інтеграл дорівнює $\int^{x=l}_{x=0} (a^{\frac{x}{2}})^2\, dx$, тобто $\int^{x=l} _{x=0} a^x\, dx$ або $\left[ \frac{a^x}{\log_\epsilon a} \right]^{x=l}_{x=0}$, що дорівнює $\dfrac{a^l-1}{\log_\epsilon a}$.
 
- or
-$\left[ \frac{a^x}{\log_\epsilon a} \right]^{x=l}_{x=0}$,
+</p><p>Отже, середнє квадратичне дорівнює $\sqrt[2] {\dfrac{a^l - 1}{l \log_\epsilon a}}$.
 
-which is $\dfrac{a^l-1}{\log_\epsilon a}$.
+</p><p>
+</p><hr><h3>Вправи XVIII</h3>
 
-<p>Hence the quadratic mean is $\sqrt[2] {\dfrac{a^l - 1}{l \log_\epsilon a}}$.
+(1) Знайдіть площу кривої $y=x^2+x-5$ між $x=0$ і $x=6$ і середнє значення ординат між цими межами.
 
-<p>
-<hr><h3>Exercises XVIII</h3>
+<p>(2) Знайдіть площу параболи $y=2a\sqrt x$ між $x=0$ і $x=a$. Покажіть, що вона становить дві третини прямокутника від граничної ординати параболи та її абсциси.
 
-(1) Find the area of the curve $y=x^2+x-5$ between
-$x=0$ and $x=6$, and the mean ordinates between
-these limits.
+</p><p>(3) Знайдіть площу додатної частини синусоїди та її середню ординату.
 
-<p>(2) Find the area of the parabola $y=2a\sqrt x$ between
-$x=0$ and $x=a$. Show that it is two-thirds of the
-rectangle of the limiting ordinate and of its abscissa.
+</p><p>(4) Знайдіть площу додатної частини кривої $y=\sin^2 x$ і її середню ординату.
 
-<p>(3) Find the area of the positive portion of a sine
-curve and the mean ordinate.
+</p><p>(5) Знайдіть площу між двома гілками кривої $y=x^2 ± x^{\frac{5}{2}}$ від $x=0$ до $x=1$, а також площу позитивної частини нижньої гілки кривої (див. <a href="#figure30">Зображення 30</a>).
 
-<p>(4) Find the area of the positive portion of the
-curve $y=\sin^2 x$, and find the mean ordinate.
+</p><p>(6) Знайдіть об’єм конуса з радіусом основи $r$ і висотою $h$.
 
-<p>(5) Find the area included between the two branches
-of the curve $y=x^2 ± x^{\frac{5}{2}}$ from $x=0$ to $x=1$, also the
-area of the positive portion of the lower branch of
-the curve (see <a href="#figure30">Figure 30</a>.
+</p><p>(7) Знайдіть площу кривої $y=x^3-\log_\epsilon x$ між $x=0$ і $x=1$.
 
-<p>(6) Find the volume of a cone of radius of base $r$,
-and of height $h$.
-
-<p>(7) Find the area of the curve $y=x^3-\log_\epsilon x$ between
-$x=0$ and $x=1$.
-
-<p>(8) Find the volume generated by the curve
-$y=\sqrt{1+x^2}$, as it revolves about the axis of $x$, between
-$x=0$ and $x=4$.
+</p><p>(8) Знайдіть об’єм, утворений кривою $y=\sqrt{1+x^2}$, коли вона обертається навколо осі $x$, між $x=0$ і $x=4$.
 
 
-<p>(9) Find the volume generated by a sine curve
-revolving about the axis of $x$. Find also the area of
-its surface.
+</p><p>(9) Знайдіть об’єм, створений синусоїдальною кривою, що обертається навколо осі $x$. Знайдіть також площу його поверхні.
 
-<p>(10) Find the area of the portion of the curve
-$xy=a$ included between $x=1$ and $x = a$. Find the
-mean ordinate between these limits.
+</p><p>(10) Знайдіть площу, утворену частиною кривої $xy=a$, що знаходиться між $x=1$ і $x = a$. Знайдіть середню ординату у цих межах.
 
-<p>(11) Show that the quadratic mean of the function
-$y=\sin x$, between the limits of $0$ and $\pi$ radians, is $\dfrac{\sqrt2}{2}$.
-Find also the arithmetical mean of the same
-function between the same limits; and show that the
-form-factor is $=1.11$.
+</p><p>(11) Покажіть, що середнє квадратичне функції $y=\sin x$ між $0$ і $\pi$ радіан дорівнює $\dfrac{\sqrt2}{2}$. Знайдіть також середнє арифметичне тієї ж функції в тих самих межах і покажіть, що їх відношення $=1,11$.
 
-<p>(12) Find the arithmetical and quadratic means of
-the function $x^2+3x+2$, from $x=0$ to $x=3$.
+</p><p>(12) Знайдіть середнє арифметичне та квадратичне функції $x^2+3x+2$ від $x=0$ до $x=3$.
 
-<p>(13) Find the quadratic mean and the arithmetical
-mean of the function $y=A_1 \sin x + A_1 \sin 3x$.
+</p><p>(13) Знайдіть середнє квадратичне та середнє арифметичне функції $y=A_1 \sin x + A_1 \sin 3x$.
 
-<p>(14) A certain curve has the equation $y=3.42\epsilon^{0.21x}$.
-Find the area included between the curve and the
-axis of $x$, from the ordinate at $x=2$ to the ordinate
-at $x = 8$. Find also the height of the mean ordinate
-of the curve between these points.
+</p><p>(14) Певна крива має рівняння $y=3,42\epsilon^{0,21x}$. Знайдіть площу між кривою та віссю $x$ від ординати на $x=2$ до ординати на $x=8$. Знайдіть також висоту середньої ординати кривої між цими точками.
 
-<p>(15) Show that the radius of a circle, the area of
-which is twice the area of a polar diagram, is equal
-to the quadratic mean of all the values of $r$ for that
-polar diagram.
+</p><p>(15) Покажіть, що радіус кола, площа якого вдвічі перевищує площу полярної діаграми, дорівнює середньому квадратичному всіх значень $r$ для цієї полярної діаграми.
 
-<p>(16) Find the volume generated by the curve
-$y=±\dfrac{x}{6}\sqrt{x(10-x)}$ rotating about the axis of $x$.
+</p><p>(16) Знайдіть об’єм, утворений кривою $y=±\dfrac{x}{6}\sqrt{x(10-x)}$, що обертається навколо осі $x$.
 
-<p><h3 class="answers">Answers</h3>
+</p><p></p><h3 class="answers">Відповіді</h3>
 
-<p>(1)  $\text{Area} = 60$; $\text{mean ordinate} = 10$.
+<p>(1) $\text{Площа} = 60$; $\text{середня ордината} = 10$.
 
-<p>(2)  $\text{Area} = \frac{2}{3}$ of $a × 2a \sqrt{a}$.
+</p><p>(2) $\text{Площа} = \frac{2}{3}$ від $a × 2a \sqrt{a}$.
 
-<p>(3)  $\text{Area} = 2$; $\text{mean ordinate} = \dfrac{2}{\pi} = 0.637$.
+</p><p>(3) $\text{Площа} = 2$; $\text{середня ордината} = \dfrac{2}{\pi} = 0,637$.
 
-<p>(4)  $\text{Area} = 1.57$; $\text{mean ordinate} = 0.5$.
+</p><p>(4) $\text{Площа} = 1,57$; $\text{середня ордината} = 0,5$.
 
 
-<p>(5)  $0.572$, $0.0476$.
+</p><p>(5)  $0.572$, $0.0476$.
 
-<p>(6)  $\text{Volume} = \pi r^2 \dfrac{h}{3}$.
+</p><p>(6) $\text{Об'єм} = \pi r^2 \dfrac{h}{3}$.
 
-<p>(7)  $1.25$.
+</p><p>(7)  $1.25$.
 
-<p>(8)  $79.4$.
+</p><p>(8)  $79.4$.
 
-<p>(9)  $\text{Volume} = 4.9348$; $\text{area of surface} = 12.57$ (from $0$ to $\pi$).
+</p><p>(9) $\text{Об'єм} = 4,9348$; $\text{площа поверхні} = 12,57$ (від $0$ до $\pi$).
 
-<p>(10)  $a\log_\epsilon a$,&nbsp;&nbsp; $\dfrac{a}{a - 1} \log_\epsilon a$.
+</p><p>(10)  $a\log_\epsilon a$,&nbsp;&nbsp; $\dfrac{a}{a - 1} \log_\epsilon a$.
 
-<p>(12)  $\text{Arithmetical mean} = 9.5$; $\text{quadratic mean} = 10.85$.
+</p><p>(12) $\text{Середнє арифметичне} = 9,5$; $\text{середнє квадратичне} = 10,85$.
 
 
-<p>(13)  $\text{Quadratic mean} = \dfrac{1}{\sqrt{2}} \sqrt{A_1^2 + A_3^2}$; $\text{arithmetical mean} = 0$.
+</p><p>(13) $\text{Середнє квадратичне} = \dfrac{1}{\sqrt{2}} \sqrt{A_1^2 + A_3^2}$; $\text{середнє арифметичне} = 0$. Перше має дещо складний інтеграл, і його можна сформулювати так: за визначенням квадратичне середнє буде \[ \sqrt{\dfrac{1}{2\pi} \int_0^{2\pi} (A_1 \sin x + A_3 \sin 3x)^2\, dx}. \] Інтегрування  \[ \int (A_1^2 \sin^2 x + 2A_1 A_3 \sin x \sin 3x + A_3^2 \sin^2 3x)\, dx \] легше виконати, якщо зхамість $\sin^2 x$ ми запишемо \[ \dfrac{1 - \cos 2x}{2}. \] Для $2\sin x \sin 3x$ ми пишемо $\cos 2x - \cos 4x$; і, для $\sin^2 3x$, \[ \dfrac{1 - \cos 6x}{2}. \] Роблячи ці заміни та інтегруючи, ми отримуємо (див. <a href="18.html#cosax">тут</a>) \[ \dfrac{A_1^2}{2} \left( x - \dfrac{\sin 2x}{2} \right) + A_1 A_3 \left( \dfrac{\sin 2x}{2} - \dfrac {\sin 4x}{4} \right) + \dfrac{A_3^2}{2} \left( x - \dfrac{\sin 6x}{6} \right). \] На нижній межі підстановка $0$ для $x$ призводить до того, що все це зникає, тоді як на верхній межі підстановка $2\pi$ для $x$ дає $A_1^2 \pi + A_3^2 \pi $. І звідси випливає відповідь.
 
-The first involves a somewhat difficult integral, and may be
-stated thus: By definition the quadratic mean will be
-\[
-\sqrt{\dfrac{1}{2\pi} \int_0^{2\pi} (A_1 \sin x + A_3 \sin 3x)^2\, dx}.
-\]
-Now the integration indicated by
-\[
-\int (A_1^2 \sin^2 x + 2A_1 A_3 \sin x \sin 3x + A_3^2 \sin^2 3x)\, dx
-\]
-is more readily obtained if for $\sin^2 x$ we write
-\[
-\dfrac{1 - \cos 2x}{2}.
-\]
-For $2\sin x \sin 3x$ we write $\cos 2x - \cos 4x$; and, for $\sin^2 3x$,
-\[
-\dfrac{1 - \cos 6x}{2}.
-\]
+</p><p>(14) Площа становить $62,6$ квадратних одиниць. Середня ордината становить $10,42$.
 
-Making these substitutions, and integrating, we get (see
-<a href="18.html#cosax">here</a>)
-\[
-\dfrac{A_1^2}{2} \left( x - \dfrac{\sin 2x}{2} \right)
- + A_1 A_3 \left( \dfrac{\sin 2x}{2} - \dfrac{\sin 4x}{4} \right)
- + \dfrac{A_3^2}{2} \left( x - \dfrac{\sin 6x}{6} \right).
-\]
-
-At the lower limit the substitution of $0$ for $x$ causes all
-this to vanish, whilst at the upper limit the substitution
-of $2\pi$ for $x$ gives $A_1^2 \pi + A_3^2 \pi$. And hence the
-answer follows.
-
-<p>(14)  Area is $62.6$ square units. Mean ordinate is $10.42$.
-
-<p>(16)  $436.3$. (This solid is pear shaped.)
+</p><p>(16) $436.3$. (Це тверде тіло має форму груші.)
 
 <br>
-<hr>
-<a href="20.html">Next &rarr;</a><br>
-<a href="/">Main Page &uarr;</a><br>
+</p><hr>
+<a href="20.html">Далі →</a><br> <a href="/">Головна сторінка ↑</a><br>
 
 <script src="j/jquery.js"></script>
 <script src="j/modernizr.js"></script>
 <script src="j/dih5.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101178221-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  gtag('config', 'UA-101178221-1');
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
