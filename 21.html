@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Finding some Solutions | Calculus Made Easy</title>
+<meta charset="UTF-8">
+<title>Пошук деяких рішень | Математичний аналіз простими словами</title>
 <link rel="stylesheet" href="screen.css">
 <style>
 body{counter-reset:h1 21}
@@ -12,625 +12,168 @@ body{counter-reset:h1 21}
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<h1><br>Finding some Solutions</h1>
+<h1><br>Пошук деяких рішень</h1>
 <p class="a rotatedFloralHeartBullet">
 
-<p>In this chapter we go to work finding solutions to
-some important differential equations, using for this
-purpose the processes shown in the preceding chapters.
+</p><p>У цьому розділі ми приступаємо до пошуку розв’язків деяких важливих диференціальних рівнянь, використовуючи для цього принципи, наведені в попередніх розділах.
 
-<p>The beginner, who now knows how easy most of
-those processes are in themselves, will here begin to
-realize that integration is <em>an art</em>. As in all arts, so
-in this, facility can be acquired only by diligent and
-regular practice. He who would attain that facility
-must work out examples, and more examples, and yet
-more examples, such as are found abundantly in all
-the regular treatises on the Calculus. Our purpose
-here must be to afford the briefest introduction to
-serious work.
+</p><p>Початківець, який тепер знає, наскільки легка більшість цих принципів сама по собі, тут почне розуміти, що інтегрування — це <em>мистецтво</em>. Як і в усіх мистецтвах, так і тут, здатності можна набути лише старанною та регулярною практикою. Той, хто хоче досягти цієї здатності, повинен проробляти приклади, і ще більше прикладів, і ще більше прикладів, і їх можна знайти в багатьох звичайних трактатах про математичний аналіз. Нашою метою тут є надати найкоротший вступ до серйозної роботи.
 
-<p><hr>
+</p><p></p><hr>
 
-<p><em>Example (1.)</em> Find the solution of the differential
-equation
-\[
-ay + b \frac{dy}{dx} = 0.
-\]
+<p><em>Приклад (1.)</em> Знайти розв’язок диференціального рівняння \[ ay + b \frac{dy}{dx} = 0. \]
 
-<p>Transposing we have
-\[
-b \frac{dy}{dx} = -ay.
-\]
+</p><p>Транспонуючи, ми маємо \[ b \frac{dy}{dx} = -ay. \]
 
 
-<p>Now the mere inspection of this relation tells us
-that we have got to do with a case in which $\dfrac{dy}{dx}$ is
-proportional to $y$. If we think of the curve which
-will represent $y$ as a function of $x$, it will be such
-that its slope at any point will be proportional to
-the ordinate at that point, and will be a negative
-slope if $y$ is positive. So obviously the curve will
-be a die-away curve, and the solution will
-contain $\epsilon^{-x}$ as a factor. But, without presuming on
-this bit of sagacity, let us go to work.
+</p><p>Простий розгляд цього відношення підказує, що ми маємо справу з випадком, коли $\dfrac{dy}{dx}$ пропорційний $y$. Якщо ми подумаємо про криву, яка представлятиме $y$ як функцію від $x$, вона буде такою, що її нахил у будь-якій точці буде пропорційний ординаті в цій точці, і він буде від’ємним, якщо $y$ є додатним. Отже, очевидно, що крива буде спадною, а розв’язок міститиме $\epsilon^{-x}$ у якості множника. Але, не вдаючись у ці мудрощі, давайте приступимо до роботи.
 
-<p>As both $y$ and $dy$ occur in the equation and on
-opposite sides, we can do nothing until we get both
-$y$ and $dy$ to one side, and $dx$ to the other. To do
-this, we must split our usually inseparable companions
-$dy$ and $dx$ from one another.
-\[
-\frac{dy}{y} = - \frac{a}{b}\, dx.
-\]
+</p><p>Оскільки обидва $y$ і $dy$ зустрічаються в рівнянні на протилежних сторонах, ми нічого не можемо зробити, доки не отримаємо $y$ і $dy$ з одного боку, а $dx$ з іншого. Для цього ми маємо розділити наших зазвичай нерозлучних супутників $dy$ і $dx$ один від одного. \[ \frac{dy}{y} = - \frac{a}{b}\, dx. \]
 
-<p>Having done the deed, we now can see that both
-sides have got into a shape that is integrable, because
-we recognize $\dfrac{dy}{y}$, or $\dfrac{1}{y}\, dy$, as a differential that we
-have met with (<a href="14.html#expolo">here</a>) when differentiating logarithms.
-So we may at once write down the instructions to
-integrate,
-\[
-\int \frac{dy}{y} = \int -\frac{a}{b}\, dx;
-\]
-and doing the two integrations, we have:
-\[
-\log_\epsilon y = -\frac{a}{b} x + \log_\epsilon C,
-\]
+</p><p>Вчинивши це, ми бачимо, що обидві сторони отримали форму, яку можна інтегрувати, оскільки ми розпізнаємо $\dfrac{dy}{y}$ або $\dfrac{1}{y}\, dy$, як диференціал, з яким ми зустрічалися (<a href="14.html#expolo">тут</a>) при диференціюванні логарифмів. Тож ми можемо одразу записати інструкції для інтегрування, \[ \int \frac{dy}{y} = \int -\frac{a}{b}\, dx; \] і виконуючи два інтегрування, ми маємо: \[ \log_\epsilon y = -\frac{a}{b} x + \log_\epsilon C, \] де $\log_\epsilon C$ є ще невизначеною константою інтегрування. Позбувшись логарифмів, ми отримуємо: \[ y = C \epsilon^{-\frac{a}{b} x}, \] що є шуканим <em>рішенням</em>*. Це рішення виглядає зовсім не схожим на диференціальне рівняння, з якого його було побудовано, однак для математика-експерта обидва вони передають однакову інформацію про те, як $y$ залежить від $x$.
 
-where $\log_\epsilon C$ is the yet undetermined constant
-of
-integration. Then, delogarizing, we get:
-\[
-y = C \epsilon^{-\frac{a}{b} x},
-\]
-which is <em>the solution</em> required*. Now, this solution
-looks quite unlike the original differential equation
-from which it was constructed: yet to an expert
-mathematician they both convey the same information
-as to the way in which $y$ depends on $x$.
+</p><p><note>*Ми можемо записати «константу інтегрування» у будь-якій формі, і форма $\log_\epsilon C$ прийнята тут за перевагою, оскільки інші члени в цьому рядку рівняння є або розглядаються як логарифми; і це може позбавити нас від ускладнень, якщо додамо константу <em>такого ж роду</em>.</note>
 
-<p><note>*We may write down any form of constant as the “constant of
-  integration,” and the form $\log_\epsilon C$ is adopted here by preference,
-  because the other terms in this line of equation are, or are treated
-  as logarithms; and it saves complications afterward if the added
-  constant be <em>of the same kind</em>.</note>
+</p><p>Тепер, що стосується $C$, її сенс залежить від початкового значення $y$. Бо якщо ми підставимо $x = 0$, щоб побачити, яке значення тоді має $y$, ми виявимо, що це дає $y = C \epsilon^{-0}$; а оскільки $\epsilon^{-0} = 1$, ми бачимо, що $C$ — це не що інше, як конкретне значення* $y$ на початку. Ми можемо назвати це $y_0$ і записати розв’язок у вигляді \[ y = y_0 \epsilon^{-\frac{a}{b} x}. \]
+</p><p><note>*Порівняйте сказане про «константу інтегрування» з посиланням на <a href="17.html#figure48">Зображення 48</a> <a href="17.html#constant">тут</a>, і <a href="17.html#figure51">Зображення 51</a>.</note>
+</p><p></p><hr>
 
-<p>Now, as to the $C$, its meaning depends on the
-initial value of $y$. For if we put $x = 0$ in order to
-see what value $y$ then has, we find that this makes
-$y = C \epsilon^{-0}$; and as $\epsilon^{-0} = 1$ we see that $C$ is nothing else
-than the particular value*
- of $y$ at starting. This we
-may call $y_0$, and so write the solution as
-\[
-y = y_0 \epsilon^{-\frac{a}{b} x}.
-\]
-<p><note>*Compare what was said about the “constant of integration,”
-  with reference to <a href="17.html#figure48">Figure 48</a> on <a href="17.html#constant">here</a>, and <a href="17.html#figure51">Figure 51</a>.</note>
-<p><hr>
+<p><em>Приклад (2.)</em>
 
-<p><em>Example (2.)</em>
+</p><p>У якості прикладу розв'яжемо \[ ay + b \frac{dy}{dx} = g, \] де $g$ — константа. Знову ж таки, розгляд рівняння приведе до припущення, що (1) так чи інакше $\epsilon^x$ увійде в розв’язок, і (2) якщо у будь-якій частині кривої $y$ стає максимумом або мінімумом, так що $\dfrac{dy}{dx} = 0$, тоді $y$ матиме значення $= \dfrac{g}{a}$. Але давайте приступимо до роботи, як і раніше, відокремлюючи диференціали та намагаючись привести цю річ до якогось виду, що можна інтегрувати. \begin{align*} b\frac{dy}{dx} &amp;= g -ay; \\ \frac{dy}{dx} &amp;= \frac{a}{b}\left(\frac{g}{a}-y\right); \\ \frac{dy}{y-\dfrac{g}{a}} &amp;= -\frac{a}{b}\, dx. \end{align*}
 
-<p>Let us take as an example to solve
-\[
-ay + b \frac{dy}{dx} = g,
-\]
-where $g$ is a constant. Again, inspecting the equation
-will suggest, (1) that somehow or other $\epsilon^x$ will come
-into the solution, and (2) that if at any part of the
+</p><p>Ми зробили все можливе, щоб не мати нічого, крім $y$ і $dy$ з одного боку, і нічого, крім $dx$ з іншого. Але чи можна інтегрувати результат у лівій частині?
 
-curve $y$ becomes either a maximum or a minimum, so
-that $\dfrac{dy}{dx} = 0$, then $y$ will have the value $= \dfrac{g}{a}$. But let
-us go to work as before, separating the differentials
-and trying to transform the thing into some integrable
-shape.
-\begin{align*}
-b\frac{dy}{dx}           &= g -ay; \\
-\frac{dy}{dx}            &= \frac{a}{b}\left(\frac{g}{a}-y\right); \\
-\frac{dy}{y-\dfrac{g}{a}} &= -\frac{a}{b}\, dx.
-\end{align*}
-
-<p>Now we have done our best to get nothing but $y$ and $dy$
-on one side, and nothing but $dx$ on the other.
-But is the result on the left side integrable?
-
-<p>It is of the same form as the result on <a href="14.html#differlog">here</a>; so,
-writing the instructions to integrate, we have:
-\[
-\int{\frac{dy}{y-\dfrac{g}{a}}} = - \int{\frac{a}{b}\, dx};
-\]
-and, doing the integration, and adding the appropriate
-constant,
-\begin{align*}
-\log_\epsilon\left(y-\frac{g}{a}\right) &= -\frac{a}{b}x + \log_\epsilon C; \\
- \text{whence}\;\;        y-\frac{g}{a} &= C\epsilon^{-\frac{a}{b}x}; \\
- \text{and finally,}\;\;              y &= \frac{g}{a} + C\epsilon^{-\frac{a}{b}x},
-\end{align*}
-which is <em>the solution</em>.
+</p><p>Він має таку ж форму, що й результат <a href="14.html#differlog">тут</a>. Отже, записавши інструкції для інтегрування, ми маємо: \[ \int{\frac{dy}{y-\dfrac{g}{a}}} = - \int{\frac{a}{b}\, dx }; \] і, проінтегрувавши та додавши відповідну константу, \begin{align*} \log_\epsilon\left(y-\frac{g}{a}\right) &amp;= -\frac{a}{b }x + \log_\epsilon C; \\ \text{звідки}\;\; y-\frac{g}{a} &amp;= C\epsilon^{-\frac{a}{b}x}; \\ \text{і нарешті,}\;\; y &amp;= \frac{g}{a} + C\epsilon^{-\frac{a}{b}x}, \end{align*} що є <em>рішенням</em>.
 
 
-<p>If the condition is laid down that $y = 0$ when $x = 0$
-we can find $C$; for then the exponential becomes $= 1$;
-and we have
-\begin{align*}
-                0 &= \frac{g}{a} + C, \\
- \text{or}\;  C &= -\frac{g}{a}.
-\end{align*}
+</p><p>Якщо встановити обмеження, що $y = 0$, коли $x = 0$, ми можемо знайти $C$. Тоді експонента стає $= 1$, і ми маємо \begin{align*} 0 &amp;= \frac{g}{a} + C, \\ \text{або}\; C &amp;= -\frac{g}{a}. \end{align*}
 
-<p>Putting in this value, the solution becomes
-\[
-y = \frac{g}{a} (1-\epsilon^{-\frac{a}{b} x}).
-\]
+</p><p>Якщо ввести це значення, розв’язок матиме вигляд \[ y = \frac{g}{a} (1-\epsilon^{-\frac{a}{b} x}). \]
 
-<p>But further, if $x$ grows indefinitely, $y$ will grow to
-a maximum; for when $x=\infty$, the exponential $= 0$,
-giving $y_{\text{max.}} = \dfrac{g}{a}$. Substituting this, we get finally
-\[
-y = y_{\text{max.}}(1-\epsilon^{-\frac{a}{b} x}).
-\]
+</p><p>Але підемо далі: якщо $x$ росте нескінченно, $y$ буде рости до максимуму, бо коли $x=\infty$, експонента $= 0$, що дає $y_{\text{max.}} = \dfrac{g}{a}$. Підставивши це, ми нарешті отримуємо \[ y = y_{\text{max.}}(1-\epsilon^{-\frac{a}{b} x}). \]
 
-<p>This result is also of importance in physical science.
+</p><p>Цей результат також є важливим у фізиці.
 
-<p><hr>
+</p><p></p><hr>
 
 <p>
-<em>Example (3.)</em>
-
-   Let $ay+b\frac{dy}{dt} = g · \sin 2\pi nt$.
+<em>Приклад (3.)</em> Нехай $ay+b\frac{dy}{dt} = g · \sin 2\pi nt$.
 
 
-<p>We shall find this much less tractable than the
-preceding. First divide through by $b$.
-\[
-\frac{dy}{dt} + \frac{a}{b}y = \frac{g}{b} \sin 2\pi nt.
-\]
+</p><p>Це нам вже набагато складніше трактувати. Спочатку поділимо на $b$. \[ \frac{dy}{dt} + \frac{a}{b}y = \frac{g}{b} \sin 2\pi nt. \]
 
-<p>Now, as it stands, the left side is not integrable.
-But it can be made so by the artifice–and this is
+</p><p>Тут, ліва частина не інтегрується у поточному вигляді. Але це можна виправити за допомогою хитрощу – і саме тут уміння та практика підкажуть план: множення всіх членів на $\epsilon^{\frac{a}{b} t}$ дасть нам: \[ \frac{dy}{dt} \epsilon^{\frac{a}{b} t} + \frac{a}{b} y \epsilon^{\frac{a}{b} t} = \frac{g }{b} \epsilon^{\frac{a}{b} t} · \sin 2 \pi nt, \] що дорівнює \[ \frac{dy}{dt} \epsilon^{\frac{ a}{b} t} + y \frac{d(\epsilon^{\frac{a}{b} t})}{dt} = \frac{g}{b} \epsilon^{\frac{a }{b} t} · \sin 2 \pi nt; \] і це ідеальний диференціал, який можна проінтегрувати наступним чином: якщо $u = y\epsilon^{\frac{a}{b} t}$, $\dfrac{du}{dt} = \dfrac{ dy}{dt} \epsilon^{\frac{a}{b} t} + y \dfrac{d(\epsilon^{\frac{a}{b} t})}{dt}$, \begin{align*} y \epsilon^{\frac{a}{b} t} &amp;= \frac{g}{b} \int \epsilon^{\frac{a}{b} t} · \sin 2 \pi nt · dt + C, \\ \text{або} y &amp;= \frac{g}{b} \epsilon^{-\frac{a}{b} t} \int \epsilon^{ \frac{a}{b} t } · \sin 2\pi nt · dt + C\epsilon^{-\frac{a}{b} t}. \tag*{[A]} \end{align*}
 
-where skill and practice suggest a plan–of multiplying
-all the terms by $\epsilon^{\frac{a}{b} t}$, giving us:
-\[
-\frac{dy}{dt} \epsilon^{\frac{a}{b} t} + \frac{a}{b} y \epsilon^{\frac{a}{b} t} = \frac{g}{b} \epsilon^{\frac{a}{b} t} · \sin 2 \pi nt,
-\]
-which is the same as
-\[
-\frac{dy}{dt} \epsilon^{\frac{a}{b} t} + y \frac{d(\epsilon^{\frac{a}{b} t})}{dt} = \frac{g}{b} \epsilon^{\frac{a}{b} t} · \sin 2 \pi nt;
-\]
-and this being a perfect differential may be integrated
-thus:–since, if  $u = y\epsilon^{\frac{a}{b} t}$, $\dfrac{du}{dt} = \dfrac{dy}{dt} \epsilon^{\frac{a}{b} t} + y \dfrac{d(\epsilon^{\frac{a}{b} t})}{dt}$,
-\begin{align*}
-  y \epsilon^{\frac{a}{b} t}
-  &= \frac{g}{b} \int \epsilon^{\frac{a}{b} t} · \sin 2 \pi nt · dt + C, \\
- or
-y &= \frac{g}{b} \epsilon^{-\frac{a}{b} t}
-     \int \epsilon^{ \frac{a}{b} t} · \sin 2\pi nt · dt
-       + C\epsilon^{-\frac{a}{b} t}.
-\tag*{[A]}
-\end{align*}
-
-<p>The last term is obviously a term which will die
-out as $t$ increases, and may be omitted. The trouble
-now comes in to find the integral that appears as a
-factor. To tackle this we resort to the device (see
-<a href="20.html#intparts">here</a>) of integration by parts, the general formula for
-which is $\int u dv = uv - \int v du$. For this purpose write
-\begin{align*}
-&\left\{
-\begin{aligned}
- u &= \epsilon^{\frac{a}{b} t}; \\
-dv &= \sin 2\pi nt · dt.
-\end{aligned}
-\right.  \\
-\end{align*}
-We shall then have
-\begin{align*}
-&\left\{
-\begin{aligned}
-du &= \epsilon^{\frac{a}{b} t} × \frac{a}{b}\, dt; \\
-v &= - \frac{1}{2\pi n} \cos 2\pi nt.
-\end{aligned}
-\right.
-\end{align*}
+</p><p>Останній доданок, очевидно, є таким, що відіпаде зі збільшенням $t$, і його можна опустити. Тепер залишається проблема знаходження інтегралу, що виникнув як множник. Щоб впоратися з цим, ми вдамося до інтегрування частинами (див. <a href="20.html#intparts">тут</a>), загальна формула якого $\int u dv = uv - \int v du$. Для цього напишемо \begin{align*} &amp;\left\{ \begin{aligned} u &amp;= \epsilon^{\frac{a}{b} t}; \\ dv &amp;= \sin 2\pi nt · dt. \end{aligned} \right. \\ \end{align*} Тоді ми матимемо \begin{align*} &amp;\left\{ \begin{aligned} du &amp;= \epsilon^{\frac{a}{b} t} × \frac{a }{b}\, dt; \\ v &amp;= - \frac{1}{2\pi n} \cos 2\pi nt. \end{aligned} \right. \end{align*}
 
 
-<p>Inserting these, the integral in question becomes:
-\begin{align*}
-\int \epsilon^{\frac{a}{b} t} &{} · \sin 2 \pi n t · dt \\
-&= -\frac{1}{2 \pi n} · \epsilon^{\frac{a}{b} t} · \cos 2 \pi nt
-   -\int -\frac{1}{2\pi n} \cos 2 \pi nt · \epsilon^{\frac{a}{b} t} · \frac{a}{b}\, dt \\
-&= -\frac{1}{2 \pi n} \epsilon^{\frac{a}{b} t} \cos 2 \pi nt
-   +\frac{a}{2 \pi nb} \int \epsilon^{\frac{a}{b} t} · \cos 2 \pi nt · dt.
-\tag*{[B]}
-\end{align*}
+</p><p>Підставлячи це, інтеграл стане наступним: \begin{align*} \int \epsilon^{\frac{a}{b} t} &amp;{} · \sin 2 \pi nt · dt \\ &amp;= -\frac {1}{2 \pi n} · \epsilon^{\frac{a}{b} t} · \cos 2 \pi nt -\int -\frac{1}{2\pi n} \cos 2 \ pi nt · \epsilon^{\frac{a}{b} t} · \frac{a}{b}\, dt \\ &amp;= -\frac{1}{2 \pi n} \epsilon^{\ frac{a}{b} t} \cos 2 \pi nt +\frac{a}{2 \pi nb} \int \epsilon^{\frac{a}{b} t} · \cos 2 \pi nt · dt. \tag*{[B]} \end{align*}
 
-<p>The last integral is still irreducible. To evade the
-difficulty, repeat the integration by parts of the left
-side, but treating it in the reverse way by writing:
-\begin{align*}
-&\left\{
-\begin{aligned}
-u &= \sin 2 \pi n t ; \\
-dv &= \epsilon^{\frac{a}{b} t} · dt;
-\end{aligned}
-\right. \\[1ex]
- whence
-&\left\{
-  \begin{aligned}
-  du &= 2 \pi n · \cos 2 \pi n t · dt; \\
- v &= \frac{b}{a} \epsilon ^{\frac{a}{b} t}
-\end{aligned}
-\right.
-\end{align*}
+</p><p>Останній інтеграл все ще нескоротний. Щоб обійти ці складнощі, повторимо інтегрування частинами лівої сторони, але виконаємо її у зворотньому напрямку, написавши: \begin{align*} &amp;\left\{ \begin{aligned} u &amp;= \sin 2 \pi nt ; \\ dv &amp;= \epsilon^{\frac{a}{b} t} · dt; \end{aligned} \right. \\[1ex] звідки &amp;\left\{ \begin{aligned} du &amp;= 2 \pi n · \cos 2 \pi nt · dt; \\ v &amp;= \frac{b}{a} \epsilon ^{\frac{a}{b} t} \end{aligned} \right. \end{align*}
 
-<p>Inserting these, we get
-\begin{align*}
-\int \epsilon^{\frac{a}{b} t} &{} · \sin 2 \pi n t · dt\\
-&= \frac{b}{a} · \epsilon^{\frac{a}{b} t} · \sin 2 \pi n t -
-   \frac{2 \pi n b}{a} \int \epsilon^{\frac{a}{b} t} · \cos 2 \pi n t · dt. \tag*{[C]}
-\end{align*}
+</p><p>Підставивши їх, ми отримаємо \begin{align*} \int \epsilon^{\frac{a}{b} t} &amp;{} · \sin 2 \pi nt · dt\\ &amp;= \frac{b}{a } · \epsilon^{\frac{a}{b} t} · \sin 2 \pi nt - \frac{2 \pi nb}{a} \int \epsilon^{\frac{a}{b} t } · \cos 2 \pi nt · dt. \tag*{[C]} \end{align*}
 
-<p>Noting that the final intractable integral in [C] is
-the same as that in [B], we may eliminate it, by
-multiplying [B] by $\dfrac{2 \pi nb}{a}$, and multiplying [C] by
-$\dfrac{a}{2 \pi nb}$, and adding them.
+</p><p>Помітивши, що кінцевий нерозв’язний інтеграл у [C] є таким самим, як і в [B], ми можемо його усунути, помноживши [B] на $\dfrac{2 \pi nb}{a}$, потім помноживши [C] на $\dfrac{a}{2 \pi nb}$ і склавши їх.
 
 
-<p>The result, when cleared down, is:
-\begin{align*}
-\int \epsilon^{\frac{a}{b} t} · \sin 2 \pi n t · dt
-  &= \epsilon^{\frac{a}{b} t} \left\{\frac{ ab · \sin 2 \pi nt - 2 \pi n b^2 · \cos 2 \pi n t}{ a^2 + 4 \pi^2 n^2 b^2 } \right\}
-\tag*{[D]} &\\
-\end{align*}
-Inserting this value in [A], we get
-\begin{align*}
-y &= g \left\{\frac{ a · \sin 2 \pi n t - 2 \pi n b · \cos 2 \pi nt}{ a^2 + 4 \pi^2  n^2 b^2}\right\}. &
-\end{align*}
+</p><p>Результат після розчистки: \begin{align*} \int \epsilon^{\frac{a}{b} t} · \sin 2 \pi nt · dt &amp;= \epsilon^{\frac{a }{b} t} \left\{\frac{ ab · \sin 2 \pi nt - 2 \pi nb^2 · \cos 2 \pi nt}{ a^2 + 4 \pi^2 n^2 b ^2 } \right\} \tag*{[D]} &amp;\\ \end{align*} І підставивши це значення в [A], ми маємо \begin{align*} y &amp;= g \left\{\frac { a · \sin 2 \pi nt - 2 \pi nb · \cos 2 \pi nt}{ a^2 + 4 \pi^2 n^2 b^2}\right\}. &amp; \end{align*}
 
-<p>To simplify still further, let us imagine an angle $\phi$
-such that $\tan \phi = \dfrac{2 \pi n b}{ a}$.
-   Then
-\[
-\sin \phi = \frac{2 \pi nb}{\sqrt{a^2 + 4 \pi^2 n^2 b^2}},
-\]
- and
- \[
-\cos \phi = \frac{a}{\sqrt{a^2 + 4 \pi^2 n^2 b^2}}.  \\
-\]
-Substituting these, we get:
- \[
-y = g \frac{\cos \phi · \sin 2 \pi nt
-  - \sin \phi · \cos 2 \pi nt}{\sqrt{a^2 + 4 \pi^2 n^2 b^2}}, \\
-\]
-which may be written
- \[
-y = g \frac{\sin(2 \pi nt - \phi)}{\sqrt{a^2 + 4 \pi^2 n^2 b^2}},
-\]
- which is <em>the solution  desired.</em>
+</p><p>Щоб ще більше спростити, уявімо такий кут $\phi$, що $\tan \phi = \dfrac{2 \pi nb}{ a}$. Тоді \[ \sin \phi = \frac{2 \pi nb}{\sqrt{a^2 + 4 \pi^2 n^2 b^2}}, \] і \[ \cos \phi = \frac {a}{\sqrt{a^2 + 4 \pi^2 n^2 b^2}}. \\ \] Підставляючи їх, ми отримуємо: \[ y = g \frac{\cos \phi · \sin 2 \pi nt - \sin \phi · \cos 2 \pi nt}{\sqrt{a^2 + 4 \pi^2 n^2 b^2}}, \\ \] що можна записати як \[ y = g \frac{\sin(2 \pi nt - \phi)}{\sqrt{a^2 + 4 \pi^2 n^2 b^2}}, \] що є <em>бажаним рішенням.</em>
 
 
-<p>This is indeed none other than the equation of an
-alternating electric current, where $g$ represents the
-amplitude of the electromotive force, $n$ the frequency,
-$a$ the resistance, $b$ the coefficient of self-induction of
-the circuit, and $\phi$ is an angle of lag.
+</p><p>Це насправді не що інше, як рівняння змінного електричного струму, де $g$ представляє амплітуду електрорушійної сили, $n$ — частоту, $a$ — опір, $b$ — коефіцієнт самоіндукції кола, $\phi$ — кут відставання.
 
-<p><hr>
+</p><p></p><hr>
 
 
 <p>
-<em>Example (4.)</em>
-
-   Suppose that
-$M\, dx + N\, dy = 0.$
+<em>Приклад (4.)</em> Припустимо, що $M\, dx + N\, dy = 0.$
 
 
-<p>We could integrate this expression directly, if $M$
-were a function of $x$ only, and $N$ a function of $y$
-only; but, if both $M$ and $N$ are functions that depend
-on both $x$ and $y$, how are we to integrate it? Is it
-itself an exact differential? That is: have $M$ and $N$
-each been formed by partial differentiation from some
-common function $U$, or not? If they have, then
-\[\left\{
-  \begin{aligned}
- \frac{\partial U}{\partial x} = M, \\
- \frac{\partial U}{\partial y} = N.
-  \end{aligned}
-\right.
-\]
-And if such a common function exists, then
-\[
-\frac{\partial U}{\partial x}\, dx + \frac{\partial U}{\partial y}\, dy
-\]
-is an exact differential (compare <a href="16.html#partialdiff">here</a>).
+</p><p>Ми могли б інтегрувати цей вираз напряму, якби $M$ була функцією лише від $x$, а $N$ – лише від $y$; але якщо і $M$, і $N$ є функціями, які залежать і від $x$, і від $y$, як нам інтегрувати цей вираз? Він сам по собі повний диференціал? Тобто, $M$ і $N$ утворилися частковим диференціюванням якоїсь спільної функції $U$ чи ні? Якщо так, то \[\left\{ \begin{aligned} \frac{\partial U}{\partial x} = M, \\ \frac{\partial U}{\partial y} = N. \end {aligned} \right. \] І якщо така спільна функція існує, то \[ \frac{\partial U}{\partial x}\, dx + \frac{\partial U}{\partial y}\, dy \] є повним диференціалом (дивіться <a href="16.html#partialdiff">тут</a>).
 
-<p>
-Now the test of the matter is this. If the expression
-is an exact differential, it must be true that
-\begin{align*}
-        \frac{dM}{dy} &= \frac{dN}{dx}; \\
-\text{for then}\;
-\frac{d(dU)}{dx\, dy} &= \frac{d(dU)}{dy\, dx},\\
-\end{align*}
- which is necessarily true.
+</p><p>
+Тож, перевірка питання полягає в наступному: якщо вираз є повним диференціалом, має бути вірним те, що \begin{align*} \frac{dM}{dy} &amp;= \frac{dN}{dx}; \\ \text{тому що}\; \frac{d(dU)}{dx\, dy} &amp;= \frac{d(dU)}{dy\, dx},\\ \end{align*} що обов'язково є істинним.
 
-<p>Take as an illustration the equation
-\[
-(1 + 3 xy)\, dx + x^2\, dy = 0.
-\]
+</p><p>Візьмемо для ілюстрації рівняння \[ (1 + 3 xy)\, dx + x^2\, dy = 0. \]
 
-<p>Is this an exact differential or not? Apply the
-test.
-\[\left\{
-  \begin{aligned}
- \frac{d(1 + 3xy)}{dy}=3x, \\
+</p><p>Це повний диференціал чи ні? Застосуємо тест: \[\left\{ \begin{aligned} \frac{d(1 + 3xy)}{dy}=3x, \\ \dfrac{d(x^2)}{dx} = 2x, \end{aligned} \right. \] що не співпадає. Отже, це не повний диференціал, і дві функції $1+3xy$ і $x^2$ не походять від загальної вихідної функції.
 
-  \dfrac{d(x^2)}{dx} = 2x,
+</p><p>Проте в таких випадках можливо виявити <em>інтегрувальний множник</em>, тобто такий множник, що якщо доданки помножити на цей множник, вираз стане повним диференціалом. Немає єдиного правила для виявлення такого інтегрувального множника, але досвід зазвичай підкаже щось. У цьому випадку спрацює множення на $2x$. Тоді ми отримаємо \[ (2x + 6x^2y)\, dx + 2x^3\, dy = 0. \]
 
-  \end{aligned}
-\right.
-\]
-which do not agree. Therefore, it is not an exact
-differential, and the two functions $1+3xy$ and $x^2$
-have not come from a common original function.
-
-<p>It is possible in such cases to discover, however, <em>an
-integrating factor</em>, that is to say, a factor such that
-if both are multiplied by this factor, the expression
-will become an exact differential. There is no one
-rule for discovering such an integrating factor; but
-experience will usually suggest one. In the present
-instance $2x$ will act as such. Multiplying by $2x$, we
-get
-\[
-(2x + 6x^2y)\, dx + 2x^3\, dy = 0.
-\]
-
-<p>Now apply the test to this.
-\[
-\left\{
-  \begin{aligned}
- \frac{d(2x + 6x^2y)}{dy}=6x^2, \\
- \dfrac{d(2x^3)}{dx} = 6x^2,
-  \end{aligned}
-\right.
-\]
-which agrees. Hence this is an exact differential, and
-may be integrated. Now, if $w = 2x^3y$,
-\[
-dw=6x^2y\, dx + 2x^3\, dy.
-\]
-   Hence
-   \[
-\int 6x^2y\, dx + \int 2x^3\, dy=w=2x^3y;
-\]
- so that we get
-\[
- U = x^2 + 2x^3y + C.
-\]
+</p><p>Знову застосуємо тест. \[ \left\{ \begin{aligned} \frac{d(2x + 6x^2y)}{dy}=6x^2, \\ \dfrac{d(2x^3)}{dx} = 6x^2, \end{aligned} \right. \] тепер погоджується. Отже, це повний диференціал, і його можна інтегрувати. Тепер, якщо $w = 2x^3y$, \[ dw=6x^2y\, dx + 2x^3\, dy. \] Отже \[ \int 6x^2y\, dx + \int 2x^3\, dy=w=2x^3y; \] так що ми отримуємо \[ U = x^2 + 2x^3y + C. \]
 
 
-<p><hr>
-<em>Example (5.)</em> Let $\dfrac{d^2 y}{dt^2} + n^2 y = 0$.
+</p><p></p><hr>
+<em>Приклад (5.)</em> Нехай $\dfrac{d^2 y}{dt^2} + n^2 y = 0$.
 
-<p>In this case we have a differential equation of the
-second degree, in which $y$ appears in the form of
-a second differential coefficient, as well as in person.
+<p>У цьому випадку ми маємо диференціальне рівняння другого степеня, в якому $y$ виступає як у вигляді другої похідної, так і особисто.
 
-<p>Transposing, we have $\dfrac{d^2 y}{dt^2} = - n^2 y$.
+</p><p>Транспонуючи, маємо $\dfrac{d^2 y}{dt^2} = - n^2 y$.
 
-<p>It appears from this that we have to do with a
-function such that its second differential coefficient is
-proportional to itself, but with reversed sign. In
-Chapter XV. we found that there was such a function–namely,
-the <em>sine</em> (or the <em>cosine</em> also) which
-possessed this property. So, without further ado,
-we may infer that the solution will be of the form
-$y = A \sin (pt + q)$. However, let us go to work.
+</p><p>З цього випливає, що ми маємо справу з такою функцією, що її друга похідна пропорційна самій собі, але зі зворотним знаком. У розділі XV  ми виявили, що існує така функція, а саме <em>синус</em> (або також <em>косинус</em>), яка володіла цією властивістю. Отже, без зайвих слів ми можемо зробити висновок, що розв’язок матиме вигляд $y = A \sin (pt + q)$. Але давайте приступимо до роботи.
 
-<p>Multiply both sides of the original equation by $2\dfrac{dy}{dt}$
-and integrate, giving us $2\dfrac{d^2 y}{dt^2}\, \dfrac{dy}{dt} + 2x^2 y \dfrac{dy}{dt} = 0$, and, as
-\[
-2 \frac{d^2y}{dt^2}\, \frac{dy}{dt}
-  = \frac{d \left(\dfrac{dy}{dt}\right)^2}{dt},\quad
-\left(\frac{dy}{dt}\right)^2 + n^2 (y^2-C^2) = 0,
-\]
-$C$ being a constant. Then, taking the square roots,
-\[
-\frac{dy}{dt} = -n \sqrt{ y^2 - C^2}\quad \text{and}\quad
-\frac{dy}{\sqrt{C^2 - y^2}} = n · dt.
-\]
+</p><p>Помножимо обидві частини початкового рівняння на $2\dfrac{dy}{dt}$ та проінтегруємо, одержавши $2\dfrac{d^2 y}{dt^2}\, \dfrac{dy}{dt} + 2x^ 2 y \dfrac{dy}{dt} = 0$, і, оскільки \[ 2 \frac{d^2y}{dt^2}\, \frac{dy}{dt} = \frac{d \left( \dfrac{dy}{dt}\right)^2}{dt},\quad \left(\frac{dy}{dt}\right)^2 + n^2 (y^2-C^2) = 0, \] $C$ є константою. Потім, взявши квадратний корінь, \[ \frac{dy}{dt} = -n \sqrt{ y^2 - C^2}\quad \text{та}\quad \frac{dy}{\sqrt{C ^2 - y^2}} = n · dt. \]
 
-<p>But it can be shown that (see <a href="15.html#intex3">here</a>)
-\[
-\frac{1}{\sqrt{C^2 - y^2}} = \frac{d (\arcsin \dfrac{y}{C})}{dy};
-\]
-whence, passing from angles to sines,
-\[
-\arcsin \frac{y}{C} = nt + C_1\quad \text{and}\quad y = C \sin (nt + C_1),
-\]
+</p><p>Але можна показати, що (див. <a href="15.html#intex3">тут</a>) \[ \frac{1}{\sqrt{C^2 - y^2}} = \frac{d (\arcsin \dfrac{y}{C})}{dy}; \] звідки, переходячи від кутів до синусів, \[ \arcsin \frac{y}{C} = nt + C_1\quad \text{та}\quad y = C \sin (nt + C_1), \] де $ C_1$ – постійний кут, отриманий інтегруванням.
 
-where $C_1$ is a constant angle that comes in by integration.
+</p><p>Або, за бажанням, це можна записати як \[ y = A \sin nt + B \cos nt, \text{ що є рішенням.} \]
 
-<p>Or, preferably, this may be written
-\[
-y = A \sin nt + B \cos nt, \text{ which is the solution.}
-\]
+</p><p></p><hr>
 
-<p><hr>
+<p><em>Приклад (6.)</em> $\dfrac{d^2 y}{dt^2} - n^2 y = 0$.
 
-<p><em>Example (6.)</em> $\dfrac{d^2 y}{dt^2} - n^2 y = 0$.
+</p><p>Тут ми, очевидно, маємо справу з функцією $y$, друга похідна якої пропорційна самій собі. Єдина відома нам функція, що має цю властивість, - це експоненціальна функція (див. <a href="14.html#unchanged">тут</a>), тому ми можемо бути впевнені, що розв’язок рівняння буде саме такого вигляду.
 
-<p>Here we have obviously to deal with a function $y$
-which is such that its second differential coefficient is
-proportional to itself. The only function we know
-that has this property is the exponential function
-(see <a href="14.html#unchanged">here</a>), and we may be certain therefore that the
-solution of the equation will be of that form.
+</p><p>Продовжуючи, як і раніше, множачи на $2 \dfrac{dy}{dx}$ та інтегруючи, ми отримуємо $2\dfrac{d^2 y}{dx^2}\, \dfrac{dy}{dx} - 2x ^2 y \dfrac{dy}{dx}=0$, і, як \[ 2\frac{d^2 y}{dx^2}\, \frac{dy}{dx} = \frac{d \left(\dfrac{dy}{dx}\right)^2}{dx},\quad \left(\frac{dy}{dx}\right)^2 - n^2 (y^2 + c^2 ) = 0, \\ \frac{dy}{dx} - n \sqrt{y^2 + c^2} = 0, \] де $c$ — константа, а $\dfrac{dy}{\sqrt {y^2 + c^2}} = n\, dx$.
 
-<p>Proceeding as before, by multiplying through by
-$2 \dfrac{dy}{dx}$, and integrating, we get $2\dfrac{d^2 y}{dx^2}\, \dfrac{dy}{dx} - 2x^2 y \dfrac{dy}{dx}=0$,
+</p><p>Тепер, якщо \[ \quad w = \log_\epsilon ( y+ \sqrt{y^2+ c^2}) = \log_\epsilon u,\\ \frac{dw}{du} = \frac{1} {u},\quad \frac{du}{dy} = 1 + \frac{y}{\sqrt{y^2 + c^2}} = \frac{y + \sqrt{ y^2 + c^ 2}}{\sqrt{y^2 + c^2}} \\ \] і \[ \frac{dw}{dy} = \frac{1}{\sqrt{ y^2 + c^2}} . \]
 
- and, as
-\[
-2\frac{d^2 y}{dx^2}\, \frac{dy}{dx}
-  = \frac{d \left(\dfrac{dy}{dx}\right)^2}{dx},\quad
-\left(\frac{dy}{dx}\right)^2 - n^2 (y^2 + c^2) = 0, \\
-\frac{dy}{dx} - n \sqrt{y^2 + c^2} = 0,
-\]
-where $c$ is a constant, and $\dfrac{dy}{\sqrt{y^2 + c^2}} = n\, dx$.
-
-<p>Now, if
-\[
-\quad w = \log_\epsilon ( y+ \sqrt{y^2+ c^2}) = \log_\epsilon u,\\
-
-\frac{dw}{du} = \frac{1}{u},\quad \frac{du}{dy} = 1 + \frac{y}{\sqrt{y^2 + c^2}} = \frac{y + \sqrt{ y^2 + c^2}}{\sqrt{y^2 + c^2}} \\
-\]
- and
-\[
- \frac{dw}{dy} = \frac{1}{\sqrt{ y^2 + c^2}}.
-\]
-
-<p>Hence, integrating, this gives us
-\[
-\log_\epsilon (y + \sqrt{y^2 + c^2} ) = nx + \log_\epsilon C, \\
-y + \sqrt{y^2 + c^2} = C \epsilon^{nx}.
-
-\tag*{(1)}  \\
-\]
-\[
-   \text{Now}\;  \qquad ( y + \sqrt{y^2 + c^2} ) × ( -y + \sqrt{y^2 + c^2} ) = c^2 ;    \\
-  \text{whence}\;  \qquad  -y + \sqrt{y^2 + c^2} = \dfrac{c^2}{C} \epsilon^{-nx}.
-\tag*{(2)}
-\]
+</p><p>Отже, інтегруючи, це дає нам \[ \log_\epsilon (y + \sqrt{y^2 + c^2} ) = nx + \log_\epsilon C, \\ y + \sqrt{y^2 + c^ 2} = C \epsilon^{nx}. \tag*{(1)} \\ \] \[ \text{Далі}\; \qquad ( y + \sqrt{y^2 + c^2} ) × ( -y + \sqrt{y^2 + c^2} ) = c^2 ; \\ \text{звідки}\; \qquad -y + \sqrt{y^2 + c^2} = \dfrac{c^2}{C} \epsilon^{-nx}. \tag*{(2)} \]
 
 
-<p>Subtracting (2) from (1) and dividing by $2$, we
-then have
-\[
-y = \frac{1}{2} C \epsilon^{nx} - \frac{1}{2}\, \frac{c^2}{C} \epsilon^{-nx},
-\]
-which is more conveniently written
-\[
-y = A \epsilon^{nx} + B \epsilon^{-nx}.
-\]
-Or, the solution, which at first sight does not look
-as if it had anything to do with the original equation,
-shows that $y$ consists of two terms, one of which
-grows logarithmically as $x$ increases, and of a second
-term which dies away as $x$ increases.
+</p><p>Віднімаючи (2) з (1) і ділячи на $2$, ми отримуємо \[ y = \frac{1}{2} C \epsilon^{nx} - \frac{1}{2}\, \frac{ c^2}{C} \epsilon^{-nx}, \] що можна записати зручніше як \[ y = A \epsilon^{nx} + B \epsilon^{-nx}. \] Або, розв’язок, який на перший погляд не має нічого спільного з початковим рівнянням, показує, що $y$ складається з двох доданків, один із яких логарифмічно зростає зі збільшенням $x$, а другий згасає.
 
-<p><hr>
+</p><p></p><hr>
 
 <p>
-<em>Example (7.)</em>
-   Let
-\begin{align*}
-b \frac{d^2y}{dt^2} + a \frac{dy}{dt} + gy &= 0.
-\end{align*}
+<em>Приклад (7.)</em> Нехай \begin{align*} b \frac{d^2y}{dt^2} + a \frac{dy}{dt} + gy &amp;= 0. \end{align*}
 
-<p>Examination of this expression will show that, if
-$b = 0$, it has the form of Example 1, the solution of
-which was a negative exponential. On the other
-hand, if $a = 0$, its form becomes the same as that of
-Example 6, the solution of which is the sum of a
-positive and a negative exponential. It is therefore
-not very surprising to find that the solution of the
-present example is
-\begin{align*}
-y &= (\epsilon^{-mt})(A \epsilon^{nt} + B \epsilon^{-nt}), \\
- \text{where}\;
-m &= \frac{a}{2b}\quad \text{and}\quad
-n  = \sqrt{\frac{a^2}{4b^2}} - \frac{g}{b}.
-\end{align*}
+</p><p>Розгляд цього виразу покаже, що якщо $b = 0$, він має вигляд прикладу 1, розв’язком якого є від’ємна експонента. З іншого боку, якщо $a = 0$, його форма стає такою ж, як у прикладі 6, розв’язок якого є сумою додатної та від’ємної експонент. Тому не дуже дивно виявити, що рішенням цього прикладу є \begin{align*} y &amp;= (\epsilon^{-mt})(A \epsilon^{nt} + B \epsilon^{-nt }), \\ \text{де}\; m &amp;= \frac{a}{2b}\quad \text{та}\quad n = \sqrt{\frac{a^2}{4b^2}} - \frac{g}{b}. \end{align*}
 
-<p>The steps by which this solution is reached are not
-given here; they may be found in advanced treatises.
+</p><p>Кроки, за допомогою яких досягається це рішення, тут не наведено; їх можна знайти в просунутих трактатах.
 
-<p><hr>
+</p><p></p><hr>
 
 
 <p>
-<em>Example (8.)</em>
-\[
-\frac{d^2y}{dt^2} = a^2 \frac{d^2y}{dx^2}.
-\]
+<em>Приклад (8.)</em> \[ \frac{d^2y}{dt^2} = a^2 \frac{d^2y}{dx^2}. \]
 
-<p>It was seen (<a href="9.html#Example4">here</a>) that this equation was derived
-from the original
-\[
-y = F(x+at) + f(x-at),
-\]
-where $F$ and $f$ were any arbitrary functions of $t$.
+</p><p>Ми бачили (<a href="9.html#Example4">тут</a>), що це рівняння було отримано з вихідного \[ y = F(x+at) + f(x-at), \] де $F$ і $f$ були довільними функціями $t$.
 
-<p>Another way of dealing with it is to transform it
-by a change of variables into
-\[
-\frac{d^2y}{du · dv} = 0,
-\]
-where $u = x + at$, and $v = x - at$, leading to the same
-general solution. If we consider a case in which
-$F$ vanishes, then we have simply
-\[
-y = f(x-at);
-\]
-and this merely states that, at the time $t = 0$, $y$ is a
-particular function of $x$, and may be looked upon as
-denoting that the curve of the relation of $y$ to $x$ has
-a particular shape. Then any change in the value
-of $t$ is equivalent simply to an alteration in the origin
-from which $x$ is reckoned. That is to say, it indicates
-that, the form of the function being conserved, it is
-propagated along the $x$ direction with a uniform
-velocity $a$; so that whatever the value of the
-ordinate $y$ at any particular time $t_0$ at any particular
-point $x_0$, the same value of $y$ will appear at the subsequent
-time $t_1$ at a point further along, the abscissa
-of which is $x_0 + a(t_1 - t_0)$. In this case the simplified
+</p><p>Інший спосіб впоратися з цим — перетворити його шляхом заміни змінних на \[ \frac{d^2y}{du · dv} = 0, \] де $u = x + at$, і $v = x - at$, що призводить до того самого загального рішення. Якщо ми розглядаємо випадок, коли $F$ дорівнює нулю, то маємо просто \[ y = f(x-at); \] і це лише стверджує, що в момент часу $t = 0$ $y$ є певною функцією від $x$, і це можна розглядати так, що крива відношення $y$ до $x$ має особливу форму. Тоді будь-яка зміна у значенні $t$ еквівалентна просто зміні початку, від якого відраховується $x$. Тобто це вказує на те, що форма функції, яка зберігається, поширюється вздовж напрямку $x$ з рівномірною швидкістю $a$; таким чином, яким би не було значення ординати $y$ у будь-який конкретний момент часу $t_0$ у будь-якій конкретній точці $x_0$, те саме значення $y$ з’явиться в наступний момент часу $t_1$ у точці, розташованій далі по осі абсцис з яких $x_0 + a(t_1 - t_0)$. У цьому випадку спрощене рівняння представляє поширення хвилі (будь-якої форми) з рівномірною швидкістю вздовж напрямку $x$.
 
-equation represents the propagation of a wave (of any
-form) at a uniform speed along the $x$ direction.
+</p><p>Якби диференціальне рівняння було написано \[ m \frac{d^2y}{dt^2} = k\, \frac{d^2y}{dx^2}, \] розв’язок був би таким самим, але швидкість поширення мала б значення \[ a = \sqrt{\frac{k}{m}}. \]
 
-<p>If the differential equation had been written
-\[
-m \frac{d^2y}{dt^2} = k\, \frac{d^2y}{dx^2},
-\]
-the solution would have been the same, but the
-velocity of propagation would have had the value
-\[
-a = \sqrt{\frac{k}{m}}.
-\]
+</p><p></p><hr>
 
-<p><hr>
-
-<p>You have now been personally conducted over the
-frontiers into the enchanted land. And in order that
-you may have a handy reference to the principal
-results, the author, in bidding you farewell, begs to
-present you with a passport in the shape of a convenient
-<a href="table.html">collection of standard forms</a>.
-In the middle column are set down a number of the
-functions which most commonly occur. The results
-of differentiating them are set down on the left; the
-results of integrating them are set down on the right.
-May you find them useful!
+<p>Тепер вас особисто провели через кордон у зачаровану країну. А для того, щоб ви мали зручну довідку про основні результати, автор, прощаючись, просить подарувати вам паспорт у формі зручного <a href="table.html">збірнику типових форм</a>. У середньому стовпчику вказано ряд функцій, які найчастіше зустрічаються. Результати їх диференціювання – ліворуч. Праворуч показані результати їх інтегрування. Нехай вони будуть для вас корисними!
 
 <br>
-<hr>
-<a href="epilogue.html">Next &rarr;</a><br>
-<a href="/">Main Page &uarr;</a><br>
+</p><hr>
+<a href="epilogue.html">Далі →</a><br> <a href="/">Головна сторінка ↑</a><br>
 
 <script src="j/jquery.js"></script>
 <script src="j/modernizr.js"></script>
 <script src="j/dih5.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101178221-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  gtag('config', 'UA-101178221-1');
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
