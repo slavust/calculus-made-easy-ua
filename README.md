@@ -1,4 +1,4 @@
-# Репозиторій перекладу Calculus Made Easy Сільвануса П. Томпсона українською
+# Переклад Calculus Made Easy Сільвануса П. Томпсона українською
 
 Веб-сайт:
 https://calculusmadeeasy.org.ua
