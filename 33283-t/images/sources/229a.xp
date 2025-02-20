@@ -32,7 +32,7 @@ int main()
   axis_labels("$O$", "", "$Y$");
   line(P(-0.2,0), P(1.2,0));
   V_axis();
-  caption("Fig.~60.", P(0,-12));
+  caption("зобр.~60.", P(0,-12));
   tikz_format();
   end();
 }

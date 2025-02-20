@@ -45,7 +45,7 @@ int main()
 
   axis_labels("$O$", "$T$", "");
   axes();
-  caption("Fig.~37.");
+  caption("зобр.~37.");
   tikz_format();
   end();
 }

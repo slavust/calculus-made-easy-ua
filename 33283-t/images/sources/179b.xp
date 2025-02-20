@@ -54,7 +54,7 @@ int main()
   label(P(1,0), P(2,4), "$\\theta$", tr);
   label(P(0,ymax()), P(0,4), "$y$", t);
 
-  caption("Fig.~45.", P(0,12));
+  caption("зобр.~45.", P(0,12));
   tikz_format();
   end();
 }

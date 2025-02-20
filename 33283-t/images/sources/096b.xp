@@ -25,7 +25,7 @@ int main()
 
   axis_labels();
   axes();
-  caption("Fig.~20.");
+  caption("зобр.~20.");
   tikz_format();
   end();
 }

@@ -26,7 +26,7 @@ int main()
 
   axis_labels();
   axes();
-  caption("Fig.~57.");
+  caption("зобр.~57.");
   tikz_format();
   end();
 }

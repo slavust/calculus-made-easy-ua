@@ -63,7 +63,7 @@ int main()
   label(P(1,0), P(2,4), "$\\theta$", tr);
   label(P(0,ymax()), P(0,4), "$y$", t);
 
-  caption("Fig.~44.", P(0,12)); // Swapping labels
+  caption("зобр.~44.", P(0,12)); // Swapping labels
   tikz_format();
   end();
 }

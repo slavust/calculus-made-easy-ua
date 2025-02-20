@@ -45,7 +45,7 @@ int main()
 
   plot(f, -1.125, 4.125, 40);
 
-  caption("Fig.~27.", P(0,12));
+  caption("зобр.~27.", P(0,12));
   tikz_format();
   end();
 }

@@ -48,7 +48,7 @@ int main()
   plot(f, -3.05, xmax(), 1);
 
   label_angle(0);
-  caption("Fig.~24.");
+  caption("зобр.~24.");
   tikz_format();
   end();
 }

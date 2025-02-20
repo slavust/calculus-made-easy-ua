@@ -22,7 +22,7 @@ int main()
 
   label(P(0.5*sz, 0.5*sz), "$x^2$");
 
-  caption("Fig.~3.", P(0,-4));
+  caption("зобр.~3.", P(0,-4));
 
   tikz_format();
   end();

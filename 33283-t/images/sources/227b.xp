@@ -42,7 +42,7 @@ int main()
   H_axis();
   V_axis(0);
 
-  caption("Fig.~58.", P(0,-16));
+  caption("зобр.~58.", P(0,-16));
   tikz_format();
   end();
 }

@@ -48,7 +48,7 @@ int main()
   cme_solid();
   plot(f, -3.05, 5.125, 40);
 
-  caption("Fig.~6\\textit{a}.---\\upshape Graph of $\\dfrac{dy}{dx} = 14x$.");
+  caption("зобр.~6\\textit{a}.---\\upshape Графік $\\dfrac{dy}{dx} = 14x$.");
   tikz_format();
   end();
 }

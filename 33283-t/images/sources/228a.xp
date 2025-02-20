@@ -36,7 +36,7 @@ int main()
   label(polar(0.5*rad1,0), P(0,4), "$r$", t);
   label(polar(0.5*rad2,th), P(-2,-2), "$R$", bl);
 
-  caption("Fig.~59.", P(0,12));
+  caption("зобр.~59.", P(0,12));
   tikz_format();
   end();
 }

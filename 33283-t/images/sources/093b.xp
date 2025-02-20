@@ -53,7 +53,7 @@ int main()
   smallbrace(P(XMin, 0), P(XMin, f(XMin)),
 	     "$y$~\\textit{min}.", P(14,0));
 
-  caption("Fig.~15.");
+  caption("зобр.~15.");
   tikz_format();
   end();
 }

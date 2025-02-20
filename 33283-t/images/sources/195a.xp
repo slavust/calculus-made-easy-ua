@@ -29,7 +29,7 @@ int main()
 
   label(P(1.8125,0), P(0,-16), "$1/8$", b);
 
-  caption("Fig.~46.", P(0,12));
+  caption("зобр.~46.", P(0,12));
   tikz_format();
   end();
 }

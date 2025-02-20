@@ -34,7 +34,7 @@ int main()
   label(P(0,0), P(0,-12), "$O$", b);
 
   axes();
-  caption("Fig.~55.", P(0,-8));
+  caption("зобр.~55.", P(0,-8));
   tikz_format();
   end();
 }

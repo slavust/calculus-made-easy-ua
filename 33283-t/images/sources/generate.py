@@ -29,7 +29,7 @@ with tempfile.TemporaryDirectory() as tempdir:
         
         result_svg_file_path = os.path.join(OUT_DIR, name + '.svg')
         subprocess.run(
-            ['rsvg-convert', '--format=svg', '--zoom=2.1', temp_svg_file_path],
+            ['rsvg-convert', '--format=svg', '--zoom=2', temp_svg_file_path],
             stdout=open(result_svg_file_path, 'wt'),
             stderr=sys.stderr
         )

@@ -27,13 +27,13 @@ int main()
 
   label(P(2, m*(2 - 0.5*dx)), P(4,0), "$dy$", r);
 
-  label(polar(rad, 15), P(2,0), "$30�$", tr);
+  label(polar(rad, 15), P(2,0), "$30�$", tr);
   bold();
   cme_dashed();
   arc_arrow(O, rad, 15, 30);
   arc_arrow(O, rad, 15, 0);
 
-  caption("Fig.~4.");
+  caption("зобр.~4.");
   tikz_format();
   end();
 }

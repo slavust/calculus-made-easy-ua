@@ -39,7 +39,7 @@ int main()
 
   axis_labels("$O$", "$X$", "");
   line(O, P(xmax(),0));
-  caption("Fig.~61.");
+  caption("зобр.~61.");
   tikz_format();
   end();
 }

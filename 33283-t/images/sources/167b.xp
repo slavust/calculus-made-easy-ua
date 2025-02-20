@@ -40,7 +40,7 @@ int main()
 
   axis_labels("$O$", "$X$", "");
   axes();
-  caption("Fig.~41.");
+  caption("зобр.~41.");
   tikz_format();
   end();
 }

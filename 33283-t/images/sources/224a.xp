@@ -40,7 +40,7 @@ int main()
   axes();
   plot(f, -2.5, 12, 1);
 
-  caption("Fig.~54.");
+  caption("зобр.~54.");
   tikz_format();
   end();
 }

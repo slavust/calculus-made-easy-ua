@@ -45,7 +45,7 @@ int main()
   line(P(xmin(), 0), P(xmax(), 0), 10);
   line(P(0, ymin()), P(0, ymax()), 10);
 
-  caption("Fig.~62.", P(0,12));
+  caption("зобр.~62.", P(0,12));
   tikz_format();
   end();
 }

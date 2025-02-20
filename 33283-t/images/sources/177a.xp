@@ -31,7 +31,7 @@ int main()
   smallbrace(P(Cos(th),0), Q, "$y$", P(6,0));
 
   circle();
-  caption("Fig.~43.", P(0,12));
+  caption("зобр.~43.", P(0,12));
   tikz_format();
   end();
 }

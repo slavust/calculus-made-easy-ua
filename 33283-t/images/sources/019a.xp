@@ -26,7 +26,7 @@ int main()
   label(P(0, sz - 0.5*dx), P(-4,0), "$dx$", l);
   label(P(sz - 0.5*dx, 0), P(0,-4), "$dx$", b);
 
-  caption("Fig.~2.", P(0,-4));
+  caption("зобр.~2.", P(0,-4));
 
   tikz_format();
   end();

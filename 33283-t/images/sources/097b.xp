@@ -44,7 +44,7 @@ int main()
   axis_labels();
   axes();
 
-  caption("Fig.~22.");
+  caption("зобр.~22.");
   tikz_format();
   end();
 }

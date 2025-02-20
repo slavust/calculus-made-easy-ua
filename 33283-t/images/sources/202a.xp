@@ -28,7 +28,7 @@ int main()
 
   axis_labels("", "", "$Y$");
   axes();
-  caption("Fig.~51.", P(0,-6));
+  caption("зобр.~51.", P(0,-6));
   tikz_format();
   end();
 }

@@ -47,7 +47,7 @@ int main()
   axis_labels();
   axes();
 
-  caption("Зоб. ~7.");
+  caption("зобр.~7.");
   tikz_format();
   end();
 }

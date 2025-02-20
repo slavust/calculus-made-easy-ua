@@ -42,7 +42,7 @@ int main()
   label_angle(0);
   axis_labels();
   axes();
-  caption("Fig.~29.");
+  caption("зобр.~29.");
   tikz_format();
   end();
 }

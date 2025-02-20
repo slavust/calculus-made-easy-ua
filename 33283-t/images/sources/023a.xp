@@ -30,7 +30,7 @@ int main()
   label(pA, P(2,-4), "$A$", b);
   label(pB, P(2, 2), "$B$", tr);
 
-  caption("Fig.~5.", P(0,-8));
+  caption("зобр.~5.", P(0,-8));
 
   tikz_format();
   end();

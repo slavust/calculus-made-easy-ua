@@ -43,7 +43,7 @@ int main()
   line(P(XMin,0), P(XMin, f(XMin)));
   brace(P(XMin,0), P(XMin, f(XMin)), "$y$~\\textit{max}.", P(16,0));
 
-  caption("Fig.~16.");
+  caption("зобр.~16.");
   tikz_format();
   end();
 }

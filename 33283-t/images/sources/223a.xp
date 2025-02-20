@@ -30,7 +30,7 @@ int main()
 
   axis_labels("$O$", "$x$", "$y$");
   axes();
-  caption("Fig.~53.");
+  caption("зобр.~53.");
   tikz_format();
   end();
 }

@@ -15,7 +15,7 @@ int main()
   cme_dashed();
   grid(3,1);
 
-  caption("Fig.~21.", P(0,12));
+  caption("зобр.~21.", P(0,12));
   tikz_format();
   end();
 }

@@ -41,7 +41,7 @@ int main()
 	line(tmp, tmp&E_2);
       }
 
-  caption("Fig.~6.---\\upshape Graph of $y = 7x^2$.", P(0,-12));
+  caption("зобр.~6.---\\upshape Графік $y = 7x^2$.", P(0,-12));
   tikz_format();
   end();
 }

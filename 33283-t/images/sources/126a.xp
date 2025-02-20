@@ -45,7 +45,7 @@ int main()
   cme_solid();
   axis_labels();
   axes();
-  caption("Fig.~34.");
+  caption("зобр.~34.");
   tikz_format();
   end();
 }

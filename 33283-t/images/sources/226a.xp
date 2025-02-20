@@ -29,7 +29,7 @@ int main()
 
   label_angle(0);
 
-  caption("Fig.~56.", P(0,12));
+  caption("зобр.~56.", P(0,12));
   tikz_format();
   end();
 }

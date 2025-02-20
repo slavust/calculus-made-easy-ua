@@ -52,7 +52,7 @@ int main()
   plot(f, -3.05, 5.125, 40);
   label_angle(0);
 
-  caption("Fig.~23.");
+  caption("зобр.~23.");
   tikz_format();
   end();
 }

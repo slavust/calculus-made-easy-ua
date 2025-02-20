@@ -42,7 +42,7 @@ int main()
 
   axis_labels("$O$", "", "$Y$");
   axes();
-  caption("Fig.~52.", P(0,-24));
+  caption("зобр.~52.", P(0,-24));
   tikz_format();
   end();
 }

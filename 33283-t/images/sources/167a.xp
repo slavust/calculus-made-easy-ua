@@ -35,7 +35,7 @@ int main()
 
   axis_labels();
   axes();
-  caption("Fig.~40.");
+  caption("зобр.~40.");
   tikz_format();
   end();
 }
