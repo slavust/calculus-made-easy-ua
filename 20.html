@@ -27,20 +27,20 @@ body{counter-reset:h1 20}
 
 </p><p>Додавши їх до формули, ми отримаємо \begin{align*} \int w · \sin w\, dw &amp;= w(-\cos w) - \int -\cos w\, dw \\ &amp;=-w \ cos w + \sin w + C. \end{align*}
 
-</p><p>(2) Знайдіть $\int x \epsilon^x\, dx$. \begin{align*} \text{Запишемо}\; u &amp;= x, &amp; \epsilon^x\, dx&amp;=dv; \\ \text{потім }\; du &amp;= dx, &amp; v &amp;=\epsilon^x, \end{align*} та \[ \int x\epsilon^x\, dx = x\epsilon^x - \int \epsilon^x\, dx \quad \text{(за формулою)} \\ = x \epsilon^x - \epsilon^x = \epsilon^x(x-1) + C. \]
+</p><p>(2) Знайдіть $\int x \epsilon^x\, dx$. \begin{align*} \text{Нехай}\; u &amp;= x, &amp; \epsilon^x\, dx&amp;=dv; \\ \text{потім }\; du &amp;= dx, &amp; v &amp;=\epsilon^x, \end{align*} та \[ \int x\epsilon^x\, dx = x\epsilon^x - \int \epsilon^x\, dx \quad \text{(за формулою)} \\ = x \epsilon^x - \epsilon^x = \epsilon^x(x-1) + C. \]
 
 </p><p>(3) Спробуємо $\int \cos^2 \theta\, d\theta$.<a name="moreexamples"/> \begin{align*} u &amp;= \cos \theta, &amp;\cos \theta\, d\theta &amp;= dv. \\ \text{Звідси }\; du&amp;= -\sin \theta\, d\theta, &amp; v &amp;=\sin \theta, \end{align*} \begin{align*} \int \cos^2 \theta\, d\theta &amp;= \ cos \theta \sin \theta+ \int \sin^2 \theta\, d\theta \\ &amp;= \frac{2 \cos\theta \sin\theta}{2} +\int(1-\cos^2 \theta)\, d\theta \\ &amp;= \frac{\sin 2\theta}{2} + \int d\theta - \int \cos^2 \theta\, d\theta. \end{align*} \begin{align*} \text{Отже}\; 2 \int \cos^2 \theta\, d\theta &amp;= \frac{\sin 2\theta}{2} + \theta \\ та \int \cos^2 \theta\, d\theta &amp;= \ frac{\sin 2\theta}{4} + \frac{\theta}{2} + C. \end{align*}
 
 
-</p><p>(4) Знайдіть $\int x^2 \sin x\, dx$. \begin{align*} \text{Запишемо }\; x^2 &amp;= u, &amp; \sin x\, dx &amp;= dv; \\ \text{тоді }\; du &amp;= 2x\, dx, &amp; v &amp;= -\cos x, \end{align*} \[ \int x^2 \sin x\, dx = -x^2 \cos x + 2 \int x \ cos x\, dx. \]
+</p><p>(4) Знайдіть $\int x^2 \sin x\, dx$. \begin{align*} \text{Нехай }\; x^2 &amp;= u, &amp; \sin x\, dx &amp;= dv; \\ \text{тоді }\; du &amp;= 2x\, dx, &amp; v &amp;= -\cos x, \end{align*} \[ \int x^2 \sin x\, dx = -x^2 \cos x + 2 \int x \ cos x\, dx. \]
 
 </p><p>Тепер знайдемо $\int x \cos x\, dx$, інтегруючи частинами (як у прикладі 1 вище): \[ \int x \cos x\, dx = x \sin x + \cos x+C. \]
 
 </p><p>Отже \begin{align*} \int x^2 \sin x\, dx &amp;= -x^2 \cos x + 2x \sin x + 2 \cos x + C' \\ &amp;= 2 \left[ x \ sin x + \cos x \left(1 - \frac{x^2}{2}\right) \right] +C'. \end{align*}
 
-</p><p>(5) Знайдіть $\int \sqrt{1-x^2}\, dx$. \begin{align*} \text{Запишемо}\; u &amp;= \sqrt{1-x^2},\quad dx=dv; \\ \text{тоді }\; du &amp;= -\frac{x\, dx}{\sqrt{1-x^2}}\quad \text{(див. Розд. IX)} \end{align*} і $x=v$; так що \[ \int \sqrt{1-x^2}\, dx=x \sqrt{1-x^2} + \int \frac{x^2\, dx}{\sqrt{1-x^ 2}}. \]
+</p><p>(5) Знайдіть $\int \sqrt{1-x^2}\, dx$. \begin{align*} \text{Нехай}\; u &amp;= \sqrt{1-x^2},\quad dx=dv; \\ \text{тоді }\; du &amp;= -\frac{x\, dx}{\sqrt{1-x^2}}\quad \text{(див. Розд. IX)} \end{align*} і $x=v$; так що \[ \int \sqrt{1-x^2}\, dx=x \sqrt{1-x^2} + \int \frac{x^2\, dx}{\sqrt{1-x^ 2}}. \]
 
-</p><p>Тут ми можемо використати невеликий трюк, оскільки можна записати \[ \int \sqrt{1-x^2}\, dx = \int \frac{(1-x^2)\, dx}{\sqrt{1 -x^2}} = \int \frac{dx}{\sqrt{1-x^2}} - \int \frac{x^2\, dx}{\sqrt{1-x^2}}. \]
+</p><p>Тут ми можемо використати невеличку хитрість, оскільки можна записати \[ \int \sqrt{1-x^2}\, dx = \int \frac{(1-x^2)\, dx}{\sqrt{1 -x^2}} = \int \frac{dx}{\sqrt{1-x^2}} - \int \frac{x^2\, dx}{\sqrt{1-x^2}}. \]
 
 </p><p>Склавши ці два останні рівняння, ми позбудемося $\int \dfrac{x^2\, dx}{\sqrt{1-x^2}}$ і отримаємо \[ 2 \int \sqrt{1-x ^2}\, dx = x\sqrt{1-x^2} + \int \frac{dx}{\sqrt{1-x^2}}. \]
 
