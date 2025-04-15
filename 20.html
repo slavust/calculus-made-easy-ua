@@ -1,154 +1,291 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<title>Хитрощі, підводні камені та тріумфи | Математичний аналіз простими словами</title>
-<link rel="stylesheet" href="screen.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>
+  Хитрощі, підводні камені та тріумфи | Математичний аналіз простими словами
+</title>
+<link rel="stylesheet" href="screen.css" />
 <style>
-body{counter-reset:h1 20}
+  body {
+    counter-reset: h1 20;
+  }
 </style>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
-<script type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
 
-<h1><br>Хитрощі, підводні камені та тріумфи</h1>
-<p class="a rotatedFloralHeartBullet">
+<h1><br />Хитрощі, підводні камені та тріумфи</h1>
+<p class="a rotatedFloralHeartBullet"></p>
+<p>
+  <em>Хитрощі.</em> Значна частина праці з інтегрування різних речей полягає в
+  тому, щоб привести їх у певну форму, яку можливо інтегрувати. Книги — і я маю
+  на увазі серйозні книги — про інтегральне числення сповнені планів, методів і
+  хитрощів для такого роду роботи. Нижче наведено деякі з таких.
+</p>
+<p>
+  <em>Інтегрування частинами.</em><a name="intparts" /> Ця назва надана прийому,
+  формула для якого це \[ \int u\, dx = ux - \int x\, du + C. \] Це корисно в
+  деяких випадках, коли ви не можете впоратися безпосередньо. Таким чином, у
+  будь-якому випадку, коли можна знайти $\int x\, du$, також можна знайти $\int
+  u\, dx$. Цю формулу можна вивести наступним чином.
+  <a href="6.html#differprod">Звідси</a> ми маємо \[ d(ux) = u\, dx + x\, du, \]
+  що можна записати як \[ u(dx) = d(ux) - x\, du, \] що шляхом прямого
+  інтегрування дає наведений вище вираз.
+</p>
+<p></p>
+<p><em>Приклади</em> (1) Знайдіть $\int w · \sin w\, dw$.</p>
+<p>
+  Запишемо $u = w$, а для $\sin w · dw$ запишемо $dx$. Тоді ми матимемо $du =
+  dw$, а $\int \sin w · dw = -\cos w = x$.
+</p>
+<p>
+  Додавши їх до формули, ми отримаємо \begin{align*} \int w · \sin w\, dw &amp;=
+  w(-\cos w) - \int -\cos w\, dw \\ &amp;=-w \ cos w + \sin w + C. \end{align*}
+</p>
+<p>
+  (2) Знайдіть $\int x \epsilon^x\, dx$. \begin{align*} \text{Нехай}\; u &amp;=
+  x, &amp; \epsilon^x\, dx&amp;=dv; \\ \text{потім }\; du &amp;= dx, &amp; v
+  &amp;=\epsilon^x, \end{align*} та \[ \int x\epsilon^x\, dx = x\epsilon^x -
+  \int \epsilon^x\, dx \quad \text{(за формулою)} \\ = x \epsilon^x - \epsilon^x
+  = \epsilon^x(x-1) + C. \]
+</p>
+<p>
+  (3) Спробуємо $\int \cos^2 \theta\, d\theta$.<a name="moreexamples" />
+  \begin{align*} u &amp;= \cos \theta, &amp;\cos \theta\, d\theta &amp;= dv. \\
+  \text{Звідси }\; du&amp;= -\sin \theta\, d\theta, &amp; v &amp;=\sin \theta,
+  \end{align*} \begin{align*} \int \cos^2 \theta\, d\theta &amp;= \ cos \theta
+  \sin \theta+ \int \sin^2 \theta\, d\theta \\ &amp;= \frac{2 \cos\theta
+  \sin\theta}{2} +\int(1-\cos^2 \theta)\, d\theta \\ &amp;= \frac{\sin
+  2\theta}{2} + \int d\theta - \int \cos^2 \theta\, d\theta. \end{align*}
+  \begin{align*} \text{Отже}\; 2 \int \cos^2 \theta\, d\theta &amp;= \frac{\sin
+  2\theta}{2} + \theta \\ та \int \cos^2 \theta\, d\theta &amp;= \ frac{\sin
+  2\theta}{4} + \frac{\theta}{2} + C. \end{align*}
+</p>
+<p>
+  (4) Знайдіть $\int x^2 \sin x\, dx$. \begin{align*} \text{Нехай }\; x^2 &amp;=
+  u, &amp; \sin x\, dx &amp;= dv; \\ \text{тоді }\; du &amp;= 2x\, dx, &amp; v
+  &amp;= -\cos x, \end{align*} \[ \int x^2 \sin x\, dx = -x^2 \cos x + 2 \int x
+  \ cos x\, dx. \]
+</p>
+<p>
+  Тепер знайдемо $\int x \cos x\, dx$, інтегруючи частинами (як у прикладі 1
+  вище): \[ \int x \cos x\, dx = x \sin x + \cos x+C. \]
+</p>
+<p>
+  Отже \begin{align*} \int x^2 \sin x\, dx &amp;= -x^2 \cos x + 2x \sin x + 2
+  \cos x + C' \\ &amp;= 2 \left[ x \ sin x + \cos x \left(1 -
+  \frac{x^2}{2}\right) \right] +C'. \end{align*}
+</p>
+<p>
+  (5) Знайдіть $\int \sqrt{1-x^2}\, dx$. \begin{align*} \text{Нехай}\; u &amp;=
+  \sqrt{1-x^2},\quad dx=dv; \\ \text{тоді }\; du &amp;= -\frac{x\,
+  dx}{\sqrt{1-x^2}}\quad \text{(див. Розд. IX)} \end{align*} і $x=v$; так що \[
+  \int \sqrt{1-x^2}\, dx=x \sqrt{1-x^2} + \int \frac{x^2\, dx}{\sqrt{1-x^ 2}}.
+  \]
+</p>
+<p>
+  Тут ми можемо використати невеличку хитрість, оскільки можна записати \[ \int
+  \sqrt{1-x^2}\, dx = \int \frac{(1-x^2)\, dx}{\sqrt{1 -x^2}} = \int
+  \frac{dx}{\sqrt{1-x^2}} - \int \frac{x^2\, dx}{\sqrt{1-x^2}}. \]
+</p>
+<p>
+  Склавши ці два останні рівняння, ми позбудемося $\int \dfrac{x^2\,
+  dx}{\sqrt{1-x^2}}$ і отримаємо \[ 2 \int \sqrt{1-x ^2}\, dx = x\sqrt{1-x^2} +
+  \int \frac{dx}{\sqrt{1-x^2}}. \]
+</p>
+<p>
+  Ви пам’ятаєте зустріч із $\dfrac {dx}{\sqrt{1-x^2}}$? Цей вираз був отриманий
+  диференціюванням $y=\arcsin x$ (див. <a href="15.html#intex3">тут</a>); отже
+  його інтеграл дорівнює $\arcsin x$, отже \[ \int \sqrt{1-x^2}\, dx = \frac{x
+  \sqrt{1-x^2}}{2} + \tfrac{ 1}{2} \arcsin x +C. \]
+</p>
+<p>
+  Тепер ви можете спробувати деякі вправи самостійно, ви знайдете їх в кінці
+  цього розділу.
+</p>
+<p>
+  <em>Підстановка.</em> Це той самий трюк, що був описаний в
+  <a href="9.html">Розд. IX</a>. Проілюструймо його застосування до інтегрування
+  на декількох прикладах.
+</p>
+<p>
+  (1) $\int \sqrt{3+x}\, dx$. \begin{align*} Нехай 3+x &amp;= u,\quad dx = du;
+  \\ замінемо \int u^{\frac{1}{2}}\, du &amp;= \tfrac{2}{3} u^{\frac{3}{2}} =
+  \tfrac{2}{3 }(3+x)^{\frac{3}{2}}. \end{align*}
+</p>
+<p>
+  (2) $\int \dfrac{dx}{\epsilon^x+\epsilon^{-x}}$. Нехай \[ \epsilon^x = u,\quad
+  \frac{du}{dx} = \epsilon^x,\quad\text{і}\quad dx = \frac{du}{\epsilon^x}; \\
+  \] так що \[ \int \frac{dx}{\epsilon^x+\epsilon^{-x}} = \int
+  \frac{du}{\epsilon^x(\epsilon^x+\epsilon^{ -x})} = \int \frac{du}{u\left(u +
+  \dfrac{1}{u}\right)} = \int \frac{du}{u^2+1}. \]
+</p>
+<p>$\dfrac{du}{1+u^2}$ є результатом диференціювання $\arctan x$.</p>
+<p>Отже, інтеграл дорівнює $\arctan \epsilon^x$.</p>
+<p>
+  (3) $\int \dfrac{dx}{x^2+2x+3} = \int \dfrac{dx}{x^2+2x+1+2} = \int
+  \dfrac{dx}{(x+1)^2+(\sqrt 2)^2}$.
+</p>
+<p>
+  Нехай $x+1=u,\quad dx=du$; тоді інтеграл стає $\int
+  \dfrac{du}{u^2+(\sqrt2)^2}$; але $\dfrac{du}{u^2+a^2}$ є результатом
+  диференціювання $u=\dfrac{1}{a} \arctan \dfrac{u}{a}$.
+</p>
+<p>
+  Отже, нарешті маємо $\dfrac{1}{\sqrt2} \arctan \dfrac{x+1}{\sqrt 2}$ для
+  значення даного інтеграла.
+</p>
+<p>
+  <em>Формули скорочення</em> є спеціальними формами, застосовними головним
+  чином до біноміальних і тригонометричних виразів, що мають бути
+  проінтегровані, та приводять їх до певної форми, інтеграл якої відомий.
+</p>
+<p>
+  <em>Раціоналізація</em> і <em>Факторизація знаменника</em> є прийомами,
+  застосовними в особливих випадках, але вони не допускають жодного короткого чи
+  загального роз'яснення. Потрібно багато практики, щоб ознайомитися з цими
+  підготовчими процесами.
+</p>
+<p>
+  Наступний приклад показує, як процес розкладання <a name="partfracs" /> на
+  неповні дроби, про який ми дізналися в Розд. XIII.,
+  <a href="13.html#partfracs2">тут</a>, може бути використаний для інтегрування.
+</p>
+<p>
+  Візьмемо знову $\int \dfrac{dx}{x^2+2x+3}$; якщо ми розкладемо
+  $\dfrac{1}{x^2+2x+3}$ на часткові дроби, він стане (див.
+  <a href="20.html#partfracs3">тут</a>): \[ \dfrac{1}{2\sqrt{-2}} \left[\int
+  \dfrac{dx}{x+1-\sqrt{-2}} - \int \dfrac{dx}{x +1+\sqrt{-2}} \right] \] \[
+  =\dfrac{1}{2\sqrt{-2}} \log_\epsilon \dfrac{x+1-\sqrt{-2}} {x+1+\sqrt{-2}}. \]
+  Зауважте, що один і той самий інтеграл іноді можна виразити кількома способами
+  (які є еквівалентними один одному).
+</p>
+<p>
+  <em>Підводні камені.</em> Початківець може упустити певні моменти, яких
+  досвідчена рука уникне. Наприклад, використання множників, що дорівнюють нулю
+  або нескінченності, або поява невизначених величин, таких як $\tfrac{0}{0}$.
+  Немає золотого правила, яке спрацює у кожному можливому випадку. Нічого, окрім
+  практики й кмітливої уваги, не допоможе. Приклад такої ситуації, яку треба
+  було обійти, виник у <a href="18.html">Розд. XVIII</a>, коли ми дійшли до
+  задачі інтегрування $x^{-1}\, dx$.
+</p>
+<p>
+  <em>Тріумфи.</em> Під тріумфами слід розуміти успіхи, з яким диференціальне та
+  інтегральне числення були застосовані для розв’язання проблем, інакше
+  нерозв’язних. Часто при розгляді фізичних зв’язків можна побудувати вираз для
+  закону, що виражає взаємодію частин або сил, що ними керують, і такий вираз,
+  природно, матиме форму <em>диференціального рівняння</em>, тобто рівняння, що
+  містить диференціали з іншими алгебраїчними величинами або без них. І коли
+  таке диференціальне рівняння знайдено, неможливо просунутися далі, поки воно
+  не буде проінтегровано. Загалом набагато легше сформулювати відповідне
+  диференціальне рівняння, ніж розв’язати його: справжня проблема починається
+  лише тоді, коли хтось хоче його інтегрувати, якщо тільки рівняння не має
+  стандартної форми, інтеграл якої відомий - тоді тріумф легкий. Рівняння, що є
+  результатом інтегрування диференціального рівняння, називається* його
+  «розв'язком»; і це досить дивно, наскільки у багатьох випадках рішення
+  виглядає так, ніби воно не має жодного відношення до диференціального
+  рівняння, інтегральною формою якого воно є. Рішення часто здається настільки ж
+  відмінним від оригінального виразу, наскільки метелик відрізняється від
+  гусениці, якою він був. Хто б міг припустити, що така невинна штука, як \[
+  \dfrac{dy}{dx} = \dfrac{1}{a^2-x^2} \] може розквітнути у \[ y = \dfrac{1}
+  {2a} \log_\epsilon \dfrac{a+x}{ax} + C? \] Але останній вираз є
+  <em>рішенням</em> першого.
+</p>
+<p>
+  <note
+    >*Це означає, що фактичний результат інтегрування називається його
+    «розв’язком». Але багато математиків сказали б, як і професор Форсайт, що
+    «кожне диференціальне рівняння<em> вважається вирішеним</em> коли значення
+    залежної змінної виражається як функція незалежної змінної за допомогою або
+    відомих функцій, або інтегралів, незалежно від того, чи можуть ці інтеграли
+    бути виражені через вже відомі функції».</note
+  >
+</p>
+<p>Як останній приклад, розгляньмо зазначене вище разом.</p>
+<p>
+  За неповними дробами, <a name="partfracs3" /> \begin{align*} \frac{1}{a^2-x^2}
+  &amp;= \frac{1}{2a(a+x)} + \frac{1}{2a(ax)}, \\ dy &amp;= \frac {dx}{2a(a+x)}+
+  \frac{dx}{2a(ax)}, \\ y &amp;= \frac{1}{2a} \left( \int \frac{ dx}{a+x} + \int
+  \frac{dx}{ax} \right) \\ &amp;= \frac{1}{2a} \left(\log_\epsilon (a+x) -
+  \log_\epsilon (ax) \right) \\ &amp;= \frac{1}{2a} \log_\epsilon \frac{a+x}{ax}
+  + C. \end{align*} Не дуже складна метаморфоза!
+</p>
+<p>
+  Є цілі трактати, наприклад <em>«Диференціальні рівняння»</em> Буля, присвячені
+  темі пошуку «рішень» для різних початкових форм.
+</p>
+<p></p>
+<hr />
+<h3>Вправи XIX</h3>
 
-</p><p><em>Хитрощі.</em> Значна частина праці з інтегрування різних речей полягає в тому, щоб привести їх у певну форму, яку можливо інтегрувати. Книги — і я маю на увазі серйозні книги — про інтегральне числення сповнені планів, методів і хитрощів для такого роду роботи. Нижче наведено деякі з таких.
-
-</p><p><em>Інтегрування частинами.</em><a name="intparts"/> Ця назва надана прийому, формула для якого це \[ \int u\, dx = ux - \int x\, du + C. \] Це корисно в деяких випадках, коли ви не можете впоратися безпосередньо. Таким чином, у будь-якому випадку, коли можна знайти $\int x\, du$, також можна знайти $\int u\, dx$. Цю формулу можна вивести наступним чином. <a href="6.html#differprod">Звідси</a> ми маємо \[ d(ux) = u\, dx + x\, du, \] що можна записати як \[ u(dx) = d(ux) - x\, du, \] що шляхом прямого інтегрування дає наведений вище вираз.
-
-
-</p><p>
-</p><p><em>Приклади</em> (1) Знайдіть $\int w · \sin w\, dw$.
-
-</p><p>Запишемо $u = w$, а для $\sin w · dw$ запишемо $dx$. Тоді ми матимемо $du = dw$, а $\int \sin w · dw = -\cos w = x$.
-
-</p><p>Додавши їх до формули, ми отримаємо \begin{align*} \int w · \sin w\, dw &amp;= w(-\cos w) - \int -\cos w\, dw \\ &amp;=-w \ cos w + \sin w + C. \end{align*}
-
-</p><p>(2) Знайдіть $\int x \epsilon^x\, dx$. \begin{align*} \text{Нехай}\; u &amp;= x, &amp; \epsilon^x\, dx&amp;=dv; \\ \text{потім }\; du &amp;= dx, &amp; v &amp;=\epsilon^x, \end{align*} та \[ \int x\epsilon^x\, dx = x\epsilon^x - \int \epsilon^x\, dx \quad \text{(за формулою)} \\ = x \epsilon^x - \epsilon^x = \epsilon^x(x-1) + C. \]
-
-</p><p>(3) Спробуємо $\int \cos^2 \theta\, d\theta$.<a name="moreexamples"/> \begin{align*} u &amp;= \cos \theta, &amp;\cos \theta\, d\theta &amp;= dv. \\ \text{Звідси }\; du&amp;= -\sin \theta\, d\theta, &amp; v &amp;=\sin \theta, \end{align*} \begin{align*} \int \cos^2 \theta\, d\theta &amp;= \ cos \theta \sin \theta+ \int \sin^2 \theta\, d\theta \\ &amp;= \frac{2 \cos\theta \sin\theta}{2} +\int(1-\cos^2 \theta)\, d\theta \\ &amp;= \frac{\sin 2\theta}{2} + \int d\theta - \int \cos^2 \theta\, d\theta. \end{align*} \begin{align*} \text{Отже}\; 2 \int \cos^2 \theta\, d\theta &amp;= \frac{\sin 2\theta}{2} + \theta \\ та \int \cos^2 \theta\, d\theta &amp;= \ frac{\sin 2\theta}{4} + \frac{\theta}{2} + C. \end{align*}
-
-
-</p><p>(4) Знайдіть $\int x^2 \sin x\, dx$. \begin{align*} \text{Нехай }\; x^2 &amp;= u, &amp; \sin x\, dx &amp;= dv; \\ \text{тоді }\; du &amp;= 2x\, dx, &amp; v &amp;= -\cos x, \end{align*} \[ \int x^2 \sin x\, dx = -x^2 \cos x + 2 \int x \ cos x\, dx. \]
-
-</p><p>Тепер знайдемо $\int x \cos x\, dx$, інтегруючи частинами (як у прикладі 1 вище): \[ \int x \cos x\, dx = x \sin x + \cos x+C. \]
-
-</p><p>Отже \begin{align*} \int x^2 \sin x\, dx &amp;= -x^2 \cos x + 2x \sin x + 2 \cos x + C' \\ &amp;= 2 \left[ x \ sin x + \cos x \left(1 - \frac{x^2}{2}\right) \right] +C'. \end{align*}
-
-</p><p>(5) Знайдіть $\int \sqrt{1-x^2}\, dx$. \begin{align*} \text{Нехай}\; u &amp;= \sqrt{1-x^2},\quad dx=dv; \\ \text{тоді }\; du &amp;= -\frac{x\, dx}{\sqrt{1-x^2}}\quad \text{(див. Розд. IX)} \end{align*} і $x=v$; так що \[ \int \sqrt{1-x^2}\, dx=x \sqrt{1-x^2} + \int \frac{x^2\, dx}{\sqrt{1-x^ 2}}. \]
-
-</p><p>Тут ми можемо використати невеличку хитрість, оскільки можна записати \[ \int \sqrt{1-x^2}\, dx = \int \frac{(1-x^2)\, dx}{\sqrt{1 -x^2}} = \int \frac{dx}{\sqrt{1-x^2}} - \int \frac{x^2\, dx}{\sqrt{1-x^2}}. \]
-
-</p><p>Склавши ці два останні рівняння, ми позбудемося $\int \dfrac{x^2\, dx}{\sqrt{1-x^2}}$ і отримаємо \[ 2 \int \sqrt{1-x ^2}\, dx = x\sqrt{1-x^2} + \int \frac{dx}{\sqrt{1-x^2}}. \]
-
-
-</p><p>Ви пам’ятаєте зустріч із $\dfrac {dx}{\sqrt{1-x^2}}$? Цей вираз був отриманий диференціюванням $y=\arcsin x$ (див. <a href="15.html#intex3">тут</a>); отже його інтеграл дорівнює $\arcsin x$, отже \[ \int \sqrt{1-x^2}\, dx = \frac{x \sqrt{1-x^2}}{2} + \tfrac{ 1}{2} \arcsin x +C. \]
-
-</p><p>Тепер ви можете спробувати деякі вправи самостійно, ви знайдете їх в кінці цього розділу.
-
-</p><p><em>Підстановка.</em> Це той самий трюк, що був описаний в <a href="9.html">Розд. IX</a>. Проілюструймо його застосування до інтегрування на декількох прикладах.
-
-</p><p>(1) $\int \sqrt{3+x}\, dx$. \begin{align*} Нехай 3+x &amp;= u,\quad dx = du; \\ замінемо \int u^{\frac{1}{2}}\, du &amp;= \tfrac{2}{3} u^{\frac{3}{2}} = \tfrac{2}{3 }(3+x)^{\frac{3}{2}}. \end{align*}
-
-</p><p>(2) $\int \dfrac{dx}{\epsilon^x+\epsilon^{-x}}$. Нехай \[ \epsilon^x = u,\quad \frac{du}{dx} = \epsilon^x,\quad\text{і}\quad dx = \frac{du}{\epsilon^x}; \\ \] так що \[ \int \frac{dx}{\epsilon^x+\epsilon^{-x}} = \int \frac{du}{\epsilon^x(\epsilon^x+\epsilon^{ -x})} = \int \frac{du}{u\left(u + \dfrac{1}{u}\right)} = \int \frac{du}{u^2+1}. \]
-
-</p><p>$\dfrac{du}{1+u^2}$ є результатом диференціювання $\arctan x$.
-
-</p><p>Отже, інтеграл дорівнює $\arctan \epsilon^x$.
-
-</p><p>(3) $\int \dfrac{dx}{x^2+2x+3} = \int \dfrac{dx}{x^2+2x+1+2} = \int \dfrac{dx}{(x+1)^2+(\sqrt 2)^2}$.
-
-
-</p><p>   Нехай $x+1=u,\quad dx=du$; тоді інтеграл стає $\int \dfrac{du}{u^2+(\sqrt2)^2}$; але $\dfrac{du}{u^2+a^2}$ є результатом диференціювання $u=\dfrac{1}{a} \arctan \dfrac{u}{a}$.
-
-</p><p>Отже, нарешті маємо $\dfrac{1}{\sqrt2} \arctan \dfrac{x+1}{\sqrt 2}$ для значення даного інтеграла.
-
-</p><p><em>Формули скорочення</em> є спеціальними формами, застосовними головним чином до біноміальних і тригонометричних виразів, що мають бути проінтегровані, та приводять їх до певної форми, інтеграл якої відомий.
-
-</p><p><em>Раціоналізація</em> і <em>Факторизація знаменника</em> є прийомами, застосовними в особливих випадках, але вони не допускають жодного короткого чи загального роз'яснення. Потрібно багато практики, щоб ознайомитися з цими підготовчими процесами.
-
-</p><p>Наступний приклад показує, як процес розкладання <a name="partfracs"/> на неповні дроби, про який ми дізналися в Розд. XIII., <a href="13.html#partfracs2">тут</a>, може бути використаний для інтегрування.
-
-</p><p>Візьмемо знову $\int \dfrac{dx}{x^2+2x+3}$; якщо ми розкладемо $\dfrac{1}{x^2+2x+3}$ на часткові дроби, він стане (див. <a href="20.html#partfracs3">тут</a>): \[ \dfrac{1}{2\sqrt{-2}} \left[\int \dfrac{dx}{x+1-\sqrt{-2}} - \int \dfrac{dx}{x +1+\sqrt{-2}} \right] \] \[ =\dfrac{1}{2\sqrt{-2}} \log_\epsilon \dfrac{x+1-\sqrt{-2}} {x+1+\sqrt{-2}}. \] Зауважте, що один і той самий інтеграл іноді можна виразити кількома способами (які є еквівалентними один одному).
-
-</p><p><em>Підводні камені.</em> Початківець може упустити певні моменти, яких досвідчена рука уникне. Наприклад, використання множників, що дорівнюють нулю або нескінченності, або поява невизначених величин, таких як $\tfrac{0}{0}$. Немає золотого правила, яке спрацює у кожному можливому випадку. Нічого, окрім практики й кмітливої уваги, не допоможе. Приклад такої ситуації, яку треба було обійти, виник у <a href="18.html">Розд. XVIII</a>, коли ми дійшли до задачі інтегрування $x^{-1}\, dx$.
-
-</p><p><em>Тріумфи.</em> Під тріумфами слід розуміти успіхи, з яким диференціальне та інтегральне числення були застосовані для розв’язання проблем, інакше нерозв’язних. Часто при розгляді фізичних зв’язків можна побудувати вираз для закону, що виражає взаємодію частин або сил, що ними керують, і такий вираз, природно, матиме форму <em>диференціального рівняння</em>, тобто рівняння, що містить диференціали з іншими алгебраїчними величинами або без них. І коли таке диференціальне рівняння знайдено, неможливо просунутися далі, поки воно не буде проінтегровано. Загалом набагато легше сформулювати відповідне диференціальне рівняння, ніж розв’язати його: справжня проблема починається лише тоді, коли хтось хоче його інтегрувати, якщо тільки рівняння не має стандартної форми, інтеграл якої відомий - тоді тріумф легкий. Рівняння, що є результатом інтегрування диференціального рівняння, називається* його «розв'язком»; і це досить дивно, наскільки у багатьох випадках рішення виглядає так, ніби воно не має жодного відношення до диференціального рівняння, інтегральною формою якого воно є. Рішення часто здається настільки ж відмінним від оригінального виразу, наскільки метелик відрізняється від гусениці, якою він був. Хто б міг припустити, що така невинна штука, як \[ \dfrac{dy}{dx} = \dfrac{1}{a^2-x^2} \] може розквітнути у \[ y = \dfrac{1} {2a} \log_\epsilon \dfrac{a+x}{ax} + C? \] Але останній вираз є <em>рішенням</em> першого.
-
-</p><p><note>*Це означає, що фактичний результат інтегрування називається його «розв’язком». Але багато математиків сказали б, як і професор Форсайт, що «кожне диференціальне рівняння<em> вважається вирішеним</em> коли значення залежної змінної виражається як функція незалежної змінної за допомогою або відомих функцій, або інтегралів, незалежно від того, чи можуть ці інтеграли бути виражені через вже відомі функції».</note>
-
-</p><p>Як останній приклад, розгляньмо зазначене вище разом.
-
-</p><p>За неповними дробами, <a name="partfracs3"/> \begin{align*} \frac{1}{a^2-x^2} &amp;= \frac{1}{2a(a+x)} + \frac{1}{2a(ax)}, \\ dy &amp;= \frac {dx}{2a(a+x)}+ \frac{dx}{2a(ax)}, \\ y &amp;= \frac{1}{2a} \left( \int \frac{ dx}{a+x} + \int \frac{dx}{ax} \right) \\ &amp;= \frac{1}{2a} \left(\log_\epsilon (a+x) - \log_\epsilon (ax) \right) \\ &amp;= \frac{1}{2a} \log_\epsilon \frac{a+x}{ax} + C. \end{align*} Не дуже складна метаморфоза!
-
-</p><p>Є цілі трактати, наприклад <em>«Диференціальні рівняння»</em> Буля, присвячені темі пошуку «рішень» для різних початкових форм.
-
-</p><p>
-</p><hr><h3>Вправи XIX</h3>
+<p></p>
+<p>(1) Знайдіть $\int \sqrt {a^2 - x^2}\, dx$.</p>
+<p>(2) Знайдіть $\int x \log_\epsilon x\, dx$.</p>
+<p>(3) Знайдіть $\int x^a \log_\epsilon x\, dx$.</p>
+<p>(4) Знайдіть $\int \epsilon^x \cos \epsilon^x\, dx$.</p>
+<p>(5) Знайдіть $\int \dfrac{1}{x} \cos (\log_\epsilon x)\, dx$.</p>
+<p>(6) Знайдіть $\int x^2 \epsilon^x\, dx$.</p>
+<p>(7) Знайдіть $\int \dfrac{(\log_\epsilon x)^a}{x}\, dx$.</p>
+<p>(8) Знайдіть $\int \dfrac{dx}{x \log_\epsilon x}$.</p>
+<p>(9) Знайдіть $\int \dfrac{5x+1}{x^2 +x-2}\, dx$.</p>
+<p>(10) Знайдіть $\int \dfrac{(x^2 -3)\, dx}{x^3 - 7x+6}$.</p>
+<p>(11) Знайдіть $\int \dfrac{b\, dx}{x^2 -a^2}$.</p>
+<p>(12) Знайдіть $\int \dfrac{4x\, dx}{x^4 -1}$.</p>
+<p>(13) Знайдіть $\int \dfrac{dx}{1-x^4}$.</p>
+<p>(14) Знайдіть $\int \dfrac{dx}{x \sqrt {a-bx^2}}$.</p>
+<p></p>
+<h3 class="answers">Відповіді</h3>
 
 <p>
-</p><p>(1) Знайдіть $\int \sqrt {a^2 - x^2}\, dx$.
-</p><p>(2) Знайдіть $\int x \log_\epsilon x\, dx$.
-</p><p>(3) Знайдіть $\int x^a \log_\epsilon x\, dx$.
-</p><p>(4) Знайдіть $\int \epsilon^x \cos \epsilon^x\, dx$.
-</p><p>(5) Знайдіть $\int \dfrac{1}{x} \cos (\log_\epsilon x)\, dx$.
-</p><p>(6) Знайдіть $\int x^2 \epsilon^x\, dx$.
-</p><p>(7) Знайдіть $\int \dfrac{(\log_\epsilon x)^a}{x}\, dx$.
-</p><p>(8) Знайдіть $\int \dfrac{dx}{x \log_\epsilon x}$.
-</p><p>(9) Знайдіть $\int \dfrac{5x+1}{x^2 +x-2}\, dx$.
-</p><p>(10) Знайдіть $\int \dfrac{(x^2 -3)\, dx}{x^3 - 7x+6}$.
-</p><p>(11) Знайдіть $\int \dfrac{b\, dx}{x^2 -a^2}$.
-</p><p>(12) Знайдіть $\int \dfrac{4x\, dx}{x^4 -1}$.
-</p><p>(13) Знайдіть $\int \dfrac{dx}{1-x^4}$.
-</p><p>(14) Знайдіть $\int \dfrac{dx}{x \sqrt {a-bx^2}}$.
-
-
-</p><p></p><h3 class="answers">Відповіді</h3>
-
-<p>(1)  $\dfrac{x\sqrt{a^2 - x^2}}{2} + \dfrac{a^2}{2} \sin^{-1} \dfrac{x}{a} + C$.
-
-</p><p>(2)  $\dfrac{x^2}{2}(\log_\epsilon x - \tfrac{1}{2}) + C$.
-
-
-</p><p>(3)  $\dfrac{x^{a+1}}{a + 1} \left(\log_\epsilon x - \dfrac{1}{a + 1}\right) + C$.
-
-</p><p>(4)  $\sin \epsilon^x + C$.
-
-
-</p><p>(5)  $\sin(\log_\epsilon x) + C$.
-
-</p><p>(6)  $\epsilon^x (x^2 - 2x + 2) + C$.
-
-
-</p><p>(7)  $\dfrac{1}{a + 1} (\log_\epsilon x)^{a+1} + C$.
-
-
-</p><p>(8)  $\log_\epsilon(\log_\epsilon x) + C$.
-
-
-</p><p>(9)  $2\log_\epsilon(x - 1) + 3\log_\epsilon(x + 2) + C$.
-
-</p><p>(10)  $\frac{1}{2} \log_\epsilon(x - 1) + \frac{1}{5} \log_\epsilon(x - 2) + \frac{3}{10} \log_\epsilon(x + 3) + C$.
-
-
-</p><p>(11)  $\dfrac{b}{2a} \log_\epsilon \dfrac{x - a}{x + a} + C$.
-
-</p><p>(12)  $\log_\epsilon \dfrac{x^2 - 1}{x^2 + 1} + C$.
-
-
-</p><p>(13)  $\frac{1}{4} \log_\epsilon \dfrac{1 + x}{1 - x} + \frac{1}{2} \arctan x + C$.
-
-</p><p>(14) $\dfrac{1}{\sqrt{a}} \log_\epsilon \dfrac{\sqrt{a} - \sqrt{a - bx^2}}{x\sqrt{a}}$. (Нехай $\dfrac{1}{x} = v$; потім у результаті нехай $\sqrt{v^2 - \dfrac{b}{a}} = v - u$.)
-<br>
-</p><hr>
-<a href="21.html">Далі →</a><br> <a href="/">Головна сторінка ↑</a><br> <a href="https://donatello.to/calculusmadeeasyua">Подякувати перекладачам &heartsuit;</a> <br>
+  (1) $\dfrac{x\sqrt{a^2 - x^2}}{2} + \dfrac{a^2}{2} \sin^{-1} \dfrac{x}{a} +
+  C$.
+</p>
+<p>(2) $\dfrac{x^2}{2}(\log_\epsilon x - \tfrac{1}{2}) + C$.</p>
+<p>
+  (3) $\dfrac{x^{a+1}}{a + 1} \left(\log_\epsilon x - \dfrac{1}{a + 1}\right) +
+  C$.
+</p>
+<p>(4) $\sin \epsilon^x + C$.</p>
+<p>(5) $\sin(\log_\epsilon x) + C$.</p>
+<p>(6) $\epsilon^x (x^2 - 2x + 2) + C$.</p>
+<p>(7) $\dfrac{1}{a + 1} (\log_\epsilon x)^{a+1} + C$.</p>
+<p>(8) $\log_\epsilon(\log_\epsilon x) + C$.</p>
+<p>(9) $2\log_\epsilon(x - 1) + 3\log_\epsilon(x + 2) + C$.</p>
+<p>
+  (10) $\frac{1}{2} \log_\epsilon(x - 1) + \frac{1}{5} \log_\epsilon(x - 2) +
+  \frac{3}{10} \log_\epsilon(x + 3) + C$.
+</p>
+<p>(11) $\dfrac{b}{2a} \log_\epsilon \dfrac{x - a}{x + a} + C$.</p>
+<p>(12) $\log_\epsilon \dfrac{x^2 - 1}{x^2 + 1} + C$.</p>
+<p>
+  (13) $\frac{1}{4} \log_\epsilon \dfrac{1 + x}{1 - x} + \frac{1}{2} \arctan x +
+  C$.
+</p>
+<p>
+  (14) $\dfrac{1}{\sqrt{a}} \log_\epsilon \dfrac{\sqrt{a} - \sqrt{a -
+  bx^2}}{x\sqrt{a}}$. (Нехай $\dfrac{1}{x} = v$; потім у результаті нехай
+  $\sqrt{v^2 - \dfrac{b}{a}} = v - u$.)
+  <br />
+</p>
+<hr />
+<a href="21.html">Далі →</a><br />
+<a href="/">Головна сторінка ↑</a><br />
+<a href="https://donatello.to/calculusmadeeasyua"
+  >Подякувати перекладачам &heartsuit;</a
+>
+<br />
 
 <script src="j/jquery.js"></script>
 <script src="j/modernizr.js"></script>
 <script src="j/dih5.js"></script>
 
-<script data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<script
+  data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js"
+></script>

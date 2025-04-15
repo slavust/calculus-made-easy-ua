@@ -1,224 +1,366 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<title>Як працювати з синусами та косинусами | Математичний аналіз простими словами</title>
-<link rel="stylesheet" href="screen.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>
+  Як працювати з синусами та косинусами | Математичний аналіз простими словами
+</title>
+<link rel="stylesheet" href="screen.css" />
 <style>
-body{counter-reset:h1 15}
+  body {
+    counter-reset: h1 15;
+  }
 </style>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
-<script type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-<h1><br>Як працювати з синусами та косинусами</h1>
-<p class="a rotatedFloralHeartBullet">
-
-
-</p><p>Оскільки зазвичай грецькі літери використовуються для позначення кутів, ми, як і зазвичай, візьмемо букву $\theta$ («тета») для будь-якого змінного кута.
-
-</p><p>Розглянемо функцію \[ y= \sin \theta. \]
-
-<a name="figure3">
-</a></p><p><img src="33283-t/images/177a.svg">
-
-</p><p>Нам потрібно дослідити значення $\dfrac{d(\sin \theta)}{d \theta}$, тобто, іншими словами, якщо кут $\theta$ змінюється, ми повинні знайти співвідношення між приростом синуса та приростом кута, коли обидва прирости самі по собі нескінченно малі. Подивіться на <a href="#figure43">Зображення 43</a>, де, якщо радіус кола дорівнює одиниці, висота $y$ є синусом, а $\theta$ є кутом. Тепер, якщо $\theta$ збільшиться шляхом додавання до нього малого кута $d \theta$ – частки кута, – висота $y$, синуса, буде збільшена на маленьку частку $dy$. Нова висота $y + dy$ буде синусом нового кута $\theta + d \theta$, або, формулюючи це у вигляді рівняння, \[ y+dy = \sin(\theta + d \theta); \] і віднімання з цього першого рівняння дає \[ dy = \sin(\theta + d \theta)- \sin \theta. \]
-
-</p><p>Величина в правій частині - це різниця між двома синусами, і книги з тригонометрії розкажуть, як це розрахувати. Там написано, що коли $M$ і $N$ — два різні кути, \[ \sin M - \sin N = 2 \cos\frac{M+N}{2}·\sin\frac{M-N}{2}. \]
-
-</p><p>Тоді, якщо ми підставимо $M= \theta + d \theta$ для одного кута, а $N= \theta$ для іншого, ми можемо написати \begin{align*} dy &amp;= 2 \cos\frac{\theta + d\theta + \theta}{2} · \sin\frac{\theta + d\theta - \theta}{2},\\ \text{або,}\; dy &amp;= 2\cos(\theta + \tfrac{1}{2}d\theta) · \sin\tfrac{1}{2} d\theta. \end{align*}
-
-</p><p>Але якщо ми вважаємо $d \theta$ необмежено малим, ми можемо знехтувати $\frac{1}{2} d \theta$ порівняно з $\theta$, а також можемо прийняти $\sin\frac{1}{2} d \theta$ рівним $\frac{1}{2} d \theta$. Тоді рівняння набуває вигляду:<a name="differsin"/> \begin{align*} dy &amp;= 2 \cos \theta × \tfrac{1}{2} d \theta; \\ dy &amp;= \cos \theta · d \theta, \\ \text{ і, нарешті,}\; \dfrac{dy}{d \theta} &amp;= \cos \theta. \end{align*}
-
-
-</p><p>Супутні криві, <a href="#figure44">Зоб. 44</a> і <a href="#figure45">Зоб. 45</a>, показують в масштабі значення $y=\sin \theta$ і $\dfrac{dy}{d\theta}=\cos\theta$ для відповідних значень $\theta$.
-
-<a name="figure44">
-</a></p><p><img src="33283-t/images/179a.svg"><a name="erratum2"/>
-<a name="figure45">
-</a></p><p><img src="33283-t/images/179b.svg">
-</p><hr>
-
-
-<p>Тепер візьмемо косинус.<a name="differcos"/>
-
-</p><p>Нехай $y=\cos \theta$.
-
-</p><p>Але $\cos \theta=\sin\left(\dfrac{\pi}{2}-\theta\right)$.
-
-</p><p>Тому \begin{align*} &amp;\begin{aligned} dy = d\left(\sin\left(\frac{\pi}{2} - \theta\right)\right) &amp;= \cos\left(\frac{\pi}{2} - \theta\right) × d(-\theta) \\ &amp;= \cos\left(\frac{\pi}{2} - \theta\right) × (-d \theta), \end{aligned} \\ &amp;\frac{dy}{d\theta} = -\cos\left(\frac{\pi}{2} - \theta\right). \end{align*} І з цього випливає, що \begin{align*} &amp;\frac{dy}{d\theta} = -\sin \theta. \end{align*}
-
-</p><p></p><hr>
-
-<p>Нарешті, візьмемо тангенс. Нехай \begin{align*} y &amp;= \tan \theta, \\ dy &amp;= \tan(\theta + d\theta) - \tan\theta. \\ \end{align*} Розгортання, як показано в книгах з тригонометрії, \begin{align*} \tan(\theta + d\theta) &amp;= \frac{\tan\theta + \tan d\theta} { 1 - \tan\theta·\tan d\theta}; \\ \text{звідки}\; dy &amp;= \frac{\tan\theta + \tan d\theta} {1-\tan\theta·\tan d\theta} - \tan\theta \\ &amp;= \frac{(1 + \tan^2 \theta)\tan d\theta} {1-\tan\theta·\tan d\theta}. \end{align*}
-
-
-</p><p>Тепер згадаємо, що якщо $d\theta$ нескінченно малий, значення $\tan d\theta$ стає ідентичним $d\theta$, а $\tan\theta · d\theta$ є зневажливо малим порівняно з $1$, так що вираз зводиться до \begin{align*} dy &amp;= \frac{(1+\tan^2 \theta)\, d\theta}{1}, \\ \text{так що}\; \frac{dy}{d\theta} &amp;= 1 + \tan^2\theta, \\ \text{або}\; \frac{dy}{d\theta} &amp;= \sec^2 \theta. \end{align*}
-
-</p><p>Підсумувавши ці результати, ми маємо:
-  <table>
-    <tr><th>$y$</th><th>$\dfrac{dy}{d\theta}$</th></tr>
-    <tr><td>$\sin\theta$</td><td>$\cos\theta$</td></tr>
-    <tr><td>$\cos\theta$</td><td>$-\sin\theta$</td></tr>
-    <tr><td>$\tan\theta$</td><td>$\sec^2\theta$</td></tr>
-  </table>
-
-
-</p><p>Іноді в питаннях механіки та фізики, як, наприклад, у простому гармонійному русі або хвильовому русі, ми маємо справу з кутами, які збільшуються пропорційно часу. Таким чином, якщо $T$ — час завершення одного повного <em>періоду</em>, або одного кола, тоді, оскільки кут навколо кола становить $2\pi$ радіан, або $360°$, величина кута, пройденого за час $t$, буде \begin{align*} \theta &amp;= 2\pi\frac{t}{T}\quad \text{у радіанах,} \\ \text{або}\; \theta &amp;= 360\frac{t}{T}\quad \text{у градусах.} \end{align*}
-
-
-</p><p>Якщо <em>частота</em>, або кількість періодів на секунду, позначається через $n$, тоді $n = \dfrac{1}{T}$, і тоді ми можемо написати: \[ \theta=2\pi nt. \] Тоді ми матимемо \[ y = \sin 2\pi nt. \]
-
-</p><p>Якщо тепер ми хочемо знати, як синус змінюється залежно від часу, ми повинні диференціювати не по $\theta$, а по $t$. Для цього ми повинні вдатися до хитрості, описаної в <a href="9.html">Розділі IX</a>, і покласти \[ \frac{dy}{dt} = \frac{dy}{d\theta} · \frac{d\theta}{dt}. \]
-
-</p><p>Оскільки $\dfrac{d\theta}{dt}$, очевидно, буде $2\pi n$, тоді \begin{align*} \frac{dy}{dt} &amp;= \cos \theta × 2\pi n \\ &amp;= 2\pi n · \cos 2\pi nt. \\ \end{align*} Подібним чином випливає, що \begin{align*} \frac{d(\cos 2\pi nt)}{dt} &amp;= -2\pi n · \sin 2\pi nt. \end{align*}
-
-</p><p>
-</p><h2>Друга похідна синуса та косинуса.</h2>
-
-<p>Ми побачили, що коли $\sin \theta$ диференціюється відносно $\theta$, він стає $\cos \theta$, і що коли $\cos \theta$ диференціюється відносно $\theta$, він стає $-\sin \theta$; або, в символах, \[ \frac{d^2(\sin \theta)}{d\theta^2} = -\sin \theta. \]
-
-
-</p><p>Отже, маємо цей результат: ми знайшли таку функцію, що якщо ми продиференціюємо її двічі, отримаємо те саме, з чого почали, але зі зміною знаку з $+$ на $-$.
-
-</p><p>Те ж саме вірно для косинуса. Диференціювання $\cos\theta$ дає нам $-\sin\theta$, а диференціювання $-\sin\theta$ дає $-\cos\theta$, або: \[ \frac{d^2(\cos\theta)}{d\theta^2} = -\cos\theta. \]
-
-</p><p><em>Синуси та косинуси є єдиними функціями, друга похідна яких дорівнює вихідній функції (і має протилежний знак).</em>
-
-</p><p></p><hr>
-
-<p><em>Приклади.</em><a name="intex3"/>
-Тепер завдяки тому, що ми дізналися, ми можемо диференціювати вирази складнішого характеру.
-
-</p><p>(1) $y=\arcsin x$.
-
-</p><p>Якщо $y$ — дуга, синус якої дорівнює $x$, тоді $x = \sin y$. \[ \frac{dx}{dy}=\cos y. \]
-
-</p><p>Переходячи тепер від оберненої функції до вихідної, ми отримуємо \begin{align*} \frac{dy}{dx} &amp;= \frac{1}{\;\dfrac{dx}{dy}\;} = \frac{1}{\cos y}. \\ \text{Тепер}\; \cos y &amp;= \sqrt{1-\sin^2 y}=\sqrt{1-x^2}; \\ \text{отже}\; \frac{dy}{dx} &amp;= \frac{1}{\sqrt{1-x^2}}, \end{align*} досить несподіваний результат.
-
-
-</p><p>(2) $y=\cos^3 \theta$.
-
-</p><p>Це те саме, що $y=(\cos \theta)^3$.
-
-</p><p>Нехай $\cos\theta=v$; тоді $y=v^3$; $\dfrac{dy}{dv}=3v^2$. \begin{align*} \frac{dv}{d\theta} &amp;= -\sin\theta.\\ \frac{dy}{d\theta} &amp;= \frac{dy}{dv} × \frac{dv}{d\theta} = -3 \cos^2 \theta \sin\theta. \end{align*}
-
-</p><p>(3) $y=\sin(x+a)$.
-
-</p><p>Нехай $x+a=v$; тоді $y=\sin v$. \[ \frac{dy}{dv}=\cos v;\qquad \frac{dv}{dx}=1 \quad\text{і}\quad \frac{dy}{dx}=\cos(x+ а). \]
-
-</p><p>(4) $y=\log_\epsilon \sin \theta$.
-
-</p><p>Нехай $\sin\theta=v$; $y=\log_\epsilon v$. \begin{align*} \frac{dy}{dv} &amp;= \frac{1}{v};\quad \frac{dv}{d\theta}=\cos\theta;\\ \frac{dy}{d\theta} &amp;= \frac{1}{\sin\theta} × \cos\theta = \cot\theta. \end{align*}
-
-</p><p>(5) $y=\cot\theta=\dfrac{\cos\theta}{\sin\theta}$.
-\begin{align*}
-\frac{dy}{d\theta}
-  &amp;= \frac{-\sin^2\theta - \cos^2 \theta}{\sin^2 \theta}\\
-  &amp;= -(1+\cot^2 \theta) = -\text{cosec}^2 \theta.
-\end{align*}
-
-</p><p>(6) $y=\tan 3\theta$.
-
-</p><p>Нехай $3\theta=v$; $y=\tan v$; $\dfrac{dy}{dv}=\sec^2 v$. \[ \frac{dv}{d\theta}=3;\quad \frac{dy}{d\theta}=3 \sec^2 3\theta. \]
-
-
-</p><p>(7) $y = \sqrt{1+3\tan^2\theta}$; $y=(1+3 \tan^2 \theta)^{\frac{1}{2}}$.
-
-</p><p>Нехай $3\tan^2\theta=v$. \begin{align*} y &amp;= (1+v)^{\frac{1}{2}};\quad \frac{dy}{dv} = \frac{1}{2\sqrt{1+v }} \end{align*} (див. <a href="9.html#ExNo1">тут</a>). \begin{align*} \frac{dv}{d\theta} &amp;= 6\tan\theta \sec^2 \theta \\ \end{align*} бо якщо $\tan \theta = u$, \begin{align*} v &amp;= 3u^2;\quad \frac{dv}{du} = 6u;\quad \frac{du}{d\theta} = \sec^2 \theta; \\ отже \frac{dv}{d\theta} &amp;= 6 (\tan \theta \sec^2 \theta) \\ отже \frac{dy}{d\theta} &amp;= \frac{6\tan\theta \sec^2\theta}{2\sqrt{1 + 3\tan^2\theta}}. \end{align*}
-
-</p><p>(8) $y=\sin x \cos x$. <a name="example1"/>
-\begin{align*}
-\frac{dy}{dx}
-  &amp;= \sin x(-\sin x) + \cos x × \cos x \\
-  &amp;= \cos^2 x - \sin^2 x.
-\end{align*}
-
-</p><p>
-</p><hr><h3>Вправи XIV</h3>
-
-(1) Продиференціюйте наступне: \begin{align*} \text{(i)}\quad y &amp;= A \sin\left(\theta - \frac{\pi}{2}\right).\\ \text{(ii)}\quad y &amp;= \sin^2 \theta;\quad \text{та } y = \sin 2\theta.\\ \text{(iii)}\quad y &amp;= \sin^ 3 \theta;\quad \text{та } y = \sin 3\theta. \end{align*}
-
-<p>(2) Знайдіть значення $\theta$, для якого $\sin\theta × \cos\theta$ є максимальним.
-
-</p><p>(3) Продиференціюйте $y=\dfrac{1}{2\pi} \cos 2\pi nt$.
-
-
-</p><p>(4) Якщо $y = \sin a^x$, знайдіть $\dfrac{dy}{dx}$.
-
-</p><p>(5) Продиференціюйте $y=\log_\epsilon \cos x$.
-
-</p><p>(6) Продиференціюйте $y=18.2 \sin(x+26°)$.
-
-</p><p>(7) Побудуйте криву $y=100 \sin(\theta-15°)$ і покажіть, що нахил кривої при $\theta = 75°$ становить половину максимального нахилу.
-
-</p><p>(8) Якщо $y=\sin \theta·\sin 2\theta$, знайдіть $\dfrac{dy}{d\theta}$.
-
-</p><p>(9) Якщо $y=a·\tan^m(\theta^n)$, знайдіть похідну $y$ відносно $\theta$.
-
-</p><p>(10) Продиференціюйте $y=\epsilon^x \sin^2 x$.
-
-</p><p>(11) Продиференціюйте три рівняння з Вправ XIII (<a href="14b.html">тут</a>), № 4, і порівняйте їхні похідні, щоб визначити, чи є вони рівними або майже рівними для дуже малих значень $x$, або для дуже великих значень $x$, або для значень $x$ в околиці $x=30$.
-
-</p><p>(12) Продиференціюйте наступне: \begin{align*} \text{(i)}\quad y &amp;= \sec x. \\ \text{(ii)}\quad y &amp;= \arccos x. \\ \text{(iii)}\quad y &amp;= \arctan x. \\ \text{(iv)}\quad y &amp;= \text{arcsec} x. \\ \text{(v)}\quad y &amp;= \tan x × \sqrt{3 \sec x}. &amp;&amp; \end{align*}
-
-</p><p>(13) Продиференціюйте $y=\sin(2\theta +3)^{2.3}$.
-
-</p><p>(14) Продиференціюйте $y=\theta^3+3 \sin(\theta+3)-3^{\sin \theta} - 3^\theta$.
-
-</p><p>(15) Знайдіть максимум або мінімум $y=\theta \cos \theta$.
-
-</p><p></p><h3 class="answers">Відповіді</h3>
-
-<p>(1) 
-(i) $\dfrac{dy}{d\theta} = A \cos \left( \theta - \dfrac{\pi}{2} \right)$;
-
-</p><p>(ii) $\dfrac{dy}{d\theta} = 2\sin\theta \cos\theta = \sin2\theta$ and $\dfrac{dy}{d\theta} = 2\cos2\theta$;
-</p><p>(iii) $\dfrac{dy}{d\theta} = 3\sin^2 \theta \cos\theta$ and $\dfrac{dy}{d\theta} = 3\cos3\theta$.
-</p><p>(2) $\theta = 45°$ або $\dfrac{\pi}{4}$ радіан.
-</p><p>(3)   $\dfrac{dy}{dt} = -n \sin 2\pi nt$.
-</p><p>(4)   $a^x \log_\epsilon a \cos a^x$.
-</p><p>(5)   $\dfrac{\cos x}{\sin x} = \text{cotan}\; x$
-</p><p>(6)   $18.2 \cos \left(x + 26° \right)$.
-</p><p>(7) Нахил становить $\dfrac{dy}{d\theta} = 100\cos\left(\theta - 15° \right)$, що є максимумом, коли $(\theta -15°) = 0$, або $\theta = 15°$, і тоді значення нахилу становить ${}= 100$. Коли $\theta = 75°$, нахил становить $100\cos(75° - 15°) = 100\cos 60° = 100 × \frac{1}{2} = 50$.
-</p><p>(8)  $\begin{aligned}[t]
-  \cos\theta \sin2\theta + 2\cos2\theta \sin\theta
-  &amp;= 2\sin\theta\left(\cos^2 \theta + \cos2\theta\right) \\
-  &amp;= 2\sin\theta\left(3\cos^2 \theta - 1\right).
-  \end{aligned}$
-
-</p><p>(9)  $amn\theta^{n-1} \tan^{m-1}\left(\theta^n\right)\sec^2 \theta^n$.
-</p><p>(10)  $\epsilon^x \left(\sin^2 x + \sin2x\right)$;&nbsp;&nbsp; $\epsilon^x \left(\sin^2 x + 2\sin2x + 2\cos2x\right)$.
-</p><p>(11)  $\left(i\right) \dfrac{dy}{dx} = \dfrac{ab}{\left(x + b\right)^2}$;&nbsp;&nbsp;
-(ii) $\dfrac{a}{b} \epsilon^{-\frac{x}{b}}$;&nbsp;&nbsp;
-(iii) $\dfrac{1}{90}° × \dfrac{ab}{\left(b^2 + x^2\right)}$.
-
-</p><p>(12)  (i) $\dfrac{dy}{dx} = \sec x \tan x$;
-
-(ii) $\dfrac{dy}{dx} = - \dfrac{1}{\sqrt{ 1 - x^2}}$;
-
-(iii) $\dfrac{dy}{dx} = \dfrac{1}{ 1 + x^2}$;
-
-(iv) $\dfrac{dy}{dx} = \dfrac{1}{x \sqrt{ x^2 - 1}}$;
-
-(v) $\dfrac{dy}{dx} = \dfrac{\sqrt{ 3\sec x} \left(3\sec^2 x - 1\right)}{2}$.
-
-</p><p>(13)  $\dfrac{dy}{d\theta} = 4.6\left(2\theta + 3\right)^{1.3} \cos\left(2\theta + 3\right)^{2.3}$.
-
-
-</p><p>(14)   $\dfrac{dy}{d\theta} = 3\theta^2 + 3\cos \left( \theta + 3 \right) - \log_\epsilon 3 \left( \cos\theta × 3^{\sin\theta} + 3\theta \right)$.
-
-</p><p>(15) $\theta = \cot\theta; \theta = ±0.86$; максимум для $+\theta$, мінімум для $-\theta$.
-
-
-<br>
-</p><hr>
-<a href="16.html">Далі →</a><br> <a href="/">Головна сторінка ↑</a><br> <a href="https://donatello.to/calculusmadeeasyua">Подякувати перекладачам &heartsuit;</a> <br>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+
+<h1><br />Як працювати з синусами та косинусами</h1>
+<p class="a rotatedFloralHeartBullet"></p>
+<p>
+  Оскільки зазвичай грецькі літери використовуються для позначення кутів, ми, як
+  і зазвичай, візьмемо букву $\theta$ («тета») для будь-якого змінного кута.
+</p>
+<p>
+  Розглянемо функцію \[ y= \sin \theta. \]
+
+  <a name="figure3"> </a>
+</p>
+<p><img src="33283-t/images/177a.svg" /></p>
+<p>
+  Нам потрібно дослідити значення $\dfrac{d(\sin \theta)}{d \theta}$, тобто,
+  іншими словами, якщо кут $\theta$ змінюється, ми повинні знайти співвідношення
+  між приростом синуса та приростом кута, коли обидва прирости самі по собі
+  нескінченно малі. Подивіться на <a href="#figure43">Зображення 43</a>, де,
+  якщо радіус кола дорівнює одиниці, висота $y$ є синусом, а $\theta$ є кутом.
+  Тепер, якщо $\theta$ збільшиться шляхом додавання до нього малого кута $d
+  \theta$ – частки кута, – висота $y$, синуса, буде збільшена на маленьку частку
+  $dy$. Нова висота $y + dy$ буде синусом нового кута $\theta + d \theta$, або,
+  формулюючи це у вигляді рівняння, \[ y+dy = \sin(\theta + d \theta); \] і
+  віднімання з цього першого рівняння дає \[ dy = \sin(\theta + d \theta)- \sin
+  \theta. \]
+</p>
+<p>
+  Величина в правій частині - це різниця між двома синусами, і книги з
+  тригонометрії розкажуть, як це розрахувати. Там написано, що коли $M$ і $N$ —
+  два різні кути, \[ \sin M - \sin N = 2 \cos\frac{M+N}{2}·\sin\frac{M-N}{2}. \]
+</p>
+<p>
+  Тоді, якщо ми підставимо $M= \theta + d \theta$ для одного кута, а $N= \theta$
+  для іншого, ми можемо написати \begin{align*} dy &amp;= 2 \cos\frac{\theta +
+  d\theta + \theta}{2} · \sin\frac{\theta + d\theta - \theta}{2},\\
+  \text{або,}\; dy &amp;= 2\cos(\theta + \tfrac{1}{2}d\theta) · \sin\tfrac{1}{2}
+  d\theta. \end{align*}
+</p>
+<p>
+  Але якщо ми вважаємо $d \theta$ необмежено малим, ми можемо знехтувати
+  $\frac{1}{2} d \theta$ порівняно з $\theta$, а також можемо прийняти
+  $\sin\frac{1}{2} d \theta$ рівним $\frac{1}{2} d \theta$. Тоді рівняння
+  набуває вигляду:<a name="differsin" /> \begin{align*} dy &amp;= 2 \cos \theta
+  × \tfrac{1}{2} d \theta; \\ dy &amp;= \cos \theta · d \theta, \\ \text{ і,
+  нарешті,}\; \dfrac{dy}{d \theta} &amp;= \cos \theta. \end{align*}
+</p>
+<p>
+  Супутні криві, <a href="#figure44">Зоб. 44</a> і
+  <a href="#figure45">Зоб. 45</a>, показують в масштабі значення $y=\sin \theta$
+  і $\dfrac{dy}{d\theta}=\cos\theta$ для відповідних значень $\theta$.
+
+  <a name="figure44"> </a>
+</p>
+<p>
+  <img src="33283-t/images/179a.svg" /><a name="erratum2" />
+  <a name="figure45"> </a>
+</p>
+<p><img src="33283-t/images/179b.svg" /></p>
+<hr />
+
+<p>Тепер візьмемо косинус.<a name="differcos" /></p>
+<p>Нехай $y=\cos \theta$.</p>
+<p>Але $\cos \theta=\sin\left(\dfrac{\pi}{2}-\theta\right)$.</p>
+<p>
+  Тому \begin{align*} &amp;\begin{aligned} dy = d\left(\sin\left(\frac{\pi}{2} -
+  \theta\right)\right) &amp;= \cos\left(\frac{\pi}{2} - \theta\right) ×
+  d(-\theta) \\ &amp;= \cos\left(\frac{\pi}{2} - \theta\right) × (-d \theta),
+  \end{aligned} \\ &amp;\frac{dy}{d\theta} = -\cos\left(\frac{\pi}{2} -
+  \theta\right). \end{align*} І з цього випливає, що \begin{align*}
+  &amp;\frac{dy}{d\theta} = -\sin \theta. \end{align*}
+</p>
+<p></p>
+<hr />
+
+<p>
+  Нарешті, візьмемо тангенс. Нехай \begin{align*} y &amp;= \tan \theta, \\ dy
+  &amp;= \tan(\theta + d\theta) - \tan\theta. \\ \end{align*} Розгортання, як
+  показано в книгах з тригонометрії, \begin{align*} \tan(\theta + d\theta)
+  &amp;= \frac{\tan\theta + \tan d\theta} { 1 - \tan\theta·\tan d\theta}; \\
+  \text{звідки}\; dy &amp;= \frac{\tan\theta + \tan d\theta} {1-\tan\theta·\tan
+  d\theta} - \tan\theta \\ &amp;= \frac{(1 + \tan^2 \theta)\tan d\theta}
+  {1-\tan\theta·\tan d\theta}. \end{align*}
+</p>
+<p>
+  Тепер згадаємо, що якщо $d\theta$ нескінченно малий, значення $\tan d\theta$
+  стає ідентичним $d\theta$, а $\tan\theta · d\theta$ є зневажливо малим
+  порівняно з $1$, так що вираз зводиться до \begin{align*} dy &amp;=
+  \frac{(1+\tan^2 \theta)\, d\theta}{1}, \\ \text{так що}\; \frac{dy}{d\theta}
+  &amp;= 1 + \tan^2\theta, \\ \text{або}\; \frac{dy}{d\theta} &amp;= \sec^2
+  \theta. \end{align*}
+</p>
+<p>Підсумувавши ці результати, ми маємо:</p>
+<table>
+  <tr>
+    <th>$y$</th>
+    <th>$\dfrac{dy}{d\theta}$</th>
+  </tr>
+  <tr>
+    <td>$\sin\theta$</td>
+    <td>$\cos\theta$</td>
+  </tr>
+  <tr>
+    <td>$\cos\theta$</td>
+    <td>$-\sin\theta$</td>
+  </tr>
+  <tr>
+    <td>$\tan\theta$</td>
+    <td>$\sec^2\theta$</td>
+  </tr>
+</table>
+
+<p>
+  Іноді в питаннях механіки та фізики, як, наприклад, у простому гармонійному
+  русі або хвильовому русі, ми маємо справу з кутами, які збільшуються
+  пропорційно часу. Таким чином, якщо $T$ — час завершення одного повного
+  <em>періоду</em>, або одного кола, тоді, оскільки кут навколо кола становить
+  $2\pi$ радіан, або $360°$, величина кута, пройденого за час $t$, буде
+  \begin{align*} \theta &amp;= 2\pi\frac{t}{T}\quad \text{у радіанах,} \\
+  \text{або}\; \theta &amp;= 360\frac{t}{T}\quad \text{у градусах.} \end{align*}
+</p>
+<p>
+  Якщо <em>частота</em>, або кількість періодів на секунду, позначається через
+  $n$, тоді $n = \dfrac{1}{T}$, і тоді ми можемо написати: \[ \theta=2\pi nt. \]
+  Тоді ми матимемо \[ y = \sin 2\pi nt. \]
+</p>
+<p>
+  Якщо тепер ми хочемо знати, як синус змінюється залежно від часу, ми повинні
+  диференціювати не по $\theta$, а по $t$. Для цього ми повинні вдатися до
+  хитрості, описаної в <a href="9.html">Розділі IX</a>, і покласти \[
+  \frac{dy}{dt} = \frac{dy}{d\theta} · \frac{d\theta}{dt}. \]
+</p>
+<p>
+  Оскільки $\dfrac{d\theta}{dt}$, очевидно, буде $2\pi n$, тоді \begin{align*}
+  \frac{dy}{dt} &amp;= \cos \theta × 2\pi n \\ &amp;= 2\pi n · \cos 2\pi nt. \\
+  \end{align*} Подібним чином випливає, що \begin{align*} \frac{d(\cos 2\pi
+  nt)}{dt} &amp;= -2\pi n · \sin 2\pi nt. \end{align*}
+</p>
+<p></p>
+<h2>Друга похідна синуса та косинуса.</h2>
+
+<p>
+  Ми побачили, що коли $\sin \theta$ диференціюється відносно $\theta$, він стає
+  $\cos \theta$, і що коли $\cos \theta$ диференціюється відносно $\theta$, він
+  стає $-\sin \theta$; або, в символах, \[ \frac{d^2(\sin \theta)}{d\theta^2} =
+  -\sin \theta. \]
+</p>
+<p>
+  Отже, маємо цей результат: ми знайшли таку функцію, що якщо ми
+  продиференціюємо її двічі, отримаємо те саме, з чого почали, але зі зміною
+  знаку з $+$ на $-$.
+</p>
+<p>
+  Те ж саме вірно для косинуса. Диференціювання $\cos\theta$ дає нам
+  $-\sin\theta$, а диференціювання $-\sin\theta$ дає $-\cos\theta$, або: \[
+  \frac{d^2(\cos\theta)}{d\theta^2} = -\cos\theta. \]
+</p>
+<p>
+  <em
+    >Синуси та косинуси є єдиними функціями, друга похідна яких дорівнює
+    вихідній функції (і має протилежний знак).</em
+  >
+</p>
+<p></p>
+<hr />
+
+<p>
+  <em>Приклади.</em><a name="intex3" />
+  Тепер завдяки тому, що ми дізналися, ми можемо диференціювати вирази
+  складнішого характеру.
+</p>
+<p>(1) $y=\arcsin x$.</p>
+<p>
+  Якщо $y$ — дуга, синус якої дорівнює $x$, тоді $x = \sin y$. \[
+  \frac{dx}{dy}=\cos y. \]
+</p>
+<p>
+  Переходячи тепер від оберненої функції до вихідної, ми отримуємо
+  \begin{align*} \frac{dy}{dx} &amp;= \frac{1}{\;\dfrac{dx}{dy}\;} =
+  \frac{1}{\cos y}. \\ \text{Тепер}\; \cos y &amp;= \sqrt{1-\sin^2
+  y}=\sqrt{1-x^2}; \\ \text{отже}\; \frac{dy}{dx} &amp;= \frac{1}{\sqrt{1-x^2}},
+  \end{align*} досить несподіваний результат.
+</p>
+<p>(2) $y=\cos^3 \theta$.</p>
+<p>Це те саме, що $y=(\cos \theta)^3$.</p>
+<p>
+  Нехай $\cos\theta=v$; тоді $y=v^3$; $\dfrac{dy}{dv}=3v^2$. \begin{align*}
+  \frac{dv}{d\theta} &amp;= -\sin\theta.\\ \frac{dy}{d\theta} &amp;=
+  \frac{dy}{dv} × \frac{dv}{d\theta} = -3 \cos^2 \theta \sin\theta. \end{align*}
+</p>
+<p>(3) $y=\sin(x+a)$.</p>
+<p>
+  Нехай $x+a=v$; тоді $y=\sin v$. \[ \frac{dy}{dv}=\cos v;\qquad \frac{dv}{dx}=1
+  \quad\text{і}\quad \frac{dy}{dx}=\cos(x+ а). \]
+</p>
+<p>(4) $y=\log_\epsilon \sin \theta$.</p>
+<p>
+  Нехай $\sin\theta=v$; $y=\log_\epsilon v$. \begin{align*} \frac{dy}{dv} &amp;=
+  \frac{1}{v};\quad \frac{dv}{d\theta}=\cos\theta;\\ \frac{dy}{d\theta} &amp;=
+  \frac{1}{\sin\theta} × \cos\theta = \cot\theta. \end{align*}
+</p>
+<p>
+  (5) $y=\cot\theta=\dfrac{\cos\theta}{\sin\theta}$. \begin{align*}
+  \frac{dy}{d\theta} &amp;= \frac{-\sin^2\theta - \cos^2 \theta}{\sin^2
+  \theta}\\ &amp;= -(1+\cot^2 \theta) = -\text{cosec}^2 \theta. \end{align*}
+</p>
+<p>(6) $y=\tan 3\theta$.</p>
+<p>
+  Нехай $3\theta=v$; $y=\tan v$; $\dfrac{dy}{dv}=\sec^2 v$. \[
+  \frac{dv}{d\theta}=3;\quad \frac{dy}{d\theta}=3 \sec^2 3\theta. \]
+</p>
+<p>(7) $y = \sqrt{1+3\tan^2\theta}$; $y=(1+3 \tan^2 \theta)^{\frac{1}{2}}$.</p>
+<p>
+  Нехай $3\tan^2\theta=v$. \begin{align*} y &amp;= (1+v)^{\frac{1}{2}};\quad
+  \frac{dy}{dv} = \frac{1}{2\sqrt{1+v }} \end{align*} (див.
+  <a href="9.html#ExNo1">тут</a>). \begin{align*} \frac{dv}{d\theta} &amp;=
+  6\tan\theta \sec^2 \theta \\ \end{align*} бо якщо $\tan \theta = u$,
+  \begin{align*} v &amp;= 3u^2;\quad \frac{dv}{du} = 6u;\quad \frac{du}{d\theta}
+  = \sec^2 \theta; \\ отже \frac{dv}{d\theta} &amp;= 6 (\tan \theta \sec^2
+  \theta) \\ отже \frac{dy}{d\theta} &amp;= \frac{6\tan\theta
+  \sec^2\theta}{2\sqrt{1 + 3\tan^2\theta}}. \end{align*}
+</p>
+<p>
+  (8) $y=\sin x \cos x$. <a name="example1" />
+  \begin{align*} \frac{dy}{dx} &amp;= \sin x(-\sin x) + \cos x × \cos x \\
+  &amp;= \cos^2 x - \sin^2 x. \end{align*}
+</p>
+<p></p>
+<hr />
+<h3>Вправи XIV</h3>
+
+(1) Продиференціюйте наступне: \begin{align*} \text{(i)}\quad y &amp;= A
+\sin\left(\theta - \frac{\pi}{2}\right).\\ \text{(ii)}\quad y &amp;= \sin^2
+\theta;\quad \text{та } y = \sin 2\theta.\\ \text{(iii)}\quad y &amp;= \sin^ 3
+\theta;\quad \text{та } y = \sin 3\theta. \end{align*}
+
+<p>
+  (2) Знайдіть значення $\theta$, для якого $\sin\theta × \cos\theta$ є
+  максимальним.
+</p>
+<p>(3) Продиференціюйте $y=\dfrac{1}{2\pi} \cos 2\pi nt$.</p>
+<p>(4) Якщо $y = \sin a^x$, знайдіть $\dfrac{dy}{dx}$.</p>
+<p>(5) Продиференціюйте $y=\log_\epsilon \cos x$.</p>
+<p>(6) Продиференціюйте $y=18.2 \sin(x+26°)$.</p>
+<p>
+  (7) Побудуйте криву $y=100 \sin(\theta-15°)$ і покажіть, що нахил кривої при
+  $\theta = 75°$ становить половину максимального нахилу.
+</p>
+<p>(8) Якщо $y=\sin \theta·\sin 2\theta$, знайдіть $\dfrac{dy}{d\theta}$.</p>
+<p>(9) Якщо $y=a·\tan^m(\theta^n)$, знайдіть похідну $y$ відносно $\theta$.</p>
+<p>(10) Продиференціюйте $y=\epsilon^x \sin^2 x$.</p>
+<p>
+  (11) Продиференціюйте три рівняння з Вправ XIII (<a href="14b.html">тут</a>),
+  № 4, і порівняйте їхні похідні, щоб визначити, чи є вони рівними або майже
+  рівними для дуже малих значень $x$, або для дуже великих значень $x$, або для
+  значень $x$ в околиці $x=30$.
+</p>
+<p>
+  (12) Продиференціюйте наступне: \begin{align*} \text{(i)}\quad y &amp;= \sec
+  x. \\ \text{(ii)}\quad y &amp;= \arccos x. \\ \text{(iii)}\quad y &amp;=
+  \arctan x. \\ \text{(iv)}\quad y &amp;= \text{arcsec} x. \\ \text{(v)}\quad y
+  &amp;= \tan x × \sqrt{3 \sec x}. &amp;&amp; \end{align*}
+</p>
+<p>(13) Продиференціюйте $y=\sin(2\theta +3)^{2.3}$.</p>
+<p>
+  (14) Продиференціюйте $y=\theta^3+3 \sin(\theta+3)-3^{\sin \theta} -
+  3^\theta$.
+</p>
+<p>(15) Знайдіть максимум або мінімум $y=\theta \cos \theta$.</p>
+<p></p>
+<h3 class="answers">Відповіді</h3>
+
+<p>
+  (1) (i) $\dfrac{dy}{d\theta} = A \cos \left( \theta - \dfrac{\pi}{2} \right)$;
+</p>
+<p>
+  (ii) $\dfrac{dy}{d\theta} = 2\sin\theta \cos\theta = \sin2\theta$ and
+  $\dfrac{dy}{d\theta} = 2\cos2\theta$;
+</p>
+<p>
+  (iii) $\dfrac{dy}{d\theta} = 3\sin^2 \theta \cos\theta$ and
+  $\dfrac{dy}{d\theta} = 3\cos3\theta$.
+</p>
+<p>(2) $\theta = 45°$ або $\dfrac{\pi}{4}$ радіан.</p>
+<p>(3) $\dfrac{dy}{dt} = -n \sin 2\pi nt$.</p>
+<p>(4) $a^x \log_\epsilon a \cos a^x$.</p>
+<p>(5) $\dfrac{\cos x}{\sin x} = \text{cotan}\; x$</p>
+<p>(6) $18.2 \cos \left(x + 26° \right)$.</p>
+<p>
+  (7) Нахил становить $\dfrac{dy}{d\theta} = 100\cos\left(\theta - 15° \right)$,
+  що є максимумом, коли $(\theta -15°) = 0$, або $\theta = 15°$, і тоді значення
+  нахилу становить ${}= 100$. Коли $\theta = 75°$, нахил становить $100\cos(75°
+  - 15°) = 100\cos 60° = 100 × \frac{1}{2} = 50$.
+</p>
+<p>
+  (8) $\begin{aligned}[t] \cos\theta \sin2\theta + 2\cos2\theta \sin\theta
+  &amp;= 2\sin\theta\left(\cos^2 \theta + \cos2\theta\right) \\ &amp;=
+  2\sin\theta\left(3\cos^2 \theta - 1\right). \end{aligned}$
+</p>
+<p>(9) $amn\theta^{n-1} \tan^{m-1}\left(\theta^n\right)\sec^2 \theta^n$.</p>
+<p>
+  (10) $\epsilon^x \left(\sin^2 x + \sin2x\right)$;&nbsp;&nbsp; $\epsilon^x
+  \left(\sin^2 x + 2\sin2x + 2\cos2x\right)$.
+</p>
+<p>
+  (11) $\left(i\right) \dfrac{dy}{dx} = \dfrac{ab}{\left(x +
+  b\right)^2}$;&nbsp;&nbsp; (ii) $\dfrac{a}{b}
+  \epsilon^{-\frac{x}{b}}$;&nbsp;&nbsp; (iii) $\dfrac{1}{90}° ×
+  \dfrac{ab}{\left(b^2 + x^2\right)}$.
+</p>
+<p>
+  (12) (i) $\dfrac{dy}{dx} = \sec x \tan x$; (ii) $\dfrac{dy}{dx} = -
+  \dfrac{1}{\sqrt{ 1 - x^2}}$; (iii) $\dfrac{dy}{dx} = \dfrac{1}{ 1 + x^2}$;
+  (iv) $\dfrac{dy}{dx} = \dfrac{1}{x \sqrt{ x^2 - 1}}$; (v) $\dfrac{dy}{dx} =
+  \dfrac{\sqrt{ 3\sec x} \left(3\sec^2 x - 1\right)}{2}$.
+</p>
+<p>
+  (13) $\dfrac{dy}{d\theta} = 4.6\left(2\theta + 3\right)^{1.3}
+  \cos\left(2\theta + 3\right)^{2.3}$.
+</p>
+<p>
+  (14) $\dfrac{dy}{d\theta} = 3\theta^2 + 3\cos \left( \theta + 3 \right) -
+  \log_\epsilon 3 \left( \cos\theta × 3^{\sin\theta} + 3\theta \right)$.
+</p>
+<p>
+  (15) $\theta = \cot\theta; \theta = ±0.86$; максимум для $+\theta$, мінімум
+  для $-\theta$.
+
+  <br />
+</p>
+<hr />
+<a href="16.html">Далі →</a><br />
+<a href="/">Головна сторінка ↑</a><br />
+<a href="https://donatello.to/calculusmadeeasyua"
+  >Подякувати перекладачам &heartsuit;</a
+>
+<br />
 
 <script src="j/jquery.js"></script>
 <script src="j/modernizr.js"></script>
 <script src="j/dih5.js"></script>
 
-<script data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<script
+  data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js"
+></script>

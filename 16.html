@@ -1,149 +1,260 @@
-
 <!DOCTYPE html>
-<meta charset="utf-8">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Часткове диференціювання | Математичний аналіз простими словами</title>
-<link rel="stylesheet" href="screen.css">
+<link rel="stylesheet" href="screen.css" />
 <style>
-body{counter-reset:h1 16}
+  body {
+    counter-reset: h1 16;
+  }
 </style>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
-<script type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
 
-<h1><br>Часткове диференціювання</h1>
-<p class="a rotatedFloralHeartBullet">
-
-</p><p>Іноді ми зустрічаємо величини, які є функціями більш ніж однієї незалежної змінної. Таким чином, ми можемо отримати випадок, коли $y$ залежить від двох інших змінних величин, одну з яких ми назвемо $u$, а іншу — $v$. У символах<a name="partialdiff"/> \[ dy = \frac{\partial y}{\partial u}\, du + \dfrac{\partial y}{\partial v}\, dv; \] \[ y = f(u, v). \] Візьмемо найпростіший конкретний випадок. Нехай \[ y = u×v. \] Що нам робити? Якби ми розглядали $v$ як константу та проводили диференціювання відносно $u$, ми мали б отримати \[ dy_v = v\, du; \] або якщо ми розглядаємо $u$ як константу та диференціюємо відносно $v$, ми повинні отримати: \[ dy_u = u\, dv. \]
-
-
-</p><p>Маленькі літери, розміщені тут як нижні індекси, показують, яка величина в операції була прийнята як постійна.
-
-</p><p>Ще один спосіб вказати, що диференціювання було виконано <em>частково</em>, тобто було виконано лише щодо <em>однієї</em> з незалежних змінних, це записати похідні з грецькими дельтами, тобто $\partial$, замість маленьких $d$. Таким чином \begin{align*} \frac{\partial y}{\partial u} &amp;= v, \\ \frac{\partial y}{\partial v} &amp;= u. \end{align*}
-
-</p><p>Якщо ми підставимо ці значення замість $v$ і $u$ відповідно, ми отримаємо \[ dy_v = \frac{\partial y}{\partial u}\, du, \\ dy_u = \frac{\partial y} {\partial v}\, dv, \]
-</p><p>що називається <em>частковими диференціалами</em>.
-</p><p>Але, якщо ви замислитесь, то помітите, що повна зміна $y$ залежить від <em>обох</em> цих штук одночасно. Тобто, якщо обидві вони змінюються, справжній $dy$ слід записати як \[ dy = \frac{\partial y}{\partial u}\, du + \dfrac{\partial y}{\partial v }\, dv; \] і це називається <em>повним диференціалом</em>. У деяких книгах це пишеться як $dy = \left(\dfrac{dy}{du}\right)\, du + \left(\dfrac{dy}{dv}\right)\, dv$.
-
-</p><p>
-<a name="example1"/><em>Приклад (1)</em> Знайдіть часткові похідні виразу $w = 2ax^2 + 3bxy + 4cy^3$. Відповіді: \[ \left. \begin{aligned} \frac{\partial w}{\partial x} &amp;= 4ax + 3by. \\ \frac{\partial w}{\partial y} &amp;= 3bx + 12cy^2. \end{aligned} \right\} \]
-
-
-</p><p>Перша отримана з припущенням, що $y$ константа, друга – якщо припустити, що $x$ є константою; тоді \[ dw = (4ax+3by)\, dx + (3bx+12cy^2)\, dy. \]
-
-</p><p>
-<a name="example2"/><em>Приклад (2)</em> Нехай $z = x^y$. Тоді, розглядаючи спочатку $y$, а потім $x$ як константу, ми отримуємо таким самим чином \[ \left. \begin{aligned} \dfrac{\partial z}{\partial x} &amp;= yx^{y-1}, \\ \dfrac{\partial z}{\partial y} &amp;= x^y × \log_\epsilon x, \end{aligned}\right\} \] тож $dz = yx^{y-1}\, dx + x^y \log_\epsilon x \, dy$.
-
-</p><p>
-<a name="example3"/><em> Приклад (3)</em> Конус із висотою $h$ і радіусом основи $r$ має об’єм $V=\frac{1}{3} \pi r^2 h$. Якщо його висота залишається незмінною, а $r$ змінюється, відношення зміни об’єму щодо радіуса відрізняється від відношення зміни об’єму до висоти, яке мало б місце, якби висота змінювалася, а радіус залишався постійним, тобто \[ \left. \begin{aligned} \frac{\partial V}{\partial r} &amp;= \dfrac{2\pi}{3} rh, \\ \frac{\partial V}{\partial h} &amp;= \dfrac{\pi}{3} r^2. \end{aligned}\right\} \]
-
-</p><p>Зміна об'єму, коли і радіус, і висота змінюються, визначається як $dV = \dfrac{2\pi}{3} rh\, dV + \dfrac{\pi}{3} r^2\, dh$.
-
-</p><p>
-<a name="example4"/><em>Приклад (4)</em><a name="Example4"/> У наступному прикладі $F$ і $f$ позначають дві довільні функції будь-якої форми. Наприклад, це можуть бути синус-функції, чи експоненти, чи просто алгебраїчні функції двох незалежних змінних $t$ і $x$. Розуміючи це, візьмемо вираз \begin{align*} y &amp;= F(x+at) + f(x-at), \\ \text{або,}\;\quad y &amp;= F(w ) + f(v); \\ \text{де}\;\quad w &amp;= x+at,\quad \text{і}\quad v = x-at. \\ \text{Тоді}\;\quad \frac{\partial y}{\partial x} &amp;= \frac{\partial F(w)}{\partial w} · \frac{\partial w}{\partial x} + \frac{\partial f(v)}{\partial v} · \frac{\partial v}{\partial x} \\ &amp;= F'(w) · 1 + f'(v) · 1 \end{align*} (де цифра $1$ це просто коефіцієнт при $x$ у $w$ та $v$) \begin{align*} \text{і}\; \ \frac{\partial^2 y}{\partial x^2} &amp;= F''(w) + f''(v). &amp;&amp; \\ \text{Також}\; \ \frac{\partial y}{\partial t} &amp;= \frac{\partial F(w)}{\partial w} · \frac{\partial w}{\partial t} + \frac{\partial f(v)}{\partial v} · \frac{\partial v}{\partial t} \\ &amp;= F'(w) · a - f'(v) a; \\ \text{і}\; \ \frac{\partial^2 y}{\partial t^2} &amp;= F''(w)a^2 + f''(v)a^2; \\ \text{звідки}\; \ \frac{\partial^2 y}{\partial t^2} &amp;= a^2\, \frac{\partial^2 y}{\partial x^2}. \end{align*}
-
-</p><p>Це диференціальне рівняння має величезне значення в математичній фізиці.
-
-</p><p></p><h2>Максимуми та мінімуми функцій двох незалежних змінних.</h2>
+<h1><br />Часткове диференціювання</h1>
+<p class="a rotatedFloralHeartBullet"></p>
+<p>
+  Іноді ми зустрічаємо величини, які є функціями більш ніж однієї незалежної
+  змінної. Таким чином, ми можемо отримати випадок, коли $y$ залежить від двох
+  інших змінних величин, одну з яких ми назвемо $u$, а іншу — $v$. У символах<a
+    name="partialdiff"
+  />
+  \[ dy = \frac{\partial y}{\partial u}\, du + \dfrac{\partial y}{\partial v}\,
+  dv; \] \[ y = f(u, v). \] Візьмемо найпростіший конкретний випадок. Нехай \[ y
+  = u×v. \] Що нам робити? Якби ми розглядали $v$ як константу та проводили
+  диференціювання відносно $u$, ми мали б отримати \[ dy_v = v\, du; \] або якщо
+  ми розглядаємо $u$ як константу та диференціюємо відносно $v$, ми повинні
+  отримати: \[ dy_u = u\, dv. \]
+</p>
+<p>
+  Маленькі літери, розміщені тут як нижні індекси, показують, яка величина в
+  операції була прийнята як постійна.
+</p>
+<p>
+  Ще один спосіб вказати, що диференціювання було виконано <em>частково</em>,
+  тобто було виконано лише щодо <em>однієї</em> з незалежних змінних, це
+  записати похідні з грецькими дельтами, тобто $\partial$, замість маленьких
+  $d$. Таким чином \begin{align*} \frac{\partial y}{\partial u} &amp;= v, \\
+  \frac{\partial y}{\partial v} &amp;= u. \end{align*}
+</p>
+<p>
+  Якщо ми підставимо ці значення замість $v$ і $u$ відповідно, ми отримаємо \[
+  dy_v = \frac{\partial y}{\partial u}\, du, \\ dy_u = \frac{\partial y}
+  {\partial v}\, dv, \]
+</p>
+<p>що називається <em>частковими диференціалами</em>.</p>
+<p>
+  Але, якщо ви замислитесь, то помітите, що повна зміна $y$ залежить від
+  <em>обох</em> цих штук одночасно. Тобто, якщо обидві вони змінюються,
+  справжній $dy$ слід записати як \[ dy = \frac{\partial y}{\partial u}\, du +
+  \dfrac{\partial y}{\partial v }\, dv; \] і це називається
+  <em>повним диференціалом</em>. У деяких книгах це пишеться як $dy =
+  \left(\dfrac{dy}{du}\right)\, du + \left(\dfrac{dy}{dv}\right)\, dv$.
+</p>
+<p>
+  <a name="example1" /><em>Приклад (1)</em> Знайдіть часткові похідні виразу $w
+  = 2ax^2 + 3bxy + 4cy^3$. Відповіді: \[ \left. \begin{aligned} \frac{\partial
+  w}{\partial x} &amp;= 4ax + 3by. \\ \frac{\partial w}{\partial y} &amp;= 3bx +
+  12cy^2. \end{aligned} \right\} \]
+</p>
+<p>
+  Перша отримана з припущенням, що $y$ константа, друга – якщо припустити, що
+  $x$ є константою; тоді \[ dw = (4ax+3by)\, dx + (3bx+12cy^2)\, dy. \]
+</p>
+<p>
+  <a name="example2" /><em>Приклад (2)</em> Нехай $z = x^y$. Тоді, розглядаючи
+  спочатку $y$, а потім $x$ як константу, ми отримуємо таким самим чином \[
+  \left. \begin{aligned} \dfrac{\partial z}{\partial x} &amp;= yx^{y-1}, \\
+  \dfrac{\partial z}{\partial y} &amp;= x^y × \log_\epsilon x,
+  \end{aligned}\right\} \] тож $dz = yx^{y-1}\, dx + x^y \log_\epsilon x \, dy$.
+</p>
+<p>
+  <a name="example3" /><em> Приклад (3)</em> Конус із висотою $h$ і радіусом
+  основи $r$ має об’єм $V=\frac{1}{3} \pi r^2 h$. Якщо його висота залишається
+  незмінною, а $r$ змінюється, відношення зміни об’єму щодо радіуса
+  відрізняється від відношення зміни об’єму до висоти, яке мало б місце, якби
+  висота змінювалася, а радіус залишався постійним, тобто \[ \left.
+  \begin{aligned} \frac{\partial V}{\partial r} &amp;= \dfrac{2\pi}{3} rh, \\
+  \frac{\partial V}{\partial h} &amp;= \dfrac{\pi}{3} r^2. \end{aligned}\right\}
+  \]
+</p>
+<p>
+  Зміна об'єму, коли і радіус, і висота змінюються, визначається як $dV =
+  \dfrac{2\pi}{3} rh\, dV + \dfrac{\pi}{3} r^2\, dh$.
+</p>
+<p>
+  <a name="example4" /><em>Приклад (4)</em><a name="Example4" /> У наступному
+  прикладі $F$ і $f$ позначають дві довільні функції будь-якої форми. Наприклад,
+  це можуть бути синус-функції, чи експоненти, чи просто алгебраїчні функції
+  двох незалежних змінних $t$ і $x$. Розуміючи це, візьмемо вираз \begin{align*}
+  y &amp;= F(x+at) + f(x-at), \\ \text{або,}\;\quad y &amp;= F(w ) + f(v); \\
+  \text{де}\;\quad w &amp;= x+at,\quad \text{і}\quad v = x-at. \\
+  \text{Тоді}\;\quad \frac{\partial y}{\partial x} &amp;= \frac{\partial
+  F(w)}{\partial w} · \frac{\partial w}{\partial x} + \frac{\partial
+  f(v)}{\partial v} · \frac{\partial v}{\partial x} \\ &amp;= F'(w) · 1 + f'(v)
+  · 1 \end{align*} (де цифра $1$ це просто коефіцієнт при $x$ у $w$ та $v$)
+  \begin{align*} \text{і}\; \ \frac{\partial^2 y}{\partial x^2} &amp;= F''(w) +
+  f''(v). &amp;&amp; \\ \text{Також}\; \ \frac{\partial y}{\partial t} &amp;=
+  \frac{\partial F(w)}{\partial w} · \frac{\partial w}{\partial t} +
+  \frac{\partial f(v)}{\partial v} · \frac{\partial v}{\partial t} \\ &amp;=
+  F'(w) · a - f'(v) a; \\ \text{і}\; \ \frac{\partial^2 y}{\partial t^2} &amp;=
+  F''(w)a^2 + f''(v)a^2; \\ \text{звідки}\; \ \frac{\partial^2 y}{\partial t^2}
+  &amp;= a^2\, \frac{\partial^2 y}{\partial x^2}. \end{align*}
+</p>
+<p>Це диференціальне рівняння має величезне значення в математичній фізиці.</p>
+<p></p>
+<h2>Максимуми та мінімуми функцій двох незалежних змінних.</h2>
 
 <p>
-<a name="example5"/><em>Приклад (5)</em> Знову розглянемо Вправу IX. № 4.
+  <a name="example5" /><em>Приклад (5)</em> Знову розглянемо Вправу IX. № 4.
+</p>
+<p>
+  Нехай $x$ і $y$ — довжина двох частин мотузки. Третя частина $= 30-(x+y)$, а
+  площа трикутника $A = \sqrt{s(sx)(sy)(s-30+x+y)}$, де $s$ — половина
+  периметра, $15$, так що $A = \sqrt{15P}$, де \begin{align*} P &amp;=
+  (15-x)(15-y)(x+y-15) \\ &amp;= xy ^2 + x^2y - 15x^2 - 15y^2 - 45xy + 450x +
+  450y - 3375. \end{align*}
+</p>
+<p>
+  Очевидно, що $A$ є максимальною, коли $P$ є максимальним. \[ dP =
+  \dfrac{\partial P}{\partial x}\, dx + \dfrac{\partial P}{\partial y}\, dy. \]
+  Для максимуму (зрозуміло, що в цьому випадку це не буде мінімум), потрібно
+  одночасно мати \[ \dfrac{\partial P}{\partial x} = 0 \quad\text{і}\quad
+  \dfrac{ \partial P}{\partial y} = 0; \] тобто \begin{aligned} 2xy - 30x + y^2
+  - 45y + 450 &amp;= 0, \\ 2xy - 30y + x^2 - 45x + 450 &amp;= 0. \end{aligned}
+</p>
+<p>Очевидним рішенням є $x=y$.</p>
+<p>
+  Якщо тепер ми введемо цю умову в значення $P$, отримаємо \[ P = (15-x)^2
+  (2x-15) = 2x^3 - 75x^2 + 900x - 3375. \] Для максимуму або мінімуму
+  $\dfrac{dP}{dx} = 6x^2 - 150x + 900 = 0$, що дає $x=15$ та $x=10$.
+</p>
+<p>
+  Зрозуміло, що $x=15$ дає мінімальну площу: $x=10$ дає максимум для $\dfrac{d^2
+  P}{dx^2} = 12x - 150$, що становить $+30$ для $x=15$ і $-30$ для $x =10$.
+</p>
+<p>
+  <a name="example6" /><em>Приклад (6)</em> Знайдіть розміри звичайного
+  залізничного вугільного вагона з прямокутними торцями, щоб для заданого об’єму
+  $V$ площа бортів і підлоги разом була якомога меншою.
+</p>
+<p>
+  Вагон являє собою відкритий зверху прямокутний ящик. Нехай $x$ — довжина, а
+  $y$ — ширина; тоді глибина $\dfrac{V}{xy}$. Площа поверхні становить $S=xy +
+  \dfrac{2V}{x} + \dfrac{2V}{y}$. \[ dS = \frac{\partial S}{\partial x}\, dx +
+  \frac{\partial S}{\partial y}\, dy = \left(y - \frac{2V}{x^2}\right) dx +
+  \left(x - \frac{2V}{y^2}\right) dy. \] Для мінімуму (очевидно, тут це не буде
+  максимум), \[ y - \frac{2V}{x^2} = 0,\quad x - \frac{2V}{y^2} = 0. \]
+</p>
+<p>
+  Тут також безпосереднім рішенням є $x = y$, так що $S = x^2 +
+  \dfrac{4V}{x}\quad$, $\dfrac{dS}{dx}= 2x - \dfrac{4V }{x^2} =0$ для мінімуму
+  та \[ x = \sqrt[3]{2V}. \]
+</p>
+<p></p>
+<hr />
+<h3>Вправи XV</h3>
 
-</p><p>Нехай $x$ і $y$ — довжина двох частин мотузки. Третя частина $= 30-(x+y)$, а площа трикутника $A = \sqrt{s(sx)(sy)(s-30+x+y)}$, де $s$ — половина периметра, $15$, так що $A = \sqrt{15P}$, де \begin{align*} P &amp;= (15-x)(15-y)(x+y-15) \\ &amp;= xy ^2 + x^2y - 15x^2 - 15y^2 - 45xy + 450x + 450y - 3375. \end{align*}
+(1) Продиференціюйте вираз $\dfrac{x^3}{3} - 2x^3y - 2y^2x + \dfrac{y}{3}$ лише
+відносно $x$ і відносно $y$ поодинці.
 
-</p><p>Очевидно, що $A$ є максимальною, коли $P$ є максимальним. \[ dP = \dfrac{\partial P}{\partial x}\, dx + \dfrac{\partial P}{\partial y}\, dy. \] Для максимуму (зрозуміло, що в цьому випадку це не буде мінімум), потрібно одночасно мати \[ \dfrac{\partial P}{\partial x} = 0 \quad\text{і}\quad \dfrac{ \partial P}{\partial y} = 0; \] тобто \begin{aligned} 2xy - 30x + y^2 - 45y + 450 &amp;= 0, \\ 2xy - 30y + x^2 - 45x + 450 &amp;= 0. \end{aligned}
+<p>
+  (2) Знайдіть часткові похідні відносно $x$, $y$ і $z$ виразу \[ x^2yz + xy^2z
+  + xyz^2 + x^2y^2z^2. \]
+</p>
+<p>(3) Нехай $r^2 = (xa)^2 + (yb)^2 + (zc)^2$.</p>
+<p>
+  Знайдіть значення $\dfrac{\partial r}{\partial x} + \dfrac{\partial
+  r}{\partial y} + \dfrac{\partial r}{\partial z}$. Знайдіть також значення
+  $\dfrac{\partial^2r}{\partial x^2} + \dfrac{\partial^2r}{\partial y^2} +
+  \dfrac{\partial^2r}{\partial z ^2}$.
+</p>
+<p>(4) Знайдіть повний диференціал $y=u^v$.</p>
+<p>
+  (5) Знайдіть повний диференціал $y=u^3 \sin v$; $y = (\sin x)^u$; і $y =
+  \dfrac{\log_\epsilon u}{v}$.
+</p>
+<p>
+  (6) Переконайтеся, що сума трьох величин $x$, $y$, $z$, чий добуток є
+  константою $k$, є максимальною, коли ці три величини рівні.
+</p>
+<p>(7) Знайдіть максимум або мінімум функції \[ u = x + 2xy + y. \]</p>
+<p>
+  (8) Правила поштового зв’язку стверджують, що жодна посилка не повинна бути
+  такого розміру, що її довжина плюс обхват перевищують $6$ футів. Який
+  найбільший об'єм можна надіслати поштою (<em>a</em>) у разі упаковки
+  прямокутного поперечного перерізу; (<em>b</em>) у випадку упаковки круглого
+  поперечного перерізу.
+</p>
+<p>
+  (9) Розділіть $\pi$ на $3$ частини так, щоб добуток їхніх синусів був
+  максимальним або мінімальним.
+</p>
+<p>(10) Знайдіть максимум або мінімум $u = \dfrac{\epsilon^{x+y}}{xy}$.</p>
+<p>
+  (11) Знайдіть максимум і мінімум \[ u = y + 2x - 2 \log_\epsilon y -
+  \log_\epsilon x. \]
+</p>
+<p>
+  (12) Тельферажне відро заданої місткості має форму горизонтальної
+  рівнобедреної трикутної призми з вершиною внизу та відкритою протилежною
+  гранню. Знайдіть такі його розміри, щоб на його виготовлення було використано
+  найменшу кількість листового заліза.
+</p>
+<p></p>
+<h3 class="answers">Відповіді</h3>
 
-</p><p>Очевидним рішенням є $x=y$.
-
-</p><p>Якщо тепер ми введемо цю умову в значення $P$, отримаємо \[ P = (15-x)^2 (2x-15) = 2x^3 - 75x^2 + 900x - 3375. \] Для максимуму або мінімуму $\dfrac{dP}{dx} = 6x^2 - 150x + 900 = 0$, що дає $x=15$ та $x=10$.
-
-</p><p>Зрозуміло, що $x=15$ дає мінімальну площу: $x=10$ дає максимум для $\dfrac{d^2 P}{dx^2} = 12x - 150$, що становить $+30$ для $x=15$ і $-30$ для $x =10$.
-
-</p><p>
-<a name="example6"/><em>Приклад (6)</em> Знайдіть розміри звичайного залізничного вугільного вагона з прямокутними торцями, щоб для заданого об’єму $V$ площа бортів і підлоги разом була якомога меншою.
-
-
-</p><p>Вагон являє собою відкритий зверху прямокутний ящик. Нехай $x$ — довжина, а $y$ — ширина; тоді глибина $\dfrac{V}{xy}$. Площа поверхні становить $S=xy + \dfrac{2V}{x} + \dfrac{2V}{y}$. \[ dS = \frac{\partial S}{\partial x}\, dx + \frac{\partial S}{\partial y}\, dy = \left(y - \frac{2V}{x^2}\right) dx + \left(x - \frac{2V}{y^2}\right) dy. \] Для мінімуму (очевидно, тут це не буде максимум), \[ y - \frac{2V}{x^2} = 0,\quad x - \frac{2V}{y^2} = 0. \]
-
-</p><p>Тут також безпосереднім рішенням є $x = y$, так що $S = x^2 + \dfrac{4V}{x}\quad$, $\dfrac{dS}{dx}= 2x - \dfrac{4V }{x^2} =0$ для мінімуму та \[ x = \sqrt[3]{2V}. \]
-
-</p><p>
-</p><hr><h3>Вправи XV</h3>
-
-(1) Продиференціюйте вираз $\dfrac{x^3}{3} - 2x^3y - 2y^2x + \dfrac{y}{3}$ лише відносно $x$ і відносно $y$ поодинці.
-
-<p>(2) Знайдіть часткові похідні відносно $x$, $y$ і $z$ виразу \[ x^2yz + xy^2z + xyz^2 + x^2y^2z^2. \]
-
-</p><p>(3) Нехай $r^2 = (xa)^2 + (yb)^2 + (zc)^2$.
-
-</p><p>Знайдіть значення $\dfrac{\partial r}{\partial x} + \dfrac{\partial r}{\partial y} + \dfrac{\partial r}{\partial z}$. Знайдіть також значення $\dfrac{\partial^2r}{\partial x^2} + \dfrac{\partial^2r}{\partial y^2} + \dfrac{\partial^2r}{\partial z ^2}$.
-
-</p><p>(4) Знайдіть повний диференціал $y=u^v$.
-
-
-</p><p>(5) Знайдіть повний диференціал $y=u^3 \sin v$; $y = (\sin x)^u$; і $y = \dfrac{\log_\epsilon u}{v}$.
-
-</p><p>(6) Переконайтеся, що сума трьох величин $x$, $y$, $z$, чий добуток є константою $k$, є максимальною, коли ці три величини рівні.
-
-</p><p>(7) Знайдіть максимум або мінімум функції \[ u = x + 2xy + y. \]
-
-</p><p>(8) Правила поштового зв’язку стверджують, що жодна посилка не повинна бути такого розміру, що її довжина плюс обхват перевищують $6$ футів. Який найбільший об'єм можна надіслати поштою (<em>a</em>) у разі упаковки прямокутного поперечного перерізу; (<em>b</em>) у випадку упаковки круглого поперечного перерізу.
-
-</p><p>(9) Розділіть $\pi$ на $3$ частини так, щоб добуток їхніх синусів був максимальним або мінімальним.
-
-</p><p>(10) Знайдіть максимум або мінімум $u = \dfrac{\epsilon^{x+y}}{xy}$.
-
-</p><p>(11) Знайдіть максимум і мінімум \[ u = y + 2x - 2 \log_\epsilon y - \log_\epsilon x. \]
-
-</p><p>(12) Тельферажне відро заданої місткості має форму горизонтальної рівнобедреної трикутної призми з вершиною внизу та відкритою протилежною гранню. Знайдіть такі його розміри, щоб на його виготовлення було використано найменшу кількість листового заліза.
-
-
-</p><p></p><h3 class="answers">Відповіді</h3>
-
-<p>(1)   $x^3 - 6x^2 y - 2y^2;\quad \frac{1}{3} - 2x^3 - 4xy$.
-
-
-
-</p><p>(2)   $2xyz + y^2 z + z^2 y + 2xy^2 z^2$;<br>
-     $2xyz + x^2 z + xz^2 + 2x^2 yz^2$;<br>
-     $2xyz + x^2 y + xy^2 + 2x^2 y^2 z$.
-
-
-
-</p><p>(3)   $\dfrac{1}{r} \{ \left(x - a\right) + \left( y - b \right) + \left( z - c \right) \} = \dfrac{ \left( x + y + z \right) - \left( a + b + c \right) }{r}$; $\dfrac{3}{r}$.
-
-
-
-</p><p>(4)   $dy = vu^{v-1}\, du + u^v \log_\epsilon u\, dv$.
-
-
-
-</p><p>(5)   $dy = 3\sin v u^2\, du + u^3 \cos v\, dv$,<br>
-     $dy = u \sin x^{u-1} \cos x\, dx + (\sin x)^u \log_\epsilon \sin x du$,<br>
-     $dy = \dfrac{1}{v}\, \dfrac{1}{u}\, du - \log_\epsilon u \dfrac{1}{v^2}\, dv$.
-
-
-
-</p><p>(7) Мінімум для $x = y = -\frac{1}{2}$.
-
-</p><p>(8) (<em>a</em>) Довжина $2$ фути, ширина = глибина = $1$ фут, об'єм = $2$ кубічних фути. (<em>b</em>) Радіус = $\dfrac{2}{\pi}$ фути = $7.46$ дюймів, довжина = $2$ фути, об'єм = $2.54$.
-
-</p><p>(9) Усі три частини рівні; добуток максимальний.
-
-</p><p>(10) Мінімум для $x = y = 1$.
-
-</p><p>(11) Мін.: $x = \frac{1}{2}$ і $y = 2$.
-
-</p><p>(12) Кут при вершині $= 90°$; рівні сторони = довжина = $\sqrt[3]{2V}$.
-<br>
-</p><hr>
-<a href="17.html">Далі →</a><br> <a href="/">Головна сторінка ↑</a><br> <a href="https://donatello.to/calculusmadeeasyua">Подякувати перекладачам &heartsuit;</a> <br>
+<p>(1) $x^3 - 6x^2 y - 2y^2;\quad \frac{1}{3} - 2x^3 - 4xy$.</p>
+<p>
+  (2) $2xyz + y^2 z + z^2 y + 2xy^2 z^2$;<br />
+  $2xyz + x^2 z + xz^2 + 2x^2 yz^2$;<br />
+  $2xyz + x^2 y + xy^2 + 2x^2 y^2 z$.
+</p>
+<p>
+  (3) $\dfrac{1}{r} \{ \left(x - a\right) + \left( y - b \right) + \left( z - c
+  \right) \} = \dfrac{ \left( x + y + z \right) - \left( a + b + c \right)
+  }{r}$; $\dfrac{3}{r}$.
+</p>
+<p>(4) $dy = vu^{v-1}\, du + u^v \log_\epsilon u\, dv$.</p>
+<p>
+  (5) $dy = 3\sin v u^2\, du + u^3 \cos v\, dv$,<br />
+  $dy = u \sin x^{u-1} \cos x\, dx + (\sin x)^u \log_\epsilon \sin x du$,<br />
+  $dy = \dfrac{1}{v}\, \dfrac{1}{u}\, du - \log_\epsilon u \dfrac{1}{v^2}\, dv$.
+</p>
+<p>(7) Мінімум для $x = y = -\frac{1}{2}$.</p>
+<p>
+  (8) (<em>a</em>) Довжина $2$ фути, ширина = глибина = $1$ фут, об'єм = $2$
+  кубічних фути. (<em>b</em>) Радіус = $\dfrac{2}{\pi}$ фути = $7.46$ дюймів,
+  довжина = $2$ фути, об'єм = $2.54$.
+</p>
+<p>(9) Усі три частини рівні; добуток максимальний.</p>
+<p>(10) Мінімум для $x = y = 1$.</p>
+<p>(11) Мін.: $x = \frac{1}{2}$ і $y = 2$.</p>
+<p>
+  (12) Кут при вершині $= 90°$; рівні сторони = довжина = $\sqrt[3]{2V}$.
+  <br />
+</p>
+<hr />
+<a href="17.html">Далі →</a><br />
+<a href="/">Головна сторінка ↑</a><br />
+<a href="https://donatello.to/calculusmadeeasyua"
+  >Подякувати перекладачам &heartsuit;</a
+>
+<br />
 
 <script src="j/jquery.js"></script>
 <script src="j/modernizr.js"></script>
 <script src="j/dih5.js"></script>
 
-<script data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<script
+  data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js"
+></script>
