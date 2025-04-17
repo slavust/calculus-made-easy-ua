@@ -26,13 +26,13 @@
   <a href="3.html#function">тут</a>). Почнемо з конкретного випадку.
 </p>
 <p>
-  Нехай $y = x^5$. \begin{alignat*}{3} &amp;\text{Перше диференціювання, }
-  &amp;&amp;5x^4. &amp;&amp; \\ &amp;\text{Друге диференціювання, } &amp;&amp;5
-  × 4x^3 &amp;&amp;= 20x^3. \\ &amp;\text{Третє диференціювання, } &amp;&amp;5 ×
-  4 × 3x^2 &amp;&amp;= 60x^2. \\ &amp;\text{Четверте диференціювання, }
-  &amp;&amp;5 × 4 × 3 × 2x &amp;&amp;= 120x. \\ &amp;\text{П'яте
-  диференціювання, } &amp;&amp;5 × 4 × 3 × 2 × 1 &amp;&amp;= 120. \\
-  &amp;\text{Шосте диференціювння, } &amp;&amp; &amp;&amp;= 0. \end{alignat*}
+  Нехай $y = x^5$. \begin{alignat*}{3} &amp;\text{Перше, }
+  &amp;&amp;5x^4. &amp;&amp; \\ &amp;\text{друге, } &amp;&amp;5
+  × 4x^3 &amp;&amp;= 20x^3. \\ &amp;\text{третє, } &amp;&amp;5 ×
+  4 × 3x^2 &amp;&amp;= 60x^2. \\ &amp;\text{четверте, }
+  &amp;&amp;5 × 4 × 3 × 2x &amp;&amp;= 120x. \\ &amp;\text{п'яте, }
+  &amp;&amp;5 × 4 × 3 × 2 × 1 &amp;&amp;= 120. \\
+  &amp;\text{шосте, } &amp;&amp; &amp;&amp;= 0. \end{alignat*}
 </p>
 <p>
   Є певна нотація, вже знайома нам (див. <a href="3.html#notation">тут</a>), яка
@@ -53,23 +53,23 @@
 <p>Тепер давайте узагальнимо.</p>
 <p>Нехай $y = f(x) = x^n$.</p>
 <p class="mobile">
-  \begin{align*} \text{Перше диференціювання}\; f'(x) = nx^{n-1}. \\ \text{Друге
-  диференціювання,}\; f''(x) = n(n-1)x^{n-2}. \\ \text{Третє диференціювання,}\;
-  f'''(x) = n(n-1)(n-2)x^{n-3}. \\ \text{Чeтверте диференціювання,}\; f''''(x) =
+  \begin{align*} \text{Перше}\; f'(x) = nx^{n-1}. \\ \text{друге,}\;
+  f''(x) = n(n-1)x^{n-2}. \\ \text{третє,}\;
+  f'''(x) = n(n-1)(n-2)x^{n-3}. \\ \text{четверте,}\; f''''(x) =
   n(n-1)(n-2)(n-3)x^{n-4}. \\ \llap{\text{і т.д.,}} \text{ і т.д.} \end{align*}
 </p>
 <p class="desktop">
-  \begin{align*} \text{Перше диференціювання}\; f'(x) &amp;= nx^{n-1}. \\
-  \text{Друге диференціювання,}\; f''(x) &amp;= n(n-1)x^{n-2}. \\ \text{Третє
-  диференціювання,}\; f'''(x) &amp;= n(n-1)(n-2)x^{n-3}. \\ \text{Чeтверте
-  диференціювання,}\; f''''(x) &amp;= n(n-1)(n-2)(n-3)x^{n-4}. \\
+  \begin{align*} \text{Перше}\; f'(x) &amp;= nx^{n-1}. \\
+  \text{друге,}\; f''(x) &amp;= n(n-1)x^{n-2}. \\ \text{третє,}\;
+  f'''(x) &amp;= n(n-1)(n-2)x^{n-3}. \\ \text{чeтверте,}\; 
+  f''''(x) &amp;= n(n-1)(n-2)(n-3)x^{n-4}. \\
   &amp;\llap{\text{і т.д.,}} \text{ і т.д.} \end{align*}
 </p>
 <p>
   Але це не єдиний спосіб позначати багаторазове диференціювання. Якщо
   \begin{align*} \text{початкова функція це}\; y &amp;= f(x); \\ \text{перше
-  диференціювання дає}\; \frac{dy}{dx} &amp;= f'(x); \\ \text{друге
-  диференціювання дає}\; \frac{d\left(\dfrac{dy}{dx}\right)}{dx} &amp;= f''(x);
+  диференціювання дає}\; \frac{dy}{dx} &amp;= f'(x); \\ \text{друге}\; 
+  \frac{d\left(\dfrac{dy}{dx}\right)}{dx} &amp;= f''(x);
   \end{align*} і це зручніше записати як $\dfrac{d^2y}{(dx)^2}$, або частіше
   $\dfrac{d^2y}{dx^2}$. Подібним чином ми можемо записати як результат
   триразового диференціювання $\dfrac{d^3y}{dx^3} = f'''(x)$.
@@ -85,7 +85,7 @@
   f'''(x) = 168x + 21, \\ \frac{d^4y}{dx^4} &amp;= f''''(x) = 168, \\
   \frac{d^5y}{dx^5} &amp;= f'''''(x) = 0. \end{align*} Подібним чином, якщо $y =
   \phi(x) = 3x(x^2 - 4)$, \begin{align*} \phi'(x) &amp;= \frac{dy}{dx} =
-  3\bigl[x × 2x + (x^2 - 4) × 1\bigr] = 3(3x^2 - 4), \\ \phi''(x) &amp;=
+  3\bigl[x × 2x + (x^2 - 4) × 1\bigr] = \\ &= 3(3x^2 - 4), \\ \phi''(x) &amp;=
   \frac{d^2y}{dx^2} = 3 × 6x = 18x, \\ \phi'''(x) &amp;= \frac{d^3y}{dx^3} = 18,
   \\ \phi''''(x) &amp;= \frac{d^4y}{dx^4} = 0. \end{align*}
 </p>
