@@ -195,7 +195,15 @@
   + b)^n &amp;= a^n + n \dfrac{a^{n-1} b}{1!} + n(n - 1) \dfrac{ a^{n-2}
   b^2}{2!} \\ &amp; \phantom{= a^n\ } + n(n -1)(n - 2) \dfrac{a^{n-3} b ^3}{3!}
   + \text{і т.д.}. \\ \end{align*} Поклавши $a = 1$ і $b = \dfrac{1}{n}$, ми
-  отримаємо \begin{align*} \left(1 + \dfrac{1}{n}\right)^n &amp;= 1 + 1 +
+  отримаємо</p>
+<p class="mobile">
+  \begin{align*} \left(1 + \dfrac{1}{n}\right)^n &amp;= 1 + 1 +
+  \dfrac{1}{2!} \left(\dfrac{n - 1}{n}\right) + \dfrac{1}{3!} \dfrac{(n - 1)(n -
+  2)}{n^2} \\ &amp;\phantom{= 1 + 1\ } + \dfrac{1}{4!} \dfrac{(n - 1)(n - 2)( n
+  - 3)}{n^3} + \text{і т.д.}. \end{align*}
+</p>
+<p class="desktop">
+  \begin{align*} \left(1 + \dfrac{1}{n}\right)^n &amp;= 1 + 1 +
   \dfrac{1}{2!} \left(\dfrac{n - 1}{n}\right) + \dfrac{1}{3!} \dfrac{(n - 1)(n -
   2)}{n^2} \\ &amp;\phantom{= 1 + 1\ } + \dfrac{1}{4!} \dfrac{(n - 1)(n - 2)( n
   - 3)}{n^3} + \text{і т.д.}. \end{align*}
@@ -265,7 +273,19 @@
 <p>
   Давайте, знову використовуючи біноміальну теорему, розгорнемо вираз $\left(1 +
   \dfrac{1}{n}\right)^{nx}$, що є еквівалентним $\epsilon^x$, коли $n$ є
-  нескінченно великим. \begin{align*} \epsilon^x &amp;= 1^{nx} + nx
+  нескінченно великим. </p>
+<p class="mobile">
+  \begin{align*} \epsilon^x &amp;= 1^{nx} + nx
+  \frac{1^{nx-1} \left(\dfrac{1}{n}\right)}{1!} + nx(nx - 1) \frac{1^{nx - 2}
+  \left(\dfrac{1}{n}\right)^2}{2!} \\ &amp; \phantom{= 1^{nx}\ } + nx(nx - 1)(nx
+  - 2) \frac{1^{nx-3} \left(\dfrac{1}{n}\right)^3}{3!} + \text{і т.д}.\\ &amp;=
+  1 + x + \frac{1}{2!} · \frac{n^2x^2 - nx}{n^2} + \frac{1}{3!} · \frac{n^3x^3 -
+  3n^2x^2 + 2nx}{n^3} + \text{і т.д}. \\ &amp;= 1 + x + \frac{x^2
+  -\dfrac{x}{n}}{2!} + \frac{x^3 - \dfrac{3x^2}{n} + \dfrac{2x}{n^2}}{3!} +
+  \text{і т.д}. \end{align*}
+</p>
+<p class="desktop">
+  \begin{align*} \epsilon^x &amp;= 1^{nx} + nx
   \frac{1^{nx-1} \left(\dfrac{1}{n}\right)}{1!} + nx(nx - 1) \frac{1^{nx - 2}
   \left(\dfrac{1}{n}\right)^2}{2!} \\ &amp; \phantom{= 1^{nx}\ } + nx(nx - 1)(nx
   - 2) \frac{1^{nx-3} \left(\dfrac{1}{n}\right)^3}{3!} + \text{і т.д}.\\ &amp;=
@@ -285,13 +305,22 @@
   $\epsilon^x$ має властивість, якої не має жодна інша функція від $x$, а саме:
   <em>коли ви її диференціюєте, її значення залишається незмінним</em
   ><a name="unchanged" />; або, іншими словами, її похідна дорівнює їй самій. Це
-  можна миттєво побачити, продиференціювавши її відносно $x$, таким чином:
+  можна миттєво побачити, продиференціювавши її відносно $x$, таким чином:</p>
+<p class="mobile">
   \begin{align*} \frac{d(\epsilon^x)}{dx} &amp;= 0 + 1 + \frac{2x}{1 · 2} +
   \frac{3x^2}{1 · 2 · 3} + \frac{4x^3}{1 · 2 · 3 · 4} \\ &amp;\phantom{= 0 + 1 +
   \frac{2x }{1 · 2} + \frac{3x^2}{1 · 2 · 3}\ } + \frac{5x^4}{1 · 2 · 3 · 4 · 5}
   + \text{і т.д}. \\ або &amp;= 1 + x + \frac{x^2}{1 · 2} + \frac{x^3}{1 · 2 ·
-  3} + \frac{x^4}{1 · 2 · 3 · 4} + \text{і т.д.}, \end{align*} що повністю
-  збігається з оригінальним рядом.
+  3} + \frac{x^4}{1 · 2 · 3 · 4} + \text{і т.д.}, \end{align*}
+<p>
+<p class="desktop">
+  \begin{align*} \frac{d(\epsilon^x)}{dx} &amp;= 0 + 1 + \frac{2x}{1 · 2} +
+  \frac{3x^2}{1 · 2 · 3} + \frac{4x^3}{1 · 2 · 3 · 4} \\ &amp;\phantom{= 0 + 1 +
+  \frac{2x }{1 · 2} + \frac{3x^2}{1 · 2 · 3}\ } + \frac{5x^4}{1 · 2 · 3 · 4 · 5}
+  + \text{і т.д}. \\ або &amp;= 1 + x + \frac{x^2}{1 · 2} + \frac{x^3}{1 · 2 ·
+  3} + \frac{x^4}{1 · 2 · 3 · 4} + \text{і т.д.}, \end{align*}
+<p>
+  що повністю збігається з оригінальним рядом.
 </p>
 <p>
   Ми могли б підійти до задачі в інший спосіб і та запитати: знайдімо функцію
@@ -310,12 +339,26 @@
   3}$; що $E = \dfrac{D}{4} = \dfrac{A}{1 · 2 · 3 · 4}$ тощо.
 </p>
 <p>
-  Тим чином закон зміни полягає в тому, що \[ y = A\left(1 + \dfrac{x}{1} +
+  Тим чином закон зміни полягає в тому, що </p>
+<p class="mobile">
+  \[ y = A\left(1 + \dfrac{x}{1} +
+  \dfrac{x^2}{1 · 2} + \dfrac{x^3}{1 · 2 · 3} + \dfrac{x^4}{1 · 2 · 3 · 4} +
+  \text{і т.д}.\right). \]
+</p>
+<p class="desktop">
+  \[ y = A\left(1 + \dfrac{x}{1} +
   \dfrac{x^2}{1 · 2} + \dfrac{x^3}{1 · 2 · 3} + \dfrac{x^4}{1 · 2 · 3 · 4} +
   \text{і т.д}.\right). \]
 </p>
 <p>
-  Якщо тепер ми візьмемо $A = 1$ для подальшої простоти, ми матимемо \[ y = 1 +
+  Якщо тепер ми візьмемо $A = 1$ для подальшої простоти, ми матимемо</p>
+<p class="mobile">
+  \[ y = 1 +
+  \dfrac{x}{1} + \dfrac{x^2}{1 · 2} + \dfrac {x^3}{1 · 2 · 3} + \dfrac{x^4}{1 ·
+  2 · 3 · 4} + \text{і т.д.}. \]
+</p>
+<p class="desktop">
+  \[ y = 1 +
   \dfrac{x}{1} + \dfrac{x^2}{1 · 2} + \dfrac {x^3}{1 · 2 · 3} + \dfrac{x^4}{1 ·
   2 · 3 · 4} + \text{і т.д.}. \]
 </p>
@@ -325,13 +368,31 @@
 </p>
 <p>
   Якщо тепер ми візьмемо окремий випадок $A=1$ і обчислимо ряд, ми отримаємо
-  просто \begin{align*} \text{коли } x &amp;= 1,\quad &amp; y &amp;= 2.718281
+  просто</p>
+<p class="mobile">
+  \begin{align*} \text{коли } x &amp;= 1,\quad &amp; y &amp;= 2.718281
   \text {і т.д.}; &amp; \text{тобто } y &amp;= \epsilon; \\ \text{коли } x
   &amp;= 2,\quad &amp; y &amp;=(2.718281 \text{ і т.д.})^2; &amp; \text{тобто }
   y &amp;= \epsilon^2; \\ \text{коли } x &amp;= 3,\quad &amp; y &amp;=(2.718281
   \text{ і т.д.})^3; &amp; \text{тобто } y &amp;= \epsilon^3; \end{align*} і,
   отже, \[ \text{коли } x=x,\quad y=(2.718281 \text{ і т.д}.)^x;\quad\text{тобто
-  } y=\epsilon^x , \] таким чином остаточно демонструючи, що \[ \epsilon^x = 1 +
+  } y=\epsilon^x , \]</p>
+<p class="desktop">
+  \begin{align*} \text{коли } x &amp;= 1,\quad &amp; y &amp;= 2.718281
+  \text {і т.д.}; &amp; \text{тобто } y &amp;= \epsilon; \\ \text{коли } x
+  &amp;= 2,\quad &amp; y &amp;=(2.718281 \text{ і т.д.})^2; &amp; \text{тобто }
+  y &amp;= \epsilon^2; \\ \text{коли } x &amp;= 3,\quad &amp; y &amp;=(2.718281
+  \text{ і т.д.})^3; &amp; \text{тобто } y &amp;= \epsilon^3; \end{align*} і,
+  отже, \[ \text{коли } x=x,\quad y=(2.718281 \text{ і т.д}.)^x;\quad\text{тобто
+  } y=\epsilon^x , \]</p>
+<p>таким чином остаточно демонструючи, що</p>
+<p class="mobile">
+  \[ \epsilon^x = 1 +
+  \dfrac{x}{1} + \dfrac{x^2}{1·2} + \dfrac{x^3}{1· 2· 3} + \dfrac{x^4}{1· 2· 3·
+  4} + \text{і т.д.} \]
+</p>
+<p class="desktop">
+  \[ \epsilon^x = 1 +
   \dfrac{x}{1} + \dfrac{x^2}{1·2} + \dfrac{x^3}{1· 2· 3} + \dfrac{x^4}{1· 2· 3·
   4} + \text{і т.д.} \]
 </p>
@@ -614,7 +675,7 @@
 </p>
 <p>
   Ми бачимо, що, оскільки \[ \frac{dx}{dy} × \frac{dy}{dx} =1\quad\text{і}\quad
-  \frac{dx}{dy} = \frac{1}{y} × \frac{1}{\log_\epsilon a},\quad \frac{1}{y} ×
+  \frac{dx}{dy} = \frac{1}{y} × \frac{1}{\log_\epsilon a}, \\ \frac{1}{y} ×
   \frac{dy}{dx} = \log_\epsilon a. \]
 </p>
 <p>
@@ -635,7 +696,7 @@
   \frac{dy}{dx} = -a \epsilon^{-ax}. \]
 </p>
 <p>
-  Або так: \[ \log_\epsilon y = -ax;\quad \frac{1}{y}\, \frac{dy}{dx} = -a;\quad
+  Або так: \[ \log_\epsilon y = -ax;\quad \frac{1}{y}\, \frac{dy}{dx} = -a; \\
   \frac{dy}{dx} = - ay = -a\epsilon^{-ax}. \]
 </p>
 <p>
@@ -670,8 +731,15 @@
   \frac{dy}{dz} = \frac{1}{z};\quad \frac{dz}{dx} = 3x^2;\quad\text{отже}\quad
   \frac{dy}{ dx} = \frac{3x^2}{a+x^3}. \]
 </p>
-<p>
-  (6) $y=\log_\epsilon\{{3x^2+\sqrt{a+x^2}}\}$. Нехай $3x^2 + \sqrt{a+x^2}=z$;
+<p>(6) $y=\log_\epsilon\{{3x^2+\sqrt{a+x^2}}\}$.</p>
+<p class="mobile"> Нехай $3x^2 + \sqrt{a+x^2}=z$;
+  тоді $y=\log_\epsilon z$. \begin{align*} \frac{dy}{dz} &amp;=
+  \frac{1}{z};\quad \frac{dz}{dx} = 6x + \frac{x}{\sqrt{x^2 +a}}; \\
+  \frac{dy}{dx} &amp;= \frac{6x + \dfrac{x}{\sqrt{x^2+a}}}{3x^2 + \sqrt{a+x^2}}
+  = \frac{x(1 + 6\sqrt{x^2+a})}{(3x^2 + \sqrt{x^2+a}) \sqrt{x^2+a}}.
+  \end{align*}
+</p>
+<p class="desktop"> Нехай $3x^2 + \sqrt{a+x^2}=z$;
   тоді $y=\log_\epsilon z$. \begin{align*} \frac{dy}{dz} &amp;=
   \frac{1}{z};\quad \frac{dz}{dx} = 6x + \frac{x}{\sqrt{x^2 +a}}; \\
   \frac{dy}{dx} &amp;= \frac{6x + \dfrac{x}{\sqrt{x^2+a}}}{3x^2 + \sqrt{a+x^2}}
@@ -688,7 +756,7 @@
 <p>
   (8) $y=(x^2+3)^3(x^3-2)^{\frac{2}{3}}$. \begin{align*} \log_\epsilon y &amp;=
   3 \log_\epsilon(x^2+3) + \tfrac{2}{3} \log_\epsilon(x^3-2); \\ \frac{1}{y}\,
-  \frac{dy}{dx} &amp;= 3 \frac{2x}{(x^2+3)} + \frac{2}{3} \frac{3x^2}{x^3-2} =
+  \frac{dy}{dx} &amp;= 3 \frac{2x}{(x^2+3)} + \frac{2}{3} \frac{3x^2}{x^3-2} = \\ &amp;=
   \frac{6x}{x^2+3} + \frac{2x^2}{x^3-2}. \end{align*} Якщо
   $y=\log_\epsilon(x^2+3)$, нехай $x^2+3=z$ і $u=\log_\epsilon z$. \[
   \frac{du}{dz} = \frac{1}{z};\quad \frac{dz}{dx} = 2x;\quad \frac{du}{dx} =
@@ -701,7 +769,7 @@
   (9) $y=\dfrac{\sqrt[2]{x^2+a}}{\sqrt[3]{x^3-a}}$. \begin{align*} \log_\epsilon
   y &amp;= \frac{1}{2} \log_\epsilon(x^2+a) - \frac{1}{3} \log_\epsilon(x^3-a).
   \\ \frac{1}{y}\, \frac{dy}{dx} &amp;= \frac{1}{2}\, \frac{2x}{x^2+a} -
-  \frac{1}{3}\, \frac{3x^2}{x^3-a} = \frac{x}{x^2+a} - \frac{x^2}{x^3-a} \\ і
+  \frac{1}{3}\, \frac{3x^2}{x^3-a} = \\ &amp;= \frac{x}{x^2+a} - \frac{x^2}{x^3-a} \\ і
   \frac{dy}{dx} &amp;= \frac{\sqrt[2]{x^2+a}}{\sqrt[3]{x^3-a}} \left\{ \frac{x}{
   x^2+a} - \frac{x^2}{x^3-a} \right\}. \end{align*}
 </p>
@@ -787,8 +855,8 @@
 </p>
 <p>Ми можемо побачити, поклавши $x=0$, що $b$ є початковою висотою $y$.</p>
 <p>
-  Тоді, коли \[ x=1,\quad y=bp;\qquad x=2,\quad y=bp^2;\qquad x=3,\quad
-  y=bp^3,\quad \text{і т.д.} \]
+  Тоді, коли \begin{align*} x&amp;=1,\quad &amp; y&amp;=bp; \\ x&amp;=2,\quad &amp; y&amp;=bp^2; \\ x&amp;=3,\quad &amp;
+  y&amp;=bp^3,\quad \text{і т.д.} \end{align*}
 </p>
 <p>
   Крім того, ми бачимо, що $p$ — це числове значення відношення між висотою
