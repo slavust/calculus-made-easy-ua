@@ -75,9 +75,14 @@
 <p>
   Тепер знайдемо $\int x \cos x\, dx$, інтегруючи частинами (як у прикладі 1
   вище): \[ \int x \cos x\, dx = x \sin x + \cos x+C. \]
+  Отже
 </p>
-<p>
-  Отже \begin{align*} \int x^2 \sin x\, dx &amp;= -x^2 \cos x + 2x \sin x + 2
+<p class="mobile">
+  \begin{align*} \int x^2 \sin x\, dx &amp;= -x^2 \cos x + 2x \sin x + 2
+  \cos x + C' \\ &amp;= 2 \left[ x \ sin x + \cos x \left(1 -
+  \frac{x^2}{2}\right) \right] +C'. \end{align*}
+</p>
+<p class="desktop">\begin{align*} \int x^2 \sin x\, dx &amp;= -x^2 \cos x + 2x \sin x + 2
   \cos x + C' \\ &amp;= 2 \left[ x \ sin x + \cos x \left(1 -
   \frac{x^2}{2}\right) \right] +C'. \end{align*}
 </p>
@@ -89,7 +94,15 @@
   \]
 </p>
 <p>
-  Тут ми можемо використати невеличку хитрість, оскільки можна записати \[ \int
+  Тут ми можемо використати невеличку хитрість, оскільки можна записати 
+</p>
+<p class="mobile">
+  \[ \int
+  \sqrt{1-x^2}\, dx = \int \frac{(1-x^2)\, dx}{\sqrt{1 -x^2}} = \int
+  \frac{dx}{\sqrt{1-x^2}} - \int \frac{x^2\, dx}{\sqrt{1-x^2}}. \]
+</p>
+<p class="desktop">
+  \[ \int
   \sqrt{1-x^2}\, dx = \int \frac{(1-x^2)\, dx}{\sqrt{1 -x^2}} = \int
   \frac{dx}{\sqrt{1-x^2}} - \int \frac{x^2\, dx}{\sqrt{1-x^2}}. \]
 </p>
@@ -121,15 +134,26 @@
 <p>
   (2) $\int \dfrac{dx}{\epsilon^x+\epsilon^{-x}}$. Нехай \[ \epsilon^x = u,\quad
   \frac{du}{dx} = \epsilon^x,\quad\text{і}\quad dx = \frac{du}{\epsilon^x}; \\
-  \] так що \[ \int \frac{dx}{\epsilon^x+\epsilon^{-x}} = \int
+  \] так що 
+</p>
+<p class="mobile">\[ \int \frac{dx}{\epsilon^x+\epsilon^{-x}} = \int
+  \frac{du}{\epsilon^x(\epsilon^x+\epsilon^{ -x})} = \int \frac{du}{u\left(u +
+  \dfrac{1}{u}\right)} = \int \frac{du}{u^2+1}. \]
+</p>
+<p class="desktop">\[ \int \frac{dx}{\epsilon^x+\epsilon^{-x}} = \int
   \frac{du}{\epsilon^x(\epsilon^x+\epsilon^{ -x})} = \int \frac{du}{u\left(u +
   \dfrac{1}{u}\right)} = \int \frac{du}{u^2+1}. \]
 </p>
 <p>$\dfrac{du}{1+u^2}$ є результатом диференціювання $\arctan x$.</p>
 <p>Отже, інтеграл дорівнює $\arctan \epsilon^x$.</p>
-<p>
-  (3) $\int \dfrac{dx}{x^2+2x+3} = \int \dfrac{dx}{x^2+2x+1+2} = \int
-  \dfrac{dx}{(x+1)^2+(\sqrt 2)^2}$.
+<p>(3)</p>
+<p class="mobile">
+  \[\int \dfrac{dx}{x^2+2x+3} = \int \dfrac{dx}{x^2+2x+1+2} = \int
+  \dfrac{dx}{(x+1)^2+(\sqrt 2)^2} .\]
+</p>
+<p class="desktop">
+  \[\int \dfrac{dx}{x^2+2x+3} = \int \dfrac{dx}{x^2+2x+1+2} = \int
+  \dfrac{dx}{(x+1)^2+(\sqrt 2)^2} .\]
 </p>
 <p>
   Нехай $x+1=u,\quad dx=du$; тоді інтеграл стає $\int
