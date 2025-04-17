@@ -159,11 +159,18 @@
   \frac{g}{b} \epsilon^{\frac{a }{b} t} · \sin 2 \pi nt; \] і це ідеальний
   диференціал, який можна проінтегрувати наступним чином: якщо $u =
   y\epsilon^{\frac{a}{b} t}$, $\dfrac{du}{dt} = \dfrac{ dy}{dt}
-  \epsilon^{\frac{a}{b} t} + y \dfrac{d(\epsilon^{\frac{a}{b} t})}{dt}$,
-  \begin{align*} y \epsilon^{\frac{a}{b} t} &amp;= \frac{g}{b} \int
-  \epsilon^{\frac{a}{b} t} · \sin 2 \pi nt · dt + C, \\ \text{або}\\ y &amp;=
+  \epsilon^{\frac{a}{b} t} + y \dfrac{d(\epsilon^{\frac{a}{b} t})}{dt}$,</p>
+<p class="mobile">
+  \begin{align*} &amp;y \epsilon^{\frac{a}{b} t} = \frac{g}{b} \int
+  \epsilon^{\frac{a}{b} t} · \sin 2 \pi nt · dt + C, \\ &amp;\text{або} \\ &amp;y =
   \frac{g}{b} \epsilon^{-\frac{a}{b} t} \int \epsilon^{ \frac{a}{b} t } · \sin
-  2\pi nt · dt + C\epsilon^{-\frac{a}{b} t}. \tag*{[A]} \end{align*}
+  2\pi nt · dt + C\epsilon^{-\frac{a}{b} t}. \tag*{[A]} \end{align*} 
+</p>
+<p class="desktop">
+  \begin{align*} &amp;y \epsilon^{\frac{a}{b} t} = \frac{g}{b} \int
+  \epsilon^{\frac{a}{b} t} · \sin 2 \pi nt · dt + C, \\ &amp;\text{або} \\ &amp;y =
+  \frac{g}{b} \epsilon^{-\frac{a}{b} t} \int \epsilon^{ \frac{a}{b} t } · \sin
+  2\pi nt · dt + C\epsilon^{-\frac{a}{b} t}. \tag*{[A]} \end{align*} 
 </p>
 <p>
   Останній доданок, очевидно, є таким, що відпаде зі збільшенням $t$, і його
@@ -177,7 +184,17 @@
   &amp;= - \frac{1}{2\pi n} \cos 2\pi nt. \end{aligned} \right. \end{align*}
 </p>
 <p>
-  Підставляючи це, інтеграл стане наступним: \begin{align*} \int
+  Підставляючи це, інтеграл стане наступним:</p>
+<p class="mobile">
+  \begin{align*} &amp;\int
+  \epsilon^{\frac{a}{b} t}{} · \sin 2 \pi nt · dt \\ &amp;= -\frac {1}{2
+  \pi n} · \epsilon^{\frac{a}{b} t} · \cos 2 \pi nt -\int -\frac{1}{2\pi n} \cos
+  2 \ pi nt · \epsilon^{\frac{a}{b} t} · \frac{a}{b}\, dt \\ &amp;= -\frac{1}{2
+  \pi n} \epsilon^{\ frac{a}{b} t} \cos 2 \pi nt +\frac{a}{2 \pi nb} \int
+  \epsilon^{\frac{a}{b} t} · \cos 2 \pi nt · dt. \tag*{[B]} \end{align*}
+</p>
+<p class="desktop">
+  \begin{align*} \int
   \epsilon^{\frac{a}{b} t} &amp;{} · \sin 2 \pi nt · dt \\ &amp;= -\frac {1}{2
   \pi n} · \epsilon^{\frac{a}{b} t} · \cos 2 \pi nt -\int -\frac{1}{2\pi n} \cos
   2 \ pi nt · \epsilon^{\frac{a}{b} t} · \frac{a}{b}\, dt \\ &amp;= -\frac{1}{2
@@ -194,7 +211,15 @@
   \end{align*}
 </p>
 <p>
-  Підставивши їх, ми отримаємо \begin{align*} \int \epsilon^{\frac{a}{b} t}
+  Підставивши їх, ми отримаємо</p>
+<p class="mobile">
+  \begin{align*} &amp;\int \epsilon^{\frac{a}{b} t}
+  {} · \sin 2 \pi nt · dt\\ &amp;= \frac{b}{a } · \epsilon^{\frac{a}{b} t}
+  · \sin 2 \pi nt - \frac{2 \pi nb}{a} \int \epsilon^{\frac{a}{b} t } · \cos 2
+  \pi nt · dt. \tag*{[C]} \end{align*}
+</p>
+<p class="desktop">
+  \begin{align*} \int \epsilon^{\frac{a}{b} t}
   &amp;{} · \sin 2 \pi nt · dt\\ &amp;= \frac{b}{a } · \epsilon^{\frac{a}{b} t}
   · \sin 2 \pi nt - \frac{2 \pi nb}{a} \int \epsilon^{\frac{a}{b} t } · \cos 2
   \pi nt · dt. \tag*{[C]} \end{align*}
@@ -205,10 +230,21 @@
   помноживши [C] на $\dfrac{a}{2 \pi nb}$ і склавши їх.
 </p>
 <p>
-  Результат після розчищення: \begin{align*} \int \epsilon^{\frac{a}{b} t} ·
+  Результат після розчищення:
+</p>
+<p class="mobile">
+  \begin{align*} &amp;\int \epsilon^{\frac{a}{b} t} ·
+  \sin 2 \pi nt · dt = \\ &amp;= \epsilon^{\frac{a }{b} t} \left\{\frac{ ab · \sin 2
+  \pi nt - 2 \pi nb^2 · \cos 2 \pi nt}{ a^2 + 4 \pi^2 n^2 b ^2 } \right\}
+  \tag*{[D]} &amp;\\ \end{align*}
+</p>
+<p class="desktop">
+  \begin{align*} \int \epsilon^{\frac{a}{b} t} ·
   \sin 2 \pi nt · dt &amp;= \epsilon^{\frac{a }{b} t} \left\{\frac{ ab · \sin 2
   \pi nt - 2 \pi nb^2 · \cos 2 \pi nt}{ a^2 + 4 \pi^2 n^2 b ^2 } \right\}
-  \tag*{[D]} &amp;\\ \end{align*} І підставивши це значення в [A], ми маємо
+  \tag*{[D]} &amp;\\ \end{align*}
+</p>
+<p>І підставивши це значення в [A], ми маємо
   \begin{align*} y &amp;= g \left\{\frac { a · \sin 2 \pi nt - 2 \pi nb · \cos 2
   \pi nt}{ a^2 + 4 \pi^2 n^2 b^2}\right\}. &amp; \end{align*}
 </p>
@@ -289,7 +325,7 @@
   Помножимо обидві частини початкового рівняння на $2\dfrac{dy}{dt}$ та
   проінтегруємо, одержавши $2\dfrac{d^2 y}{dt^2}\, \dfrac{dy}{dt} + 2x^ 2 y
   \dfrac{dy}{dt} = 0$, і, оскільки \[ 2 \frac{d^2y}{dt^2}\, \frac{dy}{dt} =
-  \frac{d \left( \dfrac{dy}{dt}\right)^2}{dt},\quad \left(\frac{dy}{dt}\right)^2
+  \frac{d \left( \dfrac{dy}{dt}\right)^2}{dt},\\ \left(\frac{dy}{dt}\right)^2
   + n^2 (y^2-C^2) = 0, \] $C$ є константою. Потім, взявши квадратний корінь, \[
   \frac{dy}{dt} = -n \sqrt{ y^2 - C^2}\quad \text{та}\quad \frac{dy}{\sqrt{C ^2
   - y^2}} = n · dt. \]
@@ -319,21 +355,28 @@
   Продовжуючи, як і раніше, множачи на $2 \dfrac{dy}{dx}$ та інтегруючи, ми
   отримуємо $2\dfrac{d^2 y}{dx^2}\, \dfrac{dy}{dx} - 2x ^2 y \dfrac{dy}{dx}=0$,
   і, як \[ 2\frac{d^2 y}{dx^2}\, \frac{dy}{dx} = \frac{d
-  \left(\dfrac{dy}{dx}\right)^2}{dx},\quad \left(\frac{dy}{dx}\right)^2 - n^2
+  \left(\dfrac{dy}{dx}\right)^2}{dx},\\ \left(\frac{dy}{dx}\right)^2 - n^2
   (y^2 + c^2 ) = 0, \\ \frac{dy}{dx} - n \sqrt{y^2 + c^2} = 0, \] де $c$ —
   константа, а $\dfrac{dy}{\sqrt {y^2 + c^2}} = n\, dx$.
 </p>
 <p>
   Тепер, якщо \[ \quad w = \log_\epsilon ( y+ \sqrt{y^2+ c^2}) = \log_\epsilon
-  u,\\ \frac{dw}{du} = \frac{1} {u},\quad \frac{du}{dy} = 1 + \frac{y}{\sqrt{y^2
+  u,\\ \frac{dw}{du} = \frac{1} {u},\\ \frac{du}{dy} = 1 + \frac{y}{\sqrt{y^2
   + c^2}} = \frac{y + \sqrt{ y^2 + c^ 2}}{\sqrt{y^2 + c^2}} \\ \] і \[
   \frac{dw}{dy} = \frac{1}{\sqrt{ y^2 + c^2}} . \]
 </p>
 <p>
   Отже, інтегруючи, це дає нам \[ \log_\epsilon (y + \sqrt{y^2 + c^2} ) = nx +
   \log_\epsilon C, \\ y + \sqrt{y^2 + c^ 2} = C \epsilon^{nx}. \tag*{(1)} \\ \]
-  \[ \text{Далі}\; \qquad ( y + \sqrt{y^2 + c^2} ) × ( -y + \sqrt{y^2 + c^2} ) =
-  c^2 ; \\ \text{звідки}\\qquad -y + \sqrt{y^2 + c^2} = \dfrac{c^2}{C}
+</p>
+<p class="mobile">
+  \[ \text{Далі }\; ( y + \sqrt{y^2 + c^2} ) × ( -y + \sqrt{y^2 + c^2} ) =
+  c^2 ; \\ \text{звідки } -y + \sqrt{y^2 + c^2} = \dfrac{c^2}{C}
+  \epsilon^{-nx}. \tag*{(2)} \]
+</p>
+<p class="desktop">
+  \[ \text{Далі }\; ( y + \sqrt{y^2 + c^2} ) × ( -y + \sqrt{y^2 + c^2} ) =
+  c^2 ; \\ \text{звідки } -y + \sqrt{y^2 + c^2} = \dfrac{c^2}{C}
   \epsilon^{-nx}. \tag*{(2)} \]
 </p>
 <p>
