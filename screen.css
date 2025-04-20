@@ -287,6 +287,10 @@ ol {
     margin: 1.5em 0;
   }
 }
+.editor-ul {
+  font-size: large;
+  margin: 0 0;
+}
 
 .mobile,
 .desktop {

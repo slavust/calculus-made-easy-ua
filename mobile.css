@@ -80,6 +80,9 @@ h3 {
   margin: 1.75em 0;
 }
 
+.editor-ul {
+  margin: 0 0;
+}
 /* links */
 
 a:link,
