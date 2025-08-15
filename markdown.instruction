@@ -1,0 +1,3 @@
+pandoc -f html+tex_math_single_backslash+tex_math_double_backslash+tex_math_dollars -t markdown --extract-media=markdown/ -o markdown/3.md 3.html
+
+GhostWriter with chosen Pandoc syntax looks promising
