@@ -15,7 +15,7 @@ def prepare_html(path, out_path):
 
         for s, b in zip(smallscreen_paragraphs, bigscreen_paragraphs):
             if s.string != b.string:
-                new_tag_small = BeautifulSoup('<p><b>!small-screen-begin!</b>\n' + s.string + '\n<b>!small-screen-begin!</b></p>', 'html.parser')
+                new_tag_small = BeautifulSoup('<p><b>!small-screen-begin!</b>\n' + s.string + '\n<b>!small-screen-end!</b></p>', 'html.parser')
                 s.replace_with(new_tag_small)
                 new_tag_big = BeautifulSoup('<p><b>!big-screen-begin!</b>\n' + b.string + '\n<b>!big-screen-end!</b></p>', 'html.parser')
                 b.replace_with(new_tag_big)
