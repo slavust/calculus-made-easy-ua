@@ -1,0 +1,301 @@
+#  Вводимо корисний трюк
+
+Іноді людина спантеличена, виявивши, що вираз, який потрібно
+диференціювати, є надто складним, щоб мати з ним справу безпосередньо.
+
+Так, рівняння[]{#dodge} $$ y = (x^2+a^2)^{\frac{3}{2}} $$ незручне для
+новачка.
+
+Трюк для зміни складності наступний: запишіть якийсь символ, наприклад
+$u$, для виразу $x^2 + a^2$; тоді рівняння стає
+$$ y = u^{\frac{3}{2}}, $$ і ним ви можете легко керувати: для
+$$ \frac{dy}{du} = \frac{3}{2} u^{\frac{1}{2}}. $$ Потім візьмемось за
+вираз $$ u = x^2 + a^2, $$ і продиференціюємо його відносно $x$,
+$$ \frac{du}{dx} = 2x. $$ Тоді все, що залишається:
+$$\begin{align*} \text{оскільки}\; \frac{dy}{dx} &= \frac{dy}{du} ×
+  \frac{du}{dx}; \\ \text{тобто}\; \frac{dy}{dx} &= \frac{3}{2}
+  u^{\frac{1}{2}} × 2x \\ &= \tfrac{3}{2} (x^2 + a ^2)^{\frac{1}{2}} × 2x \\
+  &= 3x(x^2 + a^2)^{\frac{1}{2}}, \end{align*}$$ і все зроблено.
+
+Згодом, коли ви навчитеся працювати з синусами, косинусами та
+експонентами, ви побачите, що ця хитрість стає все більш корисною.
+
+---
+
+*Приклади*
+
+Попрактикуймо цей трюк на кількох прикладах.
+
+[]{#ExNo1} (1) Продиференціюйте $y = \sqrt{a+x}$.
+
+Нехай $a+x = u$. $$\begin{align*} \frac{du}{dx} &= 1;\quad
+  y=u^{\frac{1}{2}};\quad \frac{dy}{du} = \tfrac{1}{2} u^{-\frac{1}{2}} =
+  \tfrac{1}{2} (a+x)^{-\frac{1}{2}}.\\ \frac{dy}{dx} &= \frac{dy}{du} ×
+  \frac{du}{dx} = \frac{1}{2\sqrt{a+x}}. \end{align*}$$
+
+\(2\) Продиференціюйте $y = \dfrac{1}{\sqrt{a+x^2}}$.
+
+Нехай $a + x^2 = u$. $$\begin{align*} \frac{du}{dx} &= 2x;\quad
+  y=u^{-\frac{1}{2}};\quad \frac{dy}{du} = -\tfrac{1}{2}u^{-\frac{3}{2}}.\\
+  \frac{dy}{dx} &= \frac{dy}{du}×\frac{du}{dx} = -
+  \frac{x}{\sqrt{(a+x^2)^3}}. \end{align*}$$
+
+\(3\) Продиференціюйте $y = \left(m - nx^{\frac{2}{3}} +
+  \dfrac{p}{x^{\frac{4}{3}}}\right)^a$.
+
+**!screen-dependent-scale-begin!** Нехай
+$m - nx^{\frac{2}{3}} + px^{-\frac{4}{3}} = u$.
+$$\begin{align*} \frac{du}{dx} &= -\tfrac{2}{3} nx^{-\frac{1}{3}} - \tfrac{4}{3}
+  px^{-\frac{7}{3}};\\ y &= u^a;\quad \frac{dy}{du} = a u^{a-1}. \\ \frac{dy}{dx}
+  &= \frac{dy}{du}×\frac{du}{dx} = \\ &= -a\left(m -nx^{\frac{2}{3}} +
+  \frac{p}{x^{\frac{4}{3}}}\right)^{a-1} (\tfrac{2}{3} nx^{-\frac{1}{3}} +
+  \tfrac{4}{3} px^{-\frac{7}{3}}). \end{align*}$$
+**!screen-dependent-scale-end!**
+
+\(4\) Продиференціюйте $y=\dfrac{1}{\sqrt{x^3 - a^2}}$.
+
+Нехай $u = x^3 - a^2$. $$\begin{align*} \frac{du}{dx} &= 3x^2;\quad y =
+  u^{-\frac{1}{2}};\quad \frac{dy}{du}=-\frac{1}{2}(x^3 - a^2)^{-\frac{3}{2}}.
+  \\ \frac{dy}{dx} &= \frac{dy}{du} × \frac{du}{dx} =
+  -\frac{3x^2}{2\sqrt{(x^3 - a^2)^3}}. \end{align*}$$
+
+[]{#examples4} (5) Продиференціюйте $y=\sqrt{\dfrac{1-x}{1+x}}$.
+
+**!screen-dependent-scale-begin!** Запишемо це як
+$y=\dfrac{(1-x)^{\frac{1}{2}}}{(1+x)^{\frac{1}{2}}}$. $$
+  \frac{dy}{dx} = \frac{(1+x)^{\frac{1}{2}}\, \dfrac{d(1-x)^{\frac{1}{2}}}{dx} -
+  (1-x)^{\frac{1}{2}}\, \dfrac{d(1+x)^{\frac{1}{2}}}{dx}}{1+x}. $$
+**!screen-dependent-scale-end!**
+
+(Ми також можемо написати $y = (1-x)^{\frac{1}{2}} (1+x)^{-\frac{1}{2}}$
+і диференціювати як добуток.)
+
+Діючи, як у прикладі (1) вище, ми отримуємо
+$$\begin{align*}\frac{d(1-x)^{\frac{1}{2}}}{dx}
+  &= -\frac{1}{2\sqrt{1 -x}}; \\ \quad\text{ та }\quad
+  \frac{d(1+x)^{\frac{1}{2}}}{dx} &= \frac{1}{2\sqrt{1+x}}.\end{align*}$$
+
+Отже,
+$$\begin{align*} \frac{dy}{dx} &= - \frac{(1 + x)^{\frac{1}{2}}}{2(1 +
+  x)\sqrt{1-x}} - \frac{(1 - x)^{\frac{1}{2}}}{2(1 + x)\sqrt{1+x}} \\ &= -
+  \frac{1}{2\sqrt{1+x}\sqrt{1-x}} - \frac{\sqrt{1-x}}{2 \sqrt{(1+x)^3}};\\
+  \text{ або } \frac{dy}{dx} &= - \frac{1}{(1+x)\sqrt{1-x^2}}. \end{align*}$$
+
+\(6\) Продиференціюйте $y = \sqrt{\dfrac{x^3}{1+x^2}}$.
+
+Ми можемо записати це як $$\begin{gather*} y =
+  x^{\frac{3}{2}}(1+x^2)^{-\frac{1}{2}}; \\ \frac{dy}{dx} = \tfrac{3}{2}
+  x^{\frac{1}{2}}(1 + x^2)^{-\frac{1}{2}} + x^{\frac{3}{2}} ×
+  \frac{d\bigl[(1+x^2)^{-\frac{1}{2}}\bigr]}{dx}. \end{gather*}$$
+
+Диференціюючи $(1+x^2)^{-\frac{1}{2}}$, як показано у прикладі (2) вище,
+ми отримуємо $$ \frac{d\bigl[(1+x^2)^{-\frac{1}{2}}\bigr]}{dx} = -
+  \frac{x}{\sqrt{(1+x^2)^3}}; $$ так що $$ \frac{dy}{dx} =
+  \frac{3\sqrt{x}}{2\sqrt{1+x^2}} - \frac{\sqrt{x^5}}{\sqrt{(1+x^2)^3}} =
+  \frac{\sqrt{x}(3+x^2)}{2\sqrt{(1+x^2)^3}}. $$
+
+\(7\) Продиференціюйте $y=(x+\sqrt{x^2+x+a})^3$.
+
+Нехай $x+\sqrt{x^2+x+a}=u$. $$\begin{gather*} \frac{du}{dx} = 1 +
+  \frac{d\bigl[(x^2+x+a)^{\frac{1}{2}}\bigr]}{dx}. \\ y = u^3;\quad \\ \text{та
+  }\quad \frac{dy}{du} = 3u^2= 3\left(x+\sqrt{x^2+x+a}\right)^2. \end{gather*}$$
+
+**!screen-dependent-scale-begin!** Тепер нехай
+$(x^2+x+a)^{\frac{1}{2}}=v$ і $(x^2+x+a) = w$. $$\begin{align*}
+  \frac{dw}{dx} &= 2x+1;\quad v = w^{\frac{1}{2}};\quad \frac{dv}{dw} =
+  \tfrac{1}{2}w^{-\frac{1}{2}}. \\ \frac{dv}{dx} &= \frac{dv}{dw} ×
+  \frac{dw}{dx} = \tfrac{1}{2}(x^2+x+a)^{-\frac{1}{2}}(2x+1). \\ 
+  \frac{du}{dx} &= 1 + \frac{2x+1}{2\sqrt{x^2+x+a}}, \\ \frac{dy}{dx} &=
+  \frac{dy}{du} × \frac{du}{dx}\\ &= 3\left(x+\sqrt{x^2+x+a}\right)^2
+  \left(1 +\frac{2x+1}{2\sqrt{x^2+x+a}}\right). \end{align*}$$
+**!screen-dependent-scale-end!**
+
+\(8\) Продиференціюйте $y=\sqrt{\dfrac{a^2+x^2}{a^2-x^2}}
+  \sqrt[3]{\dfrac{a^2-x^2}{a^2+x^2}}$.
+
+**!screen-dependent-scale-begin!** Ми отримуємо
+$$\begin{align*} y &= \frac{(a^2+x^2)^{\frac{1}{2}}
+  (a^2-x^2)^{\frac{1}{3}}} {(a^2-x^2)^{\frac{1}{2}} (a^2+x^2)^{\frac{1}{3}}} = \\ &=
+  (a^2+x^2)^{\frac{1}{6}} (a^2-x^2)^{-\frac{1}{6}}. \\ \frac{dy}{dx} &=
+  (a^2+x^2)^{\frac{1}{6}} \frac{d\bigl[(a^2-x^2)^{-\frac{1}{6}}\bigr]}{dx} +
+  \frac{d\bigl[(a^2+x^2)^{\frac{1}{6}}\bigr]}{(a^2-x^2)^{\frac{1}{6}}\, dx}.
+  \end{align*}$$ **!screen-dependent-scale-end!**
+
+Нехай $u = (a^2-x^2)^{-\frac{1}{6}}$ і $v = (a^2 - x^2)$.
+$$\begin{align*} u
+  &= v^{-\frac{1}{6}};\quad \frac{du}{dv} =
+  -\frac{1}{6}v^{-\frac{7}{6}};\quad \frac{dv}{dx} = -2x. \\ \frac{du}{dx}
+  &= \frac{du}{dv} × \frac{dv}{dx} = \frac{1}{3}x(a^2-x^2)^{-\frac{7}{6}}.
+  \end{align*}$$
+
+Нехай $w = (a^2 + x^2)^{\frac{1}{6}}$ і $z = (a^2 + x^2)$.
+$$\begin{align*} w
+  &= z^{\frac{1}{6}};\quad \frac{dw}{dz} = \frac{1}{6}z^{-\frac{5}{6}};\quad
+  \frac{dz}{dx} = 2x. \\ \frac{dw}{dx} &= \frac{dw}{dz} × \frac{dz}{dx} =
+  \frac{1}{3} x(a^2 + x^2)^{-\frac{5}{6}}. \end{align*}$$
+
+**!small-screen-begin!** Отже
+$$\begin{align*} \frac{dy}{dx} &= (a^2+x^2)^{\frac{1}{6}}
+  \frac{x}{3(a^2-x^2)^{\frac{7}{6}}} + \\ &+ \frac{x}{3(a^2-x^2)^{\frac{1}{6}}
+  (a^2+x^2)^{\frac{5}{6}}}; \\ \text { або } \\ \frac{dy}{dx} &= \frac{x}{3}
+  \left[\sqrt[6]{\frac{a^2+x^2}{(a^2-x^2)^7}} +
+  \frac{1}{\sqrt[6]{(a^2-x^2)(a^2+x^2)^5]}} \right]. \end{align*}$$
+**!small-screen-end!**
+
+**!big-screen-begin!** Отже
+$$\begin{align*} \frac{dy}{dx} &= (a^2+x^2)^{\frac{1}{6}}
+  \frac{x}{3(a^2-x^2)^{\frac{7}{6}}} + \frac{x}{3(a^2-x^2)^{\frac{1}{6}}
+  (a^2+x^2)^{\frac{5}{6}}}; \\ \text { або } \\ \frac{dy}{dx} &= \frac{x}{3}
+  \left[\sqrt[6]{\frac{a^2+x^2}{(a^2-x^2)^7}} +
+  \frac{1}{\sqrt[6]{(a^2-x^2)(a^2+x^2)^5]}} \right]. \end{align*}$$
+**!big-screen-end!**
+
+\(9\) Продиференціюйте $y^n$ відносно $y^5$. $$ \frac{d(y^n)}{d(y^5)} =
+  \frac{ny^{n-1}}{5y^{5-1}} = \frac{n}{5} y^{n-5}. $$
+
+(10)[]{#Example10} Знайдіть першу і другу похідні $y = \dfrac{x}{b}
+  \sqrt{(ax)x}$. $$ \frac{dy}{dx} = \frac{x}{b}\,
+  \frac{d\bigl\{\bigl[(a-x)x\bigr]^{\frac{1}{2}}\bigr\}}{dx} +
+  \frac{\sqrt{(a-x)x}}{b}. $$
+
+Нехай $\bigl[(a-x)x\bigr]^{\frac{1}{2}} = u$ і нехай $(a-x)x = w$; тоді
+$u =
+  w^{\frac{1}{2}}$. $$ \frac{du}{dw} = \frac{1}{2} w^{-\frac{1}{2}} =
+  \frac{1}{2w^{\frac{1}{2}}} = \frac{1}{2\sqrt{(a-x)x}}. $$
+$$\begin{align*}
+  &\frac{dw}{dx} = a-2x.\\ &\frac{du}{dw} × \frac{dw}{dx} =
+  \frac{du}{dx} = \frac{a-2x}{2\sqrt{(a-x)x}}. \end{align*}$$
+
+**!screen-dependent-scale-begin!** Отже
+$$ \frac{dy}{dx} = \frac{x(a-2x)}{2b\sqrt{(a-x)x}} +
+  \frac{\sqrt{(a-x)x}}{b} = \frac{x(3a-4x)}{2b\sqrt{(a-x)x}}. $$
+**!screen-dependent-scale-end!**
+
+**!screen-dependent-scale-begin!** Тепер
+$$\begin{align*} \frac{d^2y}{dx^2} &= \frac{2b \sqrt{(a-x)x}\, (3a-8x)
+  - \dfrac{(3ax-4x^2)b(a-2x)}{\sqrt{(a-x)x}}} {4b^2(a-x)x} \\ &=
+  \frac{3a^2-12ax+8x^2}{4b(a-x)\sqrt{(a-x)x}}. \end{align*}$$
+**!screen-dependent-scale-end!**
+
+(Ці дві останні похідні нам знадобляться пізніше. Дивись [Розділ XII,
+вправа 11](12.md#ex10))
+
+[]{#ex6}
+
+---
+
+### Вправи VI
+
+Продиференцюйте наступні вирази:
+
+\(1\) $y = \sqrt{x^2 + 1}$.
+
+\(2\) $y = \sqrt{x^2+a^2}$.
+
+\(3\) $y = \dfrac{1}{\sqrt{a+x}}$.
+
+\(4\) $y = \dfrac{a}{\sqrt{a-x^2}}$.
+
+\(5\) $y = \dfrac{\sqrt{x^2-a^2}}{x^2}$.
+
+\(6\) $y = \dfrac{\sqrt[3]{x^4+a}}{\sqrt[2]{x^3+a}}$.
+
+\(7\) $y = \dfrac{a^2+x^2}{(a+x)^2}$.
+
+\(8\) Продиференціюйте $y^5$ відносно $y^2$.
+
+\(9\) Продиференціюйте $y = \dfrac{\sqrt{1 - \theta^2}}{1 - \theta}$.
+
+### Відповіді
+
+\(1\) $\dfrac{x}{\sqrt{ x^2 + 1}}$.
+
+\(2\) $\dfrac{x}{\sqrt{ x^2 + a^2}}$.
+
+\(3\) $- \dfrac{1}{2 \sqrt{(a + x)^3}}$.
+
+\(4\) $\dfrac{ax}{\sqrt{(a - x^2)^3}}$.
+
+\(5\) $\dfrac{2a^2 - x^2}{x^3 \sqrt{ x^2 - a^2}}$.
+
+\(6\) $\dfrac{\frac{3}{2} x^2 \left[ \frac{8}{9} x \left(
+x^3 + a \right) - \left( x^4 + a \right) \right]}{(x^4 +
+a)^{\frac{2}{3}} (x^3 + a)^{\frac{3}{2}}}$
+
+\(7\) $\dfrac{2a \left(x - a \right)}{(x + a)^3}$.
+
+\(8\) $\frac{5}{2} y^3$.
+
+\(9\) $\dfrac{1}{(1 - \theta) \sqrt{1 - \theta^2}}$.
+
+---
+
+Процес можна розширити до трьох або більше похідних, так що
+\$\\dfrac{dy}{dx} = \\dfrac{dy}{dz} × \\dfrac{dz}{dv} × \\dfrac{dv}{dx}
+\$.
+
+*Приклади* (1) Якщо $z = 3x^4$;   $v =
+  \dfrac{7}{z^2}$;   $y =\sqrt{1+v}$, знайдемо $\dfrac{dv}{dx}$.
+
+Ми маємо $$\begin{align*} \frac{dy}{dv} &= \frac{1}{2\sqrt{1+v}};\quad
+  \frac{dv}{dz} = -\frac{14}{z^3};\quad \frac{dz}{dx} = 12x^3. \\ \frac{dy}{dx}
+  &= -\frac{168x^3}{(2\sqrt{1+v})z^3} = -\frac{28}{3x^5\sqrt{9x^8+7}}.
+  \end{align*}$$
+
+\(2\) Якщо $t = \dfrac{1}{5\sqrt{\theta}}$;   $x = t^3 +
+  \dfrac{t}{2}$;   $v = \dfrac{7x^2}{\sqrt[3]{x-1}}$, знайдемо
+$\dfrac{dv}{d\theta}$. $$\begin{align*}\frac{dv}{dx} &=
+  \frac{7x(5x-6)}{3\sqrt[3]{(x-1)^4}};\quad \frac{dx}{dt} = 3t^2 +
+  \tfrac{1}{2};\quad \\ \frac{dt}{d\theta} &= -\frac{1}{10\sqrt{\theta^3}}. \\ Отже
+  \; \frac{dv}{d\theta} &= -\frac{7x(5x-6)(3t^2+\frac{1}{2})} {30\sqrt[3]{(x-1)^
+  4} \sqrt{\theta^3}},\end{align*}$$ це вираз, у якому $x$ має бути замінено на
+його значення, і $t$ на його значення виражене через $\theta$.
+
+\(3\) Якщо $\theta = \dfrac{3a^2x}{\sqrt{x^3}}$;   $\omega =
+  \dfrac{\sqrt{1-\theta^2}}{1+\theta}$;   and $\phi = \sqrt{3} -
+  \dfrac{1}{\omega\sqrt{2}}$, знайти $\dfrac{d\phi}{dx}$.
+
+Ми отримуємо
+$$\begin{gather*} \theta = 3a^2x^{-\frac{1}{2}};\quad \omega =
+  \sqrt{\frac{1-\theta}{1+\theta}};\quad \text{та}\quad \\ \phi = \sqrt{3} -
+  \frac{1}{\sqrt{2}} \omega^{-1}. \\ \frac{d\theta}{dx} =
+  -\frac{3a^2}{2\sqrt{x^3}};\quad \frac{d\omega}{d\theta} =
+  -\frac{1}{(1+\theta)\sqrt{1-\theta^2}} \end{gather*}$$ (див. приклад
+5, [тут](9.md#examples4)); і $$ \frac{d\phi}{d\omega} =
+  \frac{1}{\sqrt{2}\omega^2}. $$
+
+Отже, $\dfrac{d\theta}{dx} = \dfrac{1}{\sqrt{2} × \omega^2} ×
+  \dfrac{1}{(1+\theta) \sqrt{1-\theta^2}} × \dfrac{3a^2}{2\sqrt{x^3}}$.
+
+Замініть спочатку $\omega$, а потім $\theta$ на їх значення.
+
+---
+
+### Вправи VII
+
+Тепер ви можете успішно спробувати наступне:
+
+\(1\) Якщо $u = \frac{1}{2}x^3$;  $v = 3(u+u^2)$;  та $w =
+  \dfrac{1}{v^2}$, знайдіть $\dfrac{dw}{dx}$.
+
+\(2\) Якщо $y = 3x^2 + \sqrt{2}$;  $z = \sqrt{1+y}$;  та $v
+  = \dfrac{1}{\sqrt{3}+4z}$, знайдіть $\dfrac{dv}{dx}$.
+
+\(3\) Якщо $y = \dfrac{x^3}{\sqrt{3}}$;  $z = (1+y)^2$;  і
+$u = \dfrac{1}{\sqrt{1+z}}$, знайдіть $\dfrac{du}{dx}$.
+
+### Відповіді
+
+\(1\) $\dfrac{dw}{dx} = \dfrac{3x^2 \left( 3 + 3x^3 \right)} {27
+  \left(\frac{1}{2} x^3 + \frac{1}{4} x^6 \right)^3}$.
+
+**!screen-dependent-scale-begin!** (2)
+$\dfrac{dv}{dx} = - \dfrac{12x}{\sqrt{1 + \sqrt{2} + 3x^2} \left(\sqrt{3}
+  + 4 \sqrt{1 + \sqrt{2} + 3x^2}\right)^2}$.
+**!screen-dependent-scale-end!**
+
+\(3\) \$\\dfrac{du}{dx} = - \\dfrac{x\^2 \\left(\\sqrt{3} + x\^3
+\\right)} {\\sqrt{ \\left\[ 1 + \\left( 1 + \\dfrac{x\^3}{\\sqrt{3}}
+\\right) \^2 \\right\]\^3}} \$
+
+---
