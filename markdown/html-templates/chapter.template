@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+$if(description-meta)$
+  <meta name="description" content="$description-meta$" />
+$endif$
+  <title>$pagetitle$</title>
+$for(css)$
+  <link rel="stylesheet" href="$css$" />
+$endfor$
+  <style>
+    body {
+      counter-reset: h1 $chapter-number$;
+    }
+  </style>
+$for(header-includes)$
+  $header-includes$
+$endfor$
+$if(math)$
+$if(mathjax)$
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+$endif$
+  $math$
+$endif$
+</head>
+<body>
+
+$body$
+
+$if(next-chapter-url)$
+<a href="$next-chapter-url$">Далі →</a><br/>
+$endif$
+<a href="/">Головна сторінка ↑</a><br/>
+<a href="https://survey.calculusmadeeasy.org.ua/index.php/111939?lang=uk" target="_blank">
+  Запропонувати виправлення &#9997;
+</a> <br />
+
+</body>
+</html>
+
+<script
+  data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js"
+></script>
