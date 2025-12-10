@@ -1,181 +1,113 @@
 <!DOCTYPE html>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Багаторазове диференціювання | Математичний аналіз простими словами</title>
+  <link rel="stylesheet" href="screen.css" />
+  <style>
+    body {
+      counter-reset: h1 7;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+</head>
+<body>
 
-<title>
-  Багаторазове диференціювання | Математичний аналіз простими словами
-</title>
-<link rel="stylesheet" href="screen.css" />
-<style>
-  body {
-    counter-reset: h1 7;
-  }
-</style>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-></script>
-
-<h1><br />Багаторазове Диференціювання</h1>
-<p class="a rotatedFloralHeartBullet"></p>
-<p>
-  Спробуємо кілька разів повторити операцію диференціювання функції (див.
-  <a href="3.html#function">тут</a>). Почнемо з конкретного випадку.
+<h1 id="багаторазове-диференціювання"><br/> Багаторазове диференціювання</h1>
+<p class="a rotatedFloralHeartBullet">
 </p>
-<p>
-  Нехай $y = x^5$. \begin{alignat*}{3} &amp;\text{Перше, }
+<p>Спробуємо кілька разів повторити операцію диференціювання функції (див. <a href="3.html#function">тут</a>). Почнемо з конкретного випадку.</p>
+<p>Нехай <span class="math inline">\(y = x^5\)</span>. <span class="math display">\[\begin{alignat*}{3} &amp;\text{Перше, }
   &amp;&amp;5x^4. &amp;&amp; \\ &amp;\text{друге, } &amp;&amp;5
   × 4x^3 &amp;&amp;= 20x^3. \\ &amp;\text{третє, } &amp;&amp;5 ×
   4 × 3x^2 &amp;&amp;= 60x^2. \\ &amp;\text{четверте, }
-  &amp;&amp;5 × 4 × 3 × 2x &amp;&amp;= 120x. \\ &amp;\text{п'яте, }
+  &amp;&amp;5 × 4 × 3 × 2x &amp;&amp;= 120x. \\ &amp;\text{п&#39;яте, }
   &amp;&amp;5 × 4 × 3 × 2 × 1 &amp;&amp;= 120. \\
-  &amp;\text{шосте, } &amp;&amp; &amp;&amp;= 0. \end{alignat*}
-</p>
-<p>
-  Є певна нотація, вже знайома нам (див. <a href="3.html#notation">тут</a>), яка
-  використовується деякими авторами, що дуже зручно. Я маю на увазі використання
-  загального символу $f(x)$ для будь-якої функції від $x$. Тут символ $f( )$
-  читається як «функція від» без вказівки, яка саме функція. Таким чином, вислів
-  $y=f(x)$ просто говорить нам, що $y$ є функцією від $x$, що може бути $x^2$
-  або $ax^n$, або $\cos x$, або будь-яка інша складна функція від $x$.
-</p>
-<p>
-  Відповідний символ для похідної — $f'(x)$, що простіше записати, ніж
-  $\dfrac{dy}{dx}$. Це називається «похідною функцією» від $x$.
-</p>
-<p>
-  Припустимо, що ми диференціюємо знову, тоді ми отримаємо «другу похідну
-  функцію», яка позначається $f''(x)$; і так далі.
-</p>
+  &amp;\text{шосте, } &amp;&amp; &amp;&amp;= 0. \end{alignat*}\]</span></p>
+<p>Є певна нотація, вже знайома нам (див. <a href="3.html#notation">тут</a>), яка використовується деякими авторами, що дуже зручно. Я маю на увазі використання загального символу <span class="math inline">\(f(x)\)</span> для будь-якої функції від <span class="math inline">\(x\)</span>. Тут символ <span class="math inline">\(f( )\)</span> читається як «функція від» без вказівки, яка саме функція. Таким чином, вислів <span class="math inline">\(y=f(x)\)</span> просто говорить нам, що <span class="math inline">\(y\)</span> є функцією від <span class="math inline">\(x\)</span>, що може бути <span class="math inline">\(x^2\)</span> або <span class="math inline">\(ax^n\)</span>, або <span class="math inline">\(\cos x\)</span>, або будь-яка інша складна функція від <span class="math inline">\(x\)</span>.</p>
+<p>Відповідний символ для похідної — <span class="math inline">\(f&#39;(x)\)</span>, що простіше записати, ніж <span class="math inline">\(\dfrac{dy}{dx}\)</span>. Це називається «похідною функцією» від <span class="math inline">\(x\)</span>.</p>
+<p>Припустимо, що ми диференціюємо знову, тоді ми отримаємо «другу похідну функцію», яка позначається <span class="math inline">\(f&#39;&#39;(x)\)</span>; і так далі.</p>
 <p>Тепер давайте узагальнимо.</p>
-<p>Нехай $y = f(x) = x^n$.</p>
-<p class="mobile">
-  \begin{align*} \text{Перше}\; f'(x) = nx^{n-1}. \\ \text{друге,}\;
-  f''(x) = n(n-1)x^{n-2}. \\ \text{третє,}\;
-  f'''(x) = n(n-1)(n-2)x^{n-3}. \\ \text{четверте,}\; f''''(x) =
-  n(n-1)(n-2)(n-3)x^{n-4}. \\ \llap{\text{і т.д.,}} \text{ і т.д.} \end{align*}
-</p>
-<p class="desktop">
-  \begin{align*} \text{Перше}\; f'(x) &amp;= nx^{n-1}. \\
-  \text{друге,}\; f''(x) &amp;= n(n-1)x^{n-2}. \\ \text{третє,}\;
-  f'''(x) &amp;= n(n-1)(n-2)x^{n-3}. \\ \text{чeтверте,}\; 
-  f''''(x) &amp;= n(n-1)(n-2)(n-3)x^{n-4}. \\
-  &amp;\llap{\text{і т.д.,}} \text{ і т.д.} \end{align*}
-</p>
-<p>
-  Але це не єдиний спосіб позначати багаторазове диференціювання. Якщо
-  \begin{align*} \text{початкова функція це}\; y &amp;= f(x); \\ \text{перше
-  диференціювання дає}\; \frac{dy}{dx} &amp;= f'(x); \\ \text{друге}\; 
-  \frac{d\left(\dfrac{dy}{dx}\right)}{dx} &amp;= f''(x);
-  \end{align*} і це зручніше записати як $\dfrac{d^2y}{(dx)^2}$, або частіше
-  $\dfrac{d^2y}{dx^2}$. Подібним чином ми можемо записати як результат
-  триразового диференціювання $\dfrac{d^3y}{dx^3} = f'''(x)$.
-</p>
+<p>Нехай <span class="math inline">\(y = f(x) = x^n\)</span>.</p>
+<p><div class="scaled"> <span class="math display">\[\begin{align*} \text{Перше}\; f&#39;(x) &amp;= nx^{n-1}. \\
+  \text{друге,}\; f&#39;&#39;(x) &amp;= n(n-1)x^{n-2}. \\ \text{третє,}\;
+  f&#39;&#39;&#39;(x) &amp;= n(n-1)(n-2)x^{n-3}. \\ \text{чeтверте,}\;
+  f&#39;&#39;&#39;&#39;(x) &amp;= n(n-1)(n-2)(n-3)x^{n-4}. \\
+  &amp;\llap{\text{і т.д.,}} \text{ і т.д.} \end{align*}\]</span> </div></p>
+<p>Але це не єдиний спосіб позначати багаторазове диференціювання. Якщо <span class="math display">\[\begin{align*} \text{початкова функція це}\; y &amp;= f(x); \\ \text{перше
+  диференціювання дає}\; \frac{dy}{dx} &amp;= f&#39;(x); \\ \text{друге}\;
+  \frac{d\left(\dfrac{dy}{dx}\right)}{dx} &amp;= f&#39;&#39;(x);
+  \end{align*}\]</span> і це зручніше записати як <span class="math inline">\(\dfrac{d^2y}{(dx)^2}\)</span>, або частіше <span class="math inline">\(\dfrac{d^2y}{dx^2}\)</span>. Подібним чином ми можемо записати як результат триразового диференціювання <span class="math inline">\(\dfrac{d^3y}{dx^3} = f&#39;&#39;&#39;(x)\)</span>.</p>
 <hr />
-
-<p></p>
 <p><em>Приклади.</em></p>
-<p>
-  Тепер спробуймо $y = f(x) = 7x^4 + 3.5x^3 - \frac{1}{2}x^2 + x - 2$.
-  \begin{align*} \frac{dy}{dx} &amp;= f'(x) = 28x^3 + 10.5x^2 - x + 1, \\
-  \frac{d^2y}{dx^2} &amp;= f''(x) = 84x^2 + 21x - 1, \\ \frac{d^3y}{dx^3} &amp;=
-  f'''(x) = 168x + 21, \\ \frac{d^4y}{dx^4} &amp;= f''''(x) = 168, \\
-  \frac{d^5y}{dx^5} &amp;= f'''''(x) = 0. \end{align*} Подібним чином, якщо $y =
-  \phi(x) = 3x(x^2 - 4)$, \begin{align*} \phi'(x) &amp;= \frac{dy}{dx} =
-  3\bigl[x × 2x + (x^2 - 4) × 1\bigr] = \\ &= 3(3x^2 - 4), \\ \phi''(x) &amp;=
-  \frac{d^2y}{dx^2} = 3 × 6x = 18x, \\ \phi'''(x) &amp;= \frac{d^3y}{dx^3} = 18,
-  \\ \phi''''(x) &amp;= \frac{d^4y}{dx^4} = 0. \end{align*}
-</p>
-<p></p>
+<p>Тепер спробуймо продиференціювати <span class="math inline">\(y = f(x) = 7x^4 + 3.5x^3 - \frac{1}{2}x^2 + x - 2\)</span>. <span class="math display">\[\begin{align*} \frac{dy}{dx} &amp;= f&#39;(x) = 28x^3 + 10.5x^2 - x + 1, \\
+  \frac{d^2y}{dx^2} &amp;= f&#39;&#39;(x) = 84x^2 + 21x - 1, \\ \frac{d^3y}{dx^3} &amp;=
+  f&#39;&#39;&#39;(x) = 168x + 21, \\ \frac{d^4y}{dx^4} &amp;= f&#39;&#39;&#39;&#39;(x) = 168, \\
+  \frac{d^5y}{dx^5} &amp;= f&#39;&#39;&#39;&#39;&#39;(x) = 0. \end{align*}\]</span> Подібним чином, якщо <span class="math inline">\(y =
+  \phi(x) = 3x(x^2 - 4)\)</span>, <span class="math display">\[\begin{align*} \phi&#39;(x) &amp;= \frac{dy}{dx} =
+  3\bigl[x × 2x + (x^2 - 4) × 1\bigr] = \\ &amp;= 3(3x^2 - 4), \\ \phi&#39;&#39;(x) &amp;=
+  \frac{d^2y}{dx^2} = 3 × 6x = 18x, \\ \phi&#39;&#39;&#39;(x) &amp;= \frac{d^3y}{dx^3} = 18,
+  \\ \phi&#39;&#39;&#39;&#39;(x) &amp;= \frac{d^4y}{dx^4} = 0. \end{align*}\]</span></p>
 <hr />
-<h3>Вправи IV</h3>
-
-<p>Знайдіть $\dfrac{dy}{dx}$ та $\dfrac{d^2y}{dx^2}$ для наступних виразів:</p>
-<p>(1) $y = 17x + 12x^2$.</p>
-<p>(2) $y = \dfrac{x^2 + a}{x + a}$.</p>
-<p>
-  (3) $y = 1 + \dfrac{x}{1} + \dfrac{x^2}{1×2} + \dfrac{x^3}{1×2×3} +
-  \dfrac{x^4}{1×2×3×4}$.
-</p>
-<p>
-  (4) Знайдіть 2-гу та 3-тю похідні функції у Вправах III. (<a
-    href="6.html#examples2"
-    >тут</a
-  >), від № 1 до № 7, а також у наведених прикладах (<a href="6.html#examples3"
-    >тут</a
-  >), від № 1 до № 7.
-</p>
-<p></p>
-<h3 class="answers">Відповіді</h3>
-<p>(1) $17 + 24x$;&nbsp;&nbsp; $24$.</p>
-<p>
-  (2) $\dfrac{x^2 + 2ax - a}{(x + a)^2}$;&nbsp;&nbsp; $\dfrac{2a(a + 1)}{(x +
-  a)^3}$.
-</p>
-<p>
-  (3) $1 + x + \dfrac{x^2}{1 × 2} + \dfrac{x^3}{1 × 2 × 3}$;&nbsp;&nbsp; $1 + x
-  + \dfrac{x^2}{1 × 2}$.
-</p>
+<h3 id="вправи-iv">Вправи IV</h3>
+<p>Знайдіть <span class="math inline">\(\dfrac{dy}{dx}\)</span> та <span class="math inline">\(\dfrac{d^2y}{dx^2}\)</span> для наступних виразів:</p>
+<p>(1) <span class="math inline">\(y = 17x + 12x^2\)</span>.</p>
+<p>(2) <span class="math inline">\(y = \dfrac{x^2 + a}{x + a}\)</span>.</p>
+<p>(3) <span class="math inline">\(y = 1 + \dfrac{x}{1} + \dfrac{x^2}{1×2} + \dfrac{x^3}{1×2×3} +
+  \dfrac{x^4}{1×2×3×4}\)</span>.</p>
+<p>(4) Знайдіть 2-гу та 3-тю похідні функції у Вправах III. (<a href="6.html#examples2">тут</a>), від № 1 до № 7, а також у наведених прикладах (<a href="6.html#examples3">тут</a>), від № 1 до № 7.</p>
+<h3 id="відповіді">Відповіді</h3>
+<p>(1) <span class="math inline">\(17 + 24x\)</span>; <span class="math inline">\(24\)</span>.</p>
+<p>(2) <span class="math inline">\(\dfrac{x^2 + 2ax - a}{(x + a)^2}\)</span>; <span class="math inline">\(\dfrac{2a(a + 1)}{(x +
+  a)^3}\)</span>.</p>
+<p>(3) <span class="math inline">\(1 + x + \dfrac{x^2}{1 × 2} + \dfrac{x^3}{1 × 2 × 3}\)</span>; <span class="math inline">\(1 + x
+  + \dfrac{x^2}{1 × 2}\)</span>.</p>
 <p><em>Вправи III</em></p>
-<p>(4) (<em>Вправи III.</em> ):</p>
-<p>
-  (1) (<em>a</em> ) $\dfrac{d^2 y}{dx^2} = \dfrac{d^3 y}{dx^3} = 1 + x +
-  \frac{1}{2}x^2 + \frac{1}{6} x^3 + \ldots$.
-</p>
-<p>(<em>b</em> ) $2a$, $0$.</p>
-<p>(<em>c</em> ) $2$, $0$.</p>
-<p>(<em>d</em> ) $6x + 6a$, $6$.</p>
-<p>(2) $-b$, $0$.</p>
-<p>(3) $2$, $0$.</p>
-<p>
-  (4) $\begin{gathered}[t] 56440x^3 - 196212x^2 - 4488x + 8192. \\ 169320x^2 -
-  392424x - 4488. \end{gathered}$
-</p>
-<p>(5) $2$, $0$.</p>
-<p>(6) $371.80453x$, $371.80453$.</p>
-<p>(7) $\dfrac{30}{(3x + 2)^3}$,&nbsp;&nbsp; $-\dfrac{270}{(3x + 2)^4}$.</p>
-<p>Приклади</p>
-<p>(1) $\dfrac{6a}{b^2} x$,&nbsp;&nbsp; $\dfrac{6a}{b^2}$.</p>
-<p>
-  (2) $\dfrac{3a \sqrt{b}} {2 \sqrt{x}} - \dfrac{6b
-  \sqrt[3]{a}}{x^3}$,&nbsp;&nbsp; $\dfrac{18b \sqrt[3]{a}}{x^4} - \dfrac{3a
-  \sqrt{b}}{4 \sqrt{x^3}}$.
-</p>
-<p>
-  (3) $\dfrac{2}{\sqrt[3]{\theta^8}} -
-  \dfrac{1.056}{\sqrt[5]{\theta^{11}}}$,&nbsp;&nbsp;
-  $\dfrac{2.3232}{\sqrt[5]{\theta^{16}}} - \dfrac{16}{3 \sqrt[3]{\theta^{11}}}$.
-</p>
-<p>
-  (4) $\begin{gathered}[t] 810t^4 - 648t^3 + 479.52t^2 - 139.968t + 26.64. \\
-  3240t^3 - 1944t^2 + 959.04t - 139.968. \end{gathered}$
-</p>
-<p>(5) $12x + 2$, $12$.</p>
-<p>(6) $6x^2 - 9x$,&nbsp;&nbsp; $12x - 9$.</p>
-<p>
-  (7) $\begin{aligned}[t] &amp;\dfrac{3}{4} \left(\dfrac{1}{\sqrt{\theta}} +
+<p>(1) (<em>a</em> ) <span class="math inline">\(\dfrac{d^2 y}{dx^2} = \dfrac{d^3 y}{dx^3} = 1 + x +
+  \frac{1}{2}x^2 + \frac{1}{6} x^3 + \ldots\)</span>.</p>
+<p>(<em>b</em> ) <span class="math inline">\(2a\)</span>, <span class="math inline">\(0\)</span>.</p>
+<p>(<em>c</em> ) <span class="math inline">\(2\)</span>, <span class="math inline">\(0\)</span>.</p>
+<p>(<em>d</em> ) <span class="math inline">\(6x + 6a\)</span>, <span class="math inline">\(6\)</span>.</p>
+<p>(2) <span class="math inline">\(-b\)</span>, <span class="math inline">\(0\)</span>.</p>
+<p>(3) <span class="math inline">\(2\)</span>, <span class="math inline">\(0\)</span>.</p>
+<p>(4) <span class="math inline">\(\begin{gathered}[t] 56440x^3 - 196212x^2 - 4488x + 8192. \\ 169320x^2 -
+  392424x - 4488. \end{gathered}\)</span></p>
+<p>(5) <span class="math inline">\(2\)</span>, <span class="math inline">\(0\)</span>.</p>
+<p>(6) <span class="math inline">\(371.80453x\)</span>, <span class="math inline">\(371.80453\)</span>.</p>
+<p>(7) <span class="math inline">\(\dfrac{30}{(3x + 2)^3}\)</span>, <span class="math inline">\(-\dfrac{270}{(3x + 2)^4}\)</span>.</p>
+<p><em>Приклади</em></p>
+<p>(1) <span class="math inline">\(\dfrac{6a}{b^2} x\)</span>, <span class="math inline">\(\dfrac{6a}{b^2}\)</span>.</p>
+<p>(2) <span class="math inline">\(\dfrac{3a \sqrt{b}} {2 \sqrt{x}} - \dfrac{6b
+  \sqrt[3]{a}}{x^3}\)</span>, <span class="math inline">\(\dfrac{18b \sqrt[3]{a}}{x^4} - \dfrac{3a
+  \sqrt{b}}{4 \sqrt{x^3}}\)</span>.</p>
+<p>(3) <span class="math inline">\(\dfrac{2}{\sqrt[3]{\theta^8}} -
+  \dfrac{1.056}{\sqrt[5]{\theta^{11}}}\)</span>,<br />
+<span class="math inline">\(\dfrac{2.3232}{\sqrt[5]{\theta^{16}}} - \dfrac{16}{3 \sqrt[3]{\theta^{11}}}\)</span>.</p>
+<p>(4) <span class="math inline">\(\begin{gathered}[t] 810t^4 - 648t^3 + 479.52t^2 - 139.968t + 26.64. \\
+  3240t^3 - 1944t^2 + 959.04t - 139.968. \end{gathered}\)</span></p>
+<p>(5) <span class="math inline">\(12x + 2\)</span>, <span class="math inline">\(12\)</span>.</p>
+<p>(6) <span class="math inline">\(6x^2 - 9x\)</span>, <span class="math inline">\(12x - 9\)</span>.</p>
+<p>(7) <span class="math inline">\(\begin{aligned}[t] &amp;\dfrac{3}{4} \left(\dfrac{1}{\sqrt{\theta}} +
   \dfrac{1}{\sqrt{\theta^5}}\right) +\dfrac{1}{4}
   \left(\dfrac{15}{\sqrt{\theta^7}} - \dfrac{1}{\sqrt{\theta^3}}\right). \\
   &amp;\dfrac{3}{8} \left(\dfrac{1}{\sqrt{\theta^5}} -
   \dfrac{1}{\sqrt{\theta^3}}\right)
   -\dfrac{15}{8}\left(\dfrac{7}{\sqrt{\theta^9}} +
-  \dfrac{1}{\sqrt{\theta^7}}\right). \end{aligned}$
-
-  <br />
+  \dfrac{1}{\sqrt{\theta^7}}\right). \end{aligned}\)</span><br />
 </p>
 <hr />
-<a href="8.html">Далі →</a><br />
-<a href="/">Головна сторінка ↑</a><br />
+
+<a href="8.html">Далі →</a><br/>
+<a href="/">Головна сторінка ↑</a><br/>
 <a href="https://survey.calculusmadeeasy.org.ua/index.php/111939?lang=uk" target="_blank">
   Запропонувати виправлення &#9997;
-</a> <br/>
+</a> <br />
 
-<script src="j/jquery.js"></script>
-<script src="j/modernizr.js"></script>
-<script src="j/dih5.js"></script>
+</body>
+</html>
 
 <script
   data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"
