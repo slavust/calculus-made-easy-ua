@@ -275,64 +275,54 @@
   >. <a href="http://diveintohtml5.info/legal.html">Юридичні повідомлення</a>.
 </p>
 
-<!-- Share buttons-->
-<br />
-<br />
-<style>
-  ul.share-buttons {
-    list-style: none;
-    padding: 0;
-    font-size: normal;
-    margin: 0 0;
-    display: inline-block;
-  }
-
-  ul.share-buttons li {
-    display: inline-block;
-  }
-
-  ul.share-buttons .sr-only {
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-    padding: 0;
-    border: 0;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-  }
-</style>
-<center>
-  <ul class="share-buttons">
-    <li>
-      <a
-        href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcalculusmadeeasy.org.ua&quote=%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D0%B8%D0%B9%20%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7%20%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%B8%D0%BC%D0%B8%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D0%BC%D0%B8"
-        title="Share on Facebook"
-        target="_blank"
-        ><img alt="Share on Facebook" src="share-icons/Facebook.png"
-      /></a>
-    </li>
-    <li>
-      <a
-        href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcalculusmadeeasy.org.ua&text=%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D0%B8%D0%B9%20%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7%20%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%B8%D0%BC%D0%B8%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D0%BC%D0%B8:%20http%3A%2F%2Fcalculusmadeeasy.org.ua"
-        target="_blank"
-        title="Tweet"
-        ><img alt="Tweet" src="share-icons/Twitter.png"
-      /></a>
-    </li>
-    <li>
-      <a
-        href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fcalculusmadeeasy.org.ua&title=%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D0%B8%D0%B9%20%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7%20%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%B8%D0%BC%D0%B8%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D0%BC%D0%B8&summary=%D0%92%D1%81%D1%82%D1%83%D0%BF%20%D0%B4%D0%BE%20%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7%D1%83&source=http%3A%2F%2Fcalculusmadeeasy.org.ua"
-        target="_blank"
-        title="Share on LinkedIn"
-        ><img alt="Share on LinkedIn" src="share-icons/LinkedIn.png"
-      /></a>
-    </li>
-  </ul>
-</center>
+<div id="share-block" class="share-block-centered">
+  <!-- <p class="share-invite"> Поділитись </p> -->
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 24 24">
+<path fill="#B22222" d="M 18 2 C 16.35499 2 15 3.3549904 15 5 C 15 5.1909529 15.021791 5.3771224 15.056641 5.5585938 L 7.921875 9.7207031 C 7.3985399 9.2778539 6.7320771 9 6 9 C 4.3549904 9 3 10.35499 3 12 C 3 13.64501 4.3549904 15 6 15 C 6.7320771 15 7.3985399 14.722146 7.921875 14.279297 L 15.056641 18.439453 C 15.021555 18.621514 15 18.808386 15 19 C 15 20.64501 16.35499 22 18 22 C 19.64501 22 21 20.64501 21 19 C 21 17.35499 19.64501 16 18 16 C 17.26748 16 16.601593 16.279328 16.078125 16.722656 L 8.9433594 12.558594 C 8.9782095 12.377122 9 12.190953 9 12 C 9 11.809047 8.9782095 11.622878 8.9433594 11.441406 L 16.078125 7.2792969 C 16.60146 7.7221461 17.267923 8 18 8 C 19.64501 8 21 6.6450096 21 5 C 21 3.3549904 19.64501 2 18 2 z M 18 4 C 18.564129 4 19 4.4358706 19 5 C 19 5.5641294 18.564129 6 18 6 C 17.435871 6 17 5.5641294 17 5 C 17 4.4358706 17.435871 4 18 4 z M 6 11 C 6.5641294 11 7 11.435871 7 12 C 7 12.564129 6.5641294 13 6 13 C 5.4358706 13 5 12.564129 5 12 C 5 11.435871 5.4358706 11 6 11 z M 18 18 C 18.564129 18 19 18.435871 19 19 C 19 19.564129 18.564129 20 18 20 C 17.435871 20 17 19.564129 17 19 C 17 18.435871 17.435871 18 18 18 z"></path>
+</svg>
+</div>
 
 <script src="j/jquery.js"></script>
 <script src="j/dih5.js"></script>
+
+<script>
+(function () {
+  const button = document.getElementById('share-block');
+const shareUrl = window.location.href;
+
+  button.addEventListener('click', async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: document.title,
+          url: shareUrl
+        });
+      } catch (e) {
+      }
+    } else if (navigator.clipboard) {
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+
+        const oldContent = button.innerHTML;
+
+        button.innerHTML = `
+          <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="green" d="M20.285 6.709a1 1 0 0 0-1.414-1.414L9 15.167l-4.871-4.872a1 1 0 1 0-1.414 1.414l5.578 5.578a1 1 0 0 0 1.414 0l10.578-10.578z"/>
+          </svg>
+          <p class="share-invite">Скопійовано</p>
+        `;
+
+        setTimeout(() => {
+          button.innerHTML = oldContent;
+        }, 2000);
+
+      } catch (e) {
+        console.error("Не вдалось скопіювати посилання:", e);
+      }
+    }
+  });
+})();
+</script>
 
 <script
   data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"
