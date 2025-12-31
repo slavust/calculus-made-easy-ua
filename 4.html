@@ -1,309 +1,212 @@
 <!DOCTYPE html>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Найпростіші випадки | Математичний аналіз простими словами</title>
+  <link rel="stylesheet" href="screen.css" />
+  <style>
+    body {
+      counter-reset: h1 4;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+</head>
+<body>
 
-<title>Найпростіші випадки | Математичний аналіз простими словами</title>
-<link rel="stylesheet" href="screen.css" />
-<style>
-  body {
-    counter-reset: h1 4;
-  }
-</style>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-></script>
-
-<h1><br />Найпростіші випадки</h1>
-<p class="a rotatedFloralHeartBullet"></p>
-<p>
-  Тепер давайте подивимось, як, виходячи з цих принципів, ми можемо
-  диференціювати деякий простий алгебраїчний вираз.
+<h1 id="найпростіші-випадки"><br/> Найпростіші випадки</h1>
+<p class="a rotatedFloralHeartBullet">
 </p>
-<h3>Випадок 1</h3>
-<p>
-  Почнемо з виразу $y=x^2$. Згадаємо, що фундаментальним поняттям математичного
-  аналізу є ідея <em>зростання</em>. Математики називають це
-  <em>варіюванням</em>. Оскільки $y$ та $x^2$ дорівнюють один одному, зрозуміло,
-  що якщо $x$ зростатиме, $x^2$ також зростатиме. І якщо $x^2$ зростає, то $y$
-  також зростатиме. Ми маємо з'ясувати пропорцію між зростанням $y$ і зростанням
-  $x$. Іншими словами, наше завдання — знайти співвідношення між $dy$ та $dx$,
-  або, коротко кажучи, знайти значення $\dfrac{dy}{dx}$.
-</p>
-
-<p>
-  Таким чином, нехай $x$ трохи збільшиться і стане $x + dx$; тоді $y$ так само
-  трохи збільшиться і стане $y + dy$. Зрозуміло, що збільшений $y$ дорівнюватиме
-  квадрату збільшеного $x$. Записуючи це, ми маємо:
-</p>
-\[ y + dy = (x + dx)^2 \]
-
+<p>Тепер давайте подивимось, як, виходячи з цих принципів, ми можемо знайти похідну деякого простого алгебраїчного виразу.</p>
+<h3 id="випадок-1">Випадок 1</h3>
+<p>Почнемо з виразу <span class="math inline">\(y=x^2\)</span>. Згадаємо, що фундаментальним поняттям математичного аналізу є ідея <em>зростання</em>. Математики називають це <em>варіюванням</em>. Оскільки <span class="math inline">\(y\)</span> та <span class="math inline">\(x^2\)</span> дорівнюють один одному, зрозуміло, що якщо <span class="math inline">\(x\)</span> зростатиме, <span class="math inline">\(x^2\)</span> також зростатиме. І якщо <span class="math inline">\(x^2\)</span> зростає, то <span class="math inline">\(y\)</span> також зростатиме. Ми маємо з'ясувати пропорцію між зростанням <span class="math inline">\(y\)</span> і зростанням <span class="math inline">\(x\)</span>. Іншими словами, наше завдання — знайти співвідношення між <span class="math inline">\(dy\)</span> та <span class="math inline">\(dx\)</span>, або, коротко кажучи, знайти значення <span class="math inline">\(\dfrac{dy}{dx}\)</span>.</p>
+<p>Таким чином, нехай <span class="math inline">\(x\)</span> трохи збільшиться і стане <span class="math inline">\(x + dx\)</span>; тоді <span class="math inline">\(y\)</span> так само трохи збільшиться і стане <span class="math inline">\(y + dy\)</span>. Зрозуміло, що збільшений <span class="math inline">\(y\)</span> дорівнюватиме квадрату збільшеного <span class="math inline">\(x\)</span>. Записуючи це, ми маємо:</p>
+<p><span class="math display">\[ y + dy = (x + dx)^2 \]</span></p>
 <p>Зводячи це у квадрат, ми отримуємо:</p>
-
-\[ y + dy = x^2 + 2x \cdot dx + (dx)^2 \]
-<p>
-  Що означає $(dx)^2$? Згадайте, що $dx$ означає малу частинку від $x$. Тоді
-  $(dx)^2$ означатиме малу частинку від малої частини $x$; тобто, як було
-  пояснено раніше (<a href="2.html#smallness">тут</a>), це мала величина другого
-  порядку малості. Тому її можна відкинути як зовсім незначущу у порівнянні з
-  іншими змінними. Зробивши це, ми маємо:
-</p>
-\[ y + dy = x^2 + 2x \cdot dx. \]
-<p>Оскільки $y=x^2$, віднімемо це від рівняння, і отримаємо</p>
-\[ dy = 2x \cdot dx. \]
-<p>Розділивши обидві частини рівняння на $dx$, ми знайдемо</p>
-\[\frac{dy}{dx}= 2x \]
-
-<p>
-  <em>Це</em>* і є те, що ми хотіли знайти. Відношення зростання $y$ до
-  зростання $x$ у нашому випадку дорівнює $2x$.
-</p>
-<p>
-  <note
-    >*<em>Примітка</em> – це співвідношення $\dfrac{dy}{dx}$ є результатом
-    диференціювання $y$ відносно $x$. Диференціювання означає знаходження
-    диференціального коефіцієнта (похідної). Припустімо, що у нас є якась інша
-    функція від $x$, наприклад, $u = 7x^2 + 3$. Тоді, якби нам сказали
-    диференціювати це відносно $x$, ми мали б знайти $\dfrac{du}{dx}$, або, що
-    те саме, $\dfrac{d(7x^2 + 3 )}{dx}$. Або, ми можемо мати випадок, коли час є
-    незалежною змінною (див. <a href="3.html#indvar">тут</a>), наприклад: $y = b
-    + \frac{1}{2} at^2$. Тоді, якщо нам сказали б його диференціювати, це
-    означає, що ми повинні знайти його похідну відносно $t$. Таким чином, наша
-    справа полягатиме у тому, щоб спробувати знайти $\dfrac{dy}{dt}$, тобто
-    $\dfrac{d(b + \frac{1}{2} at^2)}{dt }$.</note
-  >
-</p>
-<p>
-  <em>Приклад на числах.</em>
-</p>
-<p>
-  Припустимо, $x=100$, отже $y=10 000$. Нехай $x$ зростає і стає $101$ (тобто
-  нехай $dx=1$). Тоді збільшений $y$ становитиме $101 × 101 = 10 201 $. Але якщо
-  ми погоджуємося ігнорувати незначні величини другого порядку, $1$ може бути
-  відкинуте порівняно з $10 000$; тому ми можемо округлити збільшений $y$ до $10
-  200$. $y$ зріс від $10 000 $ до $10 200 $; тож, додана частинка $dy$ дорівнює
-  $200$.
-</p>
-<p>
-  $\dfrac{dy}{dx} = \dfrac{200}{1} = 200$. Згідно з алгебраїчними напрацюваннями
-  попереднього параграфа, ми знаходимо $\dfrac{dy}{dx} = 2x$. Так і є; для
-  $x=100$ і $2x=200$.
-</p>
+<p><span class="math display">\[ y + dy = x^2 + 2x \cdot dx + (dx)^2 \]</span></p>
+<p>Що означає <span class="math inline">\((dx)^2\)</span>? Згадайте, що <span class="math inline">\(dx\)</span> означає малу частинку від <span class="math inline">\(x\)</span>. Тоді <span class="math inline">\((dx)^2\)</span> означатиме малу частинку від малої частини <span class="math inline">\(x\)</span>; тобто, як було пояснено раніше (<a href="2.html#smallness">тут</a>), це мала величина другого порядку малості. Тому її можна відкинути як зовсім незначущу у порівнянні з іншими змінними. Зробивши це, ми маємо:<span id="diffexample"></span></p>
+<p><span class="math display">\[ y + dy = x^2 + 2x \cdot dx. \]</span></p>
+<p>Оскільки <span class="math inline">\(y=x^2\)</span>, віднімемо це від рівняння, і отримаємо</p>
+<p><span class="math display">\[ dy = 2x \cdot dx. \]</span></p>
+<p>Розділивши обидві частини рівняння на <span class="math inline">\(dx\)</span>, ми знайдемо</p>
+<p><span class="math display">\[\frac{dy}{dx}= 2x \]</span></p>
+<p><em>Це</em>* і є те, що ми хотіли знайти. Відношення зростання <span class="math inline">\(y\)</span> до зростання <span class="math inline">\(x\)</span> у нашому випадку дорівнює <span class="math inline">\(2x\)</span>.</p>
+<p>*<em>Примітка</em> – це співвідношення <span class="math inline">\(\dfrac{dy}{dx}\)</span> є результатом диференціювання <span class="math inline">\(y\)</span> відносно <span class="math inline">\(x\)</span>. Диференціювання означає знаходження диференціального коефіцієнта (похідної). Припустімо, що у нас є якась інша функція від <span class="math inline">\(x\)</span>, наприклад, <span class="math inline">\(u = 7x^2 + 3\)</span>. Тоді, якби нам сказали диференціювати це відносно <span class="math inline">\(x\)</span>, ми мали б знайти <span class="math inline">\(\dfrac{du}{dx}\)</span>, або, що те саме, <span class="math inline">\(\dfrac{d(7x^2 + 3 )}{dx}\)</span>. Або, ми можемо мати випадок, коли час <span class="math inline">\(t\)</span> є незалежною змінною (див. <a href="3.html#indvar">тут</a>), наприклад: <span class="math inline">\(y = b
+    + \frac{1}{2} at^2\)</span>. Тоді, якщо нам сказали б його диференціювати, це означає, що ми повинні знайти його похідну відносно <span class="math inline">\(t\)</span>. Таким чином, наша справа полягатиме у тому, щоб спробувати знайти <span class="math inline">\(\dfrac{dy}{dt}\)</span>, тобто <span class="math inline">\(\dfrac{d(b + \frac{1}{2} at^2)}{dt }\)</span>.</p>
+<p><em>Приклад на числах.</em></p>
+<p>Припустимо, <span class="math inline">\(x=100\)</span>, отже <span class="math inline">\(y=10 000\)</span>. Нехай <span class="math inline">\(x\)</span> зростає і стає <span class="math inline">\(101\)</span> (тобто нехай <span class="math inline">\(dx=1\)</span>). Тоді збільшений <span class="math inline">\(y\)</span> становитиме <span class="math inline">\(101 × 101 = 10201\)</span>. Але якщо ми погоджуємося ігнорувати незначні величини другого порядку, <span class="math inline">\(1\)</span> може бути відкинуте порівняно з <span class="math inline">\(10 000\)</span>; тому ми можемо округлити збільшений <span class="math inline">\(y\)</span> до <span class="math inline">\(10200\)</span>. <span class="math inline">\(y\)</span> зріс від <span class="math inline">\(10 000\)</span> до <span class="math inline">\(10 200\)</span>; тож, додана частинка <span class="math inline">\(dy\)</span> дорівнює <span class="math inline">\(200\)</span>.</p>
+<p><span class="math inline">\(\dfrac{dy}{dx} = \dfrac{200}{1} = 200\)</span>. Згідно з алгебраїчними напрацюваннями попереднього параграфа, ми знаходимо <span class="math inline">\(\dfrac{dy}{dx} = 2x\)</span>. Так і є; для <span class="math inline">\(x=100\)</span> і <span class="math inline">\(2x=200\)</span>.</p>
 <p>Але, скажете ви, ми знехтували цілою одиницею.</p>
-<p>Що ж, спробуємо ще раз, зробивши $dx$ ще меншою частиною.</p>
-<p>
-  Нехай $dx=\frac{1}{10}$. Тоді $x+dx=100.1$, і \[ (x+dx)^2 = 100.1 × 100.1 = 10
-  020.01. \]
-</p>
-<p>
-  Тепер остання цифра $1$ становить лише одну мільйонну частину від $10 000$ і є
-  абсолютно незначною; тому ми можемо взяти $10 020 $ без маленького десяткового
-  дробу в кінці. І це дає $dy=20$; і $\dfrac{dy}{dx} = \dfrac{20}{0.1} = 200$,
-  що все одно дорівнює $2x$.
-</p>
-<p></p>
-<h3>Випадок 2</h3>
-Спробуємо диференціювати $y = x^3$ таким самим чином.
-
-<p>Нехай $y$ зросте до $y+dy$, поки $x$ зростає до $x+dx$.</p>
-<p>Тоді ми маємо \[ y + dy = (x + dx)^3. \]</p>
-<p>
-  Виконуючи зведення в куб, ми отримуємо \[ y + dy = x^3 + 3x^2 · dx +
-  3x(dx)^2+(dx)^3. \]
-</p>
-<p>
-  Ми знаємо, що малими величинами другого і третього порядків можна знехтувати;
-  оскільки $dy$ і $dx$ обидва зроблені нескінченно малими, $(dx)^2$ і $(dx)^3$
-  стануть ще нескінченно меншими у порівнянні з ними. Отже, вважаючи їх
-  незначними, ми залишаємо: \[ y + dy=x^3+3x^2 · dx. \]
-</p>
-<p>
-  Але $y=x^3$; і, віднявши це, ми маємо: \begin{align*} dy &amp;= 3x^2 · dx, \\
-  \text{ та}\; \frac{dy}{dx} &amp;= 3x^2. \end{align*}
-</p>
-<h3>Випадок 3</h3>
-<p>
-  Спробуємо диференціювати $y=x^4$. Починаючи, як і раніше, дозволивши $y$ і $x$
-  трохи зрости, ми маємо: \begin{align*} y + dy &amp;= (x+dx)^4. \\ \end{align*}
-  Виконуючи піднесення до четвертого степеня, отримуємо
-</p>
-<p class="mobile">
-  \begin{align*} y + dy &amp;= x^4 + 4x^3\, dx + 6x^2(dx)^2 + 4x(dx)^3+(dx)^4.
-  \\ \end{align*} Тоді викреслюючи члени, що містять вищі степені $dx$, як
-  незначні для порівняння, ми маємо \begin{align*} y + dy &amp;= x^4+4x^3\ , dx.
-  \\ \end{align*} Віднімаючи початкове $y=x^4$, ми залишаємо \begin{align*} dy
-  &amp;= 4x^3\, dx, \\ \text{ і}\; \frac{dy}{dx} &amp;= 4x^3. \end{align*}
-</p>
-<p class="desktop">
-  \begin{align*} y + dy &amp;= x^4 + 4x^3\, dx + 6x^2(dx)^2 + 4x(dx)^3+(dx)^4.
-  \\ \end{align*} Тоді викреслюючи члени, що містять вищі степені $dx$, як
-  незначні для порівняння, ми маємо \begin{align*} y + dy &amp;= x^4+4x^3\ , dx.
-  \\ \end{align*} Віднімаючи початкове $y=x^4$, ми залишаємо \begin{align*} dy
-  &amp;= 4x^3\, dx, \\ \text{ і}\; \frac{dy}{dx} &amp;= 4x^3. \end{align*}
-</p>
+<p>Що ж, спробуємо ще раз, зробивши <span class="math inline">\(dx\)</span> ще меншою частиною.</p>
+<p>Нехай <span class="math inline">\(dx=\frac{1}{10}\)</span>. Тоді <span class="math inline">\(x+dx=100.1\)</span>, і <span class="math display">\[ (x+dx)^2 = 100.1 × 100.1 = 10
+  020.01. \]</span></p>
+<p>Тепер остання цифра <span class="math inline">\(1\)</span> становить лише одну мільйонну частину від <span class="math inline">\(10 000\)</span> і є абсолютно незначною; тому ми можемо взяти <span class="math inline">\(10 020\)</span> без маленького десяткового дробу в кінці. І це дає <span class="math inline">\(dy=20\)</span>; і <span class="math inline">\(\dfrac{dy}{dx} = \dfrac{20}{0.1} = 200\)</span>, що все одно дорівнює <span class="math inline">\(2x\)</span>.</p>
+<h3 id="випадок-2">Випадок 2</h3>
+<p>Спробуємо диференціювати <span class="math inline">\(y = x^3\)</span> таким самим чином.</p>
+<p>Нехай <span class="math inline">\(y\)</span> зросте до <span class="math inline">\(y+dy\)</span>, поки <span class="math inline">\(x\)</span> зростає до <span class="math inline">\(x+dx\)</span>.</p>
+<p>Тоді ми маємо <span class="math display">\[ y + dy = (x + dx)^3. \]</span></p>
+<p>Виконуючи зведення в куб, ми отримуємо <span class="math display">\[ y + dy = x^3 + 3x^2 · dx +
+  3x(dx)^2+(dx)^3. \]</span></p>
+<p>Ми знаємо, що малими величинами другого і третього порядків можна знехтувати; оскільки <span class="math inline">\(dy\)</span> і <span class="math inline">\(dx\)</span> обидва зроблені нескінченно малими, <span class="math inline">\((dx)^2\)</span> і <span class="math inline">\((dx)^3\)</span> стануть ще нескінченно меншими у порівнянні з ними. Отже, вважаючи їх незначними, ми залишаємо: <span class="math display">\[ y + dy=x^3+3x^2 · dx. \]</span></p>
+<p>Але <span class="math inline">\(y=x^3\)</span>; і, віднявши це, ми маємо: <span class="math display">\[\begin{align*} dy &amp;= 3x^2 ·
+dx, \\ \text{ та}\; \frac{dy}{dx} &amp;= 3x^2. \end{align*}\]</span></p>
+<h3 id="випадок-3">Випадок 3</h3>
+<p>Спробуємо диференціювати <span class="math inline">\(y=x^4\)</span>. Починаючи, як і раніше, дозволивши <span class="math inline">\(y\)</span> і <span class="math inline">\(x\)</span> трохи зрости, ми маємо: <span class="math display">\[\begin{align*} y + dy &amp;= (x+dx)^4. \\
+\end{align*}\]</span> Виконуючи піднесення до четвертого степеня, отримуємо</p>
+<p><div class="scaled"> <span class="math display">\[\begin{align*} y + dy &amp;= x^4 +
+4x^3\, dx + 6x^2(dx)^2 + 4x(dx)^3+(dx)^4. \\ \end{align*}\]</span> </div></p>
+<p>Тоді викреслюючи члени, що містять вищі степені <span class="math inline">\(dx\)</span>, як незначні для порівняння, ми маємо <span class="math display">\[\begin{align*} y + dy &amp;= x^4+4x^3\, dx. \\
+\end{align*}\]</span> Віднімаючи початкове <span class="math inline">\(y=x^4\)</span>, ми залишаємо <span class="math display">\[\begin{align*} dy &amp;= 4x^3\, dx, \\ \text{ і}\; \frac{dy}{dx} &amp;=
+4x^3. \end{align*}\]</span></p>
 <hr />
-
-<p>
-  Усі ці випадки досить прості. Давайте підсумуємо результати, щоб побачити, чи
-  можемо ми вивести якесь загальне правило. Розмістимо їх у двох стовпцях,
-  значення $y$ в першому, а відповідні значення, знайдені для $\dfrac{dy}{dx}$ в
-  другому: таким чином
-</p>
+<p>Усі ці випадки досить прості. Давайте підсумуємо результати, щоб побачити, чи можемо ми вивести якесь загальне правило. Розмістимо їх у двох стовпцях, значення <span class="math inline">\(y\)</span> в першому, а відповідні значення, знайдені для <span class="math inline">\(\dfrac{dy}{dx}\)</span> в другому: таким чином</p>
 <table>
-  <tr>
-    <th>$y$</th>
-    <th>$\frac{dy}{dx}$</th>
-  </tr>
-  <tr>
-    <td>$x^2$</td>
-    <td>$2x$</td>
-  </tr>
-  <tr>
-    <td>$x^3$</td>
-    <td>$3x^2$</td>
-  </tr>
-  <tr>
-    <td>$x^4$</td>
-    <td>$4x^3$</td>
-  </tr>
+<thead>
+<tr>
+<th style="text-align: left;"><span class="math inline">\(y\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(\frac{dy}{dx}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="math inline">\(x^2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(2x\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="math inline">\(x^3\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(3x^2\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="math inline">\(x^4\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(4x^3\)</span></td>
+</tr>
+</tbody>
 </table>
-
-<p>
-  <a name="diffrule1" />
-  Просто подивіться на ці результати: операція диференціювання, схоже, призвела
-  до зменшення степеня $x$ на $1$ (наприклад, в останньому випадку $x^4$
-  зменшився до $x^3$) і у той самий час до помноження на число (на те саме
-  число, яке спочатку було степенем). Тепер, коли ви побачили це, ви можете
-  легко здогадатися, як піде далі. Можна очікувати, що диференціювання $x^5$
-  дасть $5x^4$, або диференціювання $x^6$ дасть $6x^5$. Якщо ви сумніваєтеся,
-  спробуйте один із них і перевірте, чи вірна ваша гіпотеза.
-</p>
-<p>Спробуйте $y = x^5$. Тоді</p>
-<p>
-  \begin{align*} y+dy &amp;= (x+dx)^5 \\ &amp;= x^5 + 5x^4\, dx + 10x^3(dx)^2 +
-  10x^2(dx)^3 \\ &amp;\phantom{{}= x^5 + 5x^4\, dx} + 5x(dx)^4 + (dx)^5.
-  \end{align*}
-</p>
-<p>
-  Нехтуючи всіма членами, що містять малі величини вищих порядків, ми залишаємо
-</p>
-\begin{align*} y + dy &amp;= x^5 + 5x^4\, dx, \\ \text{ і віднімання}\; y &amp;=
-x^5 \text{ залишає нам} \\ dy &amp;= 5x^4\, dx, \\ \text{звідки}\; \frac{dy}{dx}
-&amp;= 5x^4,\end{align*}
-
+<p><span id="diffrule1"></span> Просто подивіться на ці результати: операція диференціювання, схоже, призвела до зменшення степеня <span class="math inline">\(x\)</span> на <span class="math inline">\(1\)</span> (наприклад, в останньому випадку <span class="math inline">\(x^4\)</span> зменшився до <span class="math inline">\(x^3\)</span>) і у той самий час до помноження на число (на те саме число, яке спочатку було степенем). Тепер, коли ви побачили це, ви можете легко здогадатися, як піде далі. Можна очікувати, що диференціювання <span class="math inline">\(x^5\)</span> дасть <span class="math inline">\(5x^4\)</span>, або диференціювання <span class="math inline">\(x^6\)</span> дасть <span class="math inline">\(6x^5\)</span>. Якщо ви сумніваєтеся, спробуйте один із них і перевірте, чи вірна ваша гіпотеза.</p>
+<p>Спробуйте <span class="math inline">\(y = x^5\)</span>. Тоді</p>
+<p><span class="math display">\[\begin{align*} y+dy &amp;= (x+dx)^5 \\ &amp;= x^5 + 5x^4\, dx +
+10x^3(dx)^2 + 10x^2(dx)^3 \\ &amp;\phantom{{}= x^5 + 5x^4\, dx} +
+5x(dx)^4 + (dx)^5. \end{align*}\]</span></p>
+<p>Нехтуючи всіма членами, що містять малі величини вищих порядків, ми залишаємо</p>
+<p><span class="math display">\[\begin{align*} y + dy &amp;= x^5 + 5x^4\, dx, \\ \text{ і
+віднімання}\; y &amp;= x^5 \text{ залишає нам} \\ dy &amp;= 5x^4\, dx,
+\\ \text{звідки}\; \frac{dy}{dx} &amp;= 5x^4,\end{align*}\]</span></p>
 <p>саме так, як ми припускали.</p>
 <hr />
-
-<p>
-  Логічно дотримуючись нашого спостереження, ми маємо зробити висновок, що якщо
-  ми хочемо мати справу з будь-яким вищим степенем, — назвемо його $n$, — ми
-  можемо впоратися з ним так само.
-</p>
-<p>Нехай $y = x^n,$</p>
+<p>Логічно дотримуючись нашого спостереження, ми маємо зробити висновок, що якщо ми хочемо мати справу з будь-яким вищим степенем, — назвемо його <span class="math inline">\(n\)</span>, — ми можемо впоратися з ним так само.</p>
+<p>Нехай <span class="math inline">\(y = x^n,\)</span></p>
 <p>тоді ми маємо очікувати, що з'ясуємо:</p>
-<p></p>
-<p>$\frac{dy}{dx} = nx^{(n-1)}$.</p>
-<p>
-  Наприклад, нехай $n=8$, тоді $y=x^8$, і його диференціювання дасть
-  $\dfrac{dy}{dx} = 8x^7$.
-</p>
-<p>
-  І насправді правило, згідно з яким диференціювання $x^n$ дає як результат
-  $nx^{n-1}$, справедливе для всіх випадків, коли $n$ є цілим додатним числом.
-  [Розкладення $(x + dx)^n$ за біноміальною теоремою одразу покаже це.] Але
-  питання, чи це вірно для випадків, коли $n$ має від’ємні чи дробові значення,
-  потребує подальшого розгляду.
-</p>
-<p>
-  <em>Випадок негативного степеня.</em>
-</p>
-<p>
-  Нехай $y = x^{-2}$. Продовжуємо, як і раніше: \begin{align*} y+dy &amp;=
-  (x+dx)^{-2} \\ &amp;= x^{-2} \left(1 + \frac{dx}{x}\right)^{-2}. \end{align*}
-  Розкриваючи це за біноміальною теоремою (див.
-  <a href="14.html#binomtheo">тут</a>), отримуємо \begin{align*} &amp;=x^{-2}
-  \left[1 - \frac{2\, dx}{x} + \frac{2(2+1)}{1×2} \left(\frac{dx}{x}\right)^2 -
-  \text{...}\right] \\ &amp;=x^{-2} - 2x^{-3} · dx + 3x^{- 4}(dx)^2 -
-  4x^{-5}(dx)^3 + \text{...} \\ \end{align*} Отже, відкидаючи малі величини
-  вищих порядків малості, ми маємо: \begin{align*} y + dy &amp;= x^{-2} -
-  2x^{-3} · dx. \end{align*} Віднімаючи початкове $y = x^{-2}$, ми отримуємо
-  $$\begin{align*} dy &amp;= -2x^{-3}dx, \\ \frac{dy}{dx} &amp;= -2x^{-3}.
-  \end{align*}$$ І це досі відповідає правилу, виведеному вище.
-</p>
-<p>
-  <em>Випадок дробового степеня.</em>
-</p>
-<p>Нехай $y= x^{\frac{1}{2}}$.Тоді, як і раніше,</p>
-<p class="mobile">
-  \begin{align*} y+dy = (x+dx)^{\frac{1}{2}} = x^{\frac{1}{2}} (1 + \frac
-  {dx}{x} )^{\frac{1}{2}} =\\ = \sqrt{x} + \frac{1}{2}
-  \frac{dx}{\sqrt{x}}-\frac{1}{8} \frac{(dx)^2}{x\sqrt{x}}+\\ + \text{величини з
-  вищими степенями $dx$.} \end{align*}
-</p>
-<p class="desktop">
-  \begin{align*} y+dy &amp;= (x+dx)^{\frac{1}{2}} = x^{\frac{1}{2}} (1 + \frac
-  {dx}{x} )^{\frac{1}{2}} \\ &amp;= \sqrt{x} + \frac{1}{2} \frac{dx}{\sqrt{x}} -
-  \frac{1}{8} \frac{(dx)^2}{x\sqrt{x}} + \text{величини з вищими степенями
-  $dx$.} \end{align*}
-</p>
-<p>
-  Віднімаючи початкове $y = x^{\frac{1}{2}}$ і нехтуючи вищими степенями, в нас
-  залишається: \[ dy = \frac{1}{2} \frac{dx}{\sqrt{x }} = \frac{1}{2}
-  x^{-\frac{1}{2}} · dx, \] і $\dfrac{dy}{dx} = \dfrac{1}{2} x^ {-\frac{1}{2}}$.
-  Узгоджується із загальним правилом.
-</p>
-<p>
-  <em>Підсумок.</em> Подивімось, як далеко ми дісталися. Ми прийшли до
-  наступного правила:<a name="multipow" /> щоб продиференціювати $x^n$, треба
-  помножити на степінь і зменшити степінь на одиницю, отримавши $nx^{n-1}$ як
-  результат.
-</p>
-<p>
-  <a name="ex1" />
-</p>
+<p><span class="math inline">\(\frac{dy}{dx} = nx^{(n-1)}\)</span>.</p>
+<p>Наприклад, нехай <span class="math inline">\(n=8\)</span>, тоді <span class="math inline">\(y=x^8\)</span>, і його диференціювання дасть <span class="math inline">\(\dfrac{dy}{dx} = 8x^7\)</span>.</p>
+<p>І насправді правило, згідно з яким диференціювання <span class="math inline">\(x^n\)</span> дає як результат <span class="math inline">\(nx^{n-1}\)</span>, справедливе для всіх випадків, коли <span class="math inline">\(n\)</span> є цілим додатним числом. [Розкладення <span class="math inline">\((x + dx)^n\)</span> за біноміальною теоремою (прим. ред. - біном Ньютона) одразу покаже це.] Але питання, чи це вірно для випадків, коли <span class="math inline">\(n\)</span> має від’ємні чи дробові значення, потребує подальшого розгляду.</p>
+<p><em>Випадок негативного степеня.</em></p>
+<p>Нехай <span class="math inline">\(y = x^{-2}\)</span>. Продовжуємо, як і раніше: <span class="math display">\[\begin{align*} y+dy &amp;=
+(x+dx)^{-2} \\ &amp;= x^{-2} \left(1 + \frac{dx}{x}\right)^{-2}.
+\end{align*}\]</span> Розкриваючи це за біноміальною теоремою (див. <a href="14.html#binomtheo">тут</a>), отримуємо <span class="math display">\[\begin{align*} &amp;=x^{-2}
+\left[1 - \frac{2\, dx}{x} + \frac{2(2+1)}{1×2}
+\left(\frac{dx}{x}\right)^2 - \text{...}\right] \\ &amp;=x^{-2} -
+2x^{-3} · dx + 3x^{- 4}(dx)^2 - 4x^{-5}(dx)^3 + \text{...} \\
+\end{align*}\]</span> Отже, відкидаючи малі величини вищих порядків малості, ми маємо: <span class="math display">\[\begin{align*} y + dy &amp;= x^{-2} - 2x^{-3} · dx.
+\end{align*}\]</span> Віднімаючи початкове <span class="math inline">\(y = x^{-2}\)</span>, ми отримуємо <span class="math display">\[\begin{align*} dy &amp;= -2x^{-3}dx, \\ \frac{dy}{dx} &amp;= -2x^{-3}.
+  \end{align*}\]</span> І це досі відповідає правилу, виведеному вище.</p>
+<p><em>Випадок дробового степеня.</em></p>
+<p>Нехай <span class="math inline">\(y= x^{\frac{1}{2}}\)</span>.Тоді, як і раніше,</p>
+<p><div class="mobile"> <span class="math display">\[\begin{align*} y+dy = (x+dx)^{\frac{1}{2}}
+= x^{\frac{1}{2}} (1 + \frac {dx}{x} )^{\frac{1}{2}} =\\ =
+\sqrt{x} + \frac{1}{2} \frac{dx}{\sqrt{x}}-\frac{1}{8}
+\frac{(dx)^2}{x\sqrt{x}}+\\ + \text{ величини з вищими степенями
+}dx.\end{align*}\]</span> </div></p>
+<p><div class="desktop"> <span class="math display">\[\begin{align*} y+dy &amp;= (x+dx)^{\frac{1}{2}} = x^{\frac{1}{2}} (1 + \frac{dx}{x} )^{\frac{1}{2}} \\ &amp;=
+\sqrt{x} + \frac{1}{2} \frac{dx}{\sqrt{x}} - \frac{1}{8}
+\frac{(dx)^2}{x\sqrt{x}} + \text{ величини з вищими степенями }dx.\end{align*}\]</span> </div></p>
+<p>Віднімаючи початкове <span class="math inline">\(y = x^{\frac{1}{2}}\)</span> і нехтуючи вищими степенями, в нас залишається: <span class="math display">\[ dy = \frac{1}{2} \frac{dx}{\sqrt{x }} = \frac{1}{2}
+  x^{-\frac{1}{2}} · dx, \]</span> і <span class="math inline">\(\dfrac{dy}{dx} = \dfrac{1}{2} x^ {-\frac{1}{2}}\)</span>. Узгоджується із загальним правилом.</p>
+<p><em>Підсумок.</em> Подивімось, як далеко ми дісталися. Ми прийшли до наступного правила:<span id="multipow"></span> щоб продиференціювати <span class="math inline">\(x^n\)</span>, треба помножити на степінь і зменшити степінь на одиницю, отримавши <span class="math inline">\(nx^{n-1}\)</span> як результат.</p>
+<p><span id="ex1"></span></p>
 <hr />
-<h3>Вправи І</h3>
-
+<h3 id="вправи-і">Вправи І</h3>
 <p>Продиференціюйте наступні вирази:</p>
-<p>(1) $y = x^{13}$</p>
-<p>(2) $y = x^{-\frac{3}{2}}$</p>
-<p>(3) $y = x^{2a}$</p>
-<p>(4) $u = t^{2.4}$</p>
-<p>(5) $z = \sqrt[3]{u}$</p>
-<p>(6) $y = \sqrt[3]{x^{-5}}$</p>
-<p>(7) $u = \sqrt[5]{\dfrac{1}{x^8}}$</p>
-<p>(8) $y = 2x^a$</p>
-<p>(9) $y = \sqrt[q]{x^3}$</p>
-<p>(10) $y = \sqrt[n]{\dfrac{1}{x^m}}$</p>
-<p><em>Тепер ви навчилися диференціювати степені $x$. Як же це легко!</em></p>
-<h3 class="answers">Відповіді</h3>
-<p>(1) $\dfrac{dy}{dx} = 13x^{12}$.</p>
-<p>(2) $\dfrac{dy}{dx} = - \dfrac{3}{2} x^{-\frac{5}{2}}$.</p>
-<p>(3) $\dfrac{dy}{dx} = 2ax^{(2a-1)}$.</p>
-<p>(4) $\dfrac{du}{dt} = 2.4t^{1.4}$.</p>
-<p>(5) $\dfrac{dz}{du} = \dfrac{1}{3} u^{-\frac{2}{3}}$.</p>
-<p>(6) $\dfrac{dy}{dx} = -\dfrac{5}{3}x^{-\frac{8}{3}}$.</p>
-<p>(7) $\dfrac{du}{dx} = -\dfrac{8}{5}x^{-\frac{13}{5}}$.</p>
-<p>(8) $\dfrac{dy}{dx} = 2ax^{a-1}$.</p>
-<p>(9) $\dfrac{dy}{dx} = \dfrac{3}{q} x^{\frac{3-q}{q}}$.</p>
-<p>
-  (10) $\dfrac{dy}{dx} = -\dfrac{m}{n} x^{-\frac{m+n}{n}}$.
-  <br />
+<p>(1) <span class="math inline">\(y = x^{13}\)</span></p>
+<p>(2) <span class="math inline">\(y = x^{-\frac{3}{2}}\)</span></p>
+<p>(3) <span class="math inline">\(y = x^{2a}\)</span></p>
+<p>(4) <span class="math inline">\(u = t^{2.4}\)</span></p>
+<p>(5) <span class="math inline">\(z = \sqrt[3]{u}\)</span></p>
+<p>(6) <span class="math inline">\(y = \sqrt[3]{x^{-5}}\)</span></p>
+<p>(7) <span class="math inline">\(u = \sqrt[5]{\dfrac{1}{x^8}}\)</span></p>
+<p>(8) <span class="math inline">\(y = 2x^a\)</span></p>
+<p>(9) <span class="math inline">\(y = \sqrt[q]{x^3}\)</span></p>
+<p>(10) <span class="math inline">\(y = \sqrt[n]{\dfrac{1}{x^m}}\)</span></p>
+<p><em>Тепер ви навчилися диференціювати степені <span class="math inline">\(x\)</span>. Як же це легко!</em></p>
+<h3 id="відповіді">Відповіді</h3>
+<p>(1) <span class="math inline">\(\dfrac{dy}{dx} = 13x^{12}\)</span>.</p>
+<p>(2) <span class="math inline">\(\dfrac{dy}{dx} = - \dfrac{3}{2} x^{-\frac{5}{2}}\)</span>.</p>
+<p>(3) <span class="math inline">\(\dfrac{dy}{dx} = 2ax^{(2a-1)}\)</span>.</p>
+<p>(4) <span class="math inline">\(\dfrac{du}{dt} = 2.4t^{1.4}\)</span>.</p>
+<p>(5) <span class="math inline">\(\dfrac{dz}{du} = \dfrac{1}{3} u^{-\frac{2}{3}}\)</span>.</p>
+<p>(6) <span class="math inline">\(\dfrac{dy}{dx} = -\dfrac{5}{3}x^{-\frac{8}{3}}\)</span>.</p>
+<p>(7) <span class="math inline">\(\dfrac{du}{dx} = -\dfrac{8}{5}x^{-\frac{13}{5}}\)</span>.</p>
+<p>(8) <span class="math inline">\(\dfrac{dy}{dx} = 2ax^{a-1}\)</span>.</p>
+<p>(9) <span class="math inline">\(\dfrac{dy}{dx} = \dfrac{3}{q} x^{\frac{3-q}{q}}\)</span>.</p>
+<p>(10) <span class="math inline">\(\dfrac{dy}{dx} = -\dfrac{m}{n} x^{-\frac{m+n}{n}}\)</span>.<br />
 </p>
-<hr />
-<a href="5.html">Далі →</a><br />
-<a href="/">Головна сторінка ↑</a><br />
-<a href="https://forms.gle/9i1seu3WDsx8wNcg7" target="_blank">
-  Залишити відгук &heartsuit;
-</a> &ndash; 1 хв
-<br />
 
-<script src="j/jquery.js"></script>
-<script src="j/modernizr.js"></script>
-<script src="j/dih5.js"></script>
+<div id="share-block" class="share-block">
+  <!-- <p class="share-invite"> Поділитись </p> -->
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 24 24">
+<path fill="#B32424" d="M 18 2 C 16.35499 2 15 3.3549904 15 5 C 15 5.1909529 15.021791 5.3771224 15.056641 5.5585938 L 7.921875 9.7207031 C 7.3985399 9.2778539 6.7320771 9 6 9 C 4.3549904 9 3 10.35499 3 12 C 3 13.64501 4.3549904 15 6 15 C 6.7320771 15 7.3985399 14.722146 7.921875 14.279297 L 15.056641 18.439453 C 15.021555 18.621514 15 18.808386 15 19 C 15 20.64501 16.35499 22 18 22 C 19.64501 22 21 20.64501 21 19 C 21 17.35499 19.64501 16 18 16 C 17.26748 16 16.601593 16.279328 16.078125 16.722656 L 8.9433594 12.558594 C 8.9782095 12.377122 9 12.190953 9 12 C 9 11.809047 8.9782095 11.622878 8.9433594 11.441406 L 16.078125 7.2792969 C 16.60146 7.7221461 17.267923 8 18 8 C 19.64501 8 21 6.6450096 21 5 C 21 3.3549904 19.64501 2 18 2 z M 18 4 C 18.564129 4 19 4.4358706 19 5 C 19 5.5641294 18.564129 6 18 6 C 17.435871 6 17 5.5641294 17 5 C 17 4.4358706 17.435871 4 18 4 z M 6 11 C 6.5641294 11 7 11.435871 7 12 C 7 12.564129 6.5641294 13 6 13 C 5.4358706 13 5 12.564129 5 12 C 5 11.435871 5.4358706 11 6 11 z M 18 18 C 18.564129 18 19 18.435871 19 19 C 19 19.564129 18.564129 20 18 20 C 17.435871 20 17 19.564129 17 19 C 17 18.435871 17.435871 18 18 18 z"></path>
+</svg>
+</div>
+<hr />
+
+<a href="5.html">Далі →</a><br/>
+<a href="/">Головна сторінка ↑</a><br/>
+<a href="https://survey.calculusmadeeasy.org.ua/index.php/111939?lang=uk" target="_blank">
+  Запропонувати виправлення &#9997;
+</a> <br />
+
+</body>
+</html>
+
+<script>
+  (function () {
+  const button = document.getElementById('share-block');
+const shareUrl = window.location.href;
+
+  button.addEventListener('click', async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: document.title,
+          url: shareUrl
+        });
+      } catch (e) {
+      }
+    } else if (navigator.clipboard) {
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+
+        const oldContent = button.innerHTML;
+
+        button.innerHTML = `
+          <svg class="share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="green" d="M20.285 6.709a1 1 0 0 0-1.414-1.414L9 15.167l-4.871-4.872a1 1 0 1 0-1.414 1.414l5.578 5.578a1 1 0 0 0 1.414 0l10.578-10.578z"/>
+          </svg>
+          <p class="share-invite">Скопійовано</p>
+        `;
+
+        setTimeout(() => {
+          button.innerHTML = oldContent;
+        }, 2000);
+
+      } catch (e) {
+        console.error("Не вдалось скопіювати посилання:", e);
+      }
+    }
+  });
+})();
+</script>
 
 <script
   data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"
