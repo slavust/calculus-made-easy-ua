@@ -28,4 +28,3 @@ rm /tmp/calculus-made-easy-compiled.zip
 
 # copy static files to output
 cp -r $TEMPLATE_DIR/static/* $OUT_DIR
-pandoc -D chunkedhtml > $OUT_DIR/source_template.html
