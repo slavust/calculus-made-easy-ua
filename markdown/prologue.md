@@ -1,13 +1,5 @@
----
-title: 'Пролог'
-author:
-- Viacheslav Ustymenko
-- Galyna Panasyuk
-- Anastasiia Sichko
-rights:  Creative Commons Attribution-ShareAlike 4.0 International
-...
-
 # Пролог
+
 <p class="a rotatedFloralHeartBullet"></p>
 
 Зважаючи на те, скільки дурнів розуміють математичний аналіз, дивно, що
