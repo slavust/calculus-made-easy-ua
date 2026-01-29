@@ -1,15 +1,10 @@
-FROM debian:bookworm-slim
+FROM debian:trixie-20260112-slim
 
 RUN apt-get update && \
-    apt-get install -y python3 \
-                       texlive \
-                       texlive-lang-cyrilic \
-                       gladtex \
-                       pandoc && \
+    apt-get install -y pandoc=3.1.11.1+ds-2 unzip=6.0-29 && \
     apt-get clean
 
-#COPY compile-html.py compile-epub-mathml.py compile-epub-svg.py compile-pdf.py compile-all.py /build-scripts/
-COPY compile-html.py /build-scripts/
+COPY compile-html md-link-to-html.lua /build-scripts/
 WORKDIR /build-scripts
 
-CMD ["python3", "compile-html.py"]
+CMD ["bash", "compile-html", "/markdown", "/html-template", "/out-dir"]

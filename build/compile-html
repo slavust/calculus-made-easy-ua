@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+
+MD_DIR=$1
+TEMPLATE_DIR=$2
+OUT_DIR=$3
+
+# read list of md files
+readarray -t md_list < $MD_DIR/contents.txt
+md_list=( "${md_list[@]/#/$MD_DIR/}" )
+IFS=" "
+md_list=${md_list[*]}
+
+# compile using pandoc
+pandoc -f markdown+tex_math_dollars \
+       -t chunkedhtml \
+       --toc=true --toc-depth=1 \
+       --lua-filter md-link-to-html.lua \
+       --mathjax="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js" \
+       --standalone \
+       --chunk-template=ch%n.html \
+       --template=$TEMPLATE_DIR/main.template \
+       --css=screen.css \
+       --wrap=none \
+       -o /tmp/calculus-made-easy-compiled.zip \
+       $md_list
+unzip /tmp/calculus-made-easy-compiled.zip -d $OUT_DIR
+rm /tmp/calculus-made-easy-compiled.zip
+
+# copy static files to output
+cp -r $TEMPLATE_DIR/static/* $OUT_DIR
+pandoc -D chunkedhtml > $OUT_DIR/source_template.html

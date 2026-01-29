@@ -1,0 +1,5 @@
+$if(toc)$
+$index()$
+$else$
+$chapter()$
+$endif$
