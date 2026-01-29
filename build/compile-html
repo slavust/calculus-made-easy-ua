@@ -29,3 +29,6 @@ rm /tmp/calculus-made-easy-compiled.zip
 
 # copy static files to output
 cp -r $TEMPLATE_DIR/static/* $OUT_DIR
+cd $OUT_DIR
+zip -m -r calculus-made-easy-ua.zip *
+cd -
