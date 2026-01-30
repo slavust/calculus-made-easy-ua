@@ -19,8 +19,7 @@ podman run -v $MD_DIR:/markdown \
        --to chunkedhtml \
        --toc=true --toc-depth=1 \
        --split-level=1 \
-       --chunk-template=%i.html \
-       --number-offset=-1 \
+       --chunk-template=%s.html \
        --lua-filter /html-template/md-link-to-html.lua \
        --mathjax="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js" \
        --standalone \
