@@ -1,0 +1,1 @@
+- Pandoc handles spans, so make links unique and remove nn.md part
