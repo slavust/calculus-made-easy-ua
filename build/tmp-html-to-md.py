@@ -37,15 +37,10 @@ def convert_to_markdown(html_path, out_md_path, out_image_dir):
         '-f',
         'html+tex_math_single_backslash+tex_math_double_backslash+tex_math_dollars',
         '-t',
-        'markdown',
-        '--extract-media={}'.format(out_image_dir),
+        'commonmark+tex_math_dollars+pipe_tables',
         '-o',
         out_md_path,
         html_path])
-
-def correct_image_links_in_md(md_path):
-    with open(md_path, 'r') as file:
-        md = file.read()
     
 
 if __name__ == '__main__':

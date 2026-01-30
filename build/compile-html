@@ -6,29 +6,35 @@ OUT_DIR=$3
 
 # read list of md files
 readarray -t md_list < $MD_DIR/contents.txt
-md_list=( "${md_list[@]/#/$MD_DIR/}" )
+md_list=( "${md_list[@]/#//markdown/}" )
 IFS=" "
 md_list=${md_list[*]}
 
 # compile using pandoc
-pandoc -f commonmark+tex_math_dollars+pipe_tables \
-       -t chunkedhtml \
+podman run -v $MD_DIR:/markdown \
+       -v $TEMPLATE_DIR:/html-template \
+       --mount type=bind,source=$OUT_DIR,target=/out-dir \
+       pandoc/core:3.8.3-debian \
+       --from commonmark+tex_math_dollars+pipe_tables \
+       --to chunkedhtml \
        --toc=true --toc-depth=1 \
-       --lua-filter md-link-to-html.lua \
+       --split-level=1 \
+       --chunk-template=%i.html \
+       --number-offset=-1 \
+       --lua-filter /html-template/md-link-to-html.lua \
        --mathjax="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js" \
        --standalone \
-       --chunk-template=ch%n.html \
-       --template=$TEMPLATE_DIR/main.template \
+       --template="/html-template/main.template" \
        --css=screen.css \
-       --resource-path $MD_DIR \
+       --resource-path="/markdown" \
        --wrap=none \
-       -o /tmp/calculus-made-easy-compiled.zip \
+       -o /out-dir/calculus-made-easy-compiled.zip \
        $md_list
-unzip /tmp/calculus-made-easy-compiled.zip -d $OUT_DIR
-rm /tmp/calculus-made-easy-compiled.zip
+unzip $OUT_DIR/calculus-made-easy-compiled.zip -d $OUT_DIR
+rm $OUT_DIR/calculus-made-easy-compiled.zip
 
 # copy static files to output
 cp -r $TEMPLATE_DIR/static/* $OUT_DIR
 cd $OUT_DIR
-zip -m -r calculus-made-easy-ua.zip *
+zip -q -m -r calculus-made-easy-ua.zip *
 cd -
