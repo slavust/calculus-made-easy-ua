@@ -1,4 +1,0 @@
-Hint to not forget:
-
-podman build -t calculus-build-env .
-podman run -v ../markdown:/markdown -v ../html-template:/html-template --mount type=bind,source=build,target=/out-dir calculus-build-env
