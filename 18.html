@@ -434,6 +434,11 @@
   Запропонувати виправлення &#9997;
 </a> <br/>
 
+<br/>
+
+<div id="advert-container">
+</div>
+
 <script src="j/jquery.js"></script>
 <script src="j/modernizr.js"></script>
 <script src="j/dih5.js"></script>
@@ -476,6 +481,64 @@ const shareUrl = window.location.href;
   });
 })();
 </script>
+
+
+<script>
+function weightedRandom(items) {
+  // Random number between 0 and totalWeight
+  const random = Math.random();
+
+  // Find the item
+  let cumulative = 0;
+
+  for (const item of items) {
+    cumulative += item.display_probability;
+
+    if (random < cumulative) {
+      return item;
+    }
+  }
+  return null;
+}
+
+(async function () {
+  const container = document.getElementById("advert-container");
+  if (!container) return;
+
+  let items;
+  try {
+    const response = await fetch("/advert/advert.json"); // подгрузка JSON
+    items = await response.json();
+  } catch (e) {
+    console.error("Не вдалося завантажити рекламу:", e);
+    return;
+  }
+
+  const advert = weightedRandom(items);
+  if(advert == null) return;
+
+  container.innerHTML = `
+<aside class="advert">
+  <div class="advert-body">
+    <a href="${advert.url}" class="conver-link"><img src="/advert/${advert.cover}" alt="" class="advert-cover" /></a>
+
+    <div class="advert-text">
+      <div class="advert-content">
+        <div class="advert-title">${advert.title}</div>
+        <div class="advert-description">${advert.description}</div>
+        <a href="${advert.url}" class="advert-link" target="_blank" rel="noopener">Детальніше →</a>
+      </div>
+
+      ${advert.include_affiliate_message ? `
+      <div class="advert-affiliate">
+        ${advert.include_affiliate_message}
+      </div>` : ""}
+    </div>
+  </div>
+</aside>
+  `;
+})();
+</script> 
 
 <script
   data-goatcounter="https://calculus-made-easy-ua.goatcounter.com/count"

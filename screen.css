@@ -688,7 +688,6 @@ tfoot {
 
 /* advertising */
 .advert {
-  background: #fefdfafa;
   margin: 4rem auto 3rem;
   padding: 1.2rem 1.4rem;
   max-width: 38rem;
@@ -709,7 +708,7 @@ tfoot {
   width: 120px;
   height: auto;
   flex-shrink: 0;
-  border: 1px solid rgb(213, 212, 212);
+  border: none;
 }
 
 .advert-text {
@@ -737,6 +736,13 @@ tfoot {
   margin-top: 0.7rem;
   font-size: 0.8rem;
   color: #555;
+}
+
+.advert-body .conver-link,
+.advert-body .conver-link:hover,
+.advert-body .conver-link:focus {
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .advert-link {
@@ -796,7 +802,7 @@ tfoot {
     display: inline;
     margin-top: 0.3rem;
   }
-  
+
   .advert-affiliate {
     margin-top: 0.6rem;
     font-size: 0.8rem;
