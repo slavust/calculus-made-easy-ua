@@ -5,7 +5,7 @@
     "cover": "tabletochki-logo.png",
     "description": "Щодня три сім’ї дізнаються про діагноз рак у дитини. Донедавна далеко не всі з них мали доступ до якісної медичної допомоги. Благодійний фонд «Таблеточки» 15 років щоденно допомагає українським родинам перемагати рак, а лікарям — рятувати життя дітей з онкозахворюваннями.*",
     "url": "https://url.calculusmadeeasy.org.ua/tabletochki",
-    "display_probability": 0.2,
+    "display_probability": 0.33,
     "exclude_from_support_page": true,
     "include_affiliate_message": "*Текст і лого взяті з вебсайта за посиланням."
   }
