@@ -1,4 +1,4 @@
-# Переклад українською книги «Calculus Made Easy» Сільвануса П. Томпсона
+# Переклад українською книги «Calculus Made Easy» Сільвана П. Томпсона
 
 Вебсайт:
 https://calculusmadeeasy.org.ua
